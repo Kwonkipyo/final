@@ -1,0 +1,71 @@
+@charset "utf-8";
+.newclass{
+    text-align: left;
+    margin-top: 100px;
+}
+
+.sw-dlclass,
+.sw-newclass{
+    width: 100%;
+    overflow: visible;
+}
+
+.dlclass .swiper-wrapper,
+.newclass .swiper-wrapper{
+    width: 100%;
+    transition-timing-function: linear;
+}
+
+.class-slide{
+    height: 350px;
+    width: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.class-box{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.class-box .class-txt{
+    width: 100%;
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.class-box .class-txt .class-price{
+    text-align: right;
+}
+
+.dlclass-title,
+.newclass-title{
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.dlclass-title span,
+.newclass-title span{
+    font-size: 20px;
+    display: inline;
+    margin-right: 10px;
+}
+
+.dlclass-title p,
+.newclass-title p{
+    font-size: 35px;
+    display: inline;
+}
+
+/* dlclass */
+/* newclass */

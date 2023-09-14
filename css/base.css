@@ -21,7 +21,9 @@ html{
     font-size: 16px;
 }
 body{
+    height: 200vh;
     font-family: 'Noto Sans KR' , "TTWanjudaedunsancheB", sans-serif;
+    line-height: 1.4;
     /* overflow-x: hidden; */
     min-width: 360px !important;
     letter-spacing: -0.68px;
