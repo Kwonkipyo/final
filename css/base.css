@@ -6,7 +6,7 @@
 }
 a{
     text-decoration: none;
-    color: #333;
+    color: inherit;
 }
 ul,
 li{
@@ -22,15 +22,14 @@ html{
 }
 body{
     font-family: 'Noto Sans KR' , "TTWanjudaedunsancheB", sans-serif;
-    font-size: 12px;
-    line-height: 1.4px;
+    line-height: 1.4;
     /* overflow-x: hidden; */
     min-width: 360px !important;
     letter-spacing: -0.68px;
     word-break: keep-all;
     color: #000;
     font-weight: 400;
-    background-color: #5b5a59;
+    background-color: #252422;
 }
 section{
     width: 100%;
