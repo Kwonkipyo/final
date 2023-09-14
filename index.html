@@ -28,10 +28,13 @@
       })(window, document, "script", "dataLayer", "GTM-NL72DDMM");
     </script>
     <!-- End Google Tag Manager -->
-    <meta charset="UTF-8" />
+    
+    <!-- 기본 설정 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stortcut icon" href="" type="image/x-icon" />
-
+    
+    <!-- title -->
     <title>팀프로젝트</title>
 
     <!-- SEO -->
@@ -72,16 +75,19 @@
       name="format-detection"
       content="telephone=no, address=no, email=no"
     />
-
+    <!-- jqeury 적용 -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <!-- <script src="js/prefixfree.min.js"></script> -->
+
+
+    <!-- CSS3 적용 -->
+    <script src="js/prefixfree.min.js"></script>
+
     <!--[if lt IE 9]>
       <script src="js/respond.min.js"></script>
       <script src="js/html5shiv.js"></script>
     <![endif]-->
-    <!-- js -->
 
-    
+    <!-- js -->
     <script src="js/header.js"></script>
     <script src="js/visual.js"></script>
     <script src="js/counting.js"></script>
@@ -92,20 +98,27 @@
     <script src="js/banner.js"></script>
     <script src="js/review.js"></script>
     <script src="js/footer.js"></script>
+
+    <!-- script 불러오기 -->
+    <script src="js/script.js"></script>
+
     <!-- fontawesome -->
     <script
       src="https://kit.fontawesome.com/706ff96991.js"
       crossorigin="anonymous"
     ></script>
+
     <!-- aos -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!-- swiper -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
     <!-- css -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -121,10 +134,35 @@
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
+    <!-- 레이아웃 -->
     <div class="wrap">
       <!-- 헤더 -->
       <header class="header">
-        <div class="inner"></div>
+        <div class="inner">
+          <div class="header-top">
+            <div class="logo"></div>
+            <div class="sign-menu">
+              <i
+                class="fa-solid fa-magnifying-glass"
+                style="color: #ffffff"
+              ></i>
+              <span>SIGN IN</span>
+              <span>SIGN UP</span>
+            </div>
+          </div>
+          <div class="header-bottom">
+            <ul>
+              <li>카테고리</li>
+              <li>공동구매</li>
+              <li>샵</li>
+              <li>이벤트</li>
+              <li>개설하기</li>
+              <li>고객센터</li>
+            </ul>
+            <i class="fa-solid fa-circle-user" style="color: #ffffff"></i>
+          </div>
+        </div>
       </header>
       <!-- 비주얼 -->
       <section class="visual">
@@ -134,7 +172,7 @@
       <section class="counting">
         <div class="inner"></div>
       </section>
-      <!-- info -->
+      <!-- 정보 -->
       <section class="info">
         <div class="inner"></div>
       </section>
