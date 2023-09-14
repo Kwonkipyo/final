@@ -6,7 +6,7 @@
 }
 a{
     text-decoration: none;
-    color: #333;
+    color: inherit;
 }
 ul,
 li{
@@ -23,7 +23,6 @@ html{
 body{
     height: 200vh;
     font-family: 'Noto Sans KR' , "TTWanjudaedunsancheB", sans-serif;
-    /* font-size: 12px; */
     line-height: 1.4;
     /* overflow-x: hidden; */
     min-width: 360px !important;

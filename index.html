@@ -78,6 +78,7 @@
     <!-- jqeury 적용 -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 
+
     <!-- CSS3 적용 -->
     <script src="js/prefixfree.min.js"></script>
 
@@ -91,8 +92,7 @@
     <script src="js/visual.js"></script>
     <script src="js/counting.js"></script>
     <script src="js/info.js"></script>
-    <script src="js/dlclass.js"></script>
-    <script src="js/newclass.js"></script>
+    <script src="js/slideclass.js"></script>
     <script src="js/specialclass.js"></script>
     <script src="js/teacher.js"></script>
     <script src="js/banner.js"></script>
@@ -177,12 +177,28 @@
         <div class="inner"></div>
       </section>
       <!-- 마감클래스 -->
-      <section class="dlclass">
-        <div class="inner"></div>
+      <section class="dlclass" dir="ltr">
+        <div class="inner">
+          <div class="dlclass-title">
+            <span>서두르세요!</span>
+            <p>마감 임박 원데이 클래스</p>
+          </div>
+          <div class="dlclass-slide" id="data-dlclass">
+            <!----- 데이터 연동 ----->
+          </div>
+        </div>
       </section>
       <!-- 신규클래스 -->
-      <section class="newclass">
-        <div class="inner"></div>
+      <section class="newclass" dir="rtl">
+        <div class="inner">
+          <div class="newclass-title">
+            <span>다양함을 만나보세요</span>
+            <p>새로 오픈 신규 클래스</p>
+          </div>
+          <div class="newclass-slide" id="data-newclass">
+            <!----- 데이터 연동 ----->
+          </div>
+        </div>
       </section>
       <!-- 기획전 -->
       <section class="specialclass">
