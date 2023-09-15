@@ -89,7 +89,6 @@
     <!-- js -->
     <script src="js/header.js"></script>
     <script src="js/footer.js"></script>
-    
     <!-- script 불러오기 -->
     <script src="js/sub-script.js"></script>
 
@@ -137,8 +136,17 @@
             <div class="sign-menu">
               <i
                 class="fa-solid fa-magnifying-glass"
-                style="color: #e8eddf"
+                id="search-icon"
+                style="color: #ffffff"
               ></i>
+              <div id="search-container">
+                <input type="text" id="search-input" placeholder="" />
+                <i
+                  class="fa-solid fa-xmark"
+                  id="close-search"
+                  style="color: #ffffff"
+                ></i>
+              </div>
               <span><a href="#">SIGN IN</a></span>
               <span><a href="#">SIGN UP</a></span>
             </div>
@@ -147,55 +155,66 @@
             <ul class="gnb">
               <li>
                 <a href="#" class="gnb-cate"
-                  ><i class="fa-solid fa-bars" style="color: #e8eddf"> </i>
-                  카테고리
+                  >카테고리
+                  <i
+                    class="fa-solid fa-chevron-down"
+                    style="color: #ffffff"
+                  ></i>
+                  <i class="fa-solid fa-chevron-up" style="color: #ffffff"></i>
                 </a>
-                <div class="header-catemenu">
-                  <ul class="depth2">
-                    <li><a href="#">디지털 드로잉</a></li>
-                    <li><a href="#">드로잉</a></li>
-                    <li><a href="#">공예</a></li>
-                    <li><a href="#">요리·음료</a></li>
-                    <li><a href="#">베이킹·디저트</a></li>
-                    <li><a href="#">음악</a></li>
-                    <li><a href="#">운동</a></li>
-                    <li><a href="#">라이프스타일</a></li>
-                    <li><a href="#">사진·영상</a></li>
-                  </ul>
-                  <ul class="depth2">
-                    <li><a href="#">금융·제테크</a></li>
-                    <li><a href="#">창업·부업</a></li>
-                    <li><a href="#">성공 마인드</a></li>
-                  </ul>
-                  <ul class="depth2">
-                    <li><a href="#">프로그래밍</a></li>
-                    <li><a href="#">데이터사이언스</a></li>
-                    <li><a href="#">제품 기획</a></li>
-                    <li><a href="#">비즈니스</a></li>
-                    <li><a href="#">생산성</a></li>
-                    <li><a href="#">마케팅</a></li>
-                    <li><a href="#">디자인</a></li>
-                    <li><a href="#">영상/3D</a></li>
-                    <li><a href="#">어도비 캠퍼스</a></li>
-                  </ul>
-                  <ul class="depth2">
-                    <li><a href="#">영어</a></li>
-                    <li><a href="#">외국어 시험</a></li>
-                    <li><a href="#">제2 외국어</a></li>
-                  </ul>
-                  <ul class="depth2">
-                    <li><a href="#">아이 교육</a></li>
-                    <li><a href="#">부모 교육</a></li>
-                  </ul>
-                </div>
               </li>
+              <div class="header-catemenu">
+                <ul class="depth2">
+                  <li><a href="#">디지털 드로잉</a></li>
+                  <li><a href="#">드로잉</a></li>
+                  <li><a href="#">공예</a></li>
+                  <li><a href="#">요리·음료</a></li>
+                  <li><a href="#">베이킹·디저트</a></li>
+                  <li><a href="#">음악</a></li>
+                  <li><a href="#">운동</a></li>
+                  <li><a href="#">라이프스타일</a></li>
+                  <li><a href="#">사진·영상</a></li>
+                </ul>
+                <ul class="depth2">
+                  <li><a href="#">금융·제테크</a></li>
+                  <li><a href="#">창업·부업</a></li>
+                  <li><a href="#">성공 마인드</a></li>
+                </ul>
+                <ul class="depth2">
+                  <li><a href="#">프로그래밍</a></li>
+                  <li><a href="#">데이터사이언스</a></li>
+                  <li><a href="#">제품 기획</a></li>
+                  <li><a href="#">비즈니스</a></li>
+                  <li><a href="#">생산성</a></li>
+                  <li><a href="#">마케팅</a></li>
+                  <li><a href="#">디자인</a></li>
+                  <li><a href="#">영상/3D</a></li>
+                  <li><a href="#">어도비 캠퍼스</a></li>
+                </ul>
+                <ul class="depth2">
+                  <li><a href="#">영어</a></li>
+                  <li><a href="#">외국어 시험</a></li>
+                  <li><a href="#">제2 외국어</a></li>
+                </ul>
+                <ul class="depth2">
+                  <li><a href="#">아이 교육</a></li>
+                  <li><a href="#">부모 교육</a></li>
+                </ul>
+                <div class="catemenu-close">
+                  <a href="#">
+                    <i class="fa-solid fa-xmark" style="color: #ffffff"></i>
+
+                    <span>닫기</span></a
+                  >
+                </div>
+              </div>
               <li><a href="#">공동구매</a></li>
               <li><a href="#">샵</a></li>
               <li><a href="#">이벤트</a></li>
               <li><a href="#">개설하기</a></li>
               <li><a href="#">고객센터</a></li>
             </ul>
-            <i class="fa-solid fa-circle-user" style="color: #e8eddf"></i>
+            <i class="fa-solid fa-circle-user" style="color: #ffffff"></i>
           </div>
         </div>
       </header>
@@ -342,7 +361,7 @@
                   <span>📍 발목 양말 만들기 📍</span> <br />
                   앞서 배운 모든 기법에 경사뜨기까지 더해진 양말은, 어쩌면 조금
                   어렵게 느껴질 수도 있지만 자신만의 속도로 차분하게
-                  따라오신다면 충분히 만드실 수 있어요🙌<br />
+                  따라오시면 충분히 만드실 수 있어요🙌<br />
                   내가 뜬 양말을 선물하거나 직접 신게 되는 일은 뜨개를 하지
                   않고서는 경험할 수 없는 특별한 일이잖아요. 볼록한 뒤꿈치가
                   포인트인 발목 양말을 만들며, 여러분도 그 특별한 순간을
