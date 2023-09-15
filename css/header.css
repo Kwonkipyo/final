@@ -3,7 +3,7 @@
   display: block;
   width: 100%;
   height: 110px;
-  color: #fff;
+  color: #e8eddf;
 }
 .header-top {
   height: 60px;
@@ -22,7 +22,6 @@
   font-size: 15px;
   flex-wrap: wrap;
   gap: 0 20px;
-  color: #E9EDDF;
 }
 .header-bottom {
   height: 50px;
