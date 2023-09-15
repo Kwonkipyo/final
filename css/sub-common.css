@@ -1,0 +1,21 @@
+/* 공통요소 */
+.clearfix::after {
+  position: relative;
+  display: block;
+  width: 100%;
+  clear: both;
+}
+.inner {
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  padding: 0 20px; 
+  margin: 0 auto;
+}
+.header .inner{
+  position: relative;
+  width: 100%;
+  max-width: 1470px;
+  padding: 0 20px; 
+  margin: 0 auto;
+}
