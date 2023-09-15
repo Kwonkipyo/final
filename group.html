@@ -89,6 +89,7 @@
     <!-- js -->
     <script src="js/header.js"></script>
     <script src="js/footer.js"></script>
+    <script src="js/group.js"></script>
 
     <!-- script 불러오기 -->
     <script src="js/script.js"></script>
@@ -139,18 +140,61 @@
                 class="fa-solid fa-magnifying-glass"
                 style="color: #ffffff"
               ></i>
-              <span>SIGN IN</span>
-              <span>SIGN UP</span>
+              <span><a href="#">SIGN IN</a></span>
+              <span><a href="#">SIGN UP</a></span>
             </div>
           </div>
           <div class="header-bottom">
-            <ul>
-              <li>카테고리</li>
-              <li>공동구매</li>
-              <li>샵</li>
-              <li>이벤트</li>
-              <li>개설하기</li>
-              <li>고객센터</li>
+            <ul class="gnb">
+              <li>
+                <a href="#" class="gnb-cate"
+                  ><i class="fa-solid fa-bars" style="color: #ffffff"> </i>
+                  카테고리
+                </a>
+                <div class="header-catemenu">
+                  <ul class="depth2">
+                    <li><a href="#">디지털 드로잉</a></li>
+                    <li><a href="#">드로잉</a></li>
+                    <li><a href="#">공예</a></li>
+                    <li><a href="#">요리·음료</a></li>
+                    <li><a href="#">베이킹·디저트</a></li>
+                    <li><a href="#">음악</a></li>
+                    <li><a href="#">운동</a></li>
+                    <li><a href="#">라이프스타일</a></li>
+                    <li><a href="#">사진·영상</a></li>
+                  </ul>
+                  <ul class="depth2">
+                    <li><a href="#">금융·제테크</a></li>
+                    <li><a href="#">창업·부업</a></li>
+                    <li><a href="#">성공 마인드</a></li>
+                  </ul>
+                  <ul class="depth2">
+                    <li><a href="#">프로그래밍</a></li>
+                    <li><a href="#">데이터사이언스</a></li>
+                    <li><a href="#">제품 기획</a></li>
+                    <li><a href="#">비즈니스</a></li>
+                    <li><a href="#">생산성</a></li>
+                    <li><a href="#">마케팅</a></li>
+                    <li><a href="#">디자인</a></li>
+                    <li><a href="#">영상/3D</a></li>
+                    <li><a href="#">어도비 캠퍼스</a></li>
+                  </ul>
+                  <ul class="depth2">
+                    <li><a href="#">영어</a></li>
+                    <li><a href="#">외국어 시험</a></li>
+                    <li><a href="#">제2 외국어</a></li>
+                  </ul>
+                  <ul class="depth2">
+                    <li><a href="#">아이 교육</a></li>
+                    <li><a href="#">부모 교육</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="#">공동구매</a></li>
+              <li><a href="#">샵</a></li>
+              <li><a href="#">이벤트</a></li>
+              <li><a href="#">개설하기</a></li>
+              <li><a href="#">고객센터</a></li>
             </ul>
             <i class="fa-solid fa-circle-user" style="color: #ffffff"></i>
           </div>
@@ -173,8 +217,8 @@
           </div>
         </div>
       </section>
-      <!-- 게시판 -->
-      <section class="board">
+      <!-- 게시판 탭 -->
+      <section class="board-tap">
         <div class="inner">
           <div class="taps">
             <ul>
@@ -195,9 +239,130 @@
               </li>
             </ul>
           </div>
-          <div class="board-list"></div>
-          <div class="paging"></div>
-          <div class="board-btn"></div>
+        </div>
+      </section>
+      <!-- 게시판 -->
+      <section class="board">
+        <div class="inner">
+          <div class="board-list">
+            <table class="board-list-title">
+              <colgroup>
+                <col width="10%" />
+                <col width="40%" />
+                <col width="10%" />
+                <col width="10%" />
+                <col width="10%" />
+                <col width="10%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>번호</th>
+                  <th>제목</th>
+                  <th>작성자</th>
+                  <th>작성일</th>
+                  <th>신청자수</th>
+                  <th>진행상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="paging">
+            <span><i class="fa-solid fa-angles-left"></i></span>
+            <span><i class="fa-solid fa-angle-left"></i></span>
+            <span class="paging-num">1</span>
+            <span><i class="fa-solid fa-angle-right"></i></span>
+            <span><i class="fa-solid fa-angles-right"></i></span>
+          </div>
+        </div>
+      </section>
+      <!-- 클래스 신청 버튼 -->
+      <section class="class-btn">
+        <div class="inner">
+          <div class="board-btn">
+            <a href="#">모집하기</a>
+          </div>
         </div>
       </section>
       <!-- 푸터 -->
