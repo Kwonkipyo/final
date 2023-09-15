@@ -22,13 +22,13 @@ html{
 }
 body{
     height: 200vh;
-    font-family: 'Noto Sans KR' , "TTWanjudaedunsancheB", sans-serif;
+    font-family: 'NanumSquare';
     line-height: 1.4;
     /* overflow-x: hidden; */
     min-width: 360px !important;
     letter-spacing: -0.68px;
     word-break: keep-all;
-    color: #000;
+    color: #E8EDDF;
     font-weight: 400;
     background-color: #252422;
 }

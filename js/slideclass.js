@@ -40,7 +40,7 @@ function showDlClass(){
     
     DL_CLASS.forEach(function(item){
         let tag = `
-        <div class="swiper-slide class-slide" style="background-image: url('image/${item.pic}')">
+        <div class="swiper-slide class-slide" style="background-image: url('images/${item.pic}')">
             <a href="${item.link}" class="class-box">
                 <span class="class-type">${item.tag}</span>
                 <div class="class-txt">
@@ -98,7 +98,7 @@ function showNewClass(){
     
     NEW_CLASS.forEach(function(item){
         let tag = `
-        <div class="swiper-slide class-slide" style="background-image: url('image/${item.pic}')">
+        <div class="swiper-slide class-slide" style="background-image: url('images/${item.pic}')">
             <a href="${item.link}" class="class-box">
                 <span class="class-type">${item.tag}</span>
                 <div class="class-txt">
