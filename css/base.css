@@ -22,7 +22,7 @@ html{
 }
 body{
     height: 2000vh;
-    font-family: 'Noto Sans KR' , "TTWanjudaedunsancheB", sans-serif;
+    font-family: 'NanumSquare';
     line-height: 1.4;
     /* overflow-x: hidden; */
     min-width: 360px !important;
