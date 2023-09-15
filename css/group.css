@@ -1,7 +1,8 @@
 /* 클래스 배너 */
 .group-header {
   width: 100%;
-  margin-top: 90px;
+  /* margin-top: 90px; */
+  padding-top: 140px;
 }
 .group-header h1 {
   font-size: 30px;
