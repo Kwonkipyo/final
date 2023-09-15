@@ -1,13 +1,7 @@
 .sub-visual{
-    color: #fff;
-}
-.sub-visual .inner {
     position: relative;
-    max-width: 1470px;
-    padding: 0 20px;
-    margin: 0 auto;
-    }
-
+    display: block;
+}
 .sub-visual-content{
     margin-top: 45px;
     position: relative;
@@ -64,6 +58,7 @@
 .icon-text-type1 i{
     font-size: 35px;
     padding-bottom: 20px;
+    cursor: pointer;
 }
 .icon-text-type2{
     display: flex;
@@ -76,6 +71,7 @@
 .icon-text-type2 i{
     font-size: 35px;
     padding-bottom: 20px;
+    cursor: pointer;
 }
 .icon-text-type3{
     display: flex;
@@ -88,4 +84,5 @@
 .icon-text-type3 i{
     font-size: 35px;
     padding-bottom: 20px;
+    cursor: pointer;
 }
