@@ -143,80 +143,153 @@
           <div class="header-top">
             <div class="logo"></div>
             <div class="sign-menu">
-              <i
-                class="fa-solid fa-magnifying-glass"
-                style="color: #ffffff"
-              ></i>
+              <i class="fa-solid fa-magnifying-glass" id="search-icon" style="color: #ffffff;"></i>
+<div id="search-container">
+    <input type="text" id="search-input" placeholder="">
+    <i class="fa-solid fa-xmark" id="close-search" style="color: #ffffff;"></i>
+</div>
               <span><a href="#">SIGN IN</a></span>
               <span><a href="#">SIGN UP</a></span>
             </div>
           </div>
           <div class="header-bottom">
-            <ul class="gnb">
-              <li>
-                  <a href="#" class="gnb-cate"><i class="fa-solid fa-bars" style="color: #ffffff;">
-                  </i>
-                  카테고리
-                </a>
+              <ul class="gnb">
+                <li>
+                    <a href="#" class="gnb-cate">카테고리
+                      <i class="fa-solid fa-chevron-down" style="color: #ffffff;"></i>  
+                      <i class="fa-solid fa-chevron-up" style="color: #ffffff;"></i>
+                    </a>
+                </li>     
                 <div class="header-catemenu">
-                <ul class="depth2">
-                  <li><a href="#">디지털 드로잉</a></li>
-                  <li><a href="#">드로잉</a></li>
-                  <li><a href="#">공예</a></li>
-                  <li><a href="#">요리·음료</a></li>
-                  <li><a href="#">베이킹·디저트</a></li>
-                  <li><a href="#">음악</a></li>
-                  <li><a href="#">운동</a></li>
-                  <li><a href="#">라이프스타일</a></li>
-                  <li><a href="#">사진·영상</a></li>
-                </ul>
-                <ul class="depth2">
-                      <li><a href="#">금융·제테크</a></li>
-                      <li><a href="#">창업·부업</a></li>
-                      <li><a href="#">성공 마인드</a></li>
-                </ul>
-                <ul class="depth2"> 
-                  <li><a href="#">프로그래밍</a></li>
-                  <li><a href="#">데이터사이언스</a></li>
-                  <li><a href="#">제품 기획</a></li>
-                  <li><a href="#">비즈니스</a></li>
-                  <li><a href="#">생산성</a></li>
-                  <li><a href="#">마케팅</a></li>
-                  <li><a href="#">디자인</a></li>
-                  <li><a href="#">영상/3D</a></li>
-                  <li><a href="#">어도비 캠퍼스</a></li>
-                </ul>
-                <ul class="depth2">
-                  <li><a href="#">영어</a></li>
-                  <li><a href="#">외국어 시험</a></li>
-                  <li><a href="#">제2 외국어</a></li>
-                </ul>
-                <ul class="depth2">
-                  <li><a href="#">아이 교육</a></li>
-                  <li><a href="#">부모 교육</a></li>
-                </ul>
-              </div>
-              </li>
-                <li><a href="#">공동구매</a></li>
-                <li><a href="#">샵</a></li>
-                <li><a href="#">이벤트</a></li>
-                <li><a href="#">개설하기</a></li>
-                <li><a href="#">고객센터</a></li>
-            </ul>
+                  <ul class="depth2">
+                    <li><a href="#">디지털 드로잉</a></li>
+                    <li><a href="#">드로잉</a></li>
+                    <li><a href="#">공예</a></li>
+                    <li><a href="#">요리·음료</a></li>
+                    <li><a href="#">베이킹·디저트</a></li>
+                    <li><a href="#">음악</a></li>
+                    <li><a href="#">운동</a></li>
+                    <li><a href="#">라이프스타일</a></li>
+                    <li><a href="#">사진·영상</a></li>
+                  </ul>
+                  <ul class="depth2">
+                        <li><a href="#">금융·제테크</a></li>
+                        <li><a href="#">창업·부업</a></li>
+                        <li><a href="#">성공 마인드</a></li>
+                  </ul>
+                  <ul class="depth2"> 
+                    <li><a href="#">프로그래밍</a></li>
+                    <li><a href="#">데이터사이언스</a></li>
+                    <li><a href="#">제품 기획</a></li>
+                    <li><a href="#">비즈니스</a></li>
+                    <li><a href="#">생산성</a></li>
+                    <li><a href="#">마케팅</a></li>
+                    <li><a href="#">디자인</a></li>
+                    <li><a href="#">영상/3D</a></li>
+                    <li><a href="#">어도비 캠퍼스</a></li>
+                  </ul>
+                  <ul class="depth2">
+                    <li><a href="#">영어</a></li>
+                    <li><a href="#">외국어 시험</a></li>
+                    <li><a href="#">제2 외국어</a></li>
+                  </ul>
+                  <ul class="depth2">
+                    <li><a href="#">아이 교육</a></li>
+                    <li><a href="#">부모 교육</a></li>
+                  </ul>
+                  <div class="catemenu-close">
+                    <a href="#">
+                    <i class="fa-solid fa-xmark" style="color: #ffffff;"></i>
+                    
+                  <span>닫기</span></a>
+                </div>
+                </div>
+                  <li><a href="#">공동구매</a></li>
+                  <li><a href="#">샵</a></li>
+                  <li><a href="#">이벤트</a></li>
+                  <li><a href="#">개설하기</a></li>
+                  <li><a href="#">고객센터</a></li>
+              </ul>
             <i class="fa-solid fa-circle-user" style="color: #ffffff;"></i>
         </div>
         </div>
       </header>
       <!-- 비주얼 -->
       <section class="visual">
-        <div class="inner"></div>
+        <div class="container">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <!-- 비디오 요소 추가 -->
+              <video id="myVideo" width="1920" height="" autoplay loop muted>
+                <source src="video/AdobeStock_476772772.mov" type="video/mp4">
+              </video>
+            </div>
+            <div class="swiper-slide">
+              <video width="1920" height="auto" autoplay loop muted>
+                <source src="" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="inner">
+        <div class="visual-menu">
+          <div class="visual-button">
+            <a href="#">
+            <span>클래스</span>
+            <br>
+            <span>온라인으로 배워보는 취미</span>
+          </a>
+          <i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i>
+          </div>
+          <div class="visual-button">
+            <a href="#">
+            <span>중고거래</span>
+            <br>
+            <span>취미 용품을 더싸게</span>
+          </a>
+          <i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i>
+          </div>
+          <div class="visual-button">
+            <a href="#">
+            <span>모임</span>
+            <br>
+            <span>취미 공유와 소통의 모임</span>
+            </a>
+            <i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i>
+          </div>
+          <div class="visual-button">
+            <a href="#">
+            <span>오프라인</span>
+            <br>
+            <span>오프라인에서 더 자세하게</span>
+          </a>
+          <i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i>
+          </div>
+        </div>
+      </div>
       </section>
       <!-- 클래스 카운트-->
       <section class="counting">
-        <div class="inner"></div>
+        <div class="inner">
+          <div class="counting-container">
+            <div class="counting-info">
+              <i class="fa-solid fa-users" style="color: #000000;"></i>
+              <span>회원수</span>
+              <br>
+              <span>85413명</span>
+            </div>
+            <div class="counting-info">
+              <i class="fa-solid fa-users" style="color: #000000;"></i>
+              <span></span>
+              <br>
+            </div>
+          </div>
+        </div>
       </section>
-      <!-- 정보 -->
-      <section class="info">
+      <!-- 팁 -->
+      <section class="tip">
         <div class="inner"></div>
       </section>
       <!-- 마감클래스 -->
