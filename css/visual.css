@@ -1,0 +1,44 @@
+.visual{
+    width: 100%;
+}
+.visual video{
+    display: inline;
+    height: 963px;
+    object-fit: fill;
+}
+.visual .visual-menu{
+    display: flex;
+    justify-content: space-evenly;
+}
+.visual-button{
+    position: relative;
+    top: -150px;
+    z-index: 999;
+    width: calc(80% / 4);
+    height: 90px;
+    border-radius: 10px;
+    background-color: #403D38;
+    display: flex;
+    align-items: center;
+}
+.visual-button a{
+    padding-left: 50px;
+    width: 100%;
+}
+.visual-button span:first-child{
+    font-size: 25px;
+    font-weight: bold;
+}
+.visual-button:hover span:first-child{
+    color: #F5CB5B;
+}
+.visual-button i{
+    position: relative;
+    right: 30px;
+    rotate: -45deg;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.visual-button:hover i{
+    opacity: 1;
+}

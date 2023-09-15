@@ -1,1 +1,11 @@
 @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 400;
+    src: url(NanumSquareR.eot);
+    src: local('☺'),
+         url(NanumSquareR.eot?#iefix) format('embedded-opentype'),
+         url(NanumSquareR.woff2) format('woff2'),
+         url(NanumSquareR.woff) format('woff'),
+         url(NanumSquareR.ttf) format('truetype');
+   }
