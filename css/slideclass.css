@@ -3,13 +3,13 @@
     margin-top: 100px;
 }
 
-.sw-dlclass,
+.sw-aiclass,
 .sw-newclass{
     width: 100%;
     overflow: visible;
 }
 
-.dlclass .swiper-wrapper,
+.aiclass .swiper-wrapper,
 .newclass .swiper-wrapper{
     width: 100%;
     transition-timing-function: linear;
@@ -47,13 +47,13 @@
     text-align: right;
 }
 
-.dlclass-title,
+.aiclass-title,
 .newclass-title{
     font-weight: 700;
     margin-bottom: 15px;
 }
 
-.dlclass-title span,
+.aiclass-title span,
 .newclass-title span{
     font-size: 20px;
     display: inline;
@@ -61,11 +61,11 @@
     color: #aeb3a6;
 }
 
-.dlclass-title p,
+.aiclass-title p,
 .newclass-title p{
     font-size: 35px;
     display: inline;
 }
 
-/* dlclass */
+/* aiclass */
 /* newclass */

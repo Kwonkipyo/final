@@ -1,5 +1,6 @@
 .specialclass{
     background-image: url("../images/specialclass-bg.jpg");
+    background-size: 100%;
     background-attachment: fixed;
     width: 100%;
     height: 500px;
@@ -18,7 +19,7 @@
     content: "";
     display: inline-block;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     width: 100%;
     height: 100%;
 }

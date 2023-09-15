@@ -1,4 +1,4 @@
-window.onload = function(){
+window.addEventListener("load", function(){
 // 콤마 기능
 function priceToString(price) {
     return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -14,9 +14,9 @@ xhttp.onreadystatechange = function(event){
         // 그러므로 json 글자를 객체로 변환해서 활용한다.
         let obj = JSON.parse(str);
 
-        DL_CLASS = obj.dlclass;
+        AI_CLASS = obj.aiclass;
         NEW_CLASS = obj.newclass;
-        showDlClass(); // 마감임박 클래스 화면에 배치
+        showAiClass(); // 마감임박 클래스 화면에 배치
         showNewClass(); // 신규 클래스 화면에 배치
     }
 }
@@ -25,20 +25,20 @@ xhttp.open("GET", "data.json")
 // 웹브라우저 기능 실행 할 수 있도록 요청.
 xhttp.send();
 // 할인 물품
-let DL_CLASS;
+let AI_CLASS;
 let NEW_CLASS;
-let dlClassTag = document.getElementById("data-dlclass");
+let aiClassTag = document.getElementById("data-aiclass");
 let newClassTag = document.getElementById("data-newclass");
 
 
 // 마감임박 클래스 화면 출력 기능
-function showDlClass(){
+function showAiClass(){
     let html = `
-    <div class="swiper sw-dlclass">
+    <div class="swiper sw-aiclass">
     <div class="swiper-wrapper">
     `;
     
-    DL_CLASS.forEach(function(item){
+    AI_CLASS.forEach(function(item){
         let tag = `
         <div class="swiper-slide class-slide" style="background-image: url('images/${item.pic}')">
             <a href="${item.link}" class="class-box">
@@ -59,10 +59,10 @@ function showDlClass(){
     </div>
     `;
     // 마감임박 클래스 Swiper
-    dlClassTag.innerHTML = html;
-    var swiper = new Swiper(".sw-dlclass", {
+    aiClassTag.innerHTML = html;
+    var swiper = new Swiper(".sw-aiclass", {
         slidesPerView: 'auto',
-        speed: 3000,
+        speed: 5000,
         spaceBetween: 30,
         freeMode: true,
         pagination: {
@@ -78,7 +78,7 @@ function showDlClass(){
         centeredSlides: true
     });
     // 슬라이드 호버시 일시정지
-    let $slides = document.querySelectorAll('.dlclass .class-slide');
+    let $slides = document.querySelectorAll('.aiclass .class-slide');
         for (let i of $slides) {
         i.addEventListener('mouseover', function(){
             swiper.autoplay.stop();
@@ -120,7 +120,7 @@ function showNewClass(){
     newClassTag.innerHTML = html;
     var swiper = new Swiper(".sw-newclass", {
         slidesPerView: 'auto',
-        speed: 3000,
+        speed: 5000,
         spaceBetween: 30,
         freeMode: true,
         pagination: {
@@ -146,4 +146,4 @@ function showNewClass(){
     });
     }
 }
-}
+});
