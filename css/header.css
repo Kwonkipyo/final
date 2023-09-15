@@ -7,6 +7,7 @@
   position: fixed;
   z-index:9999;
   background-color: #000;
+  color: #e8eddf;
 }
 .header-top {
   height: 60px;
