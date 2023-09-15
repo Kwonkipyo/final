@@ -13,3 +13,11 @@
   padding: 0 20px; 
   margin: 0 auto;
 }
+
+.sub-inner {
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  padding: 0 20px; 
+  margin: 0 auto;
+}

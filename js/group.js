@@ -31,46 +31,4 @@ window.addEventListener("load", function () {
   }
 
   // 글 목록 추가
-  const makeContent = function (id) {
-    const contentElement = document.createElement("tr");
-    contentElement.classList.add("content");
-    contentElement.innerHTML = `
-      <span class="content__id">${id}</span>
-      <span class="content__title">게시물 제목</span>
-      <span class="content__author">작성자</span>
-      <span class="content__date">2022.01.01</span>
-    `;
-    return contentElement;
-  };
-
-  const makeButton = function (id) {
-    const button = document.createElement("button");
-    button.classList.add("button");
-    button.dataset.num = id;
-    button.innerText = id;
-    button.addEventListener("click", (e) => {
-      Array.prototype.forEach.call(buttons.children, (button) => {
-        if (button.dataset.num) button.classList.remove("active");
-      });
-      e.target.classList.add("active");
-      renderContent(parseInt(e.target.dataset.num));
-    });
-    return button;
-  };
-
-  function addContent(post) {
-    const postElement = document.createElement("tr");
-    postElement.classList.add("post");
-    postElement.innerHTML = `
-        <th>1</th>
-        <th>2</th>
-        <th>3</th>
-        <th>4</th>
-        <th>5</th>
-        <th>6</th>
-    `;
-
-    // 새 게시글을 화면에 추가하는 역할
-    contents.prepend(postElement);
-  }
 });
