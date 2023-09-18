@@ -31,6 +31,10 @@ body{
     color: #e8eddf;
     font-weight: 400;
     background-color: #242423;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
 }
 section{
     width: 100%;

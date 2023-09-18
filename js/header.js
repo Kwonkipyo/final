@@ -74,4 +74,11 @@ $(document).ready(function () {
   // 페이지 로드 시 검색창과 close-search 아이콘 숨기기
   searchContainer.hide();
   closeSearchIcon.hide();
+  // 페이지 새로고침할때마다 스크롤 제일 위로 이동하는 코드
+  $(document).keydown(function(event) {
+    if (event.which == 116) { // F5 키의 keyCode는 116입니다
+        event.preventDefault(); // 기본 동작을 중지합니다 (페이지 새로 고침을 막음)
+        $(window).scrollTop(0); // 스크롤을 페이지의 맨 위로 이동
+    }
+});
 });
