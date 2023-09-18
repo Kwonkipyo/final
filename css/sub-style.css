@@ -3,7 +3,5 @@
 @import url("base.css");
 @import url("common.css");
 @import url("header.css");
-@import url("sub-visual.css");
-@import url("sub-content.css");
-@import url("sub-menu.css");
+@import url("sub-page.css");
 @import url("footer.css");
