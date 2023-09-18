@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* 클래스 배너 */
+.group-header {
+  width: 100%;
+  padding-top: 150px;
+}
+.group-header h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #e8eddf;
+}
