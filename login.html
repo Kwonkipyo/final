@@ -89,7 +89,7 @@
     <!-- js -->
     <script src="js/header.js"></script>
     <script src="js/footer.js"></script>
-    <script src="js/group.js"></script>
+    <script src="js/login.js"></script>
 
     <!-- script 불러오기 -->
     <script src="js/script.js"></script>
@@ -114,7 +114,7 @@
     <!-- css -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/group.css" />
+    <link rel="stylesheet" href="css/login.css" />
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -200,176 +200,112 @@
           </div>
         </div>
       </header>
-      <!-- 클래스 배너 -->
-      <section class="group-header">
-        <div class="sub-inner">
-          <h2>클래스 공동구매</h2>
-          <div class="group-banner">
-            <div class="group-banner-left">
-              <p>클래스 같이 해요!</p>
-              <p>클래스원이 같이 모여 저렴하게 취미생활을 시작해보세요.</p>
-            </div>
-            <div class="group-banner-right">
-              <button>
-                <a href="#">제안하기</a>
-              </button>
-            </div>
+      <!-- 로그인 -->
+      <section class="login-wrap">
+        <div class="login-bg">
+          <div class="login-line">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="login-line">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="login-line">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="login-line">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="login-line">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
         </div>
-      </section>
-      <!-- 게시판 탭 -->
-      <section class="board-tap">
-        <div class="sub-inner">
-          <div class="taps">
-            <ul>
-              <li>
-                <a href="javascript:void(0);" class="active">최근등록순</a>
-              </li>
-              <li>
-                <a href="javascript:void(0);">마감임박</a>
-              </li>
-              <li>
-                <a href="javascript:void(0);">마감종료</a>
-              </li>
-              <li>
-                <div class="searchbox">
-                  <input type="text" placeholder="검색어를 입력해주세요" />
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <!-- 게시판 -->
-      <section class="board">
-        <div class="sub-inner">
-          <div class="board-wrap">
-            <div class="board-list">
-              <table class="board-list-title">
-                <colgroup>
-                  <col width="10%" />
-                  <col width="40%" />
-                  <col width="10%" />
-                  <col width="10%" />
-                  <col width="10%" />
-                  <col width="10%" />
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th>번호</th>
-                    <th>제목</th>
-                    <th>작성자</th>
-                    <th>작성일</th>
-                    <th>신청자수</th>
-                    <th>진행상태</th>
-                  </tr>
-                </thead>
-                <tbody id="postList">
-                  <!-- js로 출력 -->
-                  <tr>
-                    <td>10</td>
-                    <td>뜨개질 클래스 같이 하실 분~~</td>
-                    <td>타로롱</td>
-                    <td>2023.09.04</td>
-                    <td>2명</td>
-                    <td>진행 중</td>
-                  </tr>
-                  <tr>
-                    <td>9</td>
-                    <td>뜨개질 클래스 같이 하실 분~~</td>
-                    <td>타로롱</td>
-                    <td>2023.09.04</td>
-                    <td>2명</td>
-                    <td>진행 중</td>
-                  </tr>
-                  <tr>
-                    <td>8</td>
-                    <td>뜨개질 클래스 같이 하실 분~~</td>
-                    <td>타로롱</td>
-                    <td>2023.09.04</td>
-                    <td>2명</td>
-                    <td>진행 중</td>
-                  </tr>
-                  <tr>
-                    <td>7</td>
-                    <td>뜨개질 클래스 같이 하실 분~~</td>
-                    <td>타로롱</td>
-                    <td>2023.09.04</td>
-                    <td>2명</td>
-                    <td>진행 중</td>
-                  </tr>
-                  <tr>
-                    <td>6</td>
-                    <td>뜨개질 클래스 같이 하실 분~~</td>
-                    <td>타로롱</td>
-                    <td>2023.09.04</td>
-                    <td>2명</td>
-                    <td>신청 마감</td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td>뜨개질 클래스 같이 하실 분~~</td>
-                    <td>타로롱</td>
-                    <td>2023.09.04</td>
-                    <td>2명</td>
-                    <td>신청 마감</td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>뜨개질 클래스 같이 하실 분~~</td>
-                    <td>타로롱</td>
-                    <td>2023.09.04</td>
-                    <td>2명</td>
-                    <td>진행 중</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>뜨개질 클래스 같이 하실 분~~</td>
-                    <td>타로롱</td>
-                    <td>2023.09.04</td>
-                    <td>2명</td>
-                    <td>신청 마감</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>뜨개질 클래스 같이 하실 분~~</td>
-                    <td>타로롱</td>
-                    <td>2023.09.04</td>
-                    <td>2명</td>
-                    <td>진행 중</td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>뜨개질 클래스 같이 하실 분~~</td>
-                    <td>타로롱</td>
-                    <td>2023.09.04</td>
-                    <td>2명</td>
-                    <td>진행 중</td>
-                  </tr>
-                </tbody>
-              </table>
+        <div class="login-box">
+          <form id="login-form">
+            <h2>로그인</h2>
+            <input
+              type="text"
+              id="login-id"
+              name="login-id"
+              placeholder="ID"
+              required
+            />
+            <br />
+            <input
+              type="password"
+              id="login-password"
+              name="login-password"
+              placeholder="Password"
+              required
+            />
+            <br />
+            <div class="login-text">
+              <p><a href="#">아이디 / 비밀번호 찾기</a></p>
+              <p><span>처음 오셨나요?</span><a href="#"> 회원가입</a></p>
             </div>
-          </div>
-          <div class="paging">
-            <a href="javascript:void(0);">
-              <i class="fa-solid fa-angles-left"></i>
-            </a>
-            <a href="javascript:void(0);" onclick="before()">
-              <i class="fa-solid fa-angle-left"></i>
-            </a>
-            <a href="javascript:void(0);" class="paging-num active">1</a>
-            <!-- <div class="paging-num"></div> -->
-            <a href="javascript:void(0);" onclick="next()">
-              <i class="fa-solid fa-angle-right"></i>
-            </a>
-            <a href="javascript:void(0);">
-              <i class="fa-solid fa-angles-right"></i>
-            </a>
-          </div>
-          <div class="board-btn">
-            <a href="#">모집하기</a>
-          </div>
+            <button type="submit">로그인</button>
+            <fieldset>
+              <legend>간편 로그인</legend>
+              <div class="logos">
+                <a href="#" style="background-color: #f9e000">
+                  <img src="images/kakao_logo.png" alt="카카오 로고" />
+                </a>
+                <a href="#" style="background-color: #2db400">
+                  <img src="images/naver_logo.png" alt="네이버 로고" />
+                </a>
+                <a href="#" style="background-color: #ffffff">
+                  <img src="images/google_logo.png" alt="구글 로고" />
+                </a>
+                <a href="#" style="background-color: #3b5998">
+                  <img src="images/facebook_logo.png" alt="페이스북 로고" />
+                </a>
+              </div>
+            </fieldset>
+          </form>
         </div>
       </section>
       <!-- 푸터 -->

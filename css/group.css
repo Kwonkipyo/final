@@ -1,10 +1,10 @@
+@charset "utf-8";
 /* 클래스 배너 */
 .group-header {
   width: 100%;
-  /* margin-top: 90px; */
-  padding-top: 140px;
+  padding-top: 150px;
 }
-.group-header h1 {
+.group-header h2 {
   font-size: 30px;
   font-weight: bold;
   color: #e8eddf;
@@ -13,7 +13,7 @@
   width: 100%;
   margin-top: 33px;
   padding: 30px 35px;
-  border-radius: 30px;
+  border-radius: 25px;
   background-color: #fff;
   display: flex;
 }
@@ -35,13 +35,13 @@
 }
 .group-banner-right button a {
   display: block;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
   text-align: center;
-  padding: 10px 20px;
+  padding: 10px 25px;
   border-radius: 30px;
-  background-color: #000;
-  color: #e8eddf;
+  background-color: #f5cb5c;
+  color: #000;
   border: none;
 }
 /* 게시판 탭 */
@@ -55,14 +55,18 @@
   justify-content: flex-end;
 }
 .board-tap .taps ul li {
-  font-size: 18px;
+  font-size: 16px;
   padding: 10px 15px;
 }
-.board-tap .taps ul li:first-child {
-  font-weight: bold;
+.board-tap .taps ul li:nth-child(3) {
+  padding-right: 30px;
 }
 .board-tap .taps ul li:last-child {
   padding: 0;
+}
+.board-tap .taps a.active {
+  font-weight: bold;
+  color: #f5cb5c;
 }
 .searchbox {
   width: 100%;
@@ -72,7 +76,7 @@
   background-color: #fff;
 }
 .searchbox input {
-  font-size: 16px;
+  font-size: 15px;
   border: none;
 }
 .searchbox i {
@@ -81,11 +85,12 @@
 /* 게시판 */
 .board {
   background-color: #fff;
+  padding-bottom: 100px;
 }
 .board-list {
-  min-height: 810px;
+  min-height: 720px;
   padding-top: 34px;
-  font-size: 16px;
+  font-size: 15px;
   color: #000;
   text-align: center;
 }
@@ -93,14 +98,15 @@
   width: 100%;
 }
 .board-list-title th {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: bold;
 }
 .board-list-title thead {
   border-bottom: 3px solid #616161;
 }
 .board-list-title tr * {
-  padding: 25px;
+  padding: 20px 10px;
+  cursor: pointer;
 }
 .board-list-title tbody tr {
   border-bottom: 1px solid #000;
@@ -110,30 +116,32 @@
   justify-content: center;
   padding: 20px;
   margin-top: 20px;
-  padding-bottom: 70px;
-  font-size: 16px;
+  padding-bottom: 50px;
+  font-size: 14px;
   color: #666;
 }
-.paging span {
+.paging a {
   margin: 0 10px;
   cursor: pointer;
 }
 .paging-num {
   border-bottom: 1px solid #666;
 }
-/* 클래스 신청 버튼 */
-.class-btn {
-  font-size: 30px;
-  color: #000;
-  padding: 60px;
+.paging-num.active {
+  font-weight: bold;
+  color: #f5cb5c;
 }
 .board-btn {
   display: flex;
   justify-content: center;
+  font-size: 17px;
+  color: #000;
 }
-.class-btn a {
+.board-btn a {
   display: inline-block;
-  background-color: #fff;
-  padding: 25px 45px;
-  border-radius: 10px;
+  background-color: #f5cb5c;
+  padding: 15px 50px;
+}
+.board-btn:hover a {
+  background-color: #f8c740;
 }
