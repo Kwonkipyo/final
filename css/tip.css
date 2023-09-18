@@ -1,0 +1,31 @@
+.tip{
+    margin-bottom: 100px;
+}
+.tip-title{
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 70px;
+}
+.tip-inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tip-container{
+    width: calc(90% / 3);
+}
+.tip-container img{
+    border-radius: 40px;
+    margin-bottom: 20px;
+    width: 430px;
+    height: 320px;
+}
+.tip-container span{
+    font-size: 23px;
+    font-weight: 900;
+}
+.tip-container span:last-child{
+    font-size: 16px;
+    font-weight: 500;
+}
