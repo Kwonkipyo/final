@@ -207,7 +207,61 @@
         </div>
       </section>
       <!-- 게시글 작성 -->
-
+      <section class="board_insert">
+        <div class="sub-inner">
+          <form id="board_form">
+            <!-- 제목 -->
+            <fieldset>
+              <label for="boardTitle">제목</label>
+              <input type="text" id="boardTitle" name="boardTitle" required />
+            </fieldset>
+            <!-- 작성자 -->
+            <fieldset>
+              <label for="boardWriter">작성자</label>
+              <p id="boardWriter"></p>
+            </fieldset>
+            <!-- 신청자수 -->
+            <fieldset>
+              <label for="boardNum">신청자수</label>
+              <div class="boardNum-wrap">
+                <button class="down" onclick="">-</button>
+                <input
+                  type="text"
+                  id="boardNum"
+                  name="boardNum"
+                  value="1"
+                  required
+                />
+                <button class="up" onclick="">+</button>
+              </div>
+            </fieldset>
+            <!-- 클래스 -->
+            <fieldset>
+              <label for="boardClass">클래스</label>
+              <select class="boardClass">
+                <option value="a" selected>a 클래스</option>
+                <option value="b">b 클래스</option>
+                <option value="c">c 클래스</option>
+              </select>
+            </fieldset>
+            <!-- 내용 -->
+            <fieldset>
+              <label for="boardContent">내용</label>
+              <textarea
+                name="boardContent"
+                id="boardContent"
+                placeholder="내용을 입력해주세요."
+                required
+              ></textarea>
+            </fieldset>
+            <!-- 이미지 업로드 -->
+            <fieldset>
+              <label for="boardImage">이미지 업로드</label>
+              <input type="file" id="boardImage" accept="image/*" />
+            </fieldset>
+          </form>
+        </div>
+      </section>
       <!-- 푸터 -->
       <footer class="footer">
         <div class="inner"></div>
