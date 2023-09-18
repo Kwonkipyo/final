@@ -62,7 +62,7 @@ function showAiClass(){
     aiClassTag.innerHTML = html;
     var swiper = new Swiper(".sw-aiclass", {
         slidesPerView: 'auto',
-        speed: 5000,
+        speed: 7000,
         spaceBetween: 30,
         freeMode: true,
         pagination: {
@@ -120,7 +120,7 @@ function showNewClass(){
     newClassTag.innerHTML = html;
     var swiper = new Swiper(".sw-newclass", {
         slidesPerView: 'auto',
-        speed: 5000,
+        speed: 7000,
         spaceBetween: 30,
         freeMode: true,
         pagination: {
