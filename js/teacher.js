@@ -1,10 +1,11 @@
 window.addEventListener("load", function(){
-    new Swiper('.sw-teacher', {
+    var swiper = new Swiper('.sw-teacher', {
         // Optional parameters
         loop: true,
         centeredSlides: true,
         slidesPerView: 'auto',
-        initialSlide: 3,
+        // initialSlide: 3,
         slideToClickedSlide: true,
+        spaceBetween : 20,
     });
 })
