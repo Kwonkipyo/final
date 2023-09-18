@@ -1,0 +1,29 @@
+.banner{
+    margin-top: 200px;
+}
+
+.banner .inner{
+    height: 200px;
+}
+
+.banner .sw-banner {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+.banner .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

@@ -1,5 +1,12 @@
+@font-face {
+    font-family: 'HakgyoansimGaeulsopungB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimGaeulsopungB.woff2') format('woff2');
+    font-size: 300;
+    font-style: normal;
+}
+
 .teacher{
-    margin-top: 100px;
+    margin-top: 200px;
 }
 
 .teacher .inner > h1{
@@ -12,13 +19,15 @@
 .teacher .sw-teacher{
     overflow: visible;
 }
-
+.teacher .swiper-wrapper{
+    align-items: center;
+}
 .teacher .teacher-slide {
-    max-width: 250px;
-    margin: 0 auto;
+    /* max-width: 250px; */
+    /* margin: 0 auto; */
     transition-timing-function: ease-in-out;
-    height: 330px;
     width: 250px;
+    height: 320px;
     transform: scale(.8);
     transition: transform .25s;
     position: relative;
@@ -28,6 +37,7 @@
     background-image: url("https://source.unsplash.com/random/960x640");
     width: 250px;
     height: 250px;
+    padding-bottom: 100%;
     border-radius: 300px;
     transition: box-shadow 0.25s;
     position: relative;
@@ -53,6 +63,42 @@
     max-width: none;
 }
 
+.teacher .img-box .img-txt{
+    position: absolute;
+    transform: translateX(-50%);
+    bottom: 20px;
+    left: 50%;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 9;
+    color: #fff;
+    text-align: center;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.teacher .img-box .img-txt p{
+    font-family: 'HakgyoansimGaeulsopungB';
+    font-size: 18px;
+}
+
+.teacher .img-box .img-txt span{
+    font-size: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.teacher .img-box .img-txt button{
+    cursor: pointer;
+    padding: 3px 10px;
+    border: none;
+    border-radius: 30px;
+    background-color: #000;
+    color: #fff;
+}
+
 .teacher-slide .teacher-slide-txt{
     position: absolute;
     /* background-color: aqua; */
@@ -74,12 +120,12 @@
 
 /* active slide */
 .teacher .swiper-slide-active {
+    /* width: 300px; */
     transform: scale(1.15);
-    margin: 0 40px;
 }
 
 .teacher .swiper-slide-active .img-box{
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    box-shadow: 0 19px 38px rgba(0,0,0,0.3), 0 15px 12px rgba(0,0,0,0.22);
 }
 
 .teacher .swiper-slide-active .img-box .teacher-img{
@@ -93,7 +139,21 @@
 }
 
 .teacher .swiper-slide-active .img-box::after{
-    display: none;
+    opacity: 0;
+    background: linear-gradient(
+            to bottom,
+            rgba(20, 20, 20, 0.0) 25%,
+            rgba(20, 20, 20, 0.5) 50%,
+            rgba(20, 20, 20, 0.75) 75%,
+            rgba(20, 20, 20, 1) 100%
+        );
+    bottom: -0.5px;
+    transition: 0.3s;
+}
+
+.teacher .swiper-slide-active .img-box:hover::after,
+.teacher .swiper-slide-active .img-box:hover .img-txt{
+    opacity: 1;
 }
 
 .teacher .swiper-slide-active .teacher-slide {

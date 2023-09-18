@@ -65,10 +65,6 @@ function showAiClass(){
         speed: 7000,
         spaceBetween: 30,
         freeMode: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
         autoplay: {     //자동슬라이드 (false-비활성화)
             delay: 0, // 시간 설정
             disableOnInteraction: false, // false-스와이프 후 자동 재생
@@ -123,10 +119,6 @@ function showNewClass(){
         speed: 7000,
         spaceBetween: 30,
         freeMode: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
         autoplay: {     //자동슬라이드 (false-비활성화)
             delay: 0, // 시간 설정
             disableOnInteraction: false, // false-스와이프 후 자동 재생
