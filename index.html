@@ -279,14 +279,14 @@
               <br>
               <span>회원수</span>
               <br>
-              <span>185413명</span>
+              <span id="userCount">0</span>
             </div>
             <div class="counting-info">
               <i class="fa-solid fa-handshake" style="color: #000000;"></i>
               <br>
               <span>강사</span>
               <br>
-              <span>138명</span>
+              <span id="teacherCount">0</span>
               <br>
             </div>
             <div class="counting-info">
@@ -294,7 +294,7 @@
               <br>
               <span>총클래스수</span>
               <br>
-              <span>26개</span>
+              <span id="classCount">0</span>
               <br>
             </div>
             <div class="counting-info">
@@ -302,7 +302,7 @@
               <br>
               <span>누적강의수</span>
               <br>
-              <span>24831번</span>
+              <span id="lectureCount">0</span>
               <br>
             </div>
           </div>
@@ -609,16 +609,16 @@
               <h1>수강생 인터뷰</h1>
               <span>영상으로 수강생들의 생생한 후기를 확인해보세요!</span>
             </div>
-            <div class="review-video"></div>
+            <div class="review-video">
+              <iframe width="980" height="600" src="https://www.youtube.com/embed/EO5U5waHXqA?si=bopEIF3-q78eqSJV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
           </div>
           <div class="review-right">
             <div class="review-title">
             <h1>수강평</h1>
             <span>후기를 보고 필요한 강의를 찾아보세요!</span>
           </div>
-          <div class="swiper reviewSwiper">
-            <div class="swiper-wrapper">
-          <div class="swiper-slide review-text">
+          <div class="review-text">
             <div>
               <span>권xx(수강생)
                 <br>2023.10.13
@@ -631,9 +631,7 @@
               <span>18명중 12명이 이 리뷰에 만족합니다.</span>
             </div>
           </div>
-        </div>
-        </div>
-          <div class="swiper-slide review-text">
+          <div class="review-text">
             <div>
               <span>박xx(수강생)
                 <br>2023.09.13
@@ -641,6 +639,16 @@
               <h2>사진 촬영 클래스로의 아름다운 여정</h2>
               <p>이번에 참여한 사진 촬영 클래스는 정말로 놀라운 경험이었습니다. 카메라 렌즈를 통해 보여지는 세계의 아름다움을 발견하고, 그 아름다움을 담아내는 방법을 배우며 무엇보다도 창의적인 사고를 기를 수 있었던 시간이었습니다.촬영하는 동안에는 자연스럽게 창의적인 아이디어가 떠오르고, 다양한 각도와 조명을 활용하여 독특한 작품을 만들어낼 수 있었습니다. 또한, 다른 참여자들과의 피드백과 의견 공유를 통해 사진을 향상시키는 데 도움을 받을 수 있었습니다.</p>
               <span>35명중 27명이 이 리뷰에 만족합니다.</span>
+            </div>
+          </div>
+          <div class="review-text">
+            <div>
+              <span>박xx(수강생)
+                <br>2023.09.13
+              </span>
+              <h2>사진 촬영 클래스로의 아름다운 여정</h2>
+              <p class="reviewtxt">이번에 참여한 사진 촬영 클래스는 정말로 놀라운 경험이었습니다. 카메라 렌즈를 통해 보여지는 세계의 아름다움을 발견하고, 그 아름다움을 담아내는 방법을 배우며 무엇보다도 창의적인 사고를 기를 수 있었던 시간이었습니다.촬영하는 동안에는 자연스럽게 창의적인 아이디어가 떠오르고, 다양한 각도와 조명을 활용하여 독특한 작품을 만들어낼 수 있었습니다. 또한, 다른 참여자들과의 피드백과 의견 공유를 통해 사진을 향상시키는 데 도움을 받을 수 있었습니다.</p>
+              <span class="reviewtxt">35명중 27명이 이 리뷰에 만족합니다.</span>
             </div>
           </div>
           </div>
@@ -651,6 +659,9 @@
       <footer class="footer">
         <div class="inner"></div>
       </footer>
-    </div>
+      <script>
+        AOS.init();
+      </script>
+    </div>  
   </body>
 </html>

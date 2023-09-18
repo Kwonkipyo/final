@@ -9,3 +9,73 @@
   font-weight: bold;
   color: #e8eddf;
 }
+/* 게시글 작성 */
+.board_insert {
+  width: 100%;
+  margin-top: 30px;
+  padding: 50px 0;
+  background-color: #cfdbd5;
+}
+#board_form {
+  width: 100%;
+  color: #000;
+  background-color: red;
+}
+#board_form fieldset {
+  margin-bottom: 20px;
+}
+#board_form label {
+  display: inline-block;
+  width: 140px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: aquamarine;
+}
+#board_form input {
+  display: inline-block;
+  width: 50%;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+}
+#board_form .boardNum-wrap {
+  position: relative;
+  display: inline-block;
+  width: 103px !important;
+  padding: 0 30px;
+}
+#board_form .boardNum-wrap button {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  cursor: pointer;
+}
+#board_form .boardNum-wrap button.down {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#board_form .boardNum-wrap button.up {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#board_form .boardNum-wrap input {
+  width: 45px;
+  height: 30px;
+  text-align: center;
+  margin-left: -1px;
+}
+#board_form .boardClass {
+  width: 50%;
+  height: 30px;
+  padding: 0 30px 0 10px;
+}
+#board_form #boardContent {
+  display: inline-block;
+  width: 87%;
+  resize: none;
+}
