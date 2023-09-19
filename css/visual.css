@@ -9,6 +9,23 @@
 .visual .visual-menu{
     display: flex;
     justify-content: space-evenly;
+    height: 0;
+}
+.visual .swiper-wrapper{
+    position: relative;
+}
+.visual .swiper-wrapper p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 9999;
+    font-family: 'SBAggroB';
+    font-size: 90px;
+    text-align: center;
+}
+.visual .swiper-slide{
+    height: 963px;
 }
 .visual-button{
     position: relative;

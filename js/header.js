@@ -13,7 +13,6 @@ $(document).ready(function () {
     // fa-chevron-down 및 fa-chevron-up 아이콘의 표시 여부를 제어
     $(this).find(".fa-chevron-down, .fa-chevron-up").toggle();
   });
-
   // catemenu-close를 클릭했을 때 header-catemenu를 숨김
   $(".catemenu-close a").click(function (e) {
     e.preventDefault();
@@ -32,17 +31,22 @@ $(document).ready(function () {
   // 스크롤 이벤트 리스너 추가
   $(window).scroll(function () {
     if ($(this).scrollTop() > 50) {
-      // 스크롤 위치가 50px 이상인 경우
-      header.css("height", "50px");
+      header.css({
+        "height": "50px",
+        "box-shadow": "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)",
+        "background-color": "#111"
+      });
       headerTop.hide();
       userIcon.show();
     } else {
-      // 스크롤 위치가 50px 미만인 경우
-      header.css("height", "auto");
+      header.css({
+        "height": "auto",
+        "box-shadow": "none",
+        "background-color": "transparent"
+      });
       headerTop.show();
       userIcon.hide();
     }
-
     // header-catemenu 위치 조정
     const headerHeight = header.height();
     if ($(this).scrollTop() > headerHeight) {

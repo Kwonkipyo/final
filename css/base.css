@@ -30,11 +30,12 @@ body{
     word-break: keep-all;
     color: #e8eddf;
     font-weight: 400;
-    background-color: #242423;
+    background-color: #111;
     -webkit-user-select:none;
     -moz-user-select:none;
     -ms-user-select:none;
-    user-select:none
+    user-select:none;
+    overflow-x: hidden;
 }
 section{
     width: 100%;
