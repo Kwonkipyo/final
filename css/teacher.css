@@ -34,7 +34,9 @@
 }
 
 .teacher .img-box{
-    background-image: url("https://source.unsplash.com/random/960x640");
+    /* background-image: url("https://source.unsplash.com/random/960x640"); */
+    /* background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%); */
+    background: linear-gradient(45deg, #795200 0%, #fae29f 100%);
     width: 250px;
     height: 250px;
     padding-bottom: 100%;

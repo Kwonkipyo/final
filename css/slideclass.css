@@ -51,6 +51,7 @@
 .newclass-title{
     font-weight: 700;
     margin-bottom: 15px;
+    position: relative;
 }
 
 .aiclass-title span,
@@ -65,6 +66,24 @@
 .newclass-title p{
     font-size: 35px;
     display: inline;
+}
+
+.aiclass-title a,
+.newclass-title a{
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+.newclass-title a{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+}
+
+.aiclass-title a i,
+.newclass-title a i{
+    margin-left: 5px;
 }
 
 /* aiclass */

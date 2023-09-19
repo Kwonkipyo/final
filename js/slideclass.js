@@ -81,7 +81,10 @@ function showAiClass(){
         });
         i.addEventListener('mouseout', function(){
             swiper.autoplay.start();
-    });
+        });
+        i.addEventListener('click', function(){
+            swiper.autoplay.start();
+        });
     }
 }
 
@@ -135,7 +138,10 @@ function showNewClass(){
         });
         i.addEventListener('mouseout', function(){
             swiper.autoplay.start();
-    });
+        });
+        i.addEventListener('click', function(){
+            swiper.autoplay.start();
+        });
     }
 }
 });

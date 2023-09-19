@@ -3,10 +3,10 @@ window.addEventListener("load", function(){
         spaceBetween: 30,
         centeredSlides: true,
         loop: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: true,
-        },
+        // autoplay: {
+        //     delay: 2500,
+        //     disableOnInteraction: true,
+        // },
         pagination: {
             el: ".banner .swiper-pagination",
             clickable: true,
