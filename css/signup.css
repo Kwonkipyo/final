@@ -1,0 +1,139 @@
+@charset "utf-8";
+.signup-wrap {
+  position: relative;
+  width: 100%;
+  padding: 110px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signup-bg {
+  width: 100%;
+  height: 830px;
+  overflow: hidden;
+  opacity: 0.2;
+  background: black;
+}
+.signup-bg .signup-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.signup-bg .signup-line div {
+  width: 140px;
+  height: 140px;
+  border-radius: 25%;
+  background-color: #d9d9d9;
+}
+.signup-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  padding: 60px;
+  background-color: #000;
+}
+#signup-form h2 {
+  margin-bottom: 30px;
+  text-align: center;
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+#signup-form > input {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 7px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#signup-form .signup-text {
+  /* display: flex;
+  justify-content: space-between; */
+  font-size: 14px;
+  /* margin-bottom: 30px; */
+  background-color: #242423;
+  padding: 16px;
+  margin-top: 10px;
+}
+.signup-text p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.checkbox_group {
+  font-size: 15px;
+}
+.checkbox_group li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+.checkbox_group li:last-child {
+  display: flex;
+  justify-content: space-evenly;
+}
+.checkbox_group input {
+  /* width: auto; */
+  width: 15px;
+  height: 15px;
+}
+.checkbox_group strong {
+  text-decoration: underline;
+}
+.marketing-txt {
+  margin: 10px 0;
+  text-align: center;
+}
+
+#signup-form .signup-text p:last-child span {
+  /* font-size: 13px;
+  font-weight: bold;
+  color: #fff; */
+}
+#signup-form button[type="submit"] {
+  width: 100%;
+  background-color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+}
+#signup-form p:last-child {
+  text-align: center;
+  font-size: 14px;
+}
+#signup-form p:last-child a {
+  text-decoration: underline;
+}
+/* #signup-form fieldset {
+  width: 100%;
+  border-top: 1px solid #fff;
+  margin: 0 auto;
+}
+#signup-form fieldset legend {
+  text-align: center;
+  font-size: 13px;
+  padding: 0 5px;
+}
+#signup-form fieldset .logos {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 15px;
+}
+#signup-form fieldset .logos img {
+  width: 40%;
+}
+#signup-form fieldset .logos a {
+  display: block;
+  width: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  text-align: center;
+} */
