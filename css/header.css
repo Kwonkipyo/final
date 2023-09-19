@@ -9,6 +9,9 @@
   background-color: transparent;
   color: #e8eddf;
 }
+.header .inner{
+  width: 100%;
+}
 .header-top {
   height: 60px;
   display: flex;
@@ -17,8 +20,8 @@
 }
 .header .logo {
   width: 150px;
-  height: 60px;
-  font-size: 50px;
+  height: auto;
+  margin-left: 30px;
 }
 .sign-menu {
   display: flex;
@@ -39,6 +42,7 @@
   line-height: 50px;
   justify-content: space-between;
   align-items: center;
+  margin-left: 30px ;
 }
 .gnb {
   display: flex;
@@ -47,26 +51,26 @@
 }
 .header-catemenu{
   position: absolute;
-  display: flex;
+  left: -220px;
   flex-wrap: wrap;
   gap: 0 30px;
-  width: 1430px;
+  width: 1920px;
   height: 400px;
   background-color: rgba(0,0,0,0.9);
-  border-radius: 0 0 30px 30px;
   top: 110px;
   font-size: 15px;
 }
 .sticky {
-  position: fixed;
   top: 50px;
-  width: 1430px;
   z-index: 1000;
+}
+.catemenu-txt{
+  margin-left: 220px;
 }
 .depth2{
   width: calc( 60% / 5);
   height: 75%;
-  border-right: 1px solid rgba(255,255,255,0.1) ;
+  border-right: 1px solid rgba(255,255,255,0.1);
   float: left;
   padding-left: 20px;
   margin-top: 15px;
