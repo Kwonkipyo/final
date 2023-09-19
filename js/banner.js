@@ -1,12 +1,12 @@
 window.addEventListener("load", function(){
     var swiper = new Swiper(".sw-banner", {
-        spaceBetween: 30,
+        spaceBetween: 0,
         centeredSlides: true,
         loop: true,
-        // autoplay: {
-        //     delay: 2500,
-        //     disableOnInteraction: true,
-        // },
+        autoplay: {
+            delay: 10000000,
+            disableOnInteraction: true,
+        },
         pagination: {
             el: ".banner .swiper-pagination",
             clickable: true,

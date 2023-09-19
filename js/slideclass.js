@@ -16,7 +16,7 @@ xhttp.onreadystatechange = function(event){
 
         AI_CLASS = obj.aiclass;
         NEW_CLASS = obj.newclass;
-        showAiClass(); // 마감임박 클래스 화면에 배치
+        showAiClass(); // 맞춤 클래스 화면에 배치
         showNewClass(); // 신규 클래스 화면에 배치
     }
 }
@@ -31,7 +31,7 @@ let aiClassTag = document.getElementById("data-aiclass");
 let newClassTag = document.getElementById("data-newclass");
 
 
-// 마감임박 클래스 화면 출력 기능
+// 맞춤 클래스 화면 출력 기능
 function showAiClass(){
     let html = `
     <div class="swiper sw-aiclass">
@@ -58,7 +58,7 @@ function showAiClass(){
     </div>
     </div>
     `;
-    // 마감임박 클래스 Swiper
+    // 맞춤 클래스 Swiper
     aiClassTag.innerHTML = html;
     var swiper = new Swiper(".sw-aiclass", {
         slidesPerView: 'auto',
