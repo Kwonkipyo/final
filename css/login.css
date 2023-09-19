@@ -11,6 +11,8 @@
   width: 100%;
   height: 830px;
   overflow: hidden;
+  opacity: 0.2;
+  background: black;
 }
 .login-bg .login-line {
   display: flex;

@@ -14,68 +14,106 @@
   width: 100%;
   margin-top: 30px;
   padding: 50px 0;
-  background-color: #cfdbd5;
+  background-color: #eee;
 }
 #board_form {
   width: 100%;
+  margin-bottom: 30px;
   color: #000;
-  background-color: red;
 }
 #board_form fieldset {
+  display: flex;
+  flex-flow: nowrap;
   margin-bottom: 20px;
 }
 #board_form label {
-  display: inline-block;
-  width: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
   font-size: 18px;
   font-weight: bold;
-  background-color: aquamarine;
+}
+#board_form label::before {
+  content: "*";
+  color: red;
+  font-size: 16px;
+  margin-right: 5px;
+}
+.board_insert input[type="text"],
+.board_insert textarea,
+.board_insert select {
+  font-size: 16px;
+  padding: 7px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 #board_form input {
-  display: inline-block;
-  width: 50%;
-  padding: 5px;
-  font-size: 16px;
-  border: 1px solid #e0e0e0;
-  border-radius: 2px;
+  width: 45%;
 }
 #board_form .boardNum-wrap {
   position: relative;
-  display: inline-block;
-  width: 103px !important;
+  width: 10%;
   padding: 0 30px;
+  display: flex;
+  align-items: center;
 }
-#board_form .boardNum-wrap button {
+#board_form .boardNum-wrap .boardNum-btn {
   width: 30px;
   height: 30px;
-  font-size: 18px;
-  border: 1px solid #e0e0e0;
-  background-color: #fff;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
   cursor: pointer;
 }
-#board_form .boardNum-wrap button.down {
+#board_form .boardNum-wrap .boardNum-btn.down {
   position: absolute;
   top: 0;
   left: 0;
 }
-#board_form .boardNum-wrap button.up {
+#board_form .boardNum-wrap .boardNum-btn.up {
   position: absolute;
   right: 0;
   top: 0;
 }
 #board_form .boardNum-wrap input {
-  width: 45px;
+  width: 100%;
   height: 30px;
   text-align: center;
-  margin-left: -1px;
 }
-#board_form .boardClass {
-  width: 50%;
+#board_form #boardClass {
+  width: 45%;
   height: 30px;
   padding: 0 30px 0 10px;
 }
 #board_form #boardContent {
-  display: inline-block;
-  width: 87%;
+  width: 85%;
+  height: 200px;
   resize: none;
+}
+#board_form #boardImage {
+  font-size: 15px;
+}
+#board_form fieldset:last-child {
+  margin-bottom: 0;
+}
+.board_insert .add-post {
+  display: flex;
+  justify-content: flex-end;
+}
+.add-post #addPostBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: bold;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
