@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // 각 섹션의 위치값(세로스크롤 위치)
-  const sectionYpos = [1020, 5533, 6433, 8643];
+  const sectionYpos = [1024, 5600, 6435, 8645];
 
   // 클래스 title-menu 의 li 를 찾아라
   // 저장한다. 재활용하기 위해서
@@ -32,7 +32,7 @@ $(document).ready(function () {
   // 페이지 로드 시 첫 번째 메뉴 아이템에 포커스 설정
   navLis.eq(0).addClass("focus-active");
 
-// ---------------------------------------------------
+  // ---------------------------------------------------
 
   // jQuery 코드
   $(".fa-heart").click(function () {
@@ -104,3 +104,13 @@ $(document).ready(function () {
     }, 400); // 1000 밀리초(1초) 후에 색상을 기본 색상으로 변경
   });
 });
+function showAlert(event) {
+  // 알림 창 표시
+  alert("로그인 후 이용해주세요.");
+
+  // 이벤트 취소 (링크의 기본 동작 방지)
+  event.preventDefault();
+
+  // login.html로 이동
+  window.location.href = "login.html";
+}
