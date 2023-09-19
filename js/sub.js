@@ -104,6 +104,9 @@ $(document).ready(function () {
     }, 400); // 1000 밀리초(1초) 후에 색상을 기본 색상으로 변경
   });
 });
+
+// ------------------------------------------------------------
+// 영상 클릭 시 로그인 창으로 안내
 function showAlert(event) {
   // 알림 창 표시
   alert("로그인 후 이용해주세요.");
@@ -113,4 +116,20 @@ function showAlert(event) {
 
   // login.html로 이동
   window.location.href = "login.html";
+}
+
+// ------------------------------------------------------
+//  준비물 selector
+function showPreparation() {
+  var selectElement = document.getElementById("preparation");
+  var customDiv = document.getElementById("customDiv");
+
+  var selectedOption = selectElement.options[selectElement.selectedIndex].text;
+
+  // 선택한 옵션에 따라 커스텀 내용을 표시하거나 숨김
+  if (selectedOption === "준비물") {
+      customDiv.style.display = "block";
+  } else {
+      customDiv.style.display = "none";
+  }
 }
