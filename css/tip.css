@@ -11,21 +11,33 @@
     display: flex;
     justify-content: space-between;
 }
-
-.tip-container{
-    width: calc(90% / 3);
+.tip-cate{
+    width: calc(90% / 3); 
+    height: 380px;
+    color: #fff;
 }
-.tip-container img{
-    border-radius: 40px;
-    margin-bottom: 20px;
-    width: 430px;
-    height: 320px;
+.classtip{
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
 }
-.tip-container span{
+.classtip img{
+    width: 50%;
+    margin: 0 auto;
+}
+.grouptip{
+    width: 100%;
+    background-color: #fff;
+}
+.shoppingtip{
+    width: 100%;
+    background-color: #fff;
+}
+.tip-cate span{
     font-size: 23px;
     font-weight: 900;
 }
-.tip-container span:last-child{
+.tip-cate span:last-child{
     font-size: 16px;
     font-weight: 500;
 }
