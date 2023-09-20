@@ -82,7 +82,7 @@ $(document).ready(function () {
   $(document).keydown(function(event) {
     if (event.which == 116) { // F5 키의 keyCode는 116입니다
         // event.preventDefault(); // 기본 동작을 중지합니다 (페이지 새로 고침을 막음)
-        $(window).scrollTop(0); // 스크롤을 페이지의 맨 위로 이동
+        // $(window).scrollTop(0); // 스크롤을 페이지의 맨 위로 이동
     }
 });
 });
