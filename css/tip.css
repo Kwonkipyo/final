@@ -7,6 +7,9 @@
     text-align: center;
     margin-bottom: 30px;
 }
+.tip-logo{
+    height:35px;
+}
 .tip-inner{
     display: flex;
     justify-content: space-between;
@@ -16,13 +19,24 @@
     height: 380px;
     color: #fff;
     text-align: center;
+
 }
 .tip-cate a{
     display: block;
     background-color: #fff;
     height: 330px;
     margin-bottom: 10px;
-    border-radius: 30px;
+    border-radius: 30px; 
+    transition: all 0.5s;
+}
+.tip-cate a span{
+    font-size: 45px;
+    font-weight: 900;
+    z-index: 10;
+}
+.tip-cate a img{
+    position: relative;
+    top: -20px;
 }
 .tip-cate a:hover{
     background-color: #b6c5e0;
@@ -34,4 +48,12 @@
 .tip-cate span:last-child{
     font-size: 16px;
     font-weight: 500;
+}
+.classtip a img{
+    width: 300px;
+    height: 250px;
+}
+.grouptip a img{
+    width: 300px;
+    height: 240px;
 }
