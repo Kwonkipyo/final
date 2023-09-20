@@ -3,81 +3,91 @@
         {
         "name" : "집에서도 만들 수 있는 나만의 디저트 카페", 
         "price": 24000, 
-        "tag": "인기", 
+        "tag": "베이킹 · 디저트", 
         "pic": "dlclass-baking.webp", 
         "id": "0", 
+        "class": "baking",
         "link":"#"
         },
         {
         "name" : "기초부터 배우는 무궁무진한 레터링 케이크의 비법", 
         "price": 43000, 
-        "tag": "인기", 
+        "tag": "베이킹 · 디저트", 
         "pic": "dlclass-cake.png", 
         "id": "1", 
+        "class": "baking",
         "link":"#"
         },
         {
         "name" : "나의 마음을 힐링하는 수채화 드로잉", 
         "price": 29000, 
-        "tag": "인기", 
+        "tag": "드로잉", 
         "pic": "dlclass-drawing.png", 
         "id": "2", 
+        "class": "drawing",
         "link":"#"
         },
         {
         "name" : "함께 만드는 귀여운 코바늘 인형", 
         "price": 30000, 
-        "tag": "인기", 
+        "tag": "공예", 
         "pic": "dlclass-doll.jpg", 
         "id": "3", 
+        "class": "craft",
         "link":"#"
         },
         {
         "name" : "캘리그라피 전문가와 찾아가는 나만의 손글씨",
         "price": 3600, 
-        "tag": "인기", 
+        "tag": "라이프스타일", 
         "pic": "dlclass-calli.webp", 
         "id": "4", 
+        "class": "lifestyle",
         "link":"#"
         },
         {
         "name" : "근력 강화, 체지방을 감소시키는 나만의 시간, 다이어트 요가 클래스",
         "price": 5000, 
-        "tag": "인기", 
+        "tag": "운동", 
         "pic": "dlclass-yoga.jpg", 
         "id": "5", 
+        "class": "sport",
         "link":"#"
         },
         {
         "name" : "조향사에게 배우는 조향 기초, 나만의 향기를 만들어요.", 
         "price": 30000, 
-        "tag": "인기", 
+        "tag": "공예", 
         "pic": "dlclass-perfume.jpg", 
         "id": "6", 
+        "class": "craft",
         "link":"#"
         },
         {
         "name" : "치명적인 매력을 가진 단 하나뿐인 나만의 작품 레진공예",
         "price": 46800, 
-        "tag": "인기", 
+        "tag": "공예", 
         "pic": "dlclass-resin.jpg", 
         "id": "7", 
+        "class": "craft",
         "link":"#"
         },
         {
         "name" : "초보자도 누구나 집에서 쉽게 귀여운 머랭쿠키 만들기",
         "price": 20300, 
-        "tag": "인기", 
+        "tag": "베이킹 · 디저트", 
         "pic": "dlclass-baking2.jpg", 
-        "id": "7", 
+        "id": "8", 
+        "class": "baking",
         "link":"#"
         },
         {
         "name" : "연필 하나로 담아내는 섬세함, 인물화 드로잉",
         "price": 39000, 
-        "tag": "인기", 
+        "tag": "드로잉", 
         "pic": "dlclass-drawing2.webp", 
-        "id": "7", 
+        "id": "9", 
+        "class": "drawing",
         "link":"#"
         }
     ],
@@ -85,81 +95,91 @@
         {
         "name" : "고민으로 잠 못드는 당신을 위한 타로클래스", 
         "price": 20300, 
-        "tag": "인기", 
+        "tag": "라이프스타일", 
         "pic": "newclass-tarot.webp", 
         "id": "0", 
+        "class": "lifestyle",
         "link":"#"
         },
         {
         "name" : "전통의 현대적 재해석, 비밀장신구와 함께 엮는 전통 매듭 액세서리", 
         "price": 32000, 
-        "tag": "인기", 
+        "tag": "공예", 
         "pic": "newclass-acc.webp", 
         "id": "1", 
+        "class": "craft",
         "link":"#"
         },
         {
         "name" : "나의 리틀 포레스트, 가드너에게 배우는 셀프 홈가드닝",
         "price": 37000, 
-        "tag": "인기", 
+        "tag": "라이프스타일", 
         "pic": "newclass-plant.webp", 
         "id": "2", 
+        "class": "lifestyle",
         "link":"#"
         },
         {
         "name" : "퇴근 후 만나는 나의 가죽 공방, 가죽공예 기초부터 완성까지", 
         "price": 39000, 
-        "tag": "인기", 
+        "tag": "공예", 
         "pic": "newclass-leather.webp", 
         "id": "3", 
+        "class": "craft",
         "link":"#"
         },
         {
         "name" : "비보이 & 비걸을 위한 브레이킹 입문 클래스",
         "price": 43000, 
-        "tag": "인기", 
+        "tag": "운동", 
         "pic": "newclass-dance.webp", 
         "id": "4", 
+        "class": "sport",
         "link":"#"
         },
         {
         "name" : "특별한 도안으로 나만의 꽃밭을 만드는 페이퍼 아트",
         "price": 35000, 
-        "tag": "인기", 
+        "tag": "공예", 
         "pic": "newclass-paper.webp", 
         "id": "5", 
+        "class": "craft",
         "link":"#"
         },
         {
         "name" : "누워만 있어도 피로가 풀리는 홈필라테스 배우기", 
         "price": 23000, 
-        "tag": "인기", 
+        "tag": "운동", 
         "pic": "newclass-ex.webp", 
         "id": "6", 
+        "class": "sport",
         "link":"#"
         },
         {
         "name" : "기초부터 응용까지, 취미는 기타",
         "price": 27000, 
-        "tag": "인기", 
+        "tag": "음악", 
         "pic": "newclass-guitar.webp", 
         "id": "7", 
+        "class": "music",
         "link":"#"
         },
         {
         "name" : "아기자기한 캐릭터푸드 만들기",
         "price": 35000, 
-        "tag": "인기", 
+        "tag": "요리 · 음료", 
         "pic": "newclass-cook.jpg", 
-        "id": "7", 
+        "id": "8", 
+        "class": "cook",
         "link":"#"
         },
         {
         "name" : "초보용 반주법과 기본 피아노 코드 배우기",
         "price": 49900, 
-        "tag": "인기", 
+        "tag": "음악", 
         "pic": "newclass-piano.jpg", 
-        "id": "7", 
+        "id": "9", 
+        "class": "music",
         "link":"#"
         }
     ]
