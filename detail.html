@@ -147,6 +147,15 @@
                   style="color: #ffffff"
                 ></i>
               </div>
+              <div class="header-select">
+                <select name="select" id="header-select">
+                  <option value="kor">KOR</option>
+                  <option value="eng">ENG</option>
+                  <option value="jap">JPN</option>
+                </select>
+              </div>
+              <span><a href="login.html">SIGN IN</a></span>
+              <span><a href="#">SIGN UP</a></span>
               <div id="dashboard-section">
                 <div id="username-display"></div>
                 <i class="fa-solid fa-angle-down"></i>
@@ -536,8 +545,78 @@
                 </div>
               </div>
               <!-- 수강후기 -->
-              <div class="class-review">
-                <h2 class="class-review-title">수강 후기</h2>
+              <div class="review">
+                <h2 class="review-title">수강 후기</h2>
+                <div class="review-score">
+                  <h2 class="review-title-score">4.9점 ★★★★★</h2>
+                  <p>23개의 후기</p>
+                </div>
+                <div class="review-content">
+                  <div class="review-profile">
+                    <div class="review-profile-image1"></div>
+                    <div class="review-profile-text">
+                      <h2 class="review-name">옥지얌빵빵아</h2>
+                      <p>진도율 100%·참여 클래스 4개</p>
+                      <p>★★★★★ 2023.08.31</p>
+                    </div>
+                  </div>
+                  <div class="review-comment">
+                    <div class="review-love">
+                      <p>
+                        <span>좋아요</span>친절하게 잘 가르쳐주셔요!! 덕분에 잘
+                        배웠습니당~~
+                      </p>
+                    </div>
+                    <div class="review-sad">
+                      <p><span>아쉬워요</span>아쉬운 점은 없었어욤</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="review-content">
+                  <div class="review-profile">
+                    <div class="review-profile-image2"></div>
+                    <div class="review-profile-text">
+                      <h2 class="review-name">옥지얌빵빵아</h2>
+                      <p>진도율 100%·참여 클래스 4개</p>
+                      <p>★★★★★ 2023.08.31</p>
+                    </div>
+                  </div>
+                  <div class="review-comment">
+                    <div class="review-love">
+                      <p>
+                        <span>좋아요</span>친절하게 잘 가르쳐주셔요!! 덕분에 잘
+                        배웠습니당~~
+                      </p>
+                    </div>
+                    <div class="review-sad">
+                      <p><span>아쉬워요</span>아쉬운 점은 없었어욤</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="review-content">
+                  <div class="review-profile">
+                    <div class="review-profile-image3"></div>
+                    <div class="review-profile-text">
+                      <h2 class="review-name">옥지얌빵빵아</h2>
+                      <p>진도율 100%·참여 클래스 4개</p>
+                      <p>★★★★★ 2023.08.31</p>
+                    </div>
+                  </div>
+                  <div class="review-comment">
+                    <div class="review-love">
+                      <p>
+                        <span>좋아요</span>친절하게 잘 가르쳐주셔요!! 덕분에 잘
+                        배웠습니당~~
+                      </p>
+                    </div>
+                    <div class="review-sad">
+                      <p><span>아쉬워요</span>아쉬운 점은 없었어욤</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="review-more">
+                  리뷰 모두보기
+                </div>
               </div>
             </div>
           </div>
@@ -562,7 +641,7 @@
                 </div>
               </div>
               <!-- 트리플 패스 -->
-              <div class="we-class">
+              <div class="we-class" id="triple-pass" onclick="showAlert(event)">
                 <h3>트리플 패스 수강권</h3>
                 <p><span>50%</span>월 15,000원</p>
                 <div class="we-class-info">
@@ -572,8 +651,13 @@
                   </div>
                 </div>
               </div>
+
               <!-- 개별 클래스 -->
-              <div class="me-class">
+              <div
+                class="me-class"
+                id="individual-class"
+                onclick="showAlert(event)"
+              >
                 <h3>개별 클래스 수강권</h3>
                 <p><span>30%</span>월 23,000원</p>
               </div>
@@ -628,19 +712,28 @@
               </div>
               <!-- 클래스 신청 버튼 -->
               <div class="button-box">
-                <button class="me-registration">
+                <a
+                  href="payment.html"
+                  class="me-registration"
+                  onclick="showAlert(event)"
+                >
                   <h2>
                     클래스 신청하기&nbsp;<i class="fa-solid fa-arrow-right"></i>
                   </h2>
-                </button>
-                <span>더 저렴히 시작하고 싶으신가요?</span>
-                <button class="we-registration">
+                  <div class="transition"></div>
+                </a>
+                <a href="group.html">더 저렴히 시작하고 싶으신가요?</a>
+                <a
+                  href="group.html"
+                  class="we-registration"
+                  onclick="showAlert(event)"
+                >
                   <h2>
                     클래스 공동구매 찾기&nbsp;<i
                       class="fa-solid fa-arrow-right"
                     ></i>
                   </h2>
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -648,7 +741,55 @@
       </section>
       <!-- 푸터 -->
       <footer class="footer">
-        <div class="inner"></div>
+        <div class="inner">
+          <div class="footer-left">
+            <img src="images/Class&.png" alt="푸터로고" class="footer-logo" />
+            <br />
+            <span>더싸고 더쉽게 Class&</span>
+            <div class="footer-selector">
+              <select id="language-select" name="language">
+                <option value="kor">한국어</option>
+                <option value="eng">ENGLISH</option>
+                <option value="jap">日本語</option>
+              </select>
+            </div>
+          </div>
+          <div class="footer-center">
+            <div class="footer-info">
+              <a href="#">이용약관</a>
+              <a href="#">개인정보취급방침</a>
+              <a href="#">사업자정보확인</a>
+              <a href="#">환불규정</a>
+              <a href="#">공지사항</a>
+              <a href="#">FAQ</a>
+            </div>
+            <div class="footer-copy">
+              <p>
+                (주) Class&CEO: OOO주소: 서울시 강남구 테헤란로 OOO, 6층 7층
+                02-5x1-6xx2
+                <br />
+                이메일: ooo@class.co.kr개인정보책임관리자: OOO
+                <br />
+                사업자등록번호: 81x-8x-0x0xx8통신판매업 신고번호: 제
+                2xxx-서울xx-01xxx
+              </p>
+            </div>
+          </div>
+          <div class="footer-right">
+            <div class="footer-sns">
+              <a href="#"
+                ><i class="fa-brands fa-instagram" style="color: #ccc"></i
+              ></a>
+              <a href="#"
+                ><i class="fa-brands fa-youtube" style="color: #ccc"></i
+              ></a>
+              <a href="#"
+                ><i class="fa-brands fa-facebook" style="color: #ccc"></i
+              ></a>
+            </div>
+            <span>COPYRIGHT &copy; Class& All rights reserved</span>
+          </div>
+        </div>
       </footer>
       <script>
         AOS.init();

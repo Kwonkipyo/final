@@ -136,7 +136,9 @@
     transform: scale(1);
   }
 }
+
 /* ----------------------------- visual 끝 -------------------------------- */
+
 
 /* 내용 */
 .main-content {
@@ -144,6 +146,7 @@
   margin-top: 150px;
   width: 800px;
 }
+
 
 /*----------------- 타이틀메뉴 -----------------*/
 .title-menu ul {
@@ -185,6 +188,7 @@
 .focus-active::after{
   opacity: 1 !important;
 }
+
 
 /*----------------- 클래스정보 -------------------*/
 .class-info {
@@ -331,6 +335,7 @@
   z-index: 1;
 }
 
+
 /*------------------- 타겟 ------------------*/
 .class-target {
   display: flex;
@@ -358,6 +363,7 @@
 .class-target ul li i {
   margin-right: 10px;
 }
+
 
 /*---------------- 클래스맛보기 ----------------*/
 .class-order {
@@ -398,6 +404,7 @@
   color: #e8eddf;
 }
 
+
 /*------------------- 강사 소개 -------------------*/
 .teacher-info {
   display: inline-block;
@@ -419,6 +426,7 @@
   line-height: 1.9;
   color: #ccc;
 }
+
 
 /*--------------- 커리큘럼 ------------------ */
 .curriculum {
@@ -531,15 +539,120 @@
 
 
 /*----------- 수강후기----------- */
-.class-review {
+.review {
   width: 800px;
   margin-top: 120px;
+  display: flex;
+  flex-direction: column;
 }
-.class-review-title {
+.review-title-score{
+  font-size: 22px;
+  text-align: left;
+  display: inline-block;
+}
+.review-title {
   font-size: 22px;
   font-weight: 700;
   text-align: center;
+  margin-bottom: 80px;
 }
+.review-score{
+  font-size: 16px;
+  border-bottom: solid 1px #ccc;
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.review-content{
+  width: 100%;
+  height: 300px;
+  border-bottom: solid 1px #ccc;
+  padding: 10px;
+  padding-top: 40px;
+}
+.review-content:last-child{
+  border-bottom: none;
+}
+.review-profile{
+  width: 100%;
+  display: flex;
+  margin-bottom: 40px;
+}
+.review-profile-image1{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: url("../images/teacher1-1.png") no-repeat center;
+  background-size: 80px auto;
+  margin-right: 20px;
+}
+.review-profile-image2{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: url("../images/teacher2-1.png") no-repeat center;
+  background-size: 80px auto;
+  margin-right: 20px;
+}
+.review-profile-image3{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: url("../images/teacher3-1.png") no-repeat center;
+  background-size: 80px auto;
+  margin-right: 20px;
+}
+.review-profile-text{
+  display: flex;
+  flex-direction: column;
+}
+.review-name{
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+.review-profile-text > p{
+  font-size: 15px;
+}
+.review-comment{
+  display: flex;
+  flex-direction: column;
+}
+.review-love{
+  width: 100%;
+  margin-bottom: 40px;
+}
+.review-love > p > span{
+  background-color: #383838;
+  border-radius: 5px;
+  padding: 2px 13px;
+  margin-right: 43px;
+  font-size: 15px;
+}
+.review-sad{
+  width: 100%;
+}
+.review-sad > p > span{
+  background-color: #383838;
+  border-radius: 5px;
+  padding: 2px 13px;
+  margin-right: 30px;
+  font-size: 15px;
+}
+.review-more{
+  margin-top: 15px;
+  width: 100%;
+  background-color: #383838;
+  cursor: pointer;
+  height: 50px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
 
 /*---------- fix-menu -----------*/
 .fix-menu {
@@ -555,10 +668,11 @@
 .fix-menu-box{
   width: 340px;
   height: auto;
-  background-color: #1a1a1a;
-  border: 1px solid #ffffff;
+  background-color: #222;
+  border: solid 1px #000;
   border-radius: 15px;
 }
+
 
 /* 타이틀메뉴 */
 .fix-title-menu{
@@ -569,13 +683,15 @@
   margin: 0 auto;
   font-size: 15px;
   padding-top: 30px;
-  gap: 10px;
+  gap: 6px;
   text-align: center;
+  /* border-bottom: solid 1px #ccc; */
+  margin-bottom: 20px;
 }
 .fix-title-menu > span{
   border-right: 2px solid #ccc;
-  height: 35px;
-  margin-top: 12px;
+  height: 45px;
+  margin-top: 5px;
 }
 .fix-title > h2{
   padding-bottom: 10px;
@@ -586,9 +702,11 @@
   color: #ccc;
   font-size: 14px;
 }
+
+
 /* 트리플 패스 */
 .we-class{
-  background-color: #646464;
+  background-color: #3e3e3e;
   width: 280px;
   height: 80px;
   margin: 0 auto;
@@ -599,10 +717,16 @@
   border-radius: 5px;
   position: relative;
 }
+.we-class:hover{
+  background-color: #2e2e2e;
+}
+.focused{
+  outline: 2px solid #fff;
+}
 .we-class > h3{
   font-size: 17px;
   font-weight: 600;
-  padding-bottom: 5px;
+  padding-bottom: 4px;
   padding-top: 5px;
 }
 .we-class > p{
@@ -633,11 +757,13 @@
   border: solid 1px #ccc;
   border-radius: 2px;
 }
+
+
 /* 개별 클래스 */
 .me-class{
-  background-color: #646464;
+  background-color: #3e3e3e;
   width: 280px;
-  height: 80px;
+  height: 79px;
   margin: 0 auto;
   margin-bottom: 20px;
   padding-top: 12px;
@@ -645,10 +771,13 @@
   cursor: pointer;
   border-radius: 5px;
 }
+.me-class:hover{
+  background-color: #2e2e2e;
+}
 .me-class > h3{
   font-size: 17px;
   font-weight: 600;
-  padding-bottom: 5px;
+  padding-bottom: 4px;
   padding-top: 5px;
 }
 .me-class > p{
@@ -683,11 +812,14 @@
   display: flex;
   flex-direction: column;
 }
+
+
 /* 준비물 박스 */
 .custom-box{
   display: flex;
   flex-direction: column;
-  border: solid 1px #ccc;
+  border-top: solid 1px #ccc;
+  border-bottom: solid 1px #ccc;
   padding: 10px;
 }
 .custom-image{
@@ -702,6 +834,8 @@
   display: flex;
   justify-content: space-between;
 }
+
+
 /* 숫자증가 박스 */
 .number-box{
   display: flex;
@@ -727,14 +861,17 @@
   border: 0;
   cursor: pointer;
 }
+
+
 /* 가격 박스 */
 .price-box{
   display: flex;
   margin-top: 3px;
+  font-size: 15px;
 }
 .x-box{
-  width: 17px;
-  height: 17px;
+  width: 16px;
+  height: 16px;
   font-size: 12px;
   border: solid 1px #ccc;
   cursor: pointer;
@@ -747,49 +884,130 @@
   margin-left: 145px;
 }
 
+
 /* 클래스 신청 버튼 */
 .button-box{
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  font-size: 15px;
 }
 .me-registration{
-  background-color: #d8a826;
+  background-color: #5c36b4;
   width: 280px;
-  height: 70px;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  height: 60px;
   border: 0;
+  margin-top: 8px;
   cursor: pointer;
   border-radius: 5px;
+  margin-bottom: 20px;
+}
+.me-registration:hover{
+  background-color: #2c0488;
 }
 .me-registration > h2{
   text-align: center;
+  line-height: 58px;
   font-size: 20px;
   font-weight: 900;
   color: #fff;
 }
 .we-registration{
-  background-color: #d8a826;
+  background-color: #3c48ee;
   width: 280px;
-  height: 70px;
+  height: 60px;
   border: 0;
   margin-top: 8px;
   cursor: pointer;
   border-radius: 5px;
   margin-bottom: 40px;
 }
+.we-registration:hover{
+  background-color: #1114c5;
+}
 .we-registration > h2{
   text-align: center;
+  line-height: 58px;
   font-size: 20px;
   font-weight: 900;
   color: #fff;
 }
-.button-box > span{
-  font-size: 14px;
-  cursor: pointer;
-  margin-right: auto;
-  margin-left: 30px;
-}
+
+/* 클래스 신청 버튼 효과추가 */
+    /* .me-registration {
+      width: 280px;
+      height: 58px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      text-transform: uppercase !important;
+      text-transform: capitalize;
+      border: 1px solid #fff;
+      position: relative;
+      overflow: hidden !important;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      background: transparent !important;
+      z-index: 10;
+      display: inline-block;
+    }
+
+    .me-registration:hover {
+      border: 1px solid #071982;
+      color: #80ffd3 !important;
+    }
+    .me-registration::before {
+      content: "";
+      width: 0%;
+      height: 100%;
+      display: block;
+      background: #bba958;
+      position: absolute;
+      -ms-transform: skewX(-20deg);
+      -webkit-transform: skewX(-20deg);
+      transform: skewX(-20deg);
+      left: -10%;
+      opacity: 1;
+      top: 0;
+      z-index: -12;
+      -moz-transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+      -o-transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+      -webkit-transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+      transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+      box-shadow: 2px 0px 14px rgba(0, 0, 0, 0.6);
+    }
+
+    .me-registration::after {
+      content: "";
+      width: 0%;
+      height: 100%;
+      display: block;
+      background: #f7d5d5;
+      position: absolute;
+      -ms-transform: skewX(-20deg);
+      -webkit-transform: skewX(-20deg);
+      transform: skewX(-20deg);
+      left: -10%;
+      opacity: 0;
+      top: 0;
+      z-index: -15;
+      -webkit-transition: all 0.94s cubic-bezier(0.2, 0.95, 0.57, 0.99);
+      -moz-transition: all 0.4s cubic-bezier(0.2, 0.95, 0.57, 0.99);
+      -o-transition: all 0.4s cubic-bezier(0.2, 0.95, 0.57, 0.99);
+      transition: all 0.4s cubic-bezier(0.2, 0.95, 0.57, 0.99);
+      box-shadow: 2px 0px 14px rgba(0, 0, 0, 0.6);
+    }
+    .me-registration:hover::before,
+    .me-registration:hover::before {
+      opacity: 1;
+      width: 116%;
+    }
+    .me-registration:hover::after,
+    .me-registration:hover::after {
+      opacity: 1;
+      width: 120%;
+    } */
