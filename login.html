@@ -92,7 +92,7 @@
     <script src="js/login.js"></script>
 
     <!-- script 불러오기 -->
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
 
     <!-- fontawesome -->
     <script
@@ -149,8 +149,8 @@
                   style="color: #ffffff"
                 ></i>
               </div>
-              <span><a href="login.html">SIGN IN</a></span>
-              <span><a href="#">SIGN UP</a></span>
+              <span id="login-section"><a href="login.html">SIGN IN</a></span>
+              <span id="signup-section"><a href="signup.html">SIGN UP</a></span>
             </div>
           </div>
           <div class="header-bottom">
@@ -209,7 +209,7 @@
                   >
                 </div>
               </div>
-              <li><a href="#">공동구매</a></li>
+              <li><a href="group.html">공동구매</a></li>
               <li><a href="#">샵</a></li>
               <li><a href="#">이벤트</a></li>
               <li><a href="#">개설하기</a></li>
@@ -287,10 +287,10 @@
           <form id="login-form">
             <h2>로그인</h2>
             <input
-              type="text"
-              id="login-id"
-              name="login-id"
-              placeholder="ID"
+              type="email"
+              id="login-email"
+              name="login-email"
+              placeholder="Email"
               required
             />
             <br />
@@ -304,7 +304,7 @@
             <br />
             <div class="login-text">
               <p><a href="#">아이디 / 비밀번호 찾기</a></p>
-              <p><span>처음 오셨나요?</span><a href="#"> 회원가입</a></p>
+              <p><span>처음 오셨나요?</span><a href="signup.html"> 회원가입</a></p>
             </div>
             <button type="submit">로그인</button>
             <fieldset>

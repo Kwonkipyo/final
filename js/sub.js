@@ -193,6 +193,18 @@ $(document).ready(function () {
 //   window.location.href = "login.html";
 // }
 
+showInitialDashboard();
+
+// 대시보드 화면 표시
+function showInitialDashboard() {
+  var params = new URLSearchParams(window.location.search);
+  var username = params.get("username");
+
+  if (username) {
+    document.getElementById("username-display").textContent = `${username}`;
+  } else {
+  }
+}
 // ------------------------------------------------------
 //  준비물 selector
 function showPreparation() {

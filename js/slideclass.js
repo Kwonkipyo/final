@@ -42,7 +42,7 @@ function showAiClass(){
         let tag = `
         <div class="swiper-slide class-slide" style="background-image: url('images/${item.pic}')">
             <a href="${item.link}" class="class-box">
-                <span class="class-type">${item.tag}</span>
+                <span class="class-type ${item.class}">${item.tag}</span>
                 <div class="class-txt">
                     <!-- 제품정보 -->
                     <p class="class-info">${item.name}</p>
@@ -63,7 +63,7 @@ function showAiClass(){
     var swiper = new Swiper(".sw-aiclass", {
         slidesPerView: 'auto',
         speed: 7000,
-        spaceBetween: 30,
+        spaceBetween: 50,
         freeMode: true,
         autoplay: {     //자동슬라이드 (false-비활성화)
             delay: 0, // 시간 설정
@@ -99,7 +99,7 @@ function showNewClass(){
         let tag = `
         <div class="swiper-slide class-slide" style="background-image: url('images/${item.pic}')">
             <a href="${item.link}" class="class-box">
-                <span class="class-type">${item.tag}</span>
+                <span class="class-type ${item.class}">${item.tag}</span>
                 <div class="class-txt">
                     <!-- 제품정보 -->
                     <p class="class-info">${item.name}</p>
@@ -120,7 +120,7 @@ function showNewClass(){
     var swiper = new Swiper(".sw-newclass", {
         slidesPerView: 'auto',
         speed: 7000,
-        spaceBetween: 30,
+        spaceBetween: 50,
         freeMode: true,
         autoplay: {     //자동슬라이드 (false-비활성화)
             delay: 0, // 시간 설정

@@ -140,7 +140,7 @@
       <header class="header">
         <div class="inner">
           <div class="header-top">
-            <div class="logo"><img src="images/Class&.png" alt=""></div>
+            <a href="#" class="logo"><img src="images/Class&.png" alt=""></a>
             <div class="sign-menu">
               <i
                 class="fa-solid fa-magnifying-glass"
@@ -155,6 +155,19 @@
                   style="color: #ffffff"
                 ></i>
               </div>
+              <div id="dashboard-section">
+                <div id="username-display"></div>
+                <i class="fa-solid fa-angle-down"></i>
+                <div id="dropdown-menu">
+                  <!-- 드롭다운 메뉴 아이템들 -->
+                  <a href="#">쿠폰</a>
+                  <a href="#">거래내역</a>
+                  <a href="#">회원정보수정</a>
+                  <a href="#" id="logout-button">로그아웃</a>
+                </div>
+              </div>
+              <span id="login-section"><a href="login.html">SIGN IN</a></span>
+              <span id="signup-section"><a href="signup.html">SIGN UP</a></span>
               <div class="header-select">
                 <select name="select" id="header-select">
                   <option value="kor">KOR</option>
@@ -162,8 +175,6 @@
                   <option value="jap">JPN</option>
                 </select>
               </div>
-              <span><a href="login.html">SIGN IN</a></span>
-              <span><a href="#">SIGN UP</a></span>
             </div>
           </div>
           <div class="header-bottom">
@@ -217,14 +228,8 @@
                   <li><a href="#">부모 교육</a></li>
                 </ul>
               </div>
-                <div class="catemenu-close">
-                  <a href="#">
-                    <i class="fa-solid fa-xmark" style="color: #ffffff"></i>
-                    <span>닫기</span></a
-                  >
-                </div>
               </div>
-              <li><a href="#">공동구매</a></li>
+              <li><a href="group.html">공동구매</a></li>
               <li><a href="#">샵</a></li>
               <li><a href="#">이벤트</a></li>
               <li><a href="#">개설하기</a></li>
@@ -286,7 +291,6 @@
               </div>
               <div class="arrow arrow-first"></div>
               <div class="arrow arrow-second"></div>
-              <p>Scroll Down</p>
         </div>
           </div>
       </div>
@@ -333,7 +337,7 @@
       <section class="tip">
         <div class="inner">
           <div class="tip-title">
-            <h1>Class&을 알뜰히 사용하는법</h1>
+            <h1><img src="images/Class&.png" alt="팁로고" class="tip-logo">을 알뜰히 사용하는 법</h1>
           </div>
           <div class="tip-inner">
             <div class="classtip tip-cate">
@@ -647,7 +651,7 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                
+                <p>Big3 개별구매 3개 묶어서 구매하면 저렴하게 구매 가능</p>
               </div>
             </div>
             <div class="swiper-pagination"></div>
