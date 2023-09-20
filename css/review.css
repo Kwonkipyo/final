@@ -13,8 +13,10 @@
     font-weight: 700;
 }
 .review-left{
-    width: 55%;
-    height: 100%;
+    width: 60%;
+}
+.review-video{
+    width: 100%;
 }
 .review-right{
     width: 30%;
