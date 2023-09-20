@@ -652,6 +652,9 @@
   font-size: 18px;
   margin-bottom: 20px;
 }
+.review-more:hover{
+  background-color: #282828;
+}
 
 
 /*---------- fix-menu -----------*/
