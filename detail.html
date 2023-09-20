@@ -139,8 +139,19 @@
                 <input type="text" id="search-input" placeholder="">
                 <i class="fa-solid fa-xmark" id="close-search" style="color: #FFFFFF;"></i>
               </div>
-              <span><a href="#">SIGN IN</a></span>
-              <span><a href="#">SIGN UP</a></span>
+              <div id="dashboard-section">
+                <div id="username-display"></div>
+                <i class="fa-solid fa-angle-down"></i>
+                <div id="dropdown-menu">
+                  <!-- 드롭다운 메뉴 아이템들 -->
+                  <a href="#">쿠폰</a>
+                  <a href="#">거래내역</a>
+                  <a href="#">회원정보수정</a>
+                  <a href="#" id="logout-button">로그아웃</a>
+                </div>
+              </div>
+              <span id="login-section"><a href="login.html">SIGN IN</a></span>
+              <span id="signup-section"><a href="signup.html">SIGN UP</a></span>
             </div>
           </div>
           <div class="header-bottom">
@@ -194,7 +205,7 @@
                   <span>닫기</span></a>
                 </div>
                 </div>
-                  <li><a href="#">공동구매</a></li>
+                  <li><a href="group.html">공동구매</a></li>
                   <li><a href="#">샵</a></li>
                   <li><a href="#">이벤트</a></li>
                   <li><a href="#">개설하기</a></li>
