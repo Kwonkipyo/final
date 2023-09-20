@@ -14,13 +14,16 @@ $(document).ready(function () {
     $(this).find(".fa-chevron-down, .fa-chevron-up").toggle();
   });
   // catemenu-close를 클릭했을 때 header-catemenu를 숨김
-  $(".catemenu-close a").click(function (e) {
-    e.preventDefault();
-    $(".gnb-cate").removeClass("active"); // 모든 밑줄 제거
-    $(".header-catemenu").slideUp(300);
-    // 모든 gnb-cate의 fa-chevron-down 아이콘을 보이게 하고 fa-chevron-up 아이콘을 숨김
-    $(".gnb-cate .fa-chevron-down").show();
-    $(".gnb-cate .fa-chevron-up").hide();
+  $(document).on("click", function (e) {
+    const headerCatemenu = $(".header-catemenu");
+    const gnbCate = $(".gnb-cate");
+    if (!headerCatemenu.is(e.target) && headerCatemenu.has(e.target).length === 0
+      && !gnbCate.is(e.target) && gnbCate.has(e.target).length === 0) {
+      headerCatemenu.slideUp(300);
+      gnbCate.removeClass("active"); // 모든 밑줄 제거
+      $(".gnb-cate .fa-chevron-down").show(); // fa-chevron-down 아이콘 보이기
+      $(".gnb-cate .fa-chevron-up").hide(); // fa-chevron-up 아이콘 숨기기
+    }
   });
   // 헤더 스크롤 이벤트
   const header = $(".header");

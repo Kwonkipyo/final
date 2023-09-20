@@ -91,16 +91,16 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 30px;
+    width: 20px;
   }
   
   .arrow:before {
-    transform: rotate(45deg) translateX(-23%);
+    transform: rotate(45deg) translateX(-15%);
     transform-origin: top left;
   }
   
   .arrow:after {
-    transform: rotate(-45deg) translateX(23%);
+    transform: rotate(-45deg) translateX(15%);
     transform-origin: top right;
   }
   
