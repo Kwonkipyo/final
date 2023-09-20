@@ -9,7 +9,8 @@
 }
 .login-bg {
   width: 100%;
-  height: 830px;
+  /* height: 830px; */
+  height: calc(100vh - 110px);
   overflow: hidden;
   opacity: 0.2;
   background: black;

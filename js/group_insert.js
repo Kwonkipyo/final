@@ -12,4 +12,17 @@ window.addEventListener("load", function () {
   const searchInput = document.getElementById("searchInput"); // 검색창
   const searchBtn = document.getElementById("searchBtn"); // 검색 버튼
   const clearBtn = document.getElementById("clearBtn"); // 닫기 버튼
+
+  showInitialDashboard();
+
+  // 대시보드 화면 표시
+  function showInitialDashboard() {
+    var params = new URLSearchParams(window.location.search);
+    var username = params.get("username");
+
+    if (username) {
+      document.getElementById("username-display").textContent = `${username}`;
+    } else {
+    }
+  }
 });
