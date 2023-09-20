@@ -132,12 +132,20 @@
       <header class="header">
         <div class="inner">
           <div class="header-top">
-            <div class="logo"><img src="images/Class&.png" alt=""></div>
+            <div class="logo"><img src="images/Class&.png" alt="" /></div>
             <div class="sign-menu">
-              <i class="fa-solid fa-magnifying-glass" id="search-icon" style="color: #FFFFFF;"></i>
+              <i
+                class="fa-solid fa-magnifying-glass"
+                id="search-icon"
+                style="color: #ffffff"
+              ></i>
               <div id="search-container">
-                <input type="text" id="search-input" placeholder="">
-                <i class="fa-solid fa-xmark" id="close-search" style="color: #FFFFFF;"></i>
+                <input type="text" id="search-input" placeholder="" />
+                <i
+                  class="fa-solid fa-xmark"
+                  id="close-search"
+                  style="color: #ffffff"
+                ></i>
               </div>
               <div id="dashboard-section">
                 <div id="username-display"></div>
@@ -155,14 +163,19 @@
             </div>
           </div>
           <div class="header-bottom">
-              <ul class="gnb">
-                <li>
-                    <a href="#" class="gnb-cate">카테고리
-                      <i class="fa-solid fa-chevron-down" style="color: #FFFFFF;"></i>
-                      <i class="fa-solid fa-chevron-up" style="color: #FFFFFF;"></i>
-                    </a>
-                </li>
-                <div class="header-catemenu">
+            <ul class="gnb">
+              <li>
+                <a href="#" class="gnb-cate"
+                  >카테고리
+                  <i
+                    class="fa-solid fa-chevron-down"
+                    style="color: #ffffff"
+                  ></i>
+                  <i class="fa-solid fa-chevron-up" style="color: #ffffff"></i>
+                </a>
+              </li>
+              <div class="header-catemenu">
+                <div class="catemenu-txt">
                   <ul class="depth2">
                     <li><a href="#">디지털 드로잉</a></li>
                     <li><a href="#">드로잉</a></li>
@@ -175,9 +188,9 @@
                     <li><a href="#">사진·영상</a></li>
                   </ul>
                   <ul class="depth2">
-                        <li><a href="#">금융·제테크</a></li>
-                        <li><a href="#">창업·부업</a></li>
-                        <li><a href="#">성공 마인드</a></li>
+                    <li><a href="#">금융·제테크</a></li>
+                    <li><a href="#">창업·부업</a></li>
+                    <li><a href="#">성공 마인드</a></li>
                   </ul>
                   <ul class="depth2">
                     <li><a href="#">프로그래밍</a></li>
@@ -199,11 +212,12 @@
                     <li><a href="#">아이 교육</a></li>
                     <li><a href="#">부모 교육</a></li>
                   </ul>
-                  <div class="catemenu-close">
-                    <a href="#">
-                    <i class="fa-solid fa-xmark" style="color: #FFFFFF;"></i>
-                  <span>닫기</span></a>
                 </div>
+                <div class="catemenu-close">
+                  <a href="#">
+                    <i class="fa-solid fa-xmark" style="color: #ffffff"></i>
+                    <span>닫기</span></a
+                  >
                 </div>
                   <li><a href="group.html">공동구매</a></li>
                   <li><a href="#">샵</a></li>
@@ -528,8 +542,107 @@
             </div>
           </div>
           <!-- fix-menu -->
-          <div class="fix-menu-box">
-            <p>fix-menu</p>
+          <div class="fix-menu">
+            <div class="fix-menu-box">
+              <!-- 타이틀 메뉴 -->
+              <div class="fix-title-menu">
+                <div class="fix-title">
+                  <h2>수강 시작</h2>
+                  <p>즉시 가능</p>
+                </div>
+                <span></span>
+                <div class="fix-title">
+                  <h2>수강 기간</h2>
+                  <p>6개월</p>
+                </div>
+                <span></span>
+                <div class="fix-title">
+                  <h2>준비물</h2>
+                  <p>구매 가능</p>
+                </div>
+              </div>
+              <!-- 트리플 패스 -->
+              <div class="we-class">
+                <h3>트리플 패스 수강권</h3>
+                <p><span>50%</span>월 15,000원</p>
+                <div class="we-class-info">
+                  <i class="fa-solid fa-circle-info"></i>
+                  <div class="we-class-info-text">
+                    <p>다른 클래스 3개를 함께 담아요</p>
+                  </div>
+                </div>
+              </div>
+              <!-- 개별 클래스 -->
+              <div class="me-class">
+                <h3>개별 클래스 수강권</h3>
+                <p><span>30%</span>월 23,000원</p>
+              </div>
+              <!-- 준비물 -->
+              <div class="custom-selector">
+                <select id="preparation" onchange="showPreparation()">
+                  <option
+                    class="custom-option"
+                    value="option"
+                    disabled
+                    selected
+                  >
+                    준비물을 선택하세요
+                  </option>
+                  <option class="custom-option" value="option1">준비물</option>
+                </select>
+                <div id="customDiv">
+                  <!-- 준비물박스 -->
+                  <div class="custom-box">
+                    <!-- 이미지 -->
+                    <div class="custom-image">
+                      <img
+                        src="images/custom-image.jpg"
+                        alt="준비물"
+                        width="78px"
+                        height="auto"
+                      />
+                      <p>클래스를 도와줄당신을 위한 준비물 키트</p>
+                    </div>
+                    <div class="custom-bottom">
+                      <!-- 숫자 증가 박스 -->
+                      <div class="number-box">
+                        <button id="decreaseButton">-</button>
+                        <span id="quantity">1</span>
+                        <button id="increaseButton">+</button>
+                      </div>
+                      <!-- 가격 박스 -->
+                      <div class="price-box">
+                        <p>가격 : <span id="price">25,500원</span></p>
+                        <button class="x-box" onclick="hidePreparation()">
+                          X
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="custom-span"
+                    >이 용품 중고거래 찾기&nbsp;<i
+                      class="fa-solid fa-arrow-right"
+                    ></i
+                  ></span>
+                </div>
+              </div>
+              <!-- 클래스 신청 버튼 -->
+              <div class="button-box">
+                <button class="me-registration">
+                  <h2>
+                    클래스 신청하기&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                  </h2>
+                </button>
+                <span>더 저렴히 시작하고 싶으신가요?</span>
+                <button class="we-registration">
+                  <h2>
+                    클래스 공동구매 찾기&nbsp;<i
+                      class="fa-solid fa-arrow-right"
+                    ></i>
+                  </h2>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>

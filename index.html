@@ -168,6 +168,13 @@
               </div>
               <span id="login-section"><a href="login.html">SIGN IN</a></span>
               <span id="signup-section"><a href="signup.html">SIGN UP</a></span>
+              <div class="header-select">
+                <select name="select" id="header-select">
+                  <option value="kor">KOR</option>
+                  <option value="eng">ENG</option>
+                  <option value="jap">JPN</option>
+                </select>
+              </div>
             </div>
           </div>
           <div class="header-bottom">
@@ -241,7 +248,7 @@
       <!-- 비주얼 -->
       <section class="visual">
         <div class="container">
-        <div class="swiper-container">
+          <div class="swiper-container">
           <div class="swiper-wrapper">
             <p>더 쉽게<br>
               더 저렴히<br>
@@ -253,43 +260,46 @@
               </video>
             </div>
             </div>
-        </div>
-      </div>
-      <div class="inner">
-        <div class="visual-menu">
-          <div class="visual-button">
+          </div>      
+          <div class="inner">
+            <div class="visual-menu">
+              <div class="visual-button">
             <a href="#">
             <span>클래스</span>
             <br>
             <span>온라인으로 배워보는 취미</span>
           </a>
           <i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i>
-          </div>
-          <div class="visual-button">
+              </div>
+              <div class="visual-button">
             <a href="#">
             <span>공동구매</span>
             <br>
             <span>취미 용품을 더싸게</span>
           </a>
           <i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i>
-          </div>
-          <div class="visual-button">
+              </div>
+              <div class="visual-button">
             <a href="#">
             <span>중고거래</span>
             <br>
             <span>취미 공유와 소통의 모임</span>
             </a>
             <i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i>
-          </div>
-          <div class="visual-button">
+              </div>
+              <div class="visual-button">
             <a href="#">
             <span>오프라인</span>
             <br>
             <span>오프라인에서 더 자세하게</span>
           </a>
           <i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i>
-          </div>
+              </div>
+              <div class="arrow arrow-first"></div>
+              <div class="arrow arrow-second"></div>
+              <p>Scroll Down</p>
         </div>
+          </div>
       </div>
       </section>
       <!-- 클래스 카운트-->
@@ -334,7 +344,7 @@
       <section class="tip">
         <div class="inner">
           <div class="tip-title">
-            <h1>Class&를 알뜰히 사용하는법</h1>
+            <h1>Class&을 알뜰히 사용하는법</h1>
           </div>
           <div class="tip-inner">
             <div class="classtip tip-cate">
@@ -423,8 +433,7 @@
       <section class="teacher">
         <div class="inner">
           <h1>이 달의 인기 선생님을 소개합니다!</h1>
-            <div class="swiper sw-teacher">
-              <!-- Additional required wrapper -->
+          <div class="swiper sw-teacher">
               <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide teacher-slide">
@@ -618,7 +627,15 @@
                   </div>
                 </div>
               </div>
+          </div>
+          <div class="swipe-arrow-box">
+            <div class="swipe-arrow-wrap">
+              <div class="swipe-arrow prevswipe"></div>
             </div>
+            <div class="swipe-arrow-wrap">
+              <div class="swipe-arrow nextswipe"></div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- 배너 -->
@@ -627,14 +644,19 @@
           <!-- Swiper -->
           <div class="swiper sw-banner">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
+              <div class="swiper-slide banner1">
+                <img src="images/banner-img1.png" alt="">
                 <div class="banner-txt">
-                  <p><span>황금같은 추석 연휴</span>에는<br>중고거래 <span>포인트가 2배!</span></p>
+                  <p>황금같은 <span>추석 연휴</span> 에는 중고거래 <span>포인트가 2배!</span></p>
                   <a href="#">바로가기</a>
                 </div>
-                <img src="images/Group 87.png" alt="">
+                <img src="images/banner-img2.png" alt="">
               </div>
-              <div class="swiper-slide"></div>
+              <div class="swiper-slide">
+                <div class="banner-txt">
+                  <p>첫 공동구매 시 30% 쿠폰 증정</p>
+                </div>
+              </div>
               <div class="swiper-slide">
                 
               </div>
@@ -653,7 +675,7 @@
               <span>영상으로 수강생들의 생생한 후기를 확인해보세요!</span>
             </div>
             <div class="review-video">
-              <iframe width="980" height="600" src="https://www.youtube.com/embed/EO5U5waHXqA?si=bopEIF3-q78eqSJV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
             </div>
           </div>
           <div class="review-right">
@@ -697,6 +719,45 @@
       <!-- 푸터 -->
       <footer class="footer">
         <div class="inner">
+          <div class="footer-left">
+            <img src="images/Class&.png" alt="푸터로고" class="footer-logo">
+            <br>
+            <span>더싸고 더쉽게 Class&</span>
+            <div class="footer-selector"> 
+              <select id="language-select" name="language">
+                <option value="kor">한국어</option>
+                <option value="eng">ENGLISH</option>
+                <option value="jap">日本語</option>
+              </select>
+            </div>
+          </div>
+          <div class="footer-center">
+            <div class="footer-info ">
+              <a href="#">이용약관</a>
+              <a href="#">개인정보취급방침</a>
+              <a href="#">사업자정보확인</a>
+              <a href="#">환불규정</a>
+              <a href="#">공지사항</a>
+              <a href="#">FAQ</a>
+            </div>
+            <div class="footer-copy">
+              <p>
+              (주) Class&CEO: OOO주소: 서울시 강남구 테헤란로 OOO, 6층 7층 02-5x1-6xx2
+              <br>
+              이메일: ooo@class.co.kr개인정보책임관리자: OOO
+              <br>
+              사업자등록번호: 81x-8x-0x0xx8통신판매업 신고번호: 제 2xxx-서울xx-01xxx
+              </p>
+            </div>
+          </div>
+          <div class="footer-right">
+            <div class="footer-sns">
+              <a href="#"><i class="fa-brands fa-instagram" style="color: #ccc;"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube" style="color: #ccc;"></i></a> 
+              <a href="#"><i class="fa-brands fa-facebook" style="color: #ccc;"></i></a>
+            </div>
+            <span>COPYRIGHT &copy; Class& All rights reserved</span>
+          </div>
         </div>
       </footer>
     </div>

@@ -35,6 +35,15 @@
   border: 0;
   padding: 5px;
 }
+#header-select{
+  width: 60px;
+  border: 0;
+  background-color: transparent;
+  color: #e8eddf;
+}
+#header-select option{
+  background-color: rgba(0,0,0,0.8) !important;
+}
 .header-bottom {
   height: 50px;
   font-size: 18px;
@@ -69,8 +78,8 @@
 }
 .depth2{
   width: calc( 60% / 5);
-  height: 75%;
-  border-right: 1px solid rgba(255,255,255,0.1);
+  height: 300px;
+  border-right: 1px solid rgba(255,255,255,0.2);
   float: left;
   padding-left: 20px;
   margin-top: 15px;

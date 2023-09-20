@@ -14,10 +14,14 @@
     font-size: 35px;
     font-weight: 700;
     margin-bottom: 140px;
+    position: relative;
 }
 
 .teacher .sw-teacher{
     overflow: visible;
+    width: 100%;
+    cursor: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20242.405%20242.405%22%20style%3D%22enable-background%3Anew%200%200%20242.405%20242.405%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20d%3D%22M201.849%20135.576c-3.656-21.778-16.566-24.598-23.007-24.598-.204%200-.402.003-.593.008-.049.002-.097.002-.145.002-1.875%200-3.603-.983-4.608-2.574-5.371-8.491-12.67-10.721-18.854-10.721-3.197%200-6.096.596-8.277%201.23a5.436%205.436%200%200%201-1.516.217c-1.842%200-3.595-.946-4.642-2.559-4.979-7.667-11.833-10.155-18.144-10.155-6.144-.001-11.771%202.356-14.656%204.588a17.6%2017.6%200%200%200-3.311%203.388%205.224%205.224%200%200%201-4.232%202.118c-2.25%200-4.489-1.379-5.263-3.847L72.608%2023.655C70.051%2015.501%2063.736%2012.001%2057.354%2012c-10.056-.002-20.28%208.685-16.252%2021.534L66.8%20114.372c.891%202.844-.653%205.914-3.496%206.807-5.637%201.768-13.888%207.269-15.402%2024.243-2.558%2028.665%2026.197%2060.101%2031.007%2065.142.45.472.813%201.02%201.069%201.621l11.706%2027.221c.855%202.012%202.83%203%205.017%203h74.855c2.655%200%204.925-1.596%205.373-4.213l3.282-27.274c.071-.415.188-.736.353-1.124%202.529-5.972%2024.683-53.989%2021.285-74.219z%22%20fill%3D%22%23fff%22%2F%3E%3Cpath%20style%3D%22fill%3Anone%3Bstroke%3A%23fff%3Bstroke-width%3A0%3Bstroke-linecap%3Around%3Bstroke-linejoin%3Around%22%20d%3D%22M57.356%200h0%22%2F%3E%3Cpath%20d%3D%22M100.203%2046.405h58.489l-12.887%2013.091c-2.343%202.343-2.343%206.242.001%208.586%201.171%201.171%202.707%201.808%204.242%201.808%201.535%200%203.071-.561%204.243-1.732l22.386-22.374a5.992%205.992%200%200%200-.001-8.479L153.7%2014.333a6%206%200%200%200-8.485.002c-2.343%202.343-2.343%205.94.001%208.284l11.989%2011.786h-57.003a6%206%200%201%200%20.001%2012z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E'), auto;
+    height: 320px;
 }
 .teacher .swiper-wrapper{
     align-items: center;
@@ -99,6 +103,7 @@
     border-radius: 30px;
     background-color: #000;
     color: #fff;
+    display: none;
 }
 
 .teacher-slide .teacher-slide-txt{
@@ -158,10 +163,126 @@
     opacity: 1;
 }
 
+.teacher .swiper-slide-active .img-box .img-txt button{
+    display: block;
+}
+
 .teacher .swiper-slide-active .teacher-slide {
     box-shadow: 0 13px 35px -16px rgb(0 0 0 / 50%);
 }
 
 .teacher .swiper-slide-active .teacher-slide-txt{
     display: block;
+}
+
+/* 화살표 */
+.swipe-arrow-box {
+    position: absolute;
+    bottom: -50px;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.swipe-arrow-wrap {
+    margin: 0 auto;
+    position: relative;
+    height: 50px;
+    rotate: -90deg;
+}
+
+.swipe-arrow {
+    position: absolute;
+    width: 2px;
+    height: 50px;
+    display: block;
+    background-color: #fff;
+}
+
+.prevswipe{
+    rotate: 180deg;
+    animation: prevswipe 2s infinite;
+}
+
+.nextswipe{
+    animation: nextswipe 2s infinite;
+}
+
+.swipe-arrow:before, .swipe-arrow:after {
+    content: '';
+    width: 2px;
+    height: 10px;
+    bottom: 0;
+    position: absolute;
+    transform-origin: bottom;
+    background-color: #fff;
+    animation: fadeIn 2s infinite;
+}
+
+.swipe-arrow:before {
+    transform: rotate(-45deg);
+}
+
+.swipe-arrow:after {
+    transform: rotate(45deg);
+}
+
+@keyframes nextswipe {
+    0% {
+        height: 0px;
+        top: 0;
+        bottom: auto;
+    }
+    49% {
+        height: 50px;
+        top: 0;
+        bottom: auto;
+    }
+    50% {
+        height: 50px;
+        top: auto;
+        bottom: 0;
+    }
+    100% {
+        height: 0px;
+        top: auto;
+        bottom: 0;
+    }
+}
+
+@keyframes prevswipe {
+    0% {
+        height: 0px;
+        top: auto;
+        bottom: 0;
+    }
+    49% {
+        height: 50px;
+        top: auto;
+        bottom: 0;
+    }
+    50% {
+        height: 50px;
+        top: 0;
+        bottom: auto;
+    }
+    100% {
+        height: 0px;
+        top: 0;
+        bottom: auto;
+    }
+}
+
+@keyframes fadeIn {
+    0%, 5% {
+        opacity: 0;
+    }
+    15%, 85% {
+        opacity: 1;
+    }
+    95%, 100% {
+        opacity: 0;
+    }
 }
