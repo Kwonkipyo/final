@@ -95,8 +95,11 @@
 }
 
 .class-type {
-    padding: 3px 10px 3px 15px;
+    padding: 3px 10px 3px 10px;
     font-weight: 700;
+    border-radius: 50px;
+    margin-top: 5px;
+    margin-left: 10px;
 }
 
 .class-type.baking{
