@@ -19,6 +19,7 @@ window.addEventListener("load", function () {
       document.getElementById("login-section").style.display = "none";
       document.getElementById("dashboard-section").style.display = "flex";
       document.getElementById("username-display").textContent = `${username}`;
+      document.getElementById("username-display2").textContent = `${username}`;
       // document.getElementById("logout-button").style.display = "block";
       document.getElementById("signup-section").style.display = "none";
     } else {
@@ -28,4 +29,19 @@ window.addEventListener("load", function () {
       // document.getElementById("logout-button").style.display = "none";
     }
   }
+
+  // ==========
+  document
+    .getElementById("login-form")
+    .addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      var params = new URLSearchParams(window.location.search);
+      var username = params.get("username");
+
+      if (username) {
+        window.location.href =
+          "index.html?username=" + encodeURIComponent(username);
+      }
+    });
 });
