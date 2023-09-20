@@ -13,60 +13,54 @@
 }
 
 .banner .swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     background-color: #252525;
     color: #e8eddf;
 }
 
-.banner .swiper-slide .banner-txt{
-    background: linear-gradient(90deg, rgb(194, 116, 0) 50%, rgba(255,154,0,0) 100%);
-    width: 40%;
-    height: 100%;
+.banner .banner1{
     display: flex;
-    padding-left: 100px;
-    padding-top: 30px;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 50px;
+    justify-content: space-between;
     position: relative;
+    /* background: linear-gradient(to bottom, rgb(194, 116, 0) 50%, rgba(255,154,0,0) 100%); */
 }
 
-.banner .swiper-slide .banner-txt a{
+.banner .banner1 .banner-txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     position: absolute;
-    bottom: 30px;
-    font-size: 14px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.banner .banner1 .banner-txt p{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.banner .banner1 .banner-txt a{
+    padding: 5px 15px;
     font-weight: 700;
-    background-color: rgb(39, 23, 0);
-    height: 30px;
-    line-height: 30px;
-    width: 80px;
-    text-align: center;
+    background-color: rgb(194, 116, 0);
     border-radius: 50px;
 }
 
-.banner .swiper-slide .banner-txt p span{
-    font-size: 28px;
+.banner .banner1 .banner-txt p span{
+    font-size: 30px;
     font-weight: 900;
     color: #fff;
     position: relative;
 }
 
-.banner .swiper-slide .banner-txt p span:last-child::after{
+.banner .banner1 .banner-txt p span:last-child::after{
     content: "★";
     position: absolute;
     top: -10px;
-    right: -38px;
+    right: -30px;
     rotate: -45deg;
     transform: translate(-50%, -50%);
     font-size: 16px;
     color: rgb(255, 203, 125);
-}
-
-.banner .swiper-slide img {
-    display: block;
-    width: 40%;
-    object-fit: cover;
-    margin-right: 100px;
 }
