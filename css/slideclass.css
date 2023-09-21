@@ -1,6 +1,5 @@
 .newclass{
     text-align: left;
-    /* margin-top: 100px; */
 }
 
 .sw-aiclass,
@@ -22,6 +21,12 @@
     background-position: center;
     border-radius: 25px;
     overflow: hidden;
+    transition: 0.3s;
+}
+
+.class-slide:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.7), 0 10px 10px rgba(0,0,0,0.67);
 }
 
 .class-box{
@@ -55,13 +60,15 @@
     text-align: right;
 }
 
+.bestclass-title,
 .aiclass-title,
 .newclass-title{
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     position: relative;
 }
 
+.bestclass-title span,
 .aiclass-title span,
 .newclass-title span{
     font-size: 20px;
@@ -70,13 +77,14 @@
     color: #aeb3a6;
 }
 
+.bestclass-title p,
 .aiclass-title p,
 .newclass-title p{
     font-size: 35px;
     display: inline;
 }
 
-.aiclass-title a,
+.title-box a,
 .newclass-title a{
     position: absolute;
     right: 0;
@@ -89,7 +97,7 @@
     align-items: baseline;
 }
 
-.aiclass-title a i,
+.title-box a i,
 .newclass-title a i{
     margin-left: 5px;
 }

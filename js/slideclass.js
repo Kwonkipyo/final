@@ -3,7 +3,7 @@ window.addEventListener("load", function(){
 function priceToString(price) {
     return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
-// data.json을 로딩. 연결시켜준다.
+// data.json을 연결.
 const xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function(event){
     const req = event.target;
@@ -20,11 +20,11 @@ xhttp.onreadystatechange = function(event){
         showNewClass(); // 신규 클래스 화면에 배치
     }
 }
-// 자료를 호출한다.
+// 자료 호출
 xhttp.open("GET", "data.json")
-// 웹브라우저 기능 실행 할 수 있도록 요청.
+// 웹브라우저 기능 실행 할 수 있도록 요청
 xhttp.send();
-// 할인 물품
+
 let AI_CLASS;
 let NEW_CLASS;
 let aiClassTag = document.getElementById("data-aiclass");
