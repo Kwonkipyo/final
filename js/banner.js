@@ -14,12 +14,12 @@ window.addEventListener("load", function(){
     });
     
     let $slides = document.querySelectorAll('.banner .swiper-slide');
-for (let i of $slides) {
-    i.addEventListener('mouseover', function(){
-        swiper.autoplay.stop();
-    });
-    i.addEventListener('mouseout', function(){
-        swiper.autoplay.start();
-    });
+    for (let i of $slides) {
+        i.addEventListener('mouseover', function(){
+            swiper.autoplay.stop();
+        });
+        i.addEventListener('mouseout', function(){
+            swiper.autoplay.start();
+        });
 }
 });

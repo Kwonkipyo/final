@@ -9,8 +9,8 @@ window.addEventListener("load", function () {
       document.getElementById("dashboard-section").style.display = "none";
       document.getElementById("signup-section").style.display = "block";
       // bestclass-title 표시
-      // document.getElementById("aiclass-title").style.display = "none";
-      // document.getElementById("bestclass-title").style.display = "block";
+      document.getElementById("aiclass-title").style.display = "none";
+      document.getElementById("bestclass-title").style.display = "block";
     });
 
   // 대시보드 화면 표시
@@ -26,8 +26,8 @@ window.addEventListener("load", function () {
       // document.getElementById("logout-button").style.display = "block";
       document.getElementById("signup-section").style.display = "none";
       // aiclass-title 표시
-      // document.getElementById("aiclass-title").style.display = "block";
-      // document.getElementById("bestclass-title").style.display = "none";
+      document.getElementById("aiclass-title").style.display = "block";
+      document.getElementById("bestclass-title").style.display = "none";
     } else {
       document.getElementById("login-section").style.display = "block";
       document.getElementById("signup-section").style.display = "block";
