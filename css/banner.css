@@ -1,5 +1,4 @@
 .banner{
-    margin-top: 200px;
 }
 
 .banner .inner{
@@ -108,6 +107,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 100px 0 100px;
+    position: relative;
+    overflow: hidden;
 }
 
 .banner .banner3 .banner-txt{
@@ -115,6 +116,19 @@
     align-items: flex-end;
     flex-direction: column;
     gap: 10px;
+}
+
+.banner .banner3 .banner-txt::before{
+    content: "";
+    position: absolute;
+    top: 65%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    rotate: 45deg;
+    width: 1000px;
+    height: 1150px;
+    background: linear-gradient(to right, #000, transparent);
+    z-index: -1;
 }
 
 .banner .banner3 .banner-txt p{
@@ -130,4 +144,13 @@
     font-size: 25px;
     font-weight: 900;
     color: #fff;
+}
+
+.banner .swiper-pagination .swiper-pagination-bullet{
+    background-color: black;
+    opacity: 0.5;
+}
+
+.banner .swiper-pagination .swiper-pagination-bullet-active{
+    background-color: #e8eddf;
 }
