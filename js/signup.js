@@ -34,6 +34,8 @@ window.addEventListener("load", function () {
     const users = JSON.parse(localStorage.getItem("users")) || [];
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
+    // 사용자 이름을 localStorage에 저장
+    localStorage.setItem("username", username);
     alert("가입이 완료 되었습니다. 로그인 페이지로 이동합니다.");
     window.location.href =
       "login.html?username=" + encodeURIComponent(username);
