@@ -20,9 +20,10 @@
   align-items: center;
 }
 .header .logo {
-  width: 150px;
+  width: 120px;
   height: auto;
   margin-left: 30px;
+  margin-top: 15px;
 }
 #search-input{
   border-radius: 20px;
@@ -51,7 +52,7 @@
 }
 .header-bottom {
   height: 50px;
-  font-size: 18px;
+  font-size: 16px;
   display: flex;
   line-height: 50px;
   justify-content: space-between;
