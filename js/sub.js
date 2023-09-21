@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // 각 섹션의 위치값(세로스크롤 위치)
-  const sectionYpos = [1024, 5600, 6435, 8545];
+  const sectionYpos = [1082, 5700, 6600, 8800];
 
   // 클래스 title-menu 의 li 를 찾아라
   // 저장한다. 재활용하기 위해서
@@ -214,7 +214,7 @@ function showPreparation() {
   var selectedOption = selectElement.options[selectElement.selectedIndex].text;
 
   // 선택한 옵션에 따라 커스텀 내용을 표시하거나 숨김
-  if (selectedOption === "준비물1") {
+  if (selectedOption === "클래스를 도와줄당신을 위한 뜨개질 키트") {
     customDiv.style.display = "block";
   } else {
     customDiv.style.display = "none";
