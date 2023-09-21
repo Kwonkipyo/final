@@ -125,7 +125,7 @@
 } */
 
 .class-type {
-    padding: 3px 10px 3px 10px;
+    padding: 3px 10px;
     font-weight: 700;
     border-radius: 50px;
     margin-top: 5px;
@@ -163,3 +163,83 @@
 
 /* aiclass */
 /* newclass */
+
+/* 반응형 */
+@media all and (max-width: 1024px) {
+    .class-slide{
+        height: 200px;
+        width: 250px;
+    }
+    .class-box .class-txt{
+        height: 80px;
+        padding: 10px 15px 5px;
+        font-size: 14px;
+    }
+    .class-type {
+        padding: 2px 8px;
+        font-size: 14px;
+    }
+}
+/* mobile */
+@media all and (max-width: 768px) {
+    .bestclass-title span,
+    .aiclass-title > span,
+    .newclass-title span{
+        font-size: 17px;
+        margin-right: 8px;
+    }
+    .bestclass-title p,
+    .aiclass-title p,
+    .newclass-title p{
+        font-size: 30px;
+    }
+    .aiclass .plus,
+    .newclass .plus{
+        font-size: 14px;
+    }
+}
+@media all and (max-width: 600px) {
+    .bestclass-title,
+    .aiclass-title,
+    .newclass-title{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .aiclass .plus,
+    .newclass .plus{
+        font-size: 14px;
+        top: 40px;
+    }
+}
+@media all and (max-width: 480px){
+    .class-slide{
+        height: 150px;
+        width: 200px;
+        border-radius: 15px;
+    }
+    .class-box .class-txt{
+        height: 60px;
+        padding: 8px 10px 5px;
+        font-size: 12px;
+    }
+    .class-type {
+        padding: 2px 6px;
+        font-size: 12px;
+    }
+    .bestclass-title span,
+    .aiclass-title > span,
+    .newclass-title span{
+        font-size: 15px;
+    }
+    .bestclass-title p,
+    .aiclass-title p,
+    .newclass-title p{
+        font-size: 26px;
+    }
+    .aiclass .plus,
+    .newclass .plus{
+        font-size: 12px;
+        top: 40px;
+    }
+}
