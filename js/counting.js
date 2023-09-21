@@ -8,7 +8,7 @@ window.addEventListener('scroll', () => {
     // Set your target counts and increment values here
     const targetUserCount = 124873;
     const targetTeacherCount = 243;
-    const targetClassCount = 186;
+    const targetClassCount = 386;
     const targetLectureCount = 34816;
 
     const userIncrement = 413;  // Increment for user count

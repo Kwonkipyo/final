@@ -1,7 +1,6 @@
 .review{
     overflow: hidden;
     height: 820px;
-    padding: 100px 0;
     margin-bottom: 100px;
 }
 .review-container{
@@ -22,6 +21,17 @@
     width: 30%;
     height: 720px;
 }
+
+.review-title{
+    padding-bottom: 50px;
+}
+.review-list{
+    max-height: 600px;
+    overflow-y: auto;
+    overflow: overlay;
+    scrollbar-color: #111;
+}
+
 .review-list:after{
     position: absolute;
     bottom:0;
@@ -31,18 +41,6 @@
     height:150px;
     background:linear-gradient(to top, rgb(0,0,0,0.6)10%,  rgba(26,26,26,0));
     z-index: 10;
-}
-.review-title{
-    padding-bottom: 50px;
-}
-.review-list{
-    max-height: 600px;
-    overflow-y: auto;
-    /* padding: 10px; */
-    overflow: overlay;
-}
-.review-list::-webkit-scrollbar{
-    height: 0px;
 }
 .review-right .review-txt {
     width: 100%;
