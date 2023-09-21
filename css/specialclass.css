@@ -138,6 +138,7 @@
     .specialclass .specialclass-item-box{
         width: 100%;
         margin-bottom: 110px;
+        margin-top: 50px;
         justify-content: space-between;
     }
     .specialclass .specialclass-item{
@@ -151,18 +152,27 @@
 @media all and (max-width: 480px) {
     .specialclass .specialclass-item-box{
         flex-direction: column;
-        margin-top: 40px;
+        margin-top: 50px;
         gap: 20px;
     }
     .specialclass .specialclass-item{
         flex-direction: row;
         width: 100%;
-        padding: 0 30px;
+        padding: 0 10%;
     }
     .specialclass .specialclass-item span{
         width: 160px;
     }
     .specialclass .specialclass-item img{
-        width: 40%;
+        width: 35%;
+    }
+    .specialclass .specialclass-info span{
+        font-size: 26px;
+    }
+}
+
+@media all and (max-width: 320px){
+    .specialclass .specialclass-item span{
+        font-size: 12px;
     }
 }
