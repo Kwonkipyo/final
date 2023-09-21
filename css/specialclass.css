@@ -6,7 +6,6 @@
     height: 500px;
     position: relative;
     display: flex;
-    margin-top: 100px;
 }
 
 .specialclass .inner{
@@ -47,10 +46,19 @@
 
 .specialclass .specialclass-info .specialclass-btn{
     display: inline-block;
-    padding: 15px 20px;
+    padding: 10px 20px;
     border: 1px solid;
-    font-size: 14px;
+    font-size: 15px;
     margin-top: 50px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.specialclass .specialclass-info .specialclass-btn:hover{
+    background-color: #e8eddf;
+    border: 1px solid #e8eddf;
+    color: #5E5952;
+    font-weight: 900;
 }
 
 .specialclass .specialclass-item{

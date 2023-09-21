@@ -2,6 +2,7 @@
   position: relative;
   display: block;
   width: 100%;
+  max-width: 1920px;
   height: 110px;
   font-family: "NanumSquare";
   position: fixed;
@@ -23,17 +24,18 @@
   height: auto;
   margin-left: 30px;
 }
+#search-input{
+  border-radius: 20px;
+  border: 0;
+  padding: 3px;
+  padding-left: 10px;
+}
 .sign-menu {
   display: flex;
   align-items: center;
   font-size: 15px;
   flex-wrap: wrap;
   gap: 0 20px;
-}
-#search-input{
-  border-radius: 10px;
-  border: 0;
-  padding: 5px;
 }
 #header-select{
   width: 60px;
@@ -42,6 +44,7 @@
   color: #e8eddf;
   font-family: "NanumSquare";
   font-size: 15px;
+  cursor: pointer;
 }
 #header-select option{
   background-color: rgba(0,0,0,0.8) !important;
@@ -101,7 +104,6 @@
   display: none;
   cursor: pointer;
 }
-
 /* ===== */
 #dashboard-section {
   position: relative;
@@ -146,4 +148,31 @@
 }
 #dropdown-menu a:hover {
   color: #f5cb5c;
+}
+@media all and (max-width:1024px) {
+  .header-catemenu{
+    width: 100%;
+    left: 0;
+  }
+  .catemenu-txt{
+    margin: 0;
+  }
+  .depth2{
+    width: calc( 90% / 5);
+  }
+}
+@media all and (max-width:768px){
+  .header-bottom{
+    font-size: 16px;
+  }
+  .header-catemenu{
+    width: 768px;
+    font-size: 13px;
+  }
+  .depth2{
+    width: calc( 90% / 5);
+  }
+}
+@media all and (max-width:320px){
+  
 }

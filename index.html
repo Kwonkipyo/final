@@ -140,7 +140,7 @@
       <header class="header">
         <div class="inner">
           <div class="header-top">
-            <a href="#" class="logo"><img src="images/Class&.png" alt=""></a>
+            <a href="#" class="logo"><img src="images/Class&.png" alt="메인로고"></a>
             <div class="sign-menu">
               <i
                 class="fa-solid fa-magnifying-glass"
@@ -148,7 +148,7 @@
                 style="color: #ffffff"
               ></i>
               <div id="search-container">
-                <input type="text" id="search-input" placeholder="" />
+                <input type="text" id="search-input" placeholder="검색어를 입력해주세요" />
                 <i
                   class="fa-solid fa-xmark"
                   id="close-search"
@@ -245,7 +245,7 @@
           <div class="swiper-container">
           <div class="swiper-wrapper">
             <p>더 쉽게<br>
-              더 저렴히<br>
+              더 가볍게<br>
               Class&</p>
             <div class="swiper-slide">
               <!-- 비디오 요소 추가 -->
@@ -307,7 +307,7 @@
               <span id="userCount">0</span>
             </div>
             <div class="counting-info">
-              <i class="fa-solid fa-handshake" style="color: #000000"></i>
+              <i class="fa-solid fa-chalkboard-user" style="color: #000000"></i>
               <br />
               <span>강사</span>
               <br />
@@ -323,9 +323,9 @@
               <br />
             </div>
             <div class="counting-info">
-              <i class="fa-solid fa-chalkboard-user" style="color: #000000"></i>
+              <i class="fa-solid fa-basket-shopping" style="color: #000000;"></i>
               <br />
-              <span>누적강의수</span>
+              <span>누적중고거래</span>
               <br />
               <span id="lectureCount">0</span>
               <br />
@@ -337,7 +337,7 @@
       <section class="tip">
         <div class="inner">
           <div class="tip-title">
-            <h1><img src="images/Class&.png" alt="팁로고" class="tip-logo">을 알뜰히 사용하는 법</h1>
+            <h1><img src="images/Class&.png" alt="팁로고" class="tip-logo"> 알뜰히 사용하는 법</h1>
           </div>
           <div class="tip-inner">
             <div class="classtip tip-cate">
@@ -373,9 +373,15 @@
       <!-- 맞춤 클래스 -->
       <section class="aiclass" dir="ltr">
         <div class="inner">
-          <div class="aiclass-title">
-            <span>AI가 추천하는</span>
-            <p>ㅇㅇㅇ님의 맞춤 클래스</p>
+          <div class="title-box">
+            <div id="bestclass-title" class="bestclass-title">
+              <span>신청 수가 많아요</span>
+              <p>Class&의 인기 클래스</p>
+            </div>
+            <div id="aiclass-title" class="aiclass-title" style="display: none;">
+              <span>AI가 추천하는</span>
+              <p><span id="username-display2"></span>님의 맞춤 클래스</p>
+            </div>
             <a href="#">더보기<i class="fa-solid fa-angle-right"></i></a>
           </div>
           <div class="aiclass-slide" id="data-aiclass">
@@ -396,7 +402,7 @@
           </div>
         </div>
       </section>
-      <!-- 기획전 -->
+      <!-- 추천 취미 -->
       <section class="specialclass">
         <div class="inner">
           <div class="specialclass-info">
@@ -404,7 +410,7 @@
             추천 취미</span>
             <p>여러 취미를 가진 취미 부자들,
             다양한 취미 용품들을 찾아보세요</p>
-            <a href="#" class="specialclass-btn">기획전 클래스 전체보기</a>
+            <a href="#" class="specialclass-btn">중고거래 하러가기</a>
           </div>
           <div class="specialclass-item-box">
             <div class="specialclass-item">
@@ -645,13 +651,19 @@
                 </div>
                 <img src="images/banner-img2.png" alt="">
               </div>
-              <div class="swiper-slide">
+              <div class="swiper-slide banner2">
                 <div class="banner-txt">
-                  <p>첫 공동구매 시 30% 쿠폰 증정</p>
+                  <p><span>첫 공동구매</span> 시 <br><span><b>30%</b> 쿠폰 증정</span></p>
+                  <a href="#">바로가기</a>
                 </div>
+                <img src="images/banner-img3.png" alt="">
               </div>
-              <div class="swiper-slide">
-                <p>Big3 개별구매 3개 묶어서 구매하면 저렴하게 구매 가능</p>
+              <div class="swiper-slide banner3">
+                <img src="images/banner-img4.png" alt="">
+                <div class="banner-txt">
+                  <span>Class3 패키지로 시작해요!</span>
+                  <p>개별구매 클래스를 3가지 골라 담아 저렴한 가격에 만나보세요</p>
+                </div>
               </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -668,7 +680,7 @@
               <span>영상으로 수강생들의 생생한 후기를 확인해보세요!</span>
             </div>
             <div class="review-video">
-
+              <img src="images/interview.jpg" alt="인터뷰썸네일">
             </div>
           </div>
           <div class="review-right">
