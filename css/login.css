@@ -2,7 +2,7 @@
 .login-wrap {
   position: relative;
   width: 100%;
-  padding: 110px 0;
+  padding-top: 110px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +28,7 @@
 }
 .login-box {
   position: absolute;
-  top: 50%;
+  top: 56%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 450px;

@@ -34,7 +34,7 @@
   font-size: 18px;
   font-weight: bold;
 }
-#board_form label::before {
+#board_form label.must::before {
   content: "*";
   color: red;
   font-size: 16px;
@@ -49,9 +49,53 @@
   border: 1px solid #ccc;
   border-radius: 3px;
 }
-#board_form input {
+.board_insert input {
   width: 45%;
 }
+
+.search-box {
+  position: relative;
+  width: 45%;
+}
+.search-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.search-wrap input[type="text"] {
+  width: 93%;
+  margin-bottom: 0;
+  border: none;
+}
+.search-wrap button {
+  font-size: 16px;
+  padding: 8.1px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+}
+#searchResults {
+  position: absolute;
+  display: none;
+  /* transform: translateY(-100%); */
+  width: 100%;
+  min-height: 250px;
+  overflow-y: hidden;
+  border-radius: 3px;
+  background-color: aqua;
+  z-index: 1;
+}
+#searchResults li {
+  font-size: 14px;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
 #board_form .boardNum-wrap {
   position: relative;
   width: 10%;

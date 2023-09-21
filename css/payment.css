@@ -12,15 +12,11 @@
 /* 결제부분 */
 .payment-section {
   width: 100%;
-  height: 1000px;
-  margin-top: 30px;
+  margin: 30px 0 60px;
   color: #000;
-  background-color: aquamarine;
 }
 .payment-wrap {
   width: 100%;
-  height: 1000px;
-  background-color: red;
 }
 .payment-box {
   width: 100%;
@@ -71,7 +67,8 @@
   font-weight: 900;
 }
 .text-wrap p {
-  color: #545454;
+  color: #a0a0a0;
+  font-weight: bold;
 }
 .class-wrap {
   display: flex;
@@ -80,6 +77,7 @@
   padding: 20px;
   border-radius: 15px;
   background-color: #f4f4f4;
+  color: #6c6c6c;
 }
 .class-wrap .images {
   width: 65px;
@@ -97,4 +95,78 @@
   margin-top: 10px;
   font-size: 14px;
   font-weight: bold;
+}
+
+/*  */
+.dropdown-selected {
+  background-color: #3498db;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dropdown-selected p {
+  margin: 0;
+}
+.dropdown-selected i {
+  font-size: 16px;
+}
+.dropdown-list {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-list-item {
+  padding: 10px;
+}
+.coupon-dropdown-label {
+  display: flex;
+  flex-direction: column;
+}
+.coupon-dropdown-title {
+  font-weight: bold;
+}
+.coupon-dropdown-desc small {
+  color: #666;
+}
+/* 드롭다운 메뉴 열린 상태 스타일 */
+.show {
+  display: block;
+}
+/*  */
+
+.radio_box {
+  width: 100%;
+  border-radius: 15px;
+  border: 1px solid #e0e0e0;
+}
+.radio_box fieldset {
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+}
+.radio_box fieldset:last-child {
+  border-bottom: 0;
+}
+.check-box {
+  display: flex;
+  justify-content: space-between;
+}
+.pay {
+  width: 100%;
+  padding: 23px;
+  background-color: #383838;
+  border-radius: 15px;
+  border: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
 }

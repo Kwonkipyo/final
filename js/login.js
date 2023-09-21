@@ -16,24 +16,12 @@ window.addEventListener("load", function () {
 
     if (authenticatedUser) {
       alert("로그인이 성공하였습니다.");
-      window.location.href =
-        "index.html?username=" + encodeURIComponent(username);
+      // 사용자 이름을 localStorage에 저장
+      localStorage.setItem("username", authenticatedUser.username);
+      window.location.href = "index.html";
     } else {
       alert("로그인 정보가 올바르지 않습니다. 다시 시도해주세요.");
       loginForm.reset();
     }
   });
-  document
-    .getElementById("login-form")
-    .addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      var params = new URLSearchParams(window.location.search);
-      var username = params.get("username");
-
-      if (username) {
-        window.location.href =
-          "index.html?username=" + encodeURIComponent(username);
-      }
-    });
 });

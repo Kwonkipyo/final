@@ -35,7 +35,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- title -->
-    <title>클래스 공동구매</title>
+    <title>로그인 페이지</title>
 
     <!-- SEO -->
     <meta name="author" content="지확행" />
@@ -151,6 +151,13 @@
               </div>
               <span id="login-section"><a href="login.html">SIGN IN</a></span>
               <span id="signup-section"><a href="signup.html">SIGN UP</a></span>
+              <div class="header-select">
+                <select name="select" id="header-select">
+                  <option value="kor">KOR</option>
+                  <option value="eng">ENG</option>
+                  <option value="jap">JPN</option>
+                </select>
+              </div>
             </div>
           </div>
           <div class="header-bottom">
@@ -304,7 +311,9 @@
             <br />
             <div class="login-text">
               <p><a href="#">아이디 / 비밀번호 찾기</a></p>
-              <p><span>처음 오셨나요?</span><a href="signup.html"> 회원가입</a></p>
+              <p>
+                <span>처음 오셨나요?</span><a href="signup.html"> 회원가입</a>
+              </p>
             </div>
             <button type="submit">로그인</button>
             <fieldset>
@@ -329,7 +338,55 @@
       </section>
       <!-- 푸터 -->
       <footer class="footer">
-        <div class="inner"></div>
+        <div class="inner">
+          <div class="footer-left">
+            <img src="images/Class&.png" alt="푸터로고" class="footer-logo" />
+            <br />
+            <span>더싸고 더쉽게 Class&</span>
+            <div class="footer-selector">
+              <select id="language-select" name="language">
+                <option value="kor">한국어</option>
+                <option value="eng">ENGLISH</option>
+                <option value="jap">日本語</option>
+              </select>
+            </div>
+          </div>
+          <div class="footer-center">
+            <div class="footer-info">
+              <a href="#">이용약관</a>
+              <a href="#">개인정보취급방침</a>
+              <a href="#">사업자정보확인</a>
+              <a href="#">환불규정</a>
+              <a href="#">공지사항</a>
+              <a href="#">FAQ</a>
+            </div>
+            <div class="footer-copy">
+              <p>
+                (주) Class&CEO: OOO주소: 서울시 강남구 테헤란로 OOO, 6층 7층
+                02-5x1-6xx2
+                <br />
+                이메일: ooo@class.co.kr개인정보책임관리자: OOO
+                <br />
+                사업자등록번호: 81x-8x-0x0xx8통신판매업 신고번호: 제
+                2xxx-서울xx-01xxx
+              </p>
+            </div>
+          </div>
+          <div class="footer-right">
+            <div class="footer-sns">
+              <a href="#"
+                ><i class="fa-brands fa-instagram" style="color: #ccc"></i
+              ></a>
+              <a href="#"
+                ><i class="fa-brands fa-youtube" style="color: #ccc"></i
+              ></a>
+              <a href="#"
+                ><i class="fa-brands fa-facebook" style="color: #ccc"></i
+              ></a>
+            </div>
+            <span>COPYRIGHT &copy; Class& All rights reserved</span>
+          </div>
+        </div>
       </footer>
       <script>
         AOS.init();
