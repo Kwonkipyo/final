@@ -1,3 +1,7 @@
+.aiclass{
+    margin-bottom: 100px;
+}
+
 .newclass{
     text-align: left;
 }
@@ -65,11 +69,10 @@
 .newclass-title{
     font-weight: 700;
     margin-bottom: 30px;
-    position: relative;
 }
 
 .bestclass-title span,
-.aiclass-title span,
+.aiclass-title > span,
 .newclass-title span{
     font-size: 20px;
     display: inline;
@@ -84,23 +87,42 @@
     display: inline;
 }
 
-.title-box a,
-.newclass-title a{
+.aiclass .plus,
+.newclass .plus{
     position: absolute;
-    right: 0;
-    top: 10px;
+    right: 20px;
+    top: 20px;
 }
 
-.newclass-title a{
+.newclass .plus{
     display: flex;
     flex-direction: row-reverse;
     align-items: baseline;
 }
 
-.title-box a i,
-.newclass-title a i{
+.aiclass .plus i,
+.newclass .plus i{
     margin-left: 5px;
+    transition: 0.3s;
 }
+
+.aiclass .plus:hover i,
+.newclass .plus:hover i{
+    transform: translateX(3px);
+}
+
+/* .class-pause{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 30px;
+    left: 500px;
+    color: #e8eddf;
+    background-color: #3b3b3b;
+    padding: 2px 7px;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+} */
 
 .class-type {
     padding: 3px 10px 3px 10px;
@@ -108,6 +130,7 @@
     border-radius: 50px;
     margin-top: 5px;
     margin-left: 10px;
+    opacity: 1;
 }
 
 .class-type.baking{
