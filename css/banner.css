@@ -11,13 +11,26 @@
 .banner .swiper-slide {
     background-color: #252525;
     color: #e8eddf;
+    overflow: hidden;
 }
 
 .banner .banner1{
     display: flex;
-    justify-content: space-between;
     position: relative;
-    /* background: linear-gradient(to bottom, rgb(194, 116, 0) 50%, rgba(255,154,0,0) 100%); */
+    align-items: center;
+    justify-content: center;
+}
+
+.banner .banner1 img:first-child{
+    position: absolute;
+    left: 0;
+    width: 500px;
+}
+
+.banner .banner1 img:last-child{
+    position: absolute;
+    right: 0;
+    width: 400px;
 }
 
 .banner .banner1 .banner-txt{
@@ -25,10 +38,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
+    z-index: 1;
 }
 
 .banner .banner1 .banner-txt p{
@@ -105,7 +115,7 @@
     justify-content: space-between;
     padding: 0 100px 0 100px;
     position: relative;
-    overflow: hidden;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 15%, #252525 90%);
 }
 
 .banner .banner3 .banner-txt{
@@ -113,19 +123,7 @@
     align-items: flex-end;
     flex-direction: column;
     gap: 10px;
-}
-
-.banner .banner3 .banner-txt::before{
-    content: "";
-    position: absolute;
-    top: 65%;
-    left: 0;
-    transform: translate(-50%, -50%);
-    rotate: 45deg;
-    width: 1000px;
-    height: 1150px;
-    background: linear-gradient(to right, #000, transparent);
-    z-index: -1;
+    text-align: right;
 }
 
 .banner .banner3 .banner-txt p{
@@ -135,6 +133,7 @@
 .banner .banner3 img{
     width: 50%;
     margin-bottom: 20px;
+    rotate: -5deg;
 }
 
 .banner .banner3 .banner-txt span{
@@ -150,4 +149,190 @@
 
 .banner .swiper-pagination .swiper-pagination-bullet-active{
     background-color: #e8eddf;
+}
+
+/* 반응형 */
+@media all and (max-width: 1024px) {
+    /* banner2 */
+    .banner .banner2 .banner-txt{
+        margin-left: 7%;
+    }
+    .banner .banner2 .banner-txt p{
+        font-size: 18px;
+    }
+    .banner .banner2 .banner-txt span{
+        font-size: 23px;
+        font-weight: 900;
+    }
+    .banner .banner2 .banner-txt span b{
+        font-size: 38px;
+    }
+    .banner .banner2 .banner-txt a{
+        margin-left: 30px;
+        margin-top: 40px;
+    }
+    
+    /* banner3 */
+    .banner .banner3{
+        padding: 0 50px 0 50px;
+    }
+    .banner .banner3 .banner-txt p{
+        font-size: 15px;
+    }
+}
+
+/* mobile */
+@media all and (max-width: 768px) {
+    /* banner1 */
+    .banner .banner1 img:first-child{
+        bottom: 0;
+        width: 400px;
+    }
+    .banner .banner1 img:last-child{
+        bottom: 0;
+        width: 300px;
+    }
+    .banner .banner1 .banner-txt p{
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    .banner .banner1 .banner-txt p span{
+        font-size: 27px;
+    }
+    
+    /* banner2 */
+    .banner .banner-txt a{
+        padding: 3px 10px;
+        font-weight: 700;
+        border-radius: 50px;
+        font-size: 14px;
+    }
+    .banner .banner2 .banner-txt{
+        margin-left: 5%;
+    }
+    .banner .banner2 .banner-txt p{
+        font-size: 15px;
+    }
+    .banner .banner2 .banner-txt span{
+        font-size: 20px;
+        font-weight: 900;
+    }
+    .banner .banner2 .banner-txt span b{
+        font-size: 33px;
+    }
+    .banner .banner2 .banner-txt a{
+        position: absolute;
+        left: 1%;
+        bottom: 30px;
+    }
+    
+    /* banner3 */
+    .banner .banner3{
+        padding: 0 40px 0 30px;
+    }
+    .banner .banner3 .banner-txt span{
+        font-size: 22px;
+    }
+    .banner .banner3 .banner-txt p{
+        font-size: 12px;
+    }
+}
+@media all and (max-width: 480px) {
+    .banner .inner{
+        height: 400px;
+    }
+    
+    /* banner1 */
+    .banner .banner1 img:first-child{
+        width: 300px;
+    }
+    .banner .banner1 img:last-child{
+        width: 250px;
+    }
+    .banner .banner1 .banner-txt{
+        width: 250px;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    .banner .banner1 .banner-txt p{
+        font-size: 20px;
+        margin-bottom: 20px;
+        line-height: 50px;
+    }
+    .banner .banner1 .banner-txt a{
+        padding: 5px 15px;
+        font-size: 16px;
+    }
+    .banner .banner1 .banner-txt p span:last-child::after{
+        right: -40px;
+    }
+    
+    /* banner2 */
+    .banner .banner2{
+        justify-content: center;
+        align-items: end;
+    }
+    .banner .banner2 img{
+        max-width: none;
+        width: 500px;
+        position: absolute;
+        top: -100px;
+        margin: 0;
+    }
+    .banner .banner2 .banner-txt{
+        margin-left: 0;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+    .banner .banner2 .banner-txt p{
+        font-size: 20px;
+    }
+    .banner .banner2 .banner-txt span{
+        font-size: 25px;
+        font-weight: 700;
+    }
+    .banner .banner2 .banner-txt span b{
+        font-size: 40px;
+    }
+    .banner .banner2 .banner-txt a{
+        position: absolute;
+        margin: 0;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        bottom: 30px;
+        padding: 5px 15px;
+        font-size: 16px;
+    }
+    
+    /* banner3 */
+    .banner .banner3{
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+    }
+    .banner .banner3 img{
+        max-width: none;
+        width: 110%;
+    }
+    .banner .banner3 .banner-txt{
+        text-align: center;
+        align-items: center;
+    }
+    .banner .banner3 .banner-txt span{
+        font-size: 23px;
+        font-weight: 700;
+    }
+    .banner .banner3 .banner-txt p{
+        font-size: 14px;
+        margin-top: 10px;
+    }
+}
+
+@media all and (max-width: 320px) {
+    .banner .banner3 .banner-txt span{
+        font-size: 17px;
+    }
+    .banner .banner3 .banner-txt p{
+        font-size: 12px;
+    }
 }
