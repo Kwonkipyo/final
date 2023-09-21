@@ -1,3 +1,7 @@
+.aiclass{
+    margin-bottom: 100px;
+}
+
 .newclass{
     text-align: left;
 }
@@ -88,7 +92,11 @@
 .newclass-title a{
     position: absolute;
     right: 0;
-    top: 10px;
+    top: 20px;
+}
+
+.title-box a{
+    right: 20px;
 }
 
 .newclass-title a{
