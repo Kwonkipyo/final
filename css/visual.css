@@ -31,7 +31,7 @@
 }
 .visual-button{
     position: relative;
-    top: -210px;
+    top: -180px;
     z-index: 999;
     width: calc(80% / 4);
     height: 90px;
@@ -71,7 +71,7 @@
     opacity: 0;
     position: absolute;
     left: 49%;
-    top: -70px;
+    top: -30px;
     transform-origin: 50% 50%;
     transform: translate3d(-50%, -50%, 0);
     z-index: 999;
@@ -109,7 +109,7 @@
   @keyframes arrow-movement {
     0% {
       opacity: 0;
-      top: -90px;
+      top: -50px;
     }
     70% {
       opacity: 1;
@@ -117,4 +117,7 @@
     100% {
       opacity: 0;
     }
+  }
+  @media all and (max-width:1024px){
+    .visual
   }

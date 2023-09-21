@@ -23,7 +23,7 @@ html{
 body{
     font-family: 'NanumSquare';
     line-height: 1.4;
-    min-width: 360px !important;
+    min-width: 320px !important;
     letter-spacing: -0.68px;
     word-break: keep-all;
     color: #e8eddf;
