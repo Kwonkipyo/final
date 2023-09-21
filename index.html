@@ -31,6 +31,7 @@
 
     <!-- 기본 설정 -->
     <meta charset="utf-8" />
+    <meta name="naver-site-verification" content="470fc30e5a10d1a89daaebed136be7ff2c5e7139" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -133,14 +134,13 @@
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-
     <!-- 레이아웃 -->
     <div class="wrap">
       <!-- 헤더 -->
       <header class="header">
         <div class="inner">
           <div class="header-top">
-            <a href="#" class="logo"><img src="images/Class&.png" alt=""></a>
+            <a href="#" class="logo"><img src="images/Class&.png" alt="메인로고"></a>
             <div class="sign-menu">
               <i
                 class="fa-solid fa-magnifying-glass"
@@ -148,7 +148,7 @@
                 style="color: #ffffff"
               ></i>
               <div id="search-container">
-                <input type="text" id="search-input" placeholder="" />
+                <input type="text" id="search-input" placeholder="검색어를 입력해주세요" />
                 <i
                   class="fa-solid fa-xmark"
                   id="close-search"
@@ -166,8 +166,11 @@
                   <a href="#" id="logout-button">로그아웃</a>
                 </div>
               </div>
+              <i class="fa-solid fa-bars" id="toggle-menu" style="color: #ffffff;"></i>
+              <div class="mb-menu">
               <span id="login-section"><a href="login.html">SIGN IN</a></span>
               <span id="signup-section"><a href="signup.html">SIGN UP</a></span>
+            </div>
               <div class="header-select">
                 <select name="select" id="header-select">
                   <option value="kor">KOR</option>
@@ -175,6 +178,46 @@
                   <option value="jap">JPN</option>
                 </select>
               </div>
+            </div>
+            <div class="header-mb-cate" id="mobile-menu">
+              <h1>카테고리</h1>
+              <a href="#"><i class="fa-solid fa-xmark" id="close-menu" style="color: #ffffff;"></i></a>
+              <ul class="mb-depth">
+                <li><a href="#">디지털 드로잉</a></li>
+                <li><a href="#">드로잉</a></li>
+                <li><a href="#">공예</a></li>
+                <li><a href="#">요리·음료</a></li>
+                <li><a href="#">베이킹·디저트</a></li>
+                <li><a href="#">음악</a></li>
+                <li><a href="#">운동</a></li>
+                <li><a href="#">라이프스타일</a></li>
+                <li><a href="#">사진·영상</a></li>
+              </ul>
+              <ul class="mb-depth">
+                <li><a href="#">금융·제테크</a></li>
+                <li><a href="#">창업·부업</a></li>
+                <li><a href="#">성공 마인드</a></li>
+              </ul>
+              <ul class="mb-depth">
+                <li><a href="#">프로그래밍</a></li>
+                <li><a href="#">데이터사이언스</a></li>
+                <li><a href="#">제품 기획</a></li>
+                <li><a href="#">비즈니스</a></li>
+                <li><a href="#">생산성</a></li>
+                <li><a href="#">마케팅</a></li>
+                <li><a href="#">디자인</a></li>
+                <li><a href="#">영상/3D</a></li>
+                <li><a href="#">어도비 캠퍼스</a></li>
+              </ul>
+              <ul class="mb-depth">
+                <li><a href="#">영어</a></li>
+                <li><a href="#">외국어 시험</a></li>
+                <li><a href="#">제2 외국어</a></li>
+              </ul>
+              <ul class="mb-depth">
+                <li><a href="#">아이 교육</a></li>
+                <li><a href="#">부모 교육</a></li>
+              </ul>
             </div>
           </div>
           <div class="header-bottom">
@@ -230,9 +273,8 @@
               </div>
               </div>
               <li><a href="group.html">공동구매</a></li>
-              <li><a href="#">샵</a></li>
-              <li><a href="#">이벤트</a></li>
-              <li><a href="#">개설하기</a></li>
+              <li><a href="#">중고거래</a></li>
+              <li><a href="#">게시판</a></li>
               <li><a href="#">고객센터</a></li>
             </ul>
             <i class="fa-solid fa-circle-user" style="color: #ffffff"></i>
@@ -245,7 +287,7 @@
           <div class="swiper-container">
           <div class="swiper-wrapper">
             <p>더 쉽게<br>
-              더 저렴히<br>
+              더 가볍게<br>
               Class&</p>
             <div class="swiper-slide">
               <!-- 비디오 요소 추가 -->
@@ -307,7 +349,7 @@
               <span id="userCount">0</span>
             </div>
             <div class="counting-info">
-              <i class="fa-solid fa-handshake" style="color: #000000"></i>
+              <i class="fa-solid fa-chalkboard-user" style="color: #000000"></i>
               <br />
               <span>강사</span>
               <br />
@@ -323,9 +365,9 @@
               <br />
             </div>
             <div class="counting-info">
-              <i class="fa-solid fa-chalkboard-user" style="color: #000000"></i>
+              <i class="fa-solid fa-basket-shopping" style="color: #000000;"></i>
               <br />
-              <span>누적강의수</span>
+              <span>누적중고거래</span>
               <br />
               <span id="lectureCount">0</span>
               <br />
@@ -337,7 +379,7 @@
       <section class="tip">
         <div class="inner">
           <div class="tip-title">
-            <h1><img src="images/Class&.png" alt="팁로고" class="tip-logo">을 알뜰히 사용하는 법</h1>
+            <h1><img src="images/Class&.png" alt="팁로고" class="tip-logo"> 알뜰히 사용하는 법</h1>
           </div>
           <div class="tip-inner">
             <div class="classtip tip-cate">
@@ -370,13 +412,20 @@
           </div>
         </div>
       </section>
-      <!-- 맞춤 클래스 -->
+      <!-- 인기/맞춤 클래스 -->
       <section class="aiclass" dir="ltr">
         <div class="inner">
-          <div class="aiclass-title">
-            <span>AI가 추천하는</span>
-            <p><span id="username-display2"></span>님의 맞춤 클래스</p>
-            <a href="#">더보기<i class="fa-solid fa-angle-right"></i></a>
+          <!-- <button class="class-pause"><i class="fa-solid fa-pause"></i></button> -->
+          <a href="#" class="plus">더보기<i class="fa-solid fa-angle-right"></i></a>
+          <div class="title-box">
+            <div id="bestclass-title" class="bestclass-title">
+              <span>신청 수가 많아요</span>
+              <p>Class&의 인기 클래스</p>
+            </div>
+            <div id="aiclass-title" class="aiclass-title" style="display: none;">
+              <span>AI가 추천하는</span>
+              <p><span id="username-display2"></span>님의 맞춤 클래스</p>
+            </div>
           </div>
           <div class="aiclass-slide" id="data-aiclass">
             <!----- 데이터 연동 ----->
@@ -386,25 +435,28 @@
       <!-- 신규클래스 -->
       <section class="newclass" dir="rtl">
         <div class="inner">
-          <div class="newclass-title">
-            <span>다양함을 만나보세요</span>
-            <p>새로 오픈 신규 클래스</p>
-            <a href="#">더보기<i class="fa-solid fa-angle-right"></i></a>
+          <!-- <button class="class-pause"><i class="fa-solid fa-pause"></i></button> -->
+          <a href="#" class="plus">더보기<i class="fa-solid fa-angle-right"></i></a>
+          <div class="title-box">
+            <div class="newclass-title">
+              <span>다양함을 만나보세요</span>
+              <p>새로 오픈 신규 클래스</p>
+            </div>
           </div>
           <div class="newclass-slide" id="data-newclass">
             <!----- 데이터 연동 ----->
           </div>
         </div>
       </section>
-      <!-- 기획전 -->
+      <!-- 추천 취미 -->
       <section class="specialclass">
         <div class="inner">
           <div class="specialclass-info">
-            <span>취미 부자를 위한
+            <span>취미 부자를 위한<br>
             추천 취미</span>
             <p>여러 취미를 가진 취미 부자들,
             다양한 취미 용품들을 찾아보세요</p>
-            <a href="#" class="specialclass-btn">기획전 클래스 전체보기</a>
+            <a href="#" class="specialclass-btn">중고거래 하러가기</a>
           </div>
           <div class="specialclass-item-box">
             <div class="specialclass-item">
@@ -645,13 +697,19 @@
                 </div>
                 <img src="images/banner-img2.png" alt="">
               </div>
-              <div class="swiper-slide">
+              <div class="swiper-slide banner2">
                 <div class="banner-txt">
-                  <p>첫 공동구매 시 30% 쿠폰 증정</p>
+                  <p><span>첫 공동구매</span> 시 <br><span><b>30%</b> 쿠폰 증정</span></p>
+                  <a href="#">바로가기</a>
                 </div>
+                <img src="images/banner-img3.png" alt="">
               </div>
-              <div class="swiper-slide">
-                <p>Big3 개별구매 3개 묶어서 구매하면 저렴하게 구매 가능</p>
+              <div class="swiper-slide banner3">
+                <img src="images/banner-img4.png" alt="">
+                <div class="banner-txt">
+                  <span>Class3 패키지로 시작해요!</span>
+                  <p>개별구매 클래스를 3가지 골라 담아 저렴한 가격에 만나보세요</p>
+                </div>
               </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -668,7 +726,7 @@
               <span>영상으로 수강생들의 생생한 후기를 확인해보세요!</span>
             </div>
             <div class="review-video">
-
+              <img src="images/interview.jpg" alt="인터뷰썸네일">
             </div>
           </div>
           <div class="review-right">

@@ -238,6 +238,14 @@
             <!-- 비주얼 -->
             <div class="visual-content">
               <div class="visual-image">
+                <div class="visual-text">
+                  <div class="tx-1">
+                    <p>기초</p>
+                    <p>총 8회</p>
+                    <p>72시간 53분</p>
+                    <p>강의자료 포함</p>
+                  </div>
+                </div>
                 <div class="visual-gradient"></div>
               </div>
               <div class="categori">
@@ -252,7 +260,9 @@
                 </h2>
               </div>
               <div class="nickname">
-                <span>뜨개장인</span>
+                <img src="images/nickname.jpg" alt="닉네임" /><span
+                  >뜨개장인</span
+                >
               </div>
               <div class="hashtag">
                 <ul>
@@ -627,12 +637,12 @@
                 </div>
                 <span></span>
                 <div class="fix-title">
-                  <h2>준비물</h2>
-                  <p>구매 가능</p>
+                  <h2>수강 자료</h2>
+                  <p>별도 구매</p>
                 </div>
               </div>
               <!-- 트리플 패스 -->
-              <div class="we-class" id="triple-pass" onclick="showAlert(event)">
+              <div class="we-class" id="item">
                 <h3>트리플 패스 수강권</h3>
                 <p><span>50%</span>월 15,000원</p>
                 <div class="we-class-info">
@@ -642,28 +652,20 @@
                   </div>
                 </div>
               </div>
-
               <!-- 개별 클래스 -->
-              <div
-                class="me-class"
-                id="individual-class"
-                onclick="showAlert(event)"
-              >
+              <div class="me-class" id="item">
                 <h3>개별 클래스 수강권</h3>
                 <p><span>30%</span>월 23,000원</p>
               </div>
               <!-- 준비물 -->
-              <div class="custom-selector">
+              <div class="custom-selector" id="item">
                 <select id="preparation" onchange="showPreparation()">
-                  <option
-                    class="custom-option"
-                    value="option"
-                    disabled
-                    selected
-                  >
+                  <option class="custom-option" value="option">
                     준비물을 선택하세요
                   </option>
-                  <option class="custom-option" value="option1">준비물</option>
+                  <option class="custom-option" value="option1">
+                    클래스를 도와줄당신을 위한 뜨개질 키트
+                  </option>
                 </select>
                 <div id="customDiv">
                   <!-- 준비물박스 -->
@@ -676,7 +678,7 @@
                         width="78px"
                         height="auto"
                       />
-                      <p>클래스를 도와줄당신을 위한 준비물 키트</p>
+                      <p>클래스를 도와줄당신을 위한 뜨개질 키트</p>
                     </div>
                     <div class="custom-bottom">
                       <!-- 숫자 증가 박스 -->
@@ -703,17 +705,20 @@
               </div>
               <!-- 클래스 신청 버튼 -->
               <div class="button-box">
-                <a
-                  href="payment.html"
+                <button
+                  disabled
                   class="me-registration"
+                  id="applyButton"
                   onclick="showAlert(event)"
                 >
                   <h2>
                     클래스 신청하기&nbsp;<i class="fa-solid fa-arrow-right"></i>
                   </h2>
                   <div class="transition"></div>
-                </a>
-                <a href="group.html">더 저렴히 시작하고 싶으신가요?</a>
+                </button>
+                <a class="we-plus" href="group.html"
+                  >더 저렴히 시작하고 싶으신가요?</a
+                >
                 <a
                   href="group.html"
                   class="we-registration"

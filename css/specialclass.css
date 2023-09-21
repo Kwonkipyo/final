@@ -6,7 +6,6 @@
     height: 500px;
     position: relative;
     display: flex;
-    margin-top: 100px;
 }
 
 .specialclass .inner{
@@ -47,10 +46,19 @@
 
 .specialclass .specialclass-info .specialclass-btn{
     display: inline-block;
-    padding: 15px 20px;
+    padding: 10px 20px;
     border: 1px solid;
-    font-size: 14px;
+    font-size: 15px;
     margin-top: 50px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.specialclass .specialclass-info .specialclass-btn:hover{
+    background-color: #e8eddf;
+    border: 1px solid #e8eddf;
+    color: #5E5952;
+    font-weight: 900;
 }
 
 .specialclass .specialclass-item{
@@ -75,6 +83,9 @@
 @media all and (max-width: 1024px) {
     .specialclass .specialclass-info{
         margin-right: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
     .specialclass .specialclass-info span{
         font-size: 30px;
@@ -91,6 +102,9 @@
         width: 190px;
         height: 220px;
     }
+    .specialclass .specialclass-item-box{
+        gap: 30px;
+    }
     .specialclass .specialclass-item img{
         width: 180px;
     }
@@ -98,7 +112,7 @@
 /* mobile */
 @media all and (max-width: 768px) {
     .specialclass{
-        height: 590px;
+        height: auto;
     }
     .specialclass .inner{
         flex-direction: column;
@@ -111,7 +125,6 @@
         flex-direction: column;
         align-items: center;
     }
-    
     .specialclass .specialclass-info .specialclass-btn{
         position: absolute;
         transform: translateX(-50%);
@@ -129,13 +142,27 @@
     }
     .specialclass .specialclass-item{
         width: 200px;
-        height: 230px;
+        height: 40%;
     }
-    
     .specialclass .specialclass-item img{
         width: 180px;
     }
 }
 @media all and (max-width: 480px) {
-    
+    .specialclass .specialclass-item-box{
+        flex-direction: column;
+        margin-top: 40px;
+        gap: 20px;
+    }
+    .specialclass .specialclass-item{
+        flex-direction: row;
+        width: 100%;
+        padding: 0 30px;
+    }
+    .specialclass .specialclass-item span{
+        width: 160px;
+    }
+    .specialclass .specialclass-item img{
+        width: 40%;
+    }
 }

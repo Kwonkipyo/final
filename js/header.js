@@ -31,33 +31,36 @@ $(document).ready(function () {
   const headerCatemenu = $(".header-catemenu");
   const userIcon = $(".fa-circle-user");
 
-  // 스크롤 이벤트 리스너 추가
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 50) {
-      header.css({
-        "height": "50px",
-        "box-shadow": "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)",
-        "background-color": "#111"
-      });
-      headerTop.hide();
-      userIcon.show();
-    } else {
-      header.css({
-        "height": "auto",
-        "box-shadow": "none",
-        "background-color": "transparent"
-      });
-      headerTop.show();
-      userIcon.hide();
-    }
-    // header-catemenu 위치 조정
-    const headerHeight = header.height();
-    if ($(this).scrollTop() > headerHeight) {
-      headerCatemenu.addClass("sticky");
-    } else {
-      headerCatemenu.removeClass("sticky");
-    }
-  });
+  // 스크롤 이벤트를 바인딩하기 전에 창 너비를 확인하는 조건 추가
+  if ($(window).width() > 480) {
+    // 320px보다 넓은 화면에 대해서만 스크롤 이벤트 리스너를 추가합니다
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 50) {
+        header.css({
+          "height": "50px",
+          "box-shadow": "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)",
+          "background-color": "#111"
+        });
+        headerTop.hide();
+        userIcon.show();
+      } else {
+        header.css({
+          "height": "auto",
+          "box-shadow": "none",
+          "background-color": "transparent"
+        });
+        headerTop.show();
+        userIcon.hide();
+      }
+      // header-catemenu 위치 조정
+      const headerHeight = header.height();
+      if ($(this).scrollTop() > headerHeight) {
+        headerCatemenu.addClass("sticky");
+      } else {
+        headerCatemenu.removeClass("sticky");
+      }
+    });
+  }
   // 헤더 검색창 js
   // 검색 아이콘과 검색창 요소 선택
   var searchIcon = $("#search-icon");
@@ -87,5 +90,15 @@ $(document).ready(function () {
         // event.preventDefault(); // 기본 동작을 중지합니다 (페이지 새로 고침을 막음)
         // $(window).scrollTop(0); // 스크롤을 페이지의 맨 위로 이동
     }
-});
+  });
+  // 모바일 메뉴 열기 닫기
+  $('#mobile-menu').hide();
+
+  $('#toggle-menu').click(function() {
+    $('#mobile-menu').slideToggle();
+  });
+
+  $('#close-menu').click(function() {
+    $('#mobile-menu').slideUp();
+  });
 });

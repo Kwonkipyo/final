@@ -1,6 +1,9 @@
+.aiclass{
+    margin-bottom: 100px;
+}
+
 .newclass{
     text-align: left;
-    margin-top: 100px;
 }
 
 .sw-aiclass,
@@ -22,6 +25,12 @@
     background-position: center;
     border-radius: 25px;
     overflow: hidden;
+    transition: 0.3s;
+}
+
+.class-slide:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.7), 0 10px 10px rgba(0,0,0,0.67);
 }
 
 .class-box{
@@ -55,14 +64,15 @@
     text-align: right;
 }
 
+.bestclass-title,
 .aiclass-title,
 .newclass-title{
     font-weight: 700;
-    margin-bottom: 15px;
-    position: relative;
+    margin-bottom: 30px;
 }
 
-.aiclass-title span,
+.bestclass-title span,
+.aiclass-title > span,
 .newclass-title span{
     font-size: 20px;
     display: inline;
@@ -70,33 +80,57 @@
     color: #aeb3a6;
 }
 
+.bestclass-title p,
 .aiclass-title p,
 .newclass-title p{
     font-size: 35px;
     display: inline;
 }
 
-.aiclass-title a,
-.newclass-title a{
+.aiclass .plus,
+.newclass .plus{
     position: absolute;
-    right: 0;
-    top: 10px;
+    right: 20px;
+    top: 20px;
 }
 
-.newclass-title a{
+.newclass .plus{
     display: flex;
     flex-direction: row-reverse;
     align-items: baseline;
 }
 
-.aiclass-title a i,
-.newclass-title a i{
+.aiclass .plus i,
+.newclass .plus i{
     margin-left: 5px;
+    transition: 0.3s;
 }
 
+.aiclass .plus:hover i,
+.newclass .plus:hover i{
+    transform: translateX(3px);
+}
+
+/* .class-pause{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 30px;
+    left: 500px;
+    color: #e8eddf;
+    background-color: #3b3b3b;
+    padding: 2px 7px;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+} */
+
 .class-type {
-    padding: 3px 10px 3px 15px;
+    padding: 3px 10px 3px 10px;
     font-weight: 700;
+    border-radius: 50px;
+    margin-top: 5px;
+    margin-left: 10px;
+    opacity: 1;
 }
 
 .class-type.baking{
