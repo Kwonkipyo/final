@@ -1,11 +1,13 @@
 .visual{
   width: 100%;
   margin: 0;
+  max-height: 963px;
 }
 .visual video{
   display: inline;
   height: 100vh;
   width: 100vw;
+  max-height: 963px;
   object-fit: fill;
 }
 .visual .visual-menu{
@@ -26,9 +28,6 @@
   font-family: 'SBAggroB';
   font-size: 90px;
   text-align: center;
-}
-.visual .swiper-slide{
-  height: 963px;
 }
 .visual-button{
   position: relative;
@@ -154,6 +153,7 @@
 }
 }
 @media all and (max-width:480px){
+
 .visual-menu{
   display: flex;
   flex-wrap: wrap;
