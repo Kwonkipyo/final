@@ -1,4 +1,18 @@
 window.addEventListener("load", function () {
+  showInitialDashboard();
+
+  // 대시보드 화면 표시
+  function showInitialDashboard() {
+    // localStorage에서 사용자 이름 가져오기
+    var username = localStorage.getItem("username");
+
+    if (username) {
+      document.getElementById("boardWriter").textContent = `${username}`;
+    } else {
+    }
+  }
+
+  // ====================
   const postTitleInput = document.getElementById("boardTitle"); // 제목
   const postWriterInput = document.getElementById("boardWriter"); // 작성자
   const postNumInput = document.getElementById("boardNum"); // 신청자수
@@ -16,15 +30,15 @@ window.addEventListener("load", function () {
   showInitialDashboard();
 
   // 대시보드 화면 표시
-  function showInitialDashboard() {
-    var params = new URLSearchParams(window.location.search);
-    var username = params.get("username");
+  // function showInitialDashboard() {
+  //   var params = new URLSearchParams(window.location.search);
+  //   var username = params.get("username");
 
-    if (username) {
-      document.getElementById("username-display").textContent = `${username}`;
-    } else {
-    }
-  }
+  //   if (username) {
+  //     document.getElementById("username-display").textContent = `${username}`;
+  //   } else {
+  //   }
+  // }
 
   // ====================
   // 최소값과 최대값 설정
