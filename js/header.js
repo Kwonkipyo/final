@@ -61,29 +61,14 @@ $(document).ready(function () {
       }
     });
   }
-  // 헤더 검색창 js
-  // 검색 아이콘과 검색창 요소 선택
-  var searchIcon = $("#search-icon");
-  var searchContainer = $("#search-container");
-  var closeSearchIcon = $("#close-search");
-
-  // 검색 아이콘 클릭 이벤트 핸들러 추가
-  searchIcon.click(function () {
-    // 검색창을 나타나게 하고, close-search 아이콘을 보이게 함
-    searchContainer.show();
-    closeSearchIcon.show();
+  $("#inpt_search").on('focus', function () {
+    $(this).parent('label').addClass('active');
   });
-
-  // close-search 아이콘 클릭 이벤트 핸들러 추가
-  closeSearchIcon.click(function () {
-    // 검색창을 숨기고, close-search 아이콘을 숨김
-    searchContainer.hide();
-    closeSearchIcon.hide();
+  
+  $("#inpt_search").on('blur', function () {
+    if($(this).val().length == 0)
+      $(this).parent('label').removeClass('active');
   });
-
-  // 페이지 로드 시 검색창과 close-search 아이콘 숨기기
-  searchContainer.hide();
-  closeSearchIcon.hide();
   // 페이지 새로고침할때마다 스크롤 제일 위로 이동하는 코드
   $(document).keydown(function(event) {
     if (event.which == 116) { // F5 키의 keyCode는 116입니다
