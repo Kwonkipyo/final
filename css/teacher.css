@@ -283,22 +283,15 @@
     }
 }
 
-@media all and (max-width: 600px){
+@media all and (max-width: 768px){
     .teacher .inner > h1{
-        margin: 0 auto;
-        width: 400px;
         font-size: 30px;
-    }
-}
-@media all and (max-width: 600px){
-    .teacher .inner > h1{
-        margin: 0 auto;
-        width: 400px;
     }
 }
 @media all and (max-width: 480px){
     .teacher .inner > h1{
         font-size: 26px;
         width: 300px;
+        margin: 0 auto 140px;
     }
 }

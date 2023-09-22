@@ -31,12 +31,12 @@ window.addEventListener("load", function () {
       document.getElementById("username-display2").textContent = `${username}`;
       document.getElementById("signup-section").style.display = "none";
       document.getElementById("bestclass-title").style.display = "none";
-      document.getElementById("aiclass-title").style.display = "block";
+      document.getElementById("aiclass-title").style.display = "flex";
     } else {
       document.getElementById("login-section").style.display = "block";
       document.getElementById("signup-section").style.display = "block";
       document.getElementById("dashboard-section").style.display = "none";
-      document.getElementById("bestclass-title").style.display = "block";
+      document.getElementById("bestclass-title").style.display = "flex";
       document.getElementById("aiclass-title").style.display = "none";
     }
   }
