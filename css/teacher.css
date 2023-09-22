@@ -4,6 +4,7 @@
     font-size: 300;
     font-style: normal;
 }
+
 .teacher .inner > h1{
     text-align: center;
     font-size: 35px;
@@ -279,5 +280,25 @@
     }
     95%, 100% {
         opacity: 0;
+    }
+}
+
+@media all and (max-width: 600px){
+    .teacher .inner > h1{
+        margin: 0 auto;
+        width: 400px;
+        font-size: 30px;
+    }
+}
+@media all and (max-width: 600px){
+    .teacher .inner > h1{
+        margin: 0 auto;
+        width: 400px;
+    }
+}
+@media all and (max-width: 480px){
+    .teacher .inner > h1{
+        font-size: 26px;
+        width: 300px;
     }
 }
