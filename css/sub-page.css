@@ -222,7 +222,7 @@
   position: relative;
 }
 .class-text {
-  margin-top: 80px;
+  margin-top: 100px;
 }
 .class-text-title {
   width: 800px;
@@ -230,9 +230,23 @@
   font-size: 22px;
   font-weight: 700;
 }
+.class-text-title::before {
+  content: "";
+  width: 200px;
+  height: 1px;
+  border-left: solid 1px #ccc;
+  padding-left: 40px;
+}
+.class-text-title::after {
+  content: "";
+  border-right: solid 1px #ccc;
+  width: 200px;
+  height: 1px;
+  padding-left: 40px;
+}
 .class-text-sub {
   margin-bottom: 20px;
-  margin-top: 40px;
+  margin-top: 60px;
   font-size: 18px;
 }
 .content-1 {
@@ -497,7 +511,21 @@
   font-weight: 700;
   text-align: center;
   border-bottom: solid 1px #5b5b5b;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
+}
+.curri-title::before {
+  content: "";
+  width: 200px;
+  height: 1px;
+  border-left: solid 1px #ccc;
+  padding-left: 40px;
+}
+.curri-title::after {
+  content: "";
+  border-right: solid 1px #ccc;
+  width: 200px;
+  height: 1px;
+  padding-left: 40px;
 }
 .curri-box1,
 .curri-box2,
@@ -622,6 +650,20 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 50px;
+}
+.review-title::before {
+  content: "";
+  width: 200px;
+  height: 1px;
+  border-left: solid 1px #ccc;
+  padding-left: 40px;
+}
+.review-title::after {
+  content: "";
+  border-right: solid 1px #ccc;
+  width: 200px;
+  height: 1px;
+  padding-left: 40px;
 }
 .review-score {
   font-size: 16px;
@@ -760,7 +802,7 @@
   display: flex;
   justify-content: space-around;
   width: 270px;
-  height: 110px;
+  height: 90px;
   margin: 0 auto;
   font-size: 15px;
   padding-top: 30px;
@@ -895,6 +937,7 @@
   background-color: transparent;
   text-overflow: ellipsis;
   color: #e8eddf;
+  font-family: "NanumSquare" !important;
 }
 #result {
   margin-top: 20px;
@@ -912,6 +955,7 @@
   border-bottom: solid 1px #ccc;
   padding: 10px;
   margin-bottom: 5px;
+  font-family: "NanumSquare" !important;
 }
 .custom-image {
   display: flex;
@@ -930,6 +974,7 @@
 .number-box {
   display: flex;
   border: solid 1px #ccc;
+  font-family: "NanumSquare" !important;
 }
 #increaseButton {
   padding: 0 8px;
@@ -938,6 +983,10 @@
   font-weight: 700;
   border: 0;
   cursor: pointer;
+  transition: 0.1s;
+}
+#increaseButton:hover{
+  background-color: #aaa;
 }
 #quantity {
   font-size: 14px;
@@ -950,6 +999,9 @@
   font-weight: 500;
   border: 0;
   cursor: pointer;
+}
+#decreaseButton:hover {
+  background-color: #aaa;
 }
 
 /* 가격 박스 */
@@ -966,6 +1018,10 @@
   cursor: pointer;
   margin-top: 3px;
   margin-left: 5px;
+  transition: 0.1s;
+}
+.x-box:hover{
+  background-color: #aaa;
 }
 .custom-span {
   font-size: 13px;
@@ -992,6 +1048,7 @@
   padding: 13px 0;
   background-color: #f7a800;
   color: #000;
+  font-family: "NanumSquare" !important;
 }
 .me-registration:hover {
   background-color: #b87d00;
@@ -1019,6 +1076,7 @@
   padding: 13px 0;
   background-color: #178fff;
   color: #000000;
+  font-family: "NanumSquare" !important;
 }
 .we-registration:hover {
   background-color: #0062be;
@@ -1032,6 +1090,10 @@
 .button-box h2 i {
   font-size: 17px;
   font-weight: 900;
+  transition: 0.3s;
+}
+.button-box h2:hover i{
+  transform: translateX(3px);
 }
 /* 기본 스타일 */
 .linked-text {
