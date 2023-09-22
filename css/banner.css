@@ -12,6 +12,12 @@
     background-color: #252525;
     color: #e8eddf;
     overflow: hidden;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.banner .swiper-slide:hover{
+    opacity: 0.8;
 }
 
 .banner .banner1{
@@ -141,7 +147,12 @@
     font-weight: 900;
     color: #fff;
 }
-
+.banner .swiper-pagination{
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
 .banner .swiper-pagination .swiper-pagination-bullet{
     background-color: black;
     opacity: 0.5;

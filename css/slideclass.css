@@ -69,6 +69,7 @@
 .newclass-title{
     font-weight: 700;
     margin-bottom: 30px;
+    align-items: baseline;
 }
 
 .bestclass-title span,
@@ -205,6 +206,9 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 20px;
+    }
+    .newclass-title{
+        align-items: flex-end;
     }
     .aiclass .plus,
     .newclass .plus{
