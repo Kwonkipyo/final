@@ -10,19 +10,6 @@ window.addEventListener("load", function () {
       showInitialDashboard(); // Show the initial dashboard screen
     });
 
-  document
-    .getElementById("login-form")
-    .addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      var params = new URLSearchParams(window.location.search);
-      var username = params.get("username");
-
-      if (username) {
-        window.location.href =
-          "index.html?username=" + encodeURIComponent(username);
-      }
-    });
   function clearUserData() {
     localStorage.removeItem("username");
   }
@@ -39,11 +26,23 @@ window.addEventListener("load", function () {
     var username = localStorage.getItem("username");
 
     if (username) {
-      document.getElementById("login-section").style.display = "none";
-      document.getElementById("dashboard-section").style.display = "flex";
-      document.getElementById("username-display").textContent = `${username}`;
-      // document.getElementById("username-display2").textContent = `${username}`;
-      document.getElementById("signup-section").style.display = "none";
+      var path = window.location.pathname;
+      var page = path.split("/").pop();
+
+      if (page === "index.html") {
+        document.getElementById("login-section").style.display = "none";
+        document.getElementById("signup-section").style.display = "none";
+        document.getElementById("dashboard-section").style.display = "flex";
+        document.getElementById("username-display").textContent = `${username}`;
+        document.getElementById(
+          "username-display2"
+        ).textContent = `${username}`;
+      } else {
+        document.getElementById("login-section").style.display = "none";
+        document.getElementById("signup-section").style.display = "none";
+        document.getElementById("dashboard-section").style.display = "flex";
+        document.getElementById("username-display").textContent = `${username}`;
+      }
     } else {
       document.getElementById("login-section").style.display = "block";
       document.getElementById("signup-section").style.display = "block";
