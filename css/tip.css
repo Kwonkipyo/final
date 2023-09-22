@@ -1,6 +1,3 @@
-/* .tip{
-    margin-bottom: 100px;
-} */
 .tip-title{
     font-size: 35px;
     font-weight: 700;
@@ -56,4 +53,128 @@
 .grouptip a img{
     width: 300px;
     height: 240px;
+}
+@media all and (max-width:1024px){
+    .tip-cate{
+        width: calc(85% / 3);
+    }
+    .tip-cate a{
+        height: 290px;
+    }
+    .tip-cate a span{
+        font-size: 35px;
+    }
+    .tip-cate a img{
+        top: -15px;
+        width: 90%;
+        height: 80%;
+    }
+}
+@media all and (max-width:768px){
+    .tip-title{
+        font-size: 30px;
+    }
+    .tip-logo{
+        height: 30px;
+    }
+    .tip-cate{
+        width: calc(85% / 3);
+    }
+    .tip-cate a{
+        height: 210px;
+    }
+    .tip-cate a span{
+        font-size: 25px;
+    }
+    .tip-cate a img{
+        top: -10px;
+        width: 90%;
+        height: 80%;
+    }
+    .tip-cate span{
+        font-size: 19px;
+        font-weight: 900;
+    }
+    .tip-cate span:last-child{
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+@media all and (max-width:480px){
+    .tip-title{
+        font-size: 26px;
+    }
+    .tip-logo{
+        height: 26px;
+        display: block;
+        margin: 0 auto;
+    }
+    .tip-inner{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .tip-cate{
+        width: 85%;
+        height: 300px;
+        margin-bottom: 70px;
+    }
+    .tip-cate a{
+        height: 280px;
+    }
+    .tip-cate a span{
+        font-size: 35px;
+    }
+    .tip-cate a img{
+        top: -10px;
+        width: 90%;
+        height: 80%;
+    }
+    .tip-cate span{
+        font-size: 19px;
+        font-weight: 900;
+    }
+    .tip-cate span:last-child{
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+@media all and (max-width:320px){
+    .tip-title{
+        font-size: 26px;
+    }
+    .tip-logo{
+        height: 26px;
+        display: block;
+        margin: 0 auto;
+    }
+    .tip-inner{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .tip-cate{
+        width: 85%;
+        height: 300px;
+        margin-bottom: 40px;
+    }
+    .tip-cate a{
+        height: 240px;
+    }
+    .tip-cate a span{
+        font-size: 35px;
+    }
+    .tip-cate a img{
+        top: -10px;
+        width: 90%;
+        height: 80%;
+    }
+    .tip-cate span{
+        font-size: 19px;
+        font-weight: 900;
+    }
+    .tip-cate span:last-child{
+        font-size: 14px;
+        font-weight: 500;
+    }
 }
