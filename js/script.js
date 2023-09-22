@@ -9,20 +9,6 @@ window.addEventListener("load", function () {
       clearUsernameParam(); // Clear or reset the username parameter
       showInitialDashboard(); // Show the initial dashboard screen
     });
-
-  document
-    .getElementById("login-form")
-    .addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      var params = new URLSearchParams(window.location.search);
-      var username = params.get("username");
-
-      if (username) {
-        window.location.href =
-          "index.html?username=" + encodeURIComponent(username);
-      }
-    });
   function clearUserData() {
     localStorage.removeItem("username");
   }
