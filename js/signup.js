@@ -36,9 +36,14 @@ window.addEventListener("load", function () {
     localStorage.setItem("users", JSON.stringify(users));
     // 사용자 이름을 localStorage에 저장
     localStorage.setItem("username", username);
+    localStorage.setItem("users", JSON.stringify(users));
+    localStorage.setItem("useremail", useremail);
     alert("가입이 완료 되었습니다. 로그인 페이지로 이동합니다.");
     window.location.href =
-      "login.html?username=" + encodeURIComponent(username);
+      "login.html?username=" +
+      encodeURIComponent(username) +
+      "?useremail=" +
+      encodeURIComponent(useremail);
   });
 
   const checkAllCheckbox = document.getElementById("check_all");

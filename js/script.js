@@ -24,21 +24,30 @@ window.addEventListener("load", function () {
     // localStorage에서 사용자 이름 가져오기
     var username = localStorage.getItem("username");
 
-    if (username) {
-      document.getElementById("login-section").style.display = "none";
-      document.getElementById("dashboard-section").style.display = "flex";
-      document.getElementById("username-display").textContent = `${username}`;
-      document.getElementById("username-display2").textContent = `${username}`;
-      document.getElementById("signup-section").style.display = "none";
-      document.getElementById("bestclass-title").style.display = "none";
-      document.getElementById("aiclass-title").style.display = "block";
+  if (username) {
+      var path = window.location.pathname;
+      var page = path.split("/").pop();
+
+      if (page === "index.html") {
+        document.getElementById("login-section").style.display = "none";
+        document.getElementById("signup-section").style.display = "none";
+        document.getElementById("dashboard-section").style.display = "flex";
+        document.getElementById("username-display").textContent = `${username}`;
+        document.getElementById(
+          "username-display2"
+        ).textContent = `${username}`;
+      } else {
+        document.getElementById("login-section").style.display = "none";
+        document.getElementById("signup-section").style.display = "none";
+        document.getElementById("dashboard-section").style.display = "flex";
+        document.getElementById("username-display").textContent = `${username}`;
+      }
     } else {
       document.getElementById("login-section").style.display = "block";
       document.getElementById("signup-section").style.display = "block";
       document.getElementById("dashboard-section").style.display = "none";
-      document.getElementById("bestclass-title").style.display = "block";
-      document.getElementById("aiclass-title").style.display = "none";
     }
+
   }
 
   // top 버튼 스크롤 기능
@@ -73,7 +82,7 @@ window.addEventListener("load", function () {
       topBtnBox.style.bottom = "30px";
     }
   });
-  
+ 
   
   
   // ============보수중============건들지마시옹==========
@@ -97,4 +106,5 @@ let countingTop = document.querySelector(".counting").getBoundingClientRect().to
       window.removeEventListener("scroll", arguments.callee);
     }
   });
+
 });

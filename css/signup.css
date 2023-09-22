@@ -1,15 +1,46 @@
 @charset "utf-8";
+section {
+  margin-bottom: 0;
+}
+/* sign-header 부분 */
+.sign-header {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 1920px;
+  height: 110px;
+  font-family: "NanumSquare";
+  position: fixed;
+  z-index: 99999;
+  background-color: transparent;
+  color: #e8eddf;
+}
+.sign-header .inner {
+  width: 100%;
+}
+.sign-header-top {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sign-header .logo {
+  width: 120px;
+  height: auto;
+  margin-left: 30px;
+  margin-top: 15px;
+}
+/* 회원가입 */
 .signup-wrap {
   position: relative;
   width: 100%;
-  padding-top: 110px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .signup-bg {
   width: 100%;
-  height: calc(100vh - 110px);
+  height: 100vh;
   overflow: hidden;
   opacity: 0.2;
   background: black;
@@ -20,14 +51,14 @@
   margin-bottom: 50px;
 }
 .signup-bg .signup-line div {
-  width: 140px;
-  height: 140px;
+  width: 146px;
+  height: 146px;
   border-radius: 25%;
   background-color: #d9d9d9;
 }
 .signup-box {
   position: absolute;
-  top: 56%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 450px;
@@ -121,4 +152,7 @@
 }
 #signup-form p:last-child a {
   text-decoration: underline;
+}
+.footer {
+  margin-top: 0;
 }

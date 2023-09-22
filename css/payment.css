@@ -1,4 +1,7 @@
 @charset "utf-8";
+section {
+  margin-bottom: 0;
+}
 /* 클래스 배너 */
 .group-header {
   width: 100%;
@@ -84,7 +87,8 @@
   height: 65px;
   border-radius: 10px;
   margin-right: 10px;
-  background-color: blue;
+  background: url("/images/sub-visual.jpg") no-repeat center;
+  background-size: cover;
 }
 .class-wrap p:first-child {
   font-weight: bold;
