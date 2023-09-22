@@ -1,11 +1,14 @@
 .tip-title{
     font-size: 35px;
     font-weight: 700;
-    text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
 }
 .tip-logo{
-    height:35px;
+    height: 33px;
 }
 .tip-inner{
     display: flex;
@@ -13,46 +16,57 @@
 }
 .tip-cate{
     width: calc(90% / 3); 
-    height: 380px;
-    color: #fff;
+    height: 400px;
     text-align: center;
-
+    display: flex;
+    flex-direction: column;
 }
 .tip-cate a{
-    display: block;
-    background-color: #fff;
+    background-color: #e8eddf;
     height: 330px;
-    margin-bottom: 10px;
     border-radius: 30px; 
-    transition: all 0.5s;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 60px;
+    position: relative;
+    margin-bottom: 25px;
 }
 .tip-cate a span{
     font-size: 45px;
     font-weight: 900;
-    z-index: 10;
+    position: absolute;
+    top: -4px;
 }
 .tip-cate a img{
-    position: relative;
-    top: -20px;
+    z-index: 1;
 }
 .tip-cate a:hover{
-    background-color: #b6c5e0;
+    background-color: #7d817d;
 }
 .tip-cate span{
     font-size: 23px;
     font-weight: 900;
 }
-.tip-cate span:last-child{
+.tip-cate > span:last-child{
     font-size: 16px;
     font-weight: 500;
 }
+.tip-sub-title{
+    margin-bottom: 10px;
+}
 .classtip a img{
     width: 300px;
-    height: 250px;
+    height: 230px;
 }
 .grouptip a img{
     width: 300px;
-    height: 240px;
+    height: 220px;
+}
+.shoppingtip a img{
+    height: 220px;
 }
 @media all and (max-width:1024px){
     .tip-cate{
