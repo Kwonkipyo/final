@@ -33,7 +33,7 @@ $(document).ready(function () {
 
   // 스크롤 이벤트를 바인딩하기 전에 창 너비를 확인하는 조건 추가
   if ($(window).width() > 480) {
-    // 320px보다 넓은 화면에 대해서만 스크롤 이벤트 리스너를 추가합니다
+    // 480px보다 넓은 화면에 대해서만 스크롤 이벤트 리스너를 추가합니다
     $(window).scroll(function () {
       if ($(this).scrollTop() > 50) {
         header.css({

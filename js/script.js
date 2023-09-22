@@ -9,7 +9,6 @@ window.addEventListener("load", function () {
       clearUsernameParam(); // Clear or reset the username parameter
       showInitialDashboard(); // Show the initial dashboard screen
     });
-
   function clearUserData() {
     localStorage.removeItem("username");
   }
