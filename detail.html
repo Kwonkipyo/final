@@ -132,7 +132,7 @@
       <header class="header">
         <div class="inner">
           <div class="header-top">
-            <a href="#" class="logo"><img src="images/Class&.png" alt="" /></a>
+            <a href="#" class="logo"><img src="images/Class&.png" alt="메인로고"></a>
             <div class="sign-menu">
               <i
                 class="fa-solid fa-magnifying-glass"
@@ -140,7 +140,7 @@
                 style="color: #ffffff"
               ></i>
               <div id="search-container">
-                <input type="text" id="search-input" placeholder="" />
+                <input type="text" id="search-input" placeholder="검색어를 입력해주세요" />
                 <i
                   class="fa-solid fa-xmark"
                   id="close-search"
@@ -158,8 +158,11 @@
                   <a href="#" id="logout-button">로그아웃</a>
                 </div>
               </div>
+              <i class="fa-solid fa-bars" id="toggle-menu" style="color: #ffffff;"></i>
+              <div class="mb-menu">
               <span id="login-section"><a href="login.html">SIGN IN</a></span>
               <span id="signup-section"><a href="signup.html">SIGN UP</a></span>
+            </div>
               <div class="header-select">
                 <select name="select" id="header-select">
                   <option value="kor">KOR</option>
@@ -167,6 +170,58 @@
                   <option value="jap">JPN</option>
                 </select>
               </div>
+            </div>
+            <div class="header-mb-cate" id="mobile-menu">
+              <div class="mb-menu-cate">
+              <span class="mb-cate-click"><a href="#">카테고리</a></span>
+              <a href="#"><i class="fa-solid fa-xmark" id="close-menu" style="color: #ffffff;"></i></a>
+              <div class="mb-cate-depth">
+              <ul class="mb-depth">
+                <li><a href="#">디지털 드로잉</a></li>
+                <li><a href="#">드로잉</a></li>
+                <li><a href="#">공예</a></li>
+                <li><a href="#">요리·음료</a></li>
+                <li><a href="#">베이킹·디저트</a></li>
+                <li><a href="#">음악</a></li>
+                <li><a href="#">운동</a></li>
+                <li><a href="#">라이프스타일</a></li>
+                <li><a href="#">사진·영상</a></li>
+              </ul>
+              <ul class="mb-depth">
+                <li><a href="#">금융·제테크</a></li>
+                <li><a href="#">창업·부업</a></li>
+                <li><a href="#">성공 마인드</a></li>
+              </ul>
+              <ul class="mb-depth">
+                <li><a href="#">프로그래밍</a></li>
+                <li><a href="#">데이터사이언스</a></li>
+                <li><a href="#">제품 기획</a></li>
+                <li><a href="#">비즈니스</a></li>
+                <li><a href="#">생산성</a></li>
+                <li><a href="#">마케팅</a></li>
+                <li><a href="#">디자인</a></li>
+                <li><a href="#">영상/3D</a></li>
+                <li><a href="#">어도비 캠퍼스</a></li>
+              </ul>
+              <ul class="mb-depth">
+                <li><a href="#">영어</a></li>
+                <li><a href="#">외국어 시험</a></li>
+                <li><a href="#">제2 외국어</a></li>
+              </ul>
+              <ul class="mb-depth">
+                <li><a href="#">아이 교육</a></li>
+                <li><a href="#">부모 교육</a></li>
+              </ul>
+            </div>
+            </div>
+            <div class="mb-menu-link">
+              <ul>
+                <li><a href="#">공동구매</a></li>
+                <li><a href="#">중고거래</a></li>
+                <li><a href="#">게시판</a></li>
+                <li><a href="#">고객센터</a></li>
+              </ul>
+            </div>
             </div>
           </div>
           <div class="header-bottom">
@@ -183,48 +238,47 @@
               </li>
               <div class="header-catemenu">
                 <div class="catemenu-txt">
-                  <ul class="depth2">
-                    <li><a href="#">디지털 드로잉</a></li>
-                    <li><a href="#">드로잉</a></li>
-                    <li><a href="#">공예</a></li>
-                    <li><a href="#">요리·음료</a></li>
-                    <li><a href="#">베이킹·디저트</a></li>
-                    <li><a href="#">음악</a></li>
-                    <li><a href="#">운동</a></li>
-                    <li><a href="#">라이프스타일</a></li>
-                    <li><a href="#">사진·영상</a></li>
-                  </ul>
-                  <ul class="depth2">
-                    <li><a href="#">금융·제테크</a></li>
-                    <li><a href="#">창업·부업</a></li>
-                    <li><a href="#">성공 마인드</a></li>
-                  </ul>
-                  <ul class="depth2">
-                    <li><a href="#">프로그래밍</a></li>
-                    <li><a href="#">데이터사이언스</a></li>
-                    <li><a href="#">제품 기획</a></li>
-                    <li><a href="#">비즈니스</a></li>
-                    <li><a href="#">생산성</a></li>
-                    <li><a href="#">마케팅</a></li>
-                    <li><a href="#">디자인</a></li>
-                    <li><a href="#">영상/3D</a></li>
-                    <li><a href="#">어도비 캠퍼스</a></li>
-                  </ul>
-                  <ul class="depth2">
-                    <li><a href="#">영어</a></li>
-                    <li><a href="#">외국어 시험</a></li>
-                    <li><a href="#">제2 외국어</a></li>
-                  </ul>
-                  <ul class="depth2">
-                    <li><a href="#">아이 교육</a></li>
-                    <li><a href="#">부모 교육</a></li>
-                  </ul>
-                </div>
+                <ul class="depth2">
+                  <li><a href="#">디지털 드로잉</a></li>
+                  <li><a href="#">드로잉</a></li>
+                  <li><a href="#">공예</a></li>
+                  <li><a href="#">요리·음료</a></li>
+                  <li><a href="#">베이킹·디저트</a></li>
+                  <li><a href="#">음악</a></li>
+                  <li><a href="#">운동</a></li>
+                  <li><a href="#">라이프스타일</a></li>
+                  <li><a href="#">사진·영상</a></li>
+                </ul>
+                <ul class="depth2">
+                  <li><a href="#">금융·제테크</a></li>
+                  <li><a href="#">창업·부업</a></li>
+                  <li><a href="#">성공 마인드</a></li>
+                </ul>
+                <ul class="depth2">
+                  <li><a href="#">프로그래밍</a></li>
+                  <li><a href="#">데이터사이언스</a></li>
+                  <li><a href="#">제품 기획</a></li>
+                  <li><a href="#">비즈니스</a></li>
+                  <li><a href="#">생산성</a></li>
+                  <li><a href="#">마케팅</a></li>
+                  <li><a href="#">디자인</a></li>
+                  <li><a href="#">영상/3D</a></li>
+                  <li><a href="#">어도비 캠퍼스</a></li>
+                </ul>
+                <ul class="depth2">
+                  <li><a href="#">영어</a></li>
+                  <li><a href="#">외국어 시험</a></li>
+                  <li><a href="#">제2 외국어</a></li>
+                </ul>
+                <ul class="depth2">
+                  <li><a href="#">아이 교육</a></li>
+                  <li><a href="#">부모 교육</a></li>
+                </ul>
+              </div>
               </div>
               <li><a href="group.html">공동구매</a></li>
-              <li><a href="#">샵</a></li>
-              <li><a href="#">이벤트</a></li>
-              <li><a href="#">개설하기</a></li>
+              <li><a href="#">중고거래</a></li>
+              <li><a href="#">게시판</a></li>
               <li><a href="#">고객센터</a></li>
             </ul>
             <i class="fa-solid fa-circle-user" style="color: #ffffff"></i>
@@ -754,10 +808,10 @@
       <footer class="footer">
         <div class="inner">
           <div class="footer-left">
-            <img src="images/Class&.png" alt="푸터로고" class="footer-logo" />
-            <br />
-            <span>더싸고 더쉽게 Class&</span>
-            <div class="footer-selector">
+            <img src="images/Class&.png" alt="푸터로고" class="footer-logo">
+            <br>
+            <span>더 쉽게 더 가볍게 Class&</span>
+            <div class="footer-selector"> 
               <select id="language-select" name="language">
                 <option value="kor">한국어</option>
                 <option value="eng">ENGLISH</option>
@@ -766,7 +820,7 @@
             </div>
           </div>
           <div class="footer-center">
-            <div class="footer-info">
+            <div class="footer-info ">
               <a href="#">이용약관</a>
               <a href="#">개인정보취급방침</a>
               <a href="#">사업자정보확인</a>
@@ -776,27 +830,19 @@
             </div>
             <div class="footer-copy">
               <p>
-                (주) Class&CEO: OOO주소: 서울시 강남구 테헤란로 OOO, 6층 7층
-                02-5x1-6xx2
-                <br />
-                이메일: ooo@class.co.kr개인정보책임관리자: OOO
-                <br />
-                사업자등록번호: 81x-8x-0x0xx8통신판매업 신고번호: 제
-                2xxx-서울xx-01xxx
+              (주) Class&CEO: OOO주소: 서울시 강남구 테헤란로 OOO, 6층 7층 02-5x1-6xx2
+              <br>
+              이메일: ooo@class.co.kr개인정보책임관리자: OOO
+              <br>
+              사업자등록번호: 81x-8x-0x0xx8통신판매업 신고번호: 제 2xxx-서울xx-01xxx
               </p>
             </div>
           </div>
           <div class="footer-right">
             <div class="footer-sns">
-              <a href="#"
-                ><i class="fa-brands fa-instagram" style="color: #ccc"></i
-              ></a>
-              <a href="#"
-                ><i class="fa-brands fa-youtube" style="color: #ccc"></i
-              ></a>
-              <a href="#"
-                ><i class="fa-brands fa-facebook" style="color: #ccc"></i
-              ></a>
+              <a href="#"><i class="fa-brands fa-instagram" style="color: #ccc;"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube" style="color: #ccc;"></i></a> 
+              <a href="#"><i class="fa-brands fa-facebook" style="color: #ccc;"></i></a>
             </div>
             <span>COPYRIGHT &copy; Class& All rights reserved</span>
           </div>
