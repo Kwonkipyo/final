@@ -10,19 +10,6 @@ window.addEventListener("load", function () {
       showInitialDashboard(); // Show the initial dashboard screen
     });
 
-  document
-    .getElementById("login-form")
-    .addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      var params = new URLSearchParams(window.location.search);
-      var username = params.get("username");
-
-      if (username) {
-        window.location.href =
-          "index.html?username=" + encodeURIComponent(username);
-      }
-    });
   function clearUserData() {
     localStorage.removeItem("username");
   }
@@ -42,12 +29,73 @@ window.addEventListener("load", function () {
       document.getElementById("login-section").style.display = "none";
       document.getElementById("dashboard-section").style.display = "flex";
       document.getElementById("username-display").textContent = `${username}`;
-      // document.getElementById("username-display2").textContent = `${username}`;
+      document.getElementById("username-display2").textContent = `${username}`;
       document.getElementById("signup-section").style.display = "none";
+      document.getElementById("bestclass-title").style.display = "none";
+      document.getElementById("aiclass-title").style.display = "block";
     } else {
       document.getElementById("login-section").style.display = "block";
       document.getElementById("signup-section").style.display = "block";
       document.getElementById("dashboard-section").style.display = "none";
+      document.getElementById("bestclass-title").style.display = "block";
+      document.getElementById("aiclass-title").style.display = "none";
     }
   }
+
+  // top 버튼 스크롤 기능
+  const topBtnBox = document.getElementById("top-button");
+  const topBtn = document.getElementById("top-btn");
+  const topBtnImg = document.getElementById("top-btn-img");
+
+  topBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    if (window.scrollY === 0) {
+      window.scrollTo({
+        top: 99999,
+        behavior: "smooth",
+      });
+    } else {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  });
+  // top 버튼 이미지 회전, 스크롤 효과
+  window.addEventListener("scroll", function () {
+    if (window.scrollY === 0) {
+      topBtnImg.style.transform = "rotate(0deg)";
+    } else {
+      topBtnImg.style.transform = "rotate(180deg)";
+    }
+    if(window.scrollY >= 4800){
+      topBtnBox.style.bottom = "180px";
+    } else {
+      topBtnBox.style.bottom = "30px";
+    }
+  });
+  
+  
+  
+  // ============보수중============건들지마시옹==========
+  // .counting 요소의 top 위치를 저장할 변수
+let countingTop = document.querySelector(".counting").getBoundingClientRect().top;
+
+// 스크롤 이벤트 리스너 추가
+  window.addEventListener("scroll", function () {
+    if (window.scrollY == 1) {
+      window.scrollTo({
+        top: countingTop - 50,
+        behavior: "smooth",
+      });
+      window.removeEventListener("scroll", arguments.callee);
+    }
+    if (window.scrollY <= countingTop) {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      window.removeEventListener("scroll", arguments.callee);
+    }
+  });
 });
