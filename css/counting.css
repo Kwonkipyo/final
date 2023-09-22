@@ -22,3 +22,6 @@
 .counting-info:last-child{
     border: 0;
 }
+@media all and (max-width:1024px){
+    
+}
