@@ -17,9 +17,9 @@ $(document).ready(function () {
       // a 태그의 href 막기
       event.preventDefault();
       // li 의 모든 클래스 제거
-      navLis.removeClass("focus-active");
-      // 클릭된 li 에 focus-active 추가하기
-      navLis.eq(index).addClass("focus-active");
+      // navLis.removeClass("focus-active");
+      // // 클릭된 li 에 focus-active 추가하기
+      // navLis.eq(index).addClass("focus-active");
       // 2. 클릭하면 스크롤바가 움직인다.
       $("html, body").animate(
         {
@@ -73,36 +73,6 @@ $(document).ready(function () {
       $(this).removeClass("heart-pulse");
     }, 1000); // 애니메이션 지속 시간 (1초)
   });
-
-  // --------------------------------------------------------------
-
-  // 아이콘 색 변경
-  // const shareIcon = document.getElementById("share-icon");
-
-  // shareIcon.addEventListener("click", function () {
-  //   // 색상 변경
-  //   const newColor = "black"; // 원하는 색상으로 변경하세요
-  //   shareIcon.style.color = newColor;
-
-  //   // 일정 시간(예: 1초) 후에 다시 기본 색상으로 변경
-  //   setTimeout(function () {
-  //     const defaultColor = ""; // 기본 색상으로 변경하세요
-  //     shareIcon.style.color = defaultColor;
-  //   }, 400); // 1000 밀리초(1초) 후에 색상을 기본 색상으로 변경
-  // });
-  // const shareIcon2 = document.getElementById("share-icon2");
-
-  // shareIcon2.addEventListener("click", function () {
-  //   // 색상 변경
-  //   const newColor = "black"; // 원하는 색상으로 변경하세요
-  //   shareIcon2.style.color = newColor;
-
-  //   // 일정 시간(예: 1초) 후에 다시 기본 색상으로 변경
-  //   setTimeout(function () {
-  //     const defaultColor = ""; // 기본 색상으로 변경하세요
-  //     shareIcon2.style.color = defaultColor;
-  //   }, 400); // 1000 밀리초(1초) 후에 색상을 기본 색상으로 변경
-  // });
 
   // -----------------------------------------------------
   // HTML 요소를 JavaScript 변수에 할당합니다.
@@ -179,9 +149,8 @@ $(document).ready(function () {
     specialClass.classList.remove("focused");
   });
 
-
   // ----------------------------------------------------------
-  // 신청하기 버튼넘어가는 과정 
+  // 신청하기 버튼넘어가는 과정
   var applyButton = document.getElementById("applyButton");
   var items = document.querySelectorAll("#item");
 
@@ -216,6 +185,8 @@ $(document).ready(function () {
   applyButton.addEventListener("click", function () {
     window.location.href = "payment.html";
   });
+
+  // -----------------------------------------------
 });
 
 // ------------------------------------------------------------
@@ -252,7 +223,7 @@ function showPreparation() {
   var selectedOption = selectElement.options[selectElement.selectedIndex].text;
 
   // 선택한 옵션에 따라 커스텀 내용을 표시하거나 숨김
-  if (selectedOption === "클래스를 도와줄당신을 위한 뜨개질 키트") {
+  if (selectedOption === "클래스를 도와줄 당신을 위한 뜨개질 키트") {
     customDiv.style.display = "block";
   } else {
     customDiv.style.display = "none";
