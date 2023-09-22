@@ -9,7 +9,7 @@
     width: 100%;
     height: 200px;
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-between; 
     align-items: center;
     text-align: center;
     font-size: 24px;
@@ -17,11 +17,32 @@
 }
 .counting-info{
     border-right: 1px solid rgba(0,0,0,0.3);
-    width: 100%;
+    width:25%;
 }
 .counting-info:last-child{
     border: 0;
 }
+@media all and (max-width:1919px){
+    .counting{
+        position: relative;
+        top: -6.93px;
+    }
+}
 @media all and (max-width:1024px){
-    
+    .counting{
+        height: 150px;
+    }
+    .counting-container{
+        font-size: 16px;
+        height: 150px;
+    }
+}
+@media all and (max-width:320px){
+    .counting{
+        height: 100px;
+    }
+    .counting-container{
+        font-size: 12px;
+        height: 100px;
+    }
 }
