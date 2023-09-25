@@ -1,0 +1,172 @@
+/*--------------- 커리큘럼 ------------------ */
+.curriculum {
+  display: inline-block;
+  width: 100%;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.curri-title {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: solid 1px #5b5b5b;
+  padding-bottom: 70px;
+}
+.curri-title::before {
+  content: "";
+  width: 200px;
+  height: 1px;
+  border-left: solid 1px #ccc;
+  padding-left: 40px;
+}
+.curri-title::after {
+  content: "";
+  border-right: solid 1px #ccc;
+  width: 200px;
+  height: 1px;
+  padding-left: 40px;
+}
+.curri-box1,
+.curri-box2,
+.curri-box3,
+.curri-box4,
+.curri-box5,
+.curri-box6,
+.curri-box7,
+.curri-box8 {
+  width: 100%;
+  display: flex;
+  border-bottom: solid 1px #5b5b5b;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+.curri-box-title {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.curri-video {
+  width: 250px;
+  height: 142px;
+  background-color: #000;
+  /* margin-top: 15px; */
+  position: relative;
+}
+.curri-box1 .curri-video {
+  background: url("../images/curri-1.jpg") no-repeat center;
+  background-size: 250px, auto;
+}
+.curri-box2 .curri-video {
+  background: url("../images/curri-2.jpg") no-repeat center;
+  background-size: 250px, auto;
+}
+.curri-box3 .curri-video {
+  background: url("../images/curri-3.jpg") no-repeat center;
+  background-size: 250px, auto;
+}
+.curri-box4 .curri-video {
+  background: url("../images/curri-4.jpg") no-repeat center;
+  background-size: 250px, auto;
+}
+.curri-box5 .curri-video {
+  background: url("../images/curri-5.jpg") no-repeat center;
+  background-size: 250px, auto;
+}
+.curri-box6 .curri-video {
+  background: url("../images/curri-6.jpg") no-repeat center;
+  background-size: 250px, auto;
+}
+.curri-box7 .curri-video {
+  background: url("../images/curri-7.jpg") no-repeat center;
+  background-size: 250px, auto;
+}
+.curri-box8 .curri-video {
+  background: url("../images/curri-8.jpg") no-repeat center;
+  background-size: 250px, auto;
+}
+.shadow-box {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 142px;
+  cursor: pointer;
+}
+.shadow-box:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: 0.1s;
+}
+.shadow-box i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+}
+.curri-text-box {
+  position: relative;
+  margin-left: 50px;
+  margin-top: 40px;
+  font-size: 15px;
+  color: #ccc;
+}
+.curri-text-box p {
+  margin-bottom: 90px;
+}
+.curri-box6 .curri-text-box p,
+.curri-box7 .curri-text-box p,
+.curri-box8 .curri-text-box p {
+  margin-bottom: 70px;
+}
+
+.curri-text-box span {
+  font-size: 14px;
+}
+
+/* 반응형 */
+@media all and (max-width: 1024px) {
+  .curriculum {
+    max-width: 1024px;
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .curri-title{
+    font-size: 18px;
+  }
+  .curri-box1,
+  .curri-box2,
+  .curri-box3,
+  .curri-box4,
+  .curri-box5,
+  .curri-box6,
+  .curri-box7,
+  .curri-box8 {
+    flex-direction: column;
+  }
+  .curri-box-title{
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .curri-text-box {
+    margin: 30px 0px;
+    margin-bottom: 0px;
+  }
+  .curri-text-box p {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .curri-box6 .curri-text-box p,
+  .curri-box7 .curri-text-box p,
+  .curri-box8 .curri-text-box p {
+    margin-bottom: 40px;
+  }
+}
+
+@media all and (max-width: 320px) {
+  
+}

@@ -1,0 +1,369 @@
+/* 메인 내용 */
+.main-content {
+  display: inline-block;
+  margin-top: 150px;
+  width: 800px;
+}
+
+/*----------------- 타이틀메뉴 -----------------*/
+.title-menu {
+  width: 100%;
+}
+.title-menu ul {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+.title-menu ul li {
+  position: relative;
+  padding: 0px 25px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 16px;
+}
+.title-menu ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #ffffff;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.title-menu ul li:hover::after {
+  opacity: 1;
+}
+.title-menu ul li:hover a {
+  color: #ffffff;
+}
+/* 포커스된 메뉴 아이템 스타일 */
+.title-menu ul li.focus-active {
+  color: #fff !important;
+}
+.focus-active::after {
+  opacity: 1 !important;
+}
+
+/*----------------- 클래스소개 -------------------*/
+.class-info {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+.class-text {
+  margin-top: 120px;
+}
+.class-text-title {
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+}
+.class-text-title::before {
+  content: "";
+  width: 200px;
+  height: 1px;
+  border-left: solid 1px #ccc;
+  padding-left: 40px;
+}
+.class-text-title::after {
+  content: "";
+  border-right: solid 1px #ccc;
+  width: 200px;
+  height: 1px;
+  padding-left: 40px;
+}
+.class-text-sub {
+  margin-bottom: 20px;
+  margin-top: 60px;
+  font-size: 18px;
+}
+.content-1 {
+  position: relative;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+  width: 100%;
+  height: 210px;
+  border: solid 1px #2d2d2d;
+  background: url("../images/class-info-1.jpg") no-repeat;
+  background-size: 100%, auto;
+}
+.content-1 > p {
+  position: absolute;
+  top: 87%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  z-index: 2;
+  color: #ccc;
+}
+.gradient-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 30%,
+    rgb(41, 39, 39) 80%
+  );
+  opacity: 1; /* 그라디언트의 투명도 조절 */
+  z-index: 1;
+}
+.content-2-3 {
+  display: flex;
+  width: 100%;
+}
+.content-2 {
+  position: relative;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 48%;
+  margin-right: 40px;
+  height: 320px;
+  background: url("../images/class-info-2.jpg") no-repeat;
+  background-size: 100%, auto;
+  border: solid 1px #3d3d3d;
+}
+.content-2 > h2 {
+  text-align: center;
+  width: 100%;
+  font-size: 17px;
+  font-weight: 700;
+  position: absolute;
+  top: 77%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.content-2 > p {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  z-index: 2;
+  color: #ccc;
+}
+.content-3 {
+  position: relative;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 48%;
+  height: 320px;
+  background: url("../images/class-info-3.jpg") no-repeat top;
+  background-size: 100%, auto;
+  border: solid 1px #3d3d3d;
+}
+.content-3 > h2 {
+  text-align: center;
+  width: 100%;
+  font-size: 17px;
+  font-weight: 700;
+  position: absolute;
+  top: 77%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.content-3 > p {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  z-index: 2;
+  color: #ccc;
+}
+.gradient-2-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 30%,
+    rgb(41, 39, 39) 70%
+  );
+  opacity: 1; /* 그라디언트의 투명도 조절 */
+  z-index: 1;
+}
+
+/*------------------- 타겟 ------------------*/
+.class-target {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 100px;
+}
+.class-target-title {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.class-target ul {
+  position: relative;
+}
+.class-target ul li {
+  background-color: #ccc;
+  width: 100%;
+  padding: 15px 20px;
+  padding-top: 17px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #000;
+}
+.class-target ul li i {
+  margin-right: 10px;
+}
+
+/*---------------- 클래스맛보기 ----------------*/
+.class-order {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.class-order-title {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.class-order1 {
+  margin-bottom: 100px;
+}
+.class-order2 {
+  margin-bottom: 100px;
+}
+.class-order3 {
+  margin-bottom: 100px;
+}
+.class-order4 {
+  margin-bottom: 100px;
+}
+.class-order-text {
+  margin-top: 20px;
+  line-height: 1.9;
+  font-size: 15px;
+  color: #ccc;
+}
+.class-order-text span {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #e8eddf;
+}
+.class-order img {
+  border-radius: 5px;
+}
+
+/* 반응형 */
+@media all and (max-width: 1240px) {
+  .main-content {
+    max-width: 100%;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .main-content {
+    max-width: 1024px;
+    width: 100%;
+  }
+  .title-menu {
+    max-width: 1024px;
+    width: 100%;
+  }
+  .class-info {
+    max-width: 1024px;
+    width: 100%;
+  }
+  .class-target {
+    max-width: 1024px;
+    width: 100%;
+  }
+  .class-order {
+    max-width: 1024px;
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .title-menu ul li{
+    padding: 0px 5.57%;
+    font-size: 15px;
+  }
+  /* 클래스 소개 */
+  .class-text {
+    margin-top: 80px;
+  }
+  .class-text-title{
+    font-size: 18px;
+  }
+  .class-text-sub{
+    font-size: 16px;
+  }
+  .content-1{
+    height: 200px;
+  }
+  .content-1 > p{
+    top: 75%;
+  }
+  .content-2-3{
+    flex-direction: column;
+  }
+  .content-2{
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .content-3{
+    width: 100%;
+  }
+  /* 타겟 */
+  .class-target-title{
+    font-size: 16px;
+  }
+  .class-target ul li{
+    font-size: 14px;
+    padding: 10px 15px;
+    padding-top: 13px;
+  }
+  .class-order-title{
+    font-size: 16px;
+  }
+  .class-order-text{
+    font-size: 13px;
+  }
+  .class-order-text span{
+    font-size: 15px;
+  }
+  
+}
+
+@media all and (max-width: 320px) {
+  
+}

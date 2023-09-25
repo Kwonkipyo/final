@@ -1,0 +1,202 @@
+/*----------- 수강후기----------- */
+.review {
+  width: 100%;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+.review-title {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 80px;
+  margin-top: 20px;
+}
+.review-title::before {
+  content: "";
+  width: 200px;
+  height: 1px;
+  border-left: solid 1px #ccc;
+  padding-left: 40px;
+}
+.review-title::after {
+  content: "";
+  border-right: solid 1px #ccc;
+  width: 200px;
+  height: 1px;
+  padding-left: 40px;
+}
+.review-title-score {
+  font-size: 19px;
+  text-align: left;
+  display: inline-block;
+}
+.review-title-score > span {
+  letter-spacing: 1.5px;
+}
+.review-score {
+  border-bottom: solid 1px #5b5b5b;
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.review-content {
+  width: 100%;
+  border-bottom: solid 1px #5b5b5b;
+  padding: 50px 10px;
+}
+.review-content:last-child {
+  border-bottom: none;
+}
+.review-profile {
+  width: 100%;
+  display: flex;
+  margin-bottom: 35px;
+}
+.review-profile-image1 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: url("../images/sub-review1.jpg") no-repeat center;
+  background-size: 100px auto;
+  margin-right: 38px;
+  margin-left: 8px;
+}
+.review-profile-image2 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: url("../images/sub-review2.jpg") no-repeat center;
+  background-size: 60px auto;
+  margin-right: 38px;
+  margin-left: 8px;
+}
+.review-profile-image3 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: url("../images/sub-review3.jpg") no-repeat center;
+  background-size: 100px auto;
+  margin-right: 38px;
+  margin-left: 8px;
+}
+.review-profile-text {
+  display: flex;
+  flex-direction: column;
+}
+.review-name {
+  font-size: 15px;
+  font-weight: 800;
+  padding-bottom: 10px;
+}
+.review-profile-text > p {
+  font-size: 14px;
+}
+.review-profile-text > p > span {
+  color: #a8a8a8;
+}
+.review-comment {
+  display: flex;
+  flex-direction: column;
+}
+.review-love {
+  display: flex;
+  width: 100%;
+  margin-bottom: 35px;
+  height: 25px;
+  line-height: 25px;
+}
+.review-love > span {
+  background-color: #3a3a3a;
+  border-radius: 5px;
+  padding: 0px 17px;
+  margin-right: 30px;
+  font-size: 15px;
+  color: #ff9d9d;
+  font-weight: 600;
+}
+.review-sad {
+  display: flex;
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+}
+.review-sad > span {
+  background-color: #3a3a3a;
+  border-radius: 5px;
+  padding: 0px 11px;
+  margin-right: 30px;
+  font-size: 15px;
+  color: #9cc3ff;
+  font-weight: 600;
+}
+.review-more {
+  margin-top: 15px;
+  width: 100%;
+  background-color: #383838;
+  cursor: pointer;
+  height: 50px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.review-more:hover {
+  background-color: #282828;
+}
+
+/* 반응형 */
+@media all and (max-width: 1024px) {
+  .review {
+    max-width: 1024px;
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .review-title{
+    font-size: 18px;
+  }
+  .review-title-score{
+    font-size: 16px;
+  }
+  .review-score{
+    font-size: 15px;
+  }
+  .review-love{
+    margin-bottom: 70px;
+  }
+  .review-name{
+    font-size: 14px;
+  }
+  .review-profile-text > p{
+    font-size: 13px;
+  }
+  .review-love > span{
+    font-size: 14px;
+  }
+  .review-love > p{
+    font-size: 13px;
+  }
+  .review-sad > span{
+    font-size: 14px;
+  }
+  .review-sad > p{
+    font-size: 13px;
+  }
+  .review-more{
+    font-size: 17px;
+  }
+  .review-profile-image1,
+  .review-profile-image2,
+  .review-profile-image3{
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media all and (max-width: 320px) {
+}
