@@ -30,24 +30,26 @@
     width: 100%;
 }
 .review-right{
+    position: relative;
     width: 30%;
-    height: 720px;
+    height: 692px;
 }
 .review-title{
     padding-bottom: 50px;
 }
 .review-list{
-    max-height: 600px;
+    position: relative;
+    width: 100%;
+    max-height: 571px;
     overflow-y: scroll;
     overflow: overlay;
     border-radius: 30px 30px 0 0;
 }
-.review-list:after{
+.review-right:after{
     position: absolute;
-    bottom:-1px;
-    display:block;
+    bottom:0px;
     content:"";
-    width:419px;
+    width:100%;
     height:150px;
     background:linear-gradient(to top, rgb(0,0,0,0.6)10%,  rgba(26,26,26,0));
     z-index: 10;
@@ -77,6 +79,9 @@
     padding-bottom: 20px;
 }
 @media all and (max-width:1024px){
+    .review{
+        max-height:600px;
+    }
     .review-right{
         height: 100%;
     }
@@ -106,6 +111,7 @@
 @media all and (max-width:768px){
     .review{
         height: 100%;
+        max-height: 1150px;
     }
     .review-container{
         flex-direction: column;
@@ -123,6 +129,7 @@
         height: 100%;
     }
     .review-list{
+        max-width: 751px;
         height: 100%;
         max-height: 374px;
         border-radius: 0;
@@ -169,12 +176,13 @@
         height: 100%;
     }
     .review-list{
+        width: 100%;
         height: 100%;
-        max-height: 374px;
+        /* max-height: 374px; */
         border-radius: 0;
     }
     .review-right .review-txt{
-        height: 240px;
+        height: 265px;
         margin-bottom: 10px;
         padding: 15px;
     }
@@ -190,11 +198,10 @@
         padding-bottom: 10px;
     }
     .review-list:after{
-        /* width: 100%; */
+        width: 89.1%;
         max-width: 413px;
         bottom: 0px;
     }
-    
 }
 @media all and (max-width:320px){
     .review{
@@ -222,6 +229,7 @@
         height: 100%;
     }
     .review-list{
+        max-width: 280px;
         height: 100%;
         max-height: 374px;
         border-radius: 0;
