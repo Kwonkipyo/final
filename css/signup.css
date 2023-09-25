@@ -2,6 +2,12 @@
 section {
   margin-bottom: 0;
 }
+.wrap {
+  width: 100%;
+  height: 100vh;
+  background: url("/images/sign-bg.jpg") no-repeat;
+  background-size: cover;
+}
 /* 모달창 */
 #signup-modal-wrap {
   display: none;
@@ -48,6 +54,7 @@ section {
 .modal-content p {
   font-size: 18px;
   margin: 35px 0;
+  text-align: center;
 }
 .modal-content > .close-btn {
   font-size: 14px;
@@ -63,8 +70,9 @@ section {
   width: 100%;
   max-width: 1920px;
   /* height: 110px; */
+  height: 60px;
   font-family: "NanumSquare";
-  position: fixed;
+  /* position: fixed; */
   z-index: 99999;
   background-color: transparent;
   color: #e8eddf;
@@ -99,8 +107,8 @@ section {
   /* opacity: 0.2; */
   /* background: black; */
   /* background: url("images/signup-bg.jpg") no-repeat; */
-  background: url("/images/sign-bg.jpg") no-repeat;
-  background-size: cover;
+  /* background: url("/images/sign-bg.jpg") no-repeat;
+  background-size: cover; */
 }
 /* .signup-bg .signup-line {
   display: flex;
@@ -193,6 +201,9 @@ section {
   align-items: center;
   gap: 5px;
 }
+.checkbox_group .checkbox label {
+  min-width: 50px;
+}
 .checkbox_group input {
   width: 15px;
   height: 15px;
@@ -256,8 +267,56 @@ section {
   #check-nickname-button {
     font-size: 11px;
   }
+  #signup-form .signup-text {
+    font-size: 14px;
+  }
+  .checkbox_group {
+    font-size: 14px;
+  }
+  .marketing-txt {
+    font-size: 13px;
+  }
+  #signup-form button[type="submit"] {
+    font-size: 14px;
+  }
+  #signup-form p:last-child {
+    font-size: 13px;
+  }
+  .nicknameModal > .close {
+    font-size: 18px;
+  }
+  .modal-content h2 {
+    font-size: 20px;
+  }
+  .modal-content p {
+    font-size: 16px;
+  }
+  .modal-content > .close-btn {
+    font-size: 12px;
+  }
 }
 @media all and (max-width: 480px) {
+  .sign-header .logo {
+    margin-top: 15px;
+    margin-left: 15px;
+    width: 80px;
+  }
+  .logo img {
+    width: 100%;
+    margin: 0 0;
+  }
+  .nicknameModal > .close {
+    font-size: 16px;
+  }
+  .modal-content h2 {
+    font-size: 18px;
+  }
+  .modal-content p {
+    font-size: 14px;
+  }
+  .modal-content > .close-btn {
+    font-size: 11px;
+  }
 }
 @media all and (max-width: 320px) {
 }

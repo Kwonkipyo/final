@@ -118,6 +118,9 @@ section {
 .board-list-title tr * {
   padding: 20px 10px;
   cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .board-list-title tbody tr {
   border-bottom: 1px solid #000;
@@ -200,6 +203,40 @@ section {
   }
 }
 @media all and (max-width: 768px) {
+  .group-header h2 {
+    font-size: 26px;
+  }
+  .group-banner-left p {
+    font-size: 18px;
+  }
+  .group-banner-right button a {
+    font-size: 13px;
+  }
+  .board-tap .taps ul li {
+    font-size: 13px;
+  }
+  .searchbox input {
+    font-size: 13px;
+  }
+  .board-list {
+    font-size: 13px;
+  }
+  .board-list h2 {
+    font-size: 22px;
+  }
+  .board-list-title th {
+    font-size: 14px;
+  }
+  .paging {
+    font-size: 12px;
+  }
+  .board-btn {
+    font-size: 14px;
+  }
+  .board-list-title tbody tr td:nth-child(2) {
+    padding: 20px;
+  }
+  
 }
 @media all and (max-width: 480px) {
 }
