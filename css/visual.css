@@ -68,55 +68,96 @@
   z-index: 10;
 }
 /* 스크롤 화살표 */
-.arrow {
+.mouse {
+  width: 30px;
+  height: 50px;
+  border: 2px solid white;
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  border-radius: 35px;
+  margin-left: -15px;
+  z-index: 10;
+}
+.mouse-wheel {
+  position: relative;
+  overflow: hidden;
+  width: 30px;
+  height: 15px;
+  border: 1px solid white;
+  width: 6px;
+  border-radius: 500px;
+  margin: 5px auto 0;
+  margin-top: 5px;
+}
+.mouse-wheel::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #fff;
+  height: 4px;
+  left: 50%;
+  margin-left: -2px;
+  border-radius: 15px;
+  animation: mouseScroll 1.5s 000ms infinite ease;
+}
+.arrows {
+  position: relative;
+  width: 26px;
+  height: 20px;
+  overflow: hidden;
+  margin-top:-5px;
+}
+
+.arrows-container {
+  overflow: hidden;
+  position: relative;
+  
+}
+.arrows {
+  position: absolute;
+  left: 50%;
+  overflow: hidden;
+  transform: rotate(45deg);
+  margin-left: -5px;
+  content: '';
   opacity: 0;
-  position: absolute;
-  left: 49.3%;
-  top: -30px;
-  transform-origin: 50% 50%;
-  transform: translate3d(-50%, -50%);
-  z-index: 999;
+  width: 10px;
+  height: 10px;
+  border: 2px solid white;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  animation: arrowScroll 1.5s 500ms ease-in-out infinite ;
 }
 
-.arrow-first {
-  animation: arrow-movement 2s ease-in-out infinite;
-}
-.arrow-second {
-  animation: arrow-movement 2s 1s ease-in-out infinite;
-}
-
-.arrow:before,
-.arrow:after {
-  background: #fff;
-  content: "";
-  display: block;
-  height: 3px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-}
-
-.arrow:before {
-  transform: rotate(45deg) translateX(-15%);
-  transform-origin: top left;
-}
-
-.arrow:after {
-  transform: rotate(-45deg) translateX(15%);
-  transform-origin: top right;
-}
-
-@keyframes arrow-movement {
+@keyframes mouseScroll {
   0% {
-    opacity: 0;
-    top: -50px;
+      margin-top: -10px;
+      opacity: 0;
   }
-  70% {
-    opacity: 1;
+  50% {
+      height: 8px
   }
   100% {
-    opacity: 0;
+      margin-top: 16px;
+  }
+}
+
+@keyframes arrowScroll {
+  from {
+      margin-top: -2px;
+      transform:  rotate(45deg) ;
+      opacity: 0;
+   
+  }
+  50% {
+      transform:  rotate(45deg) ;
+      opacity: 1;
+  }
+  to {
+      margin-top: 10px;
+      transform:  rotate(45deg);
+      opacity: 0;
   }
 }
 @media all and (max-width:1024px){
@@ -156,7 +197,7 @@
   right:15px;
 }
 .visual .swiper-wrapper p{
-  font-size: 70px;
+  font-size: 60px;
 }
 }
 @media all and (max-width:480px){
@@ -221,6 +262,6 @@
     font-size: 0;
   }
   .visual .swiper-wrapper p{
-    font-size: 50px;
+    font-size: 38px;
   }
   }

@@ -1,20 +1,4 @@
 window.addEventListener("load", function () {
-  showInitialDashboard();
-
-  // 대시보드 화면 표시
-  function showInitialDashboard() {
-    // localStorage에서 사용자 이름 가져오기
-    var username = localStorage.getItem("username");
-    var useremail = localStorage.getItem("useremail");
-
-    if (username) {
-      document.getElementById("username").value = `${username}`;
-      document.getElementById("useremail").value = `${useremail}`;
-    } else {
-    }
-  }
-
-  // ====================
   // JavaScript로 드롭다운 메뉴 열기/닫기 및 선택 항목 변경 및 표시 기능 추가
   // var dropdown = document.querySelector(".dropdown");
   // var dropdownContent = dropdown.querySelector(".dropdown-list");
@@ -64,5 +48,6 @@ window.addEventListener("load", function () {
     }
 
     alert("결제가 완료되었습니다. 당신의 취미 생활을 응원합니다.");
+    window.location.href = "index.html";
   });
 });

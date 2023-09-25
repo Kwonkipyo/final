@@ -94,6 +94,7 @@
     <script src="js/info.js"></script>
     <script src="js/slideclass.js"></script>
     <script src="js/specialclass.js"></script>
+    <script src="js/board.js"></script>
     <script src="js/teacher.js"></script>
     <script src="js/banner.js"></script>
     <script src="js/review.js"></script>
@@ -229,7 +230,7 @@
             </div>
             <div class="mb-menu-link">
               <ul>
-                <li><a href="#">공동구매</a></li>
+                <li><a href="group.html">공동구매</a></li>
                 <li><a href="#">중고거래</a></li>
                 <li><a href="#">게시판</a></li>
                 <li><a href="#">고객센터</a></li>
@@ -317,7 +318,7 @@
           <div class="inner">
             <div class="visual-menu">
               <div class="visual-button">
-                  <a href="#">
+                  <a href="detail.html">
                   <span>클래스</span>
                   <br>
                   <span>온라인으로 간단하게</span>
@@ -325,7 +326,7 @@
                   <i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i>
               </div>
               <div class="visual-button">
-                <a href="#">
+                <a href="group.html">
                 <span>공동구매</span>
                 <br>
                 <span>취미를 더 저렴하게</span>
@@ -348,8 +349,10 @@
                 </a>
                 <i class="fa-solid fa-arrow-right-long" style="color: #ffffff;"></i>
               </div>
-              <div class="arrow arrow-first"></div>
-              <div class="arrow arrow-second"></div>
+                <div class="mouse">
+                    <div class="mouse-wheel"></div>
+                    <div class="arrows"></div>
+                </div>
             </div>
           </div>
       </div>
@@ -397,7 +400,7 @@
               <span>마음에 드는 취미를 알아보세요</span>
             </div>
             <div class="grouptip tip-cate">
-              <a href="#">
+              <a href="group.html">
                 <span>Group Buying</span> 
                 <img src="images/tip-group.png" alt="모임팁">
               </a>
@@ -477,28 +480,34 @@
           </div>
         </div>
       </section>
-      <!-- 중고거래 게시판 -->
+      <!-- 게시판 -->
       <section class="board">
-        <div class="board-title">
-          <h2>솜씨 키트 차트</h2>
-        </div>
-        <div class="rank-chart">
-          <div class="best-board-box">
-            <div class="list-title">
-              <span>인기 중고용품 검색어</span>
-            </div>
-            <div class="best-board" id="data-bestboard">
-              <!----- 데이터 연동 ----->
-            </div>
+        <div class="inner">
+          <div class="board-header">
+            <h2>중고 거래 게시판</h2>
+            <span>남는 취미 용품들은 판매하고, 원하는 취미 용품들을 저렴히 구매하세요!</span>
           </div>
-          <div class="new-board-box">
-            <div class="list-title">
-              <span>신규 중고 게시글</span>
+          <div class="board-wrap">
+            <div class="best-search board-box">
+              <div class="board-sub-title">
+                <span>인기 검색어</span>
+              </div>
+              <div class="best-search-wrap">
+                <div class="search-wrap" id="data-search">
+                  <!----- 데이터 연동 ----->
+                </div>
+                <div class="search-wrap" id="data-search2">
+                  <!----- 데이터 연동 ----->
+                </div>
+              </div>
             </div>
-            <div class="new-board" id="data-newboard">
-              <!----- 데이터 연동 ----->
-              
-              
+            <div class="new-board board-box">
+              <div class="board-sub-title">
+                <span>신규 게시글</span>
+              </div>
+              <div class="new-board-wrap" id="data-newboard">
+                <!----- 데이터 연동 ----->
+              </div>
             </div>
           </div>
         </div>
@@ -780,7 +789,7 @@
                 <br>2023.09.13
               </span>
               <h2>사진 촬영 클래스로의 아름다운 여정</h2>
-              <p>이번에 참여한 사진 촬영 클래스는 정말로 놀라운 경험이었습니다. 카메라 렌즈를 통해 보여지는 세계의 아름다움을 발견하고, 그 아름다움을 담아내는 방법을 배우며 무엇보다도 창의적인 사고를 기를 수 있었던 시간이었습니다.촬영하는 동안에는 자연스럽게 창의적인 아이디어가 떠오르고, 다양한 각도와 조명을 활용하여 독특한 작품을 만들어낼 수 있었습니다. 또한, 다른 참여자들과의 피드백과 의견 공유를 통해 사진을 향상시키는 데 도움을 받을 수 있었습니다.</p>
+              <p>이번에 참여한 사진 촬영 클래스는 정말로 놀라운 경험이었습니다. 카메라 렌즈를 통해 보여지는 세계의 아름다움을 발견하고, 그 아름다움을 담아내는 방법을 배우며 창의적인 사고를 기를 수 있었던 시간이었습니다.촬영하는 동안에는 자연스럽게 창의적인 아이디어가 떠오르고, 다양한 각도와 조명을 활용하여 독특한 작품을 만들어낼 수 있었습니다. 다른 참여자들과의 피드백과 의견 공유를 통해 사진을 향상시키는 데 도움을 받을 수 있었습니다.</p>
               <span>35명중 27명이 이 리뷰에 만족합니다.</span>
           </div>
           <div class="review-txt">

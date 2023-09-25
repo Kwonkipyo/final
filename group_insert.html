@@ -114,6 +114,7 @@
     <!-- css -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/topbutton.css" />
     <link rel="stylesheet" href="css/group_insert.css" />
   </head>
   <body>
@@ -130,24 +131,31 @@
 
     <!-- 레이아웃 -->
     <div class="wrap">
+      <!-- 탑버튼 -->
+      <div class="top-button" id="top-button">
+        <!-- <a href="javascript:void(0);" onclick="openPopup()" class="top-event-button"> -->
+        <a href="#" class="top-chat-button">
+          <p>&Talk</p>
+          <img src="images/talk.png" alt="" />
+        </a>
+        <a href="#" class="top-btn" id="top-btn">
+          <img src="images/top-btn.png" alt="top-btn" id="top-btn-img" />
+        </a>
+      </div>
       <!-- 헤더 -->
       <header class="header">
         <div class="inner">
           <div class="header-top">
-            <div class="logo"><img src="images/Class&.png" alt="" /></div>
+            <a href="index.html" class="logo"
+              ><img src="images/Class&.png" alt="메인로고"
+            /></a>
             <div class="sign-menu">
-              <i
-                class="fa-solid fa-magnifying-glass"
-                id="search-icon"
-                style="color: #ffffff"
-              ></i>
-              <div id="search-container">
-                <input type="text" id="search-input" placeholder="" />
-                <i
-                  class="fa-solid fa-xmark"
-                  id="close-search"
-                  style="color: #ffffff"
-                ></i>
+              <div class="cntr">
+                <div class="cntr-innr">
+                  <label class="search" for="inpt_search">
+                    <input id="inpt_search" type="text" />
+                  </label>
+                </div>
               </div>
               <div id="dashboard-section">
                 <div id="username-display"></div>
@@ -160,14 +168,81 @@
                   <a href="#" id="logout-button">로그아웃</a>
                 </div>
               </div>
-              <span id="login-section"><a href="login.html">SIGN IN</a></span>
-              <span id="signup-section"><a href="signup.html">SIGN UP</a></span>
+              <i
+                class="fa-solid fa-bars"
+                id="toggle-menu"
+                style="color: #ffffff"
+              ></i>
+              <div class="mb-menu">
+                <span id="login-section"><a href="login.html">SIGN IN</a></span>
+                <span id="signup-section"
+                  ><a href="signup.html">SIGN UP</a></span
+                >
+              </div>
               <div class="header-select">
                 <select name="select" id="header-select">
                   <option value="kor">KOR</option>
                   <option value="eng">ENG</option>
                   <option value="jap">JPN</option>
                 </select>
+              </div>
+            </div>
+            <div class="header-mb-cate" id="mobile-menu">
+              <div class="mb-menu-cate">
+                <span class="mb-cate-click"><a href="#">카테고리</a></span>
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-xmark"
+                    id="close-menu"
+                    style="color: #ffffff"
+                  ></i
+                ></a>
+                <div class="mb-cate-depth">
+                  <ul class="mb-depth">
+                    <li><a href="#">디지털 드로잉</a></li>
+                    <li><a href="#">드로잉</a></li>
+                    <li><a href="#">공예</a></li>
+                    <li><a href="#">요리·음료</a></li>
+                    <li><a href="#">베이킹·디저트</a></li>
+                    <li><a href="#">음악</a></li>
+                    <li><a href="#">운동</a></li>
+                    <li><a href="#">라이프스타일</a></li>
+                    <li><a href="#">사진·영상</a></li>
+                  </ul>
+                  <ul class="mb-depth">
+                    <li><a href="#">금융·제테크</a></li>
+                    <li><a href="#">창업·부업</a></li>
+                    <li><a href="#">성공 마인드</a></li>
+                  </ul>
+                  <ul class="mb-depth">
+                    <li><a href="#">프로그래밍</a></li>
+                    <li><a href="#">데이터사이언스</a></li>
+                    <li><a href="#">제품 기획</a></li>
+                    <li><a href="#">비즈니스</a></li>
+                    <li><a href="#">생산성</a></li>
+                    <li><a href="#">마케팅</a></li>
+                    <li><a href="#">디자인</a></li>
+                    <li><a href="#">영상/3D</a></li>
+                    <li><a href="#">어도비 캠퍼스</a></li>
+                  </ul>
+                  <ul class="mb-depth">
+                    <li><a href="#">영어</a></li>
+                    <li><a href="#">외국어 시험</a></li>
+                    <li><a href="#">제2 외국어</a></li>
+                  </ul>
+                  <ul class="mb-depth">
+                    <li><a href="#">아이 교육</a></li>
+                    <li><a href="#">부모 교육</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mb-menu-link">
+                <ul>
+                  <li><a href="#">공동구매</a></li>
+                  <li><a href="#">중고거래</a></li>
+                  <li><a href="#">게시판</a></li>
+                  <li><a href="#">고객센터</a></li>
+                </ul>
               </div>
             </div>
           </div>
@@ -184,53 +259,48 @@
                 </a>
               </li>
               <div class="header-catemenu">
-                <ul class="depth2">
-                  <li><a href="#">디지털 드로잉</a></li>
-                  <li><a href="#">드로잉</a></li>
-                  <li><a href="#">공예</a></li>
-                  <li><a href="#">요리·음료</a></li>
-                  <li><a href="#">베이킹·디저트</a></li>
-                  <li><a href="#">음악</a></li>
-                  <li><a href="#">운동</a></li>
-                  <li><a href="#">라이프스타일</a></li>
-                  <li><a href="#">사진·영상</a></li>
-                </ul>
-                <ul class="depth2">
-                  <li><a href="#">금융·제테크</a></li>
-                  <li><a href="#">창업·부업</a></li>
-                  <li><a href="#">성공 마인드</a></li>
-                </ul>
-                <ul class="depth2">
-                  <li><a href="#">프로그래밍</a></li>
-                  <li><a href="#">데이터사이언스</a></li>
-                  <li><a href="#">제품 기획</a></li>
-                  <li><a href="#">비즈니스</a></li>
-                  <li><a href="#">생산성</a></li>
-                  <li><a href="#">마케팅</a></li>
-                  <li><a href="#">디자인</a></li>
-                  <li><a href="#">영상/3D</a></li>
-                  <li><a href="#">어도비 캠퍼스</a></li>
-                </ul>
-                <ul class="depth2">
-                  <li><a href="#">영어</a></li>
-                  <li><a href="#">외국어 시험</a></li>
-                  <li><a href="#">제2 외국어</a></li>
-                </ul>
-                <ul class="depth2">
-                  <li><a href="#">아이 교육</a></li>
-                  <li><a href="#">부모 교육</a></li>
-                </ul>
-                <div class="catemenu-close">
-                  <a href="#">
-                    <i class="fa-solid fa-xmark" style="color: #ffffff"></i>
-                    <span>닫기</span></a
-                  >
+                <div class="catemenu-txt">
+                  <ul class="depth2">
+                    <li><a href="#">디지털 드로잉</a></li>
+                    <li><a href="#">드로잉</a></li>
+                    <li><a href="#">공예</a></li>
+                    <li><a href="#">요리·음료</a></li>
+                    <li><a href="#">베이킹·디저트</a></li>
+                    <li><a href="#">음악</a></li>
+                    <li><a href="#">운동</a></li>
+                    <li><a href="#">라이프스타일</a></li>
+                    <li><a href="#">사진·영상</a></li>
+                  </ul>
+                  <ul class="depth2">
+                    <li><a href="#">금융·제테크</a></li>
+                    <li><a href="#">창업·부업</a></li>
+                    <li><a href="#">성공 마인드</a></li>
+                  </ul>
+                  <ul class="depth2">
+                    <li><a href="#">프로그래밍</a></li>
+                    <li><a href="#">데이터사이언스</a></li>
+                    <li><a href="#">제품 기획</a></li>
+                    <li><a href="#">비즈니스</a></li>
+                    <li><a href="#">생산성</a></li>
+                    <li><a href="#">마케팅</a></li>
+                    <li><a href="#">디자인</a></li>
+                    <li><a href="#">영상/3D</a></li>
+                    <li><a href="#">어도비 캠퍼스</a></li>
+                  </ul>
+                  <ul class="depth2">
+                    <li><a href="#">영어</a></li>
+                    <li><a href="#">외국어 시험</a></li>
+                    <li><a href="#">제2 외국어</a></li>
+                  </ul>
+                  <ul class="depth2">
+                    <li><a href="#">아이 교육</a></li>
+                    <li><a href="#">부모 교육</a></li>
+                  </ul>
                 </div>
               </div>
               <li><a href="group.html">공동구매</a></li>
-              <li><a href="#">샵</a></li>
-              <li><a href="#">이벤트</a></li>
-              <li><a href="#">개설하기</a></li>
+              <li><a href="#">중고거래</a></li>
+              <li><a href="#">게시판</a></li>
               <li><a href="#">고객센터</a></li>
             </ul>
             <i class="fa-solid fa-circle-user" style="color: #ffffff"></i>
@@ -289,7 +359,7 @@
             <fieldset>
               <label for="boardNum" class="must">신청자수</label>
               <div class="boardNum-wrap">
-                <button class="boardNum-btn down" onclick="">-</button>
+                <button type="button" class="boardNum-btn down">-</button>
                 <input
                   type="text"
                   id="boardNum"
@@ -297,7 +367,7 @@
                   value="5"
                   required
                 />
-                <button class="boardNum-btn up" onclick="">+</button>
+                <button type="button" class="boardNum-btn up">+</button>
               </div>
             </fieldset>
             <!-- 내용 -->
@@ -315,9 +385,69 @@
               <label for="boardImage" class="notAfter">이미지 업로드</label>
               <input type="file" id="boardImage" accept="image/*" />
             </fieldset>
+            <div class="add-post">
+              <a href="group.html" id="addPostBtn">제안하기</a>
+            </div>
           </form>
-          <div class="add-post">
-            <a href="group.html" id="addPostBtn">제안하기</a>
+        </div>
+      </section>
+      <!-- 글 출력 -->
+      <section class="board" style="display: none">
+        <div class="sub-inner">
+          <div class="board-wrap">
+            <div class="board-list">
+              <h2>공동구매 게시판</h2>
+              <table class="board-list-title">
+                <colgroup>
+                  <col width="10%" />
+                  <col width="40%" />
+                  <col width="10%" />
+                  <col width="10%" />
+                  <col width="10%" />
+                  <col width="10%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>작성일</th>
+                    <th>신청자수</th>
+                    <th>진행상태</th>
+                  </tr>
+                </thead>
+                <tbody id="postList">
+                  <!-- js로 출력 -->
+                  <tr>
+                    <td>1</td>
+                    <td>뜨개질 클래스 같이 하실 분~~</td>
+                    <td>타로롱</td>
+                    <td>2023.09.04</td>
+                    <td>2명</td>
+                    <td>진행 중</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="paging">
+            <a href="javascript:void(0);">
+              <i class="fa-solid fa-angles-left"></i>
+            </a>
+            <a href="javascript:void(0);" onclick="before()">
+              <i class="fa-solid fa-angle-left"></i>
+            </a>
+            <a href="javascript:void(0);" class="paging-num active">1</a>
+            <!-- <div class="paging-num"></div> -->
+            <a href="javascript:void(0);" onclick="next()">
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+            <a href="javascript:void(0);">
+              <i class="fa-solid fa-angles-right"></i>
+            </a>
+          </div>
+          <div class="board-btn">
+            <a href="group_insert.html">모집하기</a>
           </div>
         </div>
       </section>

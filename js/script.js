@@ -1,14 +1,21 @@
 window.addEventListener("load", function () {
   showInitialDashboard();
 
-  document
-    .getElementById("logout-button")
-    .addEventListener("click", function () {
-      // Logout logic: clear user data and display the login section
-      clearUserData(); // Clear login data
-      clearUsernameParam(); // Clear or reset the username parameter
-      showInitialDashboard(); // Show the initial dashboard screen
-    });
+  var path = window.location.pathname;
+  var page = path.split("/").pop();
+
+  if (page === "login.html" || page === "signup.html") {
+  } else {
+    document
+      .getElementById("logout-button")
+      .addEventListener("click", function () {
+        // Logout logic: clear user data and display the login section
+        clearUserData(); // Clear login data
+        clearUsernameParam(); // Clear or reset the username parameter
+        showInitialDashboard(); // Show the initial dashboard screen
+      });
+  }
+
   function clearUserData() {
     localStorage.removeItem("username");
   }
@@ -24,7 +31,7 @@ window.addEventListener("load", function () {
     // localStorage에서 사용자 이름 가져오기
     var username = localStorage.getItem("username");
 
-  if (username) {
+    if (username) {
       var path = window.location.pathname;
       var page = path.split("/").pop();
 
@@ -33,16 +40,18 @@ window.addEventListener("load", function () {
         document.getElementById("signup-section").style.display = "none";
         document.getElementById("dashboard-section").style.display = "flex";
         document.getElementById("username-display").textContent = `${username}`;
-        document.getElementById("username-display2").textContent = `${username}`;
+        document.getElementById(
+          "username-display2"
+        ).textContent = `${username}`;
         document.getElementById("bestclass-title").style.display = "none";
         document.getElementById("aiclass-title").style.display = "flex";
+      } else if (page === "login.html" || page === "signup.html") {
       } else {
         document.getElementById("login-section").style.display = "none";
         document.getElementById("signup-section").style.display = "none";
         document.getElementById("dashboard-section").style.display = "flex";
         document.getElementById("username-display").textContent = `${username}`;
       }
-
     } else {
       document.getElementById("login-section").style.display = "block";
       document.getElementById("signup-section").style.display = "block";
@@ -51,7 +60,6 @@ window.addEventListener("load", function () {
       document.getElementById("bestclass-title").style.display = "flex";
       document.getElementById("aiclass-title").style.display = "none";
     }
-
   }
 
   // top 버튼 스크롤 기능
@@ -80,20 +88,20 @@ window.addEventListener("load", function () {
     } else {
       topBtnImg.style.transform = "rotate(180deg)";
     }
-    if(window.scrollY >= 4800){
+    if (window.scrollY >= 4800) {
       topBtnBox.style.bottom = "180px";
     } else {
       topBtnBox.style.bottom = "30px";
     }
   });
- 
-  
-  
+
   // ============보수중============건들지마시옹==========
   // .counting 요소의 top 위치를 저장할 변수
-let countingTop = document.querySelector(".counting").getBoundingClientRect().top;
+  let countingTop = document
+    .querySelector(".counting")
+    .getBoundingClientRect().top;
 
-// 스크롤 이벤트 리스너 추가
+  // 스크롤 이벤트 리스너 추가
   window.addEventListener("scroll", function () {
     if (window.scrollY == 1) {
       window.scrollTo({
@@ -110,5 +118,4 @@ let countingTop = document.querySelector(".counting").getBoundingClientRect().to
       window.removeEventListener("scroll", arguments.callee);
     }
   });
-
 });

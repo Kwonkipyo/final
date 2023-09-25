@@ -1,0 +1,249 @@
+.board-header h2{
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.board-wrap{
+  margin-top: 80px;
+  width: 100%;
+  height: auto;
+  /* background-color: rgb(255, 0, 0); */
+  display: flex;
+  justify-content: space-between;
+  gap: 10%;
+}
+
+.board-sub-title{
+  font-size: 25px;
+  color: #f5cb5c;
+  margin-bottom: 30px;
+}
+
+/* 인기 중고 검색어 */
+.best-search{
+  width: 35%;
+}
+
+.best-search-wrap{
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.best-search-wrap .search-wrap{
+  padding: 0 0 0 10px;
+  width: 50%;
+}
+
+.best-search-wrap .search-item-box{
+  /* background-color: brown; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.best-search-wrap .search-item{
+  background-color: #333533;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 20px;
+  border-radius: 50px;
+  padding: 3px 25px;
+}
+
+.best-search-wrap .search-item span{
+  font-weight: 900;
+  font-size: 25px;
+}
+
+
+/* 신규 게시글 */
+.new-board{
+  width: 55%;
+}
+
+.new-board-wrap{
+  padding: 0 10px;
+}
+
+.new-board-wrap .new-board-item-box{
+  display: flex;
+  flex-direction: column;
+}
+
+.new-board-item{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e8eddf;
+  transition: 0.3s;
+}
+
+.new-board-item:first-child{
+  border-top: 1px solid #e8eddf;
+}
+
+.new-board-item .board-tag{
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 900;
+  padding: 3px 5px;
+  height: 20px;
+}
+
+.new-board-item .sale{
+  background: red;
+  margin: 0 5px;
+  color: #e8eddf;
+}
+
+.new-board-item .done{
+  background-color: green;
+  color: #e8eddf;
+}
+
+.new-board-item .img{
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  display: none;
+}
+
+.new-board-item .board-info-txt{
+  width: 70%;
+  flex: 1;
+  width: calc(100% - 200px);
+}
+
+.new-board-item .board-info-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.new-board-item .board-date{
+  font-size: 14px;
+  width: 50px;
+  text-align: right;
+  margin-left: 10px;
+}
+
+.new-board-item .board-name{
+  font-size: 18px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space:nowrap;
+  width: calc(100% - 70px);
+}
+
+.new-board-item .price{
+  display: none;
+}
+
+.new-board-item .board-info-bottom{
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+  width: 100%;
+  align-items: center;
+  margin-top: 30px;
+  display: none;
+}
+
+.new-board-item .badge-area{
+  display: flex;
+  gap: 10px;
+}
+
+.new-board-item .badge,
+.new-board-item .badge2{
+  border: 1px solid;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 0px 3px;
+  font-size: 500;
+  line-height: 20px;
+}
+
+.new-board-item .go-btn{
+  float: right;
+}
+
+/* hover */
+.new-board-item:hover{
+  background: #ffbb00;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: #242423;
+}
+
+.new-board-item:hover .img{
+  display: block;
+}
+
+.new-board-item:hover .price{
+  display: block;
+}
+
+.new-board-item:hover .board-info-bottom{
+  display: flex;
+}
+
+/* 반응형 */
+@media all and (max-width: 1080px) {
+  .best-search-wrap{
+    gap: 15px;
+  }
+  .best-search-wrap .search-item span{
+    font-size: 20px;
+  }
+  .best-search-wrap .search-item p{
+    font-size: 16px;
+  }
+  .new-board-item .board-name{
+    font-size: 16px;
+  }
+  .best-search-wrap .search-item{
+    padding: 3px 15px;
+  }
+}
+/* mobile */
+@media all and (max-width: 768px) {
+  .board-sub-title{
+    font-size: 20px;
+  }
+  .board-box{
+    width: 100%;
+    margin-bottom: 70px;
+  }
+  .board-wrap{
+    flex-direction: column;
+  }
+  .best-search-wrap{
+    width: 100%;
+    flex-direction: column;
+  }
+  .best-search-wrap .search-wrap{
+    width: 100%;
+    padding: 0;
+  }
+  .best-search-wrap .search-item-box{
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .new-board-wrap{
+    padding: 0;
+  }
+}
+@media all and (max-width: 600px) {
+}
+@media all and (max-width: 480px){
+}
