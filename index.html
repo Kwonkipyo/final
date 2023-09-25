@@ -94,6 +94,7 @@
     <script src="js/info.js"></script>
     <script src="js/slideclass.js"></script>
     <script src="js/specialclass.js"></script>
+    <script src="js/board.js"></script>
     <script src="js/teacher.js"></script>
     <script src="js/banner.js"></script>
     <script src="js/review.js"></script>
@@ -483,28 +484,34 @@
           </div>
         </div>
       </section>
-      <!-- 중고거래 게시판 -->
+      <!-- 게시판 -->
       <section class="board">
-        <div class="board-title">
-          <h2>솜씨 키트 차트</h2>
-        </div>
-        <div class="rank-chart">
-          <div class="best-board-box">
-            <div class="list-title">
-              <span>인기 중고용품 검색어</span>
-            </div>
-            <div class="best-board" id="data-bestboard">
-              <!----- 데이터 연동 ----->
-            </div>
+        <div class="inner">
+          <div class="board-header">
+            <h2>중고 거래 게시판</h2>
+            <span>남는 취미 용품들은 판매하고, 원하는 취미 용품들을 저렴히 구매하세요!</span>
           </div>
-          <div class="new-board-box">
-            <div class="list-title">
-              <span>신규 중고 게시글</span>
+          <div class="board-wrap">
+            <div class="best-search board-box">
+              <div class="board-sub-title">
+                <span>인기 검색어</span>
+              </div>
+              <div class="best-search-wrap">
+                <div class="search-wrap" id="data-search">
+                  <!----- 데이터 연동 ----->
+                </div>
+                <div class="search-wrap" id="data-search2">
+                  <!----- 데이터 연동 ----->
+                </div>
+              </div>
             </div>
-            <div class="new-board" id="data-newboard">
-              <!----- 데이터 연동 ----->
-              
-              
+            <div class="new-board board-box">
+              <div class="board-sub-title">
+                <span>신규 게시글</span>
+              </div>
+              <div class="new-board-wrap" id="data-newboard">
+                <!----- 데이터 연동 ----->
+              </div>
             </div>
           </div>
         </div>
