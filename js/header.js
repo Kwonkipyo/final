@@ -78,12 +78,21 @@ $(document).ready(function () {
   });
   // 모바일 메뉴 열기 닫기
   $('#mobile-menu').hide();
-
   $('#toggle-menu').click(function() {
     $('#mobile-menu').slideToggle();
+    $('body').toggleClass('menu-open');  // 스크롤 막기 위한 클래스 추가/제거
   });
-
+  // 모바일 메뉴 닫기
   $('#close-menu').click(function() {
     $('#mobile-menu').slideUp();
+    $('body').removeClass('menu-open');  // 스크롤 허용을 위한 클래스 제거
+  });
+  var isOpen = false;
+
+  $(".mb-cate-depth").slideUp(); // 처음에 숨겨두기
+  
+  $(".mb-cate-click").click(function(){
+    $(".mb-cate-depth").slideToggle();
+    isOpen = !isOpen;  // Toggle the state
   });
 });
