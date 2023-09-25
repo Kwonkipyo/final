@@ -90,8 +90,11 @@ section {
   background-color: #fff;
   padding-bottom: 100px;
 }
+.board-wrap {
+  /* min-height: 845px; */
+}
 .board-list {
-  min-height: 720px;
+  /* min-height: 720px; */
   padding-top: 34px;
   font-size: 15px;
   color: #000;
@@ -118,6 +121,13 @@ section {
 }
 .board-list-title tbody tr {
   border-bottom: 1px solid #000;
+}
+.board-list-title tbody tr td:nth-child(2) {
+  text-align: left;
+  padding: 20px 50px;
+}
+.board-list-title tbody tr td:last-child {
+  color: blue;
 }
 .paging {
   display: flex;
@@ -155,4 +165,43 @@ section {
 }
 .footer {
   margin-top: 0;
+}
+
+@media all and (max-width: 1024px) {
+  .group-header h2 {
+    font-size: 28px;
+  }
+  .group-banner-left p {
+    font-size: 21px;
+  }
+  .group-banner-right button a {
+    font-size: 14px;
+  }
+  .board-tap .taps ul li {
+    font-size: 14px;
+  }
+  .searchbox input {
+    font-size: 14px;
+  }
+  .board-list {
+    font-size: 14px;
+  }
+  .board-list h2 {
+    font-size: 24px;
+  }
+  .board-list-title th {
+    font-size: 15px;
+  }
+  .paging {
+    font-size: 13px;
+  }
+  .board-btn {
+    font-size: 16px;
+  }
+}
+@media all and (max-width: 768px) {
+}
+@media all and (max-width: 480px) {
+}
+@media all and (max-width: 320px) {
 }
