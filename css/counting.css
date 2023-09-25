@@ -50,12 +50,42 @@
         height: 150px;
     }
 }
-@media all and (max-width:320px){
+@media all and (max-width:480px){
     .counting{
-        height: 100px;
+        height: 250px;
     }
     .counting-container{
-        font-size: 12px;
-        height: 100px;
+        height: 250px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .counting-info{
+        flex: 1 1 40%;
+        margin-top: 10px;
+    }
+    .counting-info:nth-child(odd){
+        border-right: 1px solid rgba(0,0,0,0.3);
+    }
+    .counting-info:nth-child(even){
+        border: 0;
+    }
+    .counting-info span{
+        font-size: 18px;
+    }
+    .counting-info span:last-child{
+        font-size: 26px;
+    }
+}
+@media all and (max-width:320px){
+    .counting{
+        height: 250px;
+    }
+    .counting-container{
+        height: 250px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .counting-info{
+        flex: 1 1 40%;
     }
 }

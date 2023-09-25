@@ -74,6 +74,7 @@
     }
     .tip-cate a{
         height: 290px;
+        padding: 0 20px;
     }
     .tip-cate a span{
         font-size: 35px;
@@ -85,6 +86,9 @@
     }
 }
 @media all and (max-width:768px){
+    .tip{
+        margin-bottom: 100px;
+    }
     .tip-title{
         font-size: 30px;
     }
@@ -117,11 +121,12 @@
 @media all and (max-width:480px){
     .tip-title{
         font-size: 26px;
+        width: 100%;
+        flex-wrap: wrap;
     }
     .tip-logo{
-        height: 26px;
-        display: block;
-        margin: 0 auto;
+        width: 50%;
+        height: auto;
     }
     .tip-inner{
         flex-direction: column;
@@ -135,6 +140,7 @@
     }
     .tip-cate a{
         height: 280px;
+        padding: 0 50px;
     }
     .tip-cate a span{
         font-size: 35px;
@@ -158,9 +164,8 @@
         font-size: 26px;
     }
     .tip-logo{
-        height: 26px;
-        display: block;
-        margin: 0 auto;
+        width: 50%;
+        height: auto;
     }
     .tip-inner{
         flex-direction: column;
@@ -174,6 +179,7 @@
     }
     .tip-cate a{
         height: 240px;
+        padding: 0 20px;
     }
     .tip-cate a span{
         font-size: 35px;
