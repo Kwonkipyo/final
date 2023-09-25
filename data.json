@@ -183,95 +183,112 @@
         "link":"#"
         }
     ],
-    "best-board":[
+    "search":[
         {
-        "name" : "고민으로 잠 못드는 당신을 위한 타로클래스", 
-        "price": 20300, 
-        "tag": "라이프스타일", 
-        "pic": "newclass-tarot.jpg", 
-        "id": "0", 
-        "class": "lifestyle",
+        "name" : "뜨개실", 
+        "ranking" : "1"
+        },
+        {
+        "name" : "베이킹", 
+        "ranking" : "2"
+        },
+        {
+        "name" : "우쿨렐레", 
+        "ranking" : "3"
+        },
+        {
+        "name" : "터프팅건", 
+        "ranking" : "4"
+        },
+        {
+        "name" : "요가매트", 
+        "ranking" : "5"
+        }
+    ],
+    "search2":[
+        {
+        "name" : "레진아트", 
+        "ranking" : "6"
+        },
+        {
+        "name" : "레고", 
+        "ranking" : "7"
+        },
+        {
+        "name" : "쿠키틀", 
+        "ranking" : "8"
+        },
+        {
+        "name" : "서핑보드", 
+        "ranking" : "9"
+        },
+        {
+        "name" : "화분", 
+        "ranking" : "10"
+        }
+    ],
+    "newboard":[
+        {
+        "name" : "레고 기차 7939 판매합니다 - 컨디션 매우 좋음", 
+        "tag" : "판매중",
+        "tagClass": "sale",
+        "price": 190000, 
+        "date": "5분 전", 
+        "pic": "board-img1.jpg", 
+        "badge": "미개봉", 
+        "badge2": "배송비포함", 
         "link":"#"
         },
         {
-        "name" : "전통의 현대적 재해석, 비밀장신구와 함께 엮는 전통 매듭 액세서리", 
-        "price": 32000, 
-        "tag": "공예", 
-        "pic": "newclass-acc.jpg", 
-        "id": "1", 
-        "class": "craft",
+        "name" : "비즈, 키링 부자재 세트 팝니다", 
+        "tag" : "판매중",
+        "tagClass": "sale",
+        "price": 10000, 
+        "date": "7분 전", 
+        "pic": "board-img2.jpg", 
+        "badge": "미개봉", 
         "link":"#"
         },
         {
-        "name" : "나의 리틀 포레스트, 가드너에게 배우는 셀프 홈가드닝",
-        "price": 37000, 
-        "tag": "라이프스타일", 
-        "pic": "newclass-plant.jpg", 
-        "id": "2", 
-        "class": "lifestyle",
+        "name" : "[무료나눔] 네온사인 만들기 DIY 세트 킷", 
+        "tag" : "판매완료",
+        "tagClass": "done",
+        "price": 0, 
+        "date": "20분 전", 
+        "pic": "board-img3.jpg", 
+        "badge": "미개봉", 
+        "badge2": "무료나눔", 
         "link":"#"
         },
         {
-        "name" : "퇴근 후 만나는 나의 가죽 공방, 가죽공예 기초부터 완성까지", 
-        "price": 39000, 
-        "tag": "공예", 
-        "pic": "newclass-leather.jpg", 
-        "id": "3", 
-        "class": "craft",
-        "link":"#"
-        },
-        {
-        "name" : "비보이 & 비걸을 위한 브레이킹 입문 클래스",
+        "name" : "파버카스텔 피트 연필 파스텔 24색 미개봉 새상품", 
+        "tag" : "판매중",
+        "tagClass": "sale",
         "price": 43000, 
-        "tag": "운동", 
-        "pic": "newclass-dance.jpg", 
-        "id": "4", 
-        "class": "sport",
+        "date": "38분 전", 
+        "pic": "board-img4.jpg", 
+        "badge": "미개봉", 
+        "badge2": "배송비포함", 
         "link":"#"
         },
         {
-        "name" : "특별한 도안으로 나만의 꽃밭을 만드는 페이퍼 아트",
-        "price": 35000, 
-        "tag": "공예", 
-        "pic": "newclass-paper.jpg", 
-        "id": "5", 
-        "class": "craft",
+        "name" : "(가격내림)마베프 테이블이젤 M17", 
+        "tag" : "판매완료",
+        "tagClass": "done",
+        "price": 89000, 
+        "date": "1시간 전", 
+        "pic": "board-img5.jpg", 
+        "badge": "배송비포함", 
         "link":"#"
         },
         {
-        "name" : "누워만 있어도 피로가 풀리는 홈필라테스 배우기", 
-        "price": 23000, 
-        "tag": "운동", 
-        "pic": "newclass-ex.jpg", 
-        "id": "6", 
-        "class": "sport",
-        "link":"#"
-        },
-        {
-        "name" : "기초부터 응용까지, 취미는 기타",
-        "price": 27000, 
-        "tag": "음악", 
-        "pic": "newclass-guitar.jpg", 
-        "id": "7", 
-        "class": "music",
-        "link":"#"
-        },
-        {
-        "name" : "아기자기한 캐릭터푸드 만들기",
-        "price": 35000, 
-        "tag": "요리 · 음료", 
-        "pic": "newclass-cook.jpg", 
-        "id": "8", 
-        "class": "cook",
-        "link":"#"
-        },
-        {
-        "name" : "초보용 반주법과 기본 피아노 코드 배우기",
-        "price": 49900, 
-        "tag": "음악", 
-        "pic": "newclass-piano.jpg", 
-        "id": "9", 
-        "class": "music",
+        "name" : "(거의 새제품) 아반티 우크렐레 콘서트 AU-103 판매", 
+        "tag" : "판매완료",
+        "tagClass": "done",
+        "price": 90000, 
+        "date": "1시간 전", 
+        "pic": "board-img6.jpg",
+        "badge": "배송비포함", 
         "link":"#"
         }
     ]
