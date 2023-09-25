@@ -5,7 +5,7 @@
 }
 
 .board-wrap{
-  margin-top: 80px;
+  margin-top: 50px;
   width: 100%;
   height: auto;
   /* background-color: rgb(255, 0, 0); */
@@ -102,7 +102,7 @@
 
 .new-board-item .sale{
   background: red;
-  margin: 0 5px;
+  margin-right: 10px;
   color: #e8eddf;
 }
 
@@ -223,8 +223,15 @@
 }
 /* mobile */
 @media all and (max-width: 768px) {
+  .board-header h2{
+    font-size: 30px;
+  }
+  .board-header span{
+    font-size: 13px;
+  }
   .board-sub-title{
     font-size: 20px;
+    margin-bottom: 15px;
   }
   .board-box{
     width: 100%;
@@ -232,6 +239,9 @@
   }
   .board-wrap{
     flex-direction: column;
+  }
+  .best-search{
+    margin-bottom: 40px;
   }
   .best-search-wrap{
     width: 100%;
@@ -261,4 +271,29 @@
   }
 }
 @media all and (max-width: 480px){
+  .board-header h2{
+    font-size: 26px;
+    margin: 2px;
+  }
+  .board-sub-title{
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  .new-board-item{
+    padding: 15px 10px;
+    gap: 10px;
+  }
+  .new-board-item .board-name {
+    font-size: 14px;
+  }
+  .new-board-item .board-date{
+    font-size: 12px;
+    margin: 0;
+    width: auto;
+  }
+  .new-board-item .board-tag{
+    font-size: 10px;
+    padding: 0.5px 3px;
+    height: 15px;
+  }
 }
