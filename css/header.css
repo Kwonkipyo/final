@@ -9,6 +9,7 @@
   z-index:99999;
   background-color: transparent;
   color: #e8eddf;
+  min-width: 320px !important;
 }
 .header .inner{
   width: 100%;
