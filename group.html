@@ -114,6 +114,7 @@
     <!-- css -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/topbutton.css" />
     <link rel="stylesheet" href="css/group.css" />
   </head>
   <body>
@@ -130,6 +131,17 @@
 
     <!-- 레이아웃 -->
     <div class="wrap">
+      <!-- 탑버튼 -->
+      <div class="top-button" id="top-button">
+        <!-- <a href="javascript:void(0);" onclick="openPopup()" class="top-event-button"> -->
+        <a href="#" class="top-chat-button">
+          <p>&Talk</p>
+          <img src="images/talk.png" alt="" />
+        </a>
+        <a href="#" class="top-btn" id="top-btn">
+          <img src="images/top-btn.png" alt="top-btn" id="top-btn-img" />
+        </a>
+      </div>
       <!-- 헤더 -->
       <header class="header">
         <div class="inner">
@@ -260,13 +272,15 @@
           <div class="taps">
             <ul>
               <li>
-                <a href="javascript:void(0);" class="active">최근등록순</a>
+                <a href="javascript:void(0);" class="tab-link active"
+                  >최근등록순</a
+                >
               </li>
               <li>
-                <a href="javascript:void(0);">마감임박</a>
+                <a href="javascript:void(0);" class="tab-link">마감임박</a>
               </li>
               <li>
-                <a href="javascript:void(0);">마감종료</a>
+                <a href="javascript:void(0);" class="tab-link">마감종료</a>
               </li>
               <li>
                 <div class="searchbox">
@@ -306,84 +320,28 @@
                 <tbody id="postList">
                   <!-- js로 출력 -->
                   <tr>
-                    <td>10</td>
-                    <td>뜨개질 클래스 같이 하실 분~~</td>
-                    <td>타로롱</td>
-                    <td>2023.09.04</td>
-                    <td>2명</td>
-                    <td>진행 중</td>
-                  </tr>
-                  <tr>
-                    <td>9</td>
-                    <td>뜨개질 클래스 같이 하실 분~~</td>
-                    <td>타로롱</td>
-                    <td>2023.09.04</td>
-                    <td>2명</td>
-                    <td>진행 중</td>
-                  </tr>
-                  <tr>
-                    <td>8</td>
-                    <td>뜨개질 클래스 같이 하실 분~~</td>
-                    <td>타로롱</td>
-                    <td>2023.09.04</td>
-                    <td>2명</td>
-                    <td>진행 중</td>
-                  </tr>
-                  <tr>
-                    <td>7</td>
-                    <td>뜨개질 클래스 같이 하실 분~~</td>
-                    <td>타로롱</td>
-                    <td>2023.09.04</td>
-                    <td>2명</td>
-                    <td>진행 중</td>
-                  </tr>
-                  <tr>
-                    <td>6</td>
-                    <td>뜨개질 클래스 같이 하실 분~~</td>
-                    <td>타로롱</td>
-                    <td>2023.09.04</td>
-                    <td>2명</td>
-                    <td>신청 마감</td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td>뜨개질 클래스 같이 하실 분~~</td>
-                    <td>타로롱</td>
-                    <td>2023.09.04</td>
-                    <td>2명</td>
-                    <td>신청 마감</td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>뜨개질 클래스 같이 하실 분~~</td>
-                    <td>타로롱</td>
-                    <td>2023.09.04</td>
-                    <td>2명</td>
-                    <td>진행 중</td>
-                  </tr>
-                  <tr>
                     <td>3</td>
-                    <td>뜨개질 클래스 같이 하실 분~~</td>
-                    <td>타로롱</td>
-                    <td>2023.09.04</td>
-                    <td>2명</td>
-                    <td>신청 마감</td>
+                    <td>같이 하실 분 구합니다</td>
+                    <td>박재빈</td>
+                    <td>2023.09.20</td>
+                    <td>7명</td>
+                    <td style="color: red">신청 마감</td>
                   </tr>
                   <tr>
                     <td>2</td>
-                    <td>뜨개질 클래스 같이 하실 분~~</td>
-                    <td>타로롱</td>
-                    <td>2023.09.04</td>
-                    <td>2명</td>
+                    <td>통기타 같이 배우실 분 구함</td>
+                    <td>권기표</td>
+                    <td>2023.09.13</td>
+                    <td>8명</td>
                     <td>진행 중</td>
                   </tr>
                   <tr>
                     <td>1</td>
-                    <td>뜨개질 클래스 같이 하실 분~~</td>
-                    <td>타로롱</td>
+                    <td>뜨개질 클래스 같이 배우실 분 구해요!</td>
+                    <td>김민정</td>
                     <td>2023.09.04</td>
-                    <td>2명</td>
-                    <td>진행 중</td>
+                    <td>10명</td>
+                    <td style="color: red">신청 마감</td>
                   </tr>
                 </tbody>
               </table>

@@ -1,4 +1,5 @@
 window.addEventListener("load", function () {
+  // 작성자 이름 불러오기
   showInitialDashboard();
 
   // 대시보드 화면 표시
@@ -15,30 +16,120 @@ window.addEventListener("load", function () {
   // ====================
   const postTitleInput = document.getElementById("boardTitle"); // 제목
   const postWriterInput = document.getElementById("boardWriter"); // 작성자
+  const postClassInput = document.getElementById("searchClass"); // 클래스
   const postNumInput = document.getElementById("boardNum"); // 신청자수
-  const postClassInput = document.getElementById("boardClass"); // 클래스
   const postContentInput = document.getElementById("boardContent"); // 내용
   const postImageInput = document.getElementById("boardImage"); // 이미지
 
+  var tDate = new Date();
+  var today =
+    tDate.getFullYear() + "." + (tDate.getMonth() + 1) + "." + tDate.getDate();
+
+  const boardForm = document.getElementById("board_form");
   const addPostBtn = document.getElementById("addPostBtn"); // 제안하기 버튼
   const postList = document.getElementById("postList"); // 리스트 출력 부분
 
-  const searchInput = document.getElementById("searchInput"); // 검색창
-  const searchBtn = document.getElementById("searchBtn"); // 검색 버튼
-  const clearBtn = document.getElementById("clearBtn"); // 닫기 버튼
+  // 저장된 게시글 배열
+  let posts = [];
 
-  showInitialDashboard();
+  // 로컬 스토리지에 저장된 게시글 불러오기
+  if (localStorage.getItem("posts")) {
+    posts = JSON.parse(localStorage.getItem("posts"));
+    // posts 배열의 각 요소를 순환하면서 반복문 내부에서 post 변수를 통해 현재 요소에
+    // 접근할 수 있게 함. 반복문을 사용하면 posts 배열의 모든 요소를 차례대로 처리 가능
+    for (const post of posts) {
+      addPostToDOM(post);
+    }
+  }
 
-  // 대시보드 화면 표시
-  // function showInitialDashboard() {
-  //   var params = new URLSearchParams(window.location.search);
-  //   var username = params.get("username");
+  // 게시글 작성 버튼 클릭 이벤트 처리
+  boardForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  //   if (username) {
-  //     document.getElementById("username-display").textContent = `${username}`;
-  //   } else {
-  //   }
-  // }
+    const title = postTitleInput.value;
+    const writer = postWriterInput.innerText;
+    const hobbyClass = postClassInput.value;
+    const userNum = postNumInput.value;
+    const content = postContentInput.value;
+    const imageFile = postImageInput.files[0];
+    const date = today;
+
+    var count = posts.length + 4;
+    console.log(count);
+
+    if (title && hobbyClass && userNum && content) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        // 새 게시글 객체 생성
+        const newPost = {
+          count,
+          title,
+          writer,
+          hobbyClass,
+          userNum,
+          content,
+          image: reader.result,
+          date,
+        };
+
+        // 배열에 게시글 추가
+        posts.push(newPost);
+        // 로컬 스토리지에 게시글 저장
+        localStorage.setItem("posts", JSON.stringify(posts));
+        localStorage.setItem("count", count);
+        localStorage.setItem("title", title);
+        localStorage.setItem("writer", writer);
+        localStorage.setItem("date", date);
+        localStorage.setItem("userNum", userNum);
+        // 화면에 게시글 추가
+        addPostToDOM(newPost);
+        // 입력 필드 초기화
+        postTitleInput.value = "";
+        postWriterInput.value = "";
+        postClassInput.value = "";
+        postNumInput.value = "";
+        postContentInput.value = "";
+        postImageInput.value = "";
+
+        alert("신청이 완료 되었습니다. 게시판 페이지로 이동합니다.");
+        window.location.href =
+          "group.html?count=" +
+          encodeURIComponent(count) +
+          "?title=" +
+          encodeURIComponent(title) +
+          "?writer=" +
+          encodeURIComponent(writer) +
+          "?date=" +
+          encodeURIComponent(date) +
+          "?userNum=" +
+          encodeURIComponent(userNum);
+      };
+
+      if (imageFile) {
+        reader.readAsDataURL(imageFile); // 이미지 파일을 base64로 읽기
+      } else {
+        // 이미지가 없을 경우도 처리
+        reader.onload();
+      }
+    }
+  });
+
+  // 게시글 추가 함수
+  function addPostToDOM(post) {
+    const postElement = document.createElement("tr");
+    postElement.classList.add("post");
+    postElement.innerHTML = `
+      <td>${post.count}</td>
+      <td>${post.title}</td>
+      <td>${post.writer}</td>
+      <td>${post.date}</td>
+      <td>${post.userNum}명</td>
+      <td>진행 중</td>
+    `;
+
+    // 새 게시글을 화면에 추가하는 역할
+    postList.prepend(postElement);
+  }
 
   // ====================
   // 최소값과 최대값 설정
@@ -82,6 +173,7 @@ window.addEventListener("load", function () {
       NEW_CLASS = obj.newclass;
     }
   };
+
   // 자료를 호출한다.
   xhttp.open("GET", "data.json");
   // 웹브라우저 기능 실행 할 수 있도록 요청.
@@ -94,14 +186,29 @@ window.addEventListener("load", function () {
       // #searchClass 입력 필드의 값을 가져옴
       const searchKeyword = document.getElementById("searchClass").value.trim();
 
-      // const searchResultsElement = document.getElementById("searchResults");
-      // searchResultsElement.style.display = "block";
+      const searchResultsElement = document.getElementById("searchResults");
+      searchResultsElement.style.display = "block";
 
       // data.json 파일에서 클래스 검색
       if (searchKeyword !== "") {
         const searchResults = searchClasses(searchKeyword);
         displaySearchResults(searchResults);
       }
+
+      document.addEventListener("click", function (event) {
+        // console.log(event.target);
+        const searchClass = document.getElementById("searchClass");
+        const searchBtn = document.getElementById("searchButton");
+        const searchBtni = document.querySelector("#searchButton i");
+        const searchList = document.getElementById("searchResults");
+        if (
+          event.target !== searchClass &&
+          event.target !== searchBtn &&
+          event.target !== searchBtni
+        ) {
+          searchList.style.display = "none";
+        }
+      });
     });
 
   // data.json에서 클래스 검색 함수
@@ -115,7 +222,6 @@ window.addEventListener("load", function () {
         results.push(classObj);
       }
     }
-
     return results;
   }
 
@@ -133,76 +239,11 @@ window.addEventListener("load", function () {
         const listItem = document.createElement("li");
         listItem.textContent = classObj.name;
         searchResultsElement.appendChild(listItem);
+
+        listItem.addEventListener("click", function () {
+          document.getElementById("searchClass").value = classObj.name;
+        });
       }
     }
   }
-
-  const searchButton = document.getElementById("searchButton");
-  const searchClassInput = document.getElementById("searchClass");
-  const searchResultss = document.getElementById("searchResults");
-  // 검색 버튼 클릭 시 검색 결과 표시/숨김 토글
-  searchClassInput.addEventListener("click", function (event) {
-    event.stopPropagation(); // 이벤트 전파 방지
-
-    const isResultsVisible = searchResultss.style.display === "block";
-    if (!isResultsVisible) {
-      // 검색 결과가 숨겨져 있다면 표시
-      searchResultss.style.display = "block";
-    } else {
-      // 검색 결과가 표시된 상태면 숨김
-      searchResultss.style.display = "none";
-    }
-  });
-
-  // 다른 곳을 클릭하면 검색 결과 숨김
-  document.addEventListener("click", function () {
-    searchResultss.style.display = "none";
-  });
-
-  // ====================
-  // const searchButton = document.getElementById("searchButton");
-  // const searchClassInput = document.getElementById("searchClass");
-  // const searchResults = document.getElementById("searchResults");
-
-  // 검색 버튼 클릭 시 검색 결과 표시/숨김 토글
-  // searchButton.addEventListener("click", function (event) {
-  //   event.stopPropagation(); // 이벤트 전파 방지
-
-  //   const isResultsVisible = searchResults.style.display === "block";
-  //   if (!isResultsVisible) {
-  //     // 검색 결과가 숨겨져 있다면 표시
-  //     searchResults.style.display = "block";
-  //   } else {
-  //     // 검색 결과가 표시된 상태면 숨김
-  //     searchResults.style.display = "none";
-  //   }
-  // });
-
-  // 검색창 클릭 시 검색 결과 표시
-  // searchClassInput.addEventListener("click", function (event) {
-  //   event.stopPropagation(); // 이벤트 전파 방지
-
-  //   // 검색 결과 표시
-  //   searchResults.style.display = "block";
-  // });
-
-  // 다른 곳을 클릭하면 검색 결과 숨김
-  // document.addEventListener("click", function () {
-  //   searchResults.style.display = "none";
-  // });
-
-  // 검색창 클릭 시 이벤트 전파 방지
-  // searchClassInput.addEventListener("click", function (event) {
-  //   event.stopPropagation();
-  // });
-
-  // 검색 결과 리스트 아이템 클릭 시 검색어 입력
-  // searchResults.addEventListener("click", function (event) {
-  //   const clickedItem = event.target;
-  //   if (clickedItem.tagName === "LI") {
-  //     const className = clickedItem.textContent;
-  //     searchClassInput.value = className;
-  //     searchResults.style.display = "none"; // 선택한 후에 검색 결과 숨김
-  //   }
-  // });
 });

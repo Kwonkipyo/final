@@ -114,6 +114,7 @@
     <!-- css -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/topbutton.css" />
     <link rel="stylesheet" href="css/group_insert.css" />
   </head>
   <body>
@@ -130,6 +131,17 @@
 
     <!-- 레이아웃 -->
     <div class="wrap">
+      <!-- 탑버튼 -->
+      <div class="top-button" id="top-button">
+        <!-- <a href="javascript:void(0);" onclick="openPopup()" class="top-event-button"> -->
+        <a href="#" class="top-chat-button">
+          <p>&Talk</p>
+          <img src="images/talk.png" alt="" />
+        </a>
+        <a href="#" class="top-btn" id="top-btn">
+          <img src="images/top-btn.png" alt="top-btn" id="top-btn-img" />
+        </a>
+      </div>
       <!-- 헤더 -->
       <header class="header">
         <div class="inner">
@@ -289,7 +301,7 @@
             <fieldset>
               <label for="boardNum" class="must">신청자수</label>
               <div class="boardNum-wrap">
-                <button class="boardNum-btn down" onclick="">-</button>
+                <button type="button" class="boardNum-btn down">-</button>
                 <input
                   type="text"
                   id="boardNum"
@@ -297,7 +309,7 @@
                   value="5"
                   required
                 />
-                <button class="boardNum-btn up" onclick="">+</button>
+                <button type="button" class="boardNum-btn up">+</button>
               </div>
             </fieldset>
             <!-- 내용 -->
@@ -315,9 +327,69 @@
               <label for="boardImage" class="notAfter">이미지 업로드</label>
               <input type="file" id="boardImage" accept="image/*" />
             </fieldset>
+            <div class="add-post">
+              <a href="group.html" id="addPostBtn">제안하기</a>
+            </div>
           </form>
-          <div class="add-post">
-            <a href="group.html" id="addPostBtn">제안하기</a>
+        </div>
+      </section>
+      <!-- 글 출력 -->
+      <section class="board" style="display: none">
+        <div class="sub-inner">
+          <div class="board-wrap">
+            <div class="board-list">
+              <h2>공동구매 게시판</h2>
+              <table class="board-list-title">
+                <colgroup>
+                  <col width="10%" />
+                  <col width="40%" />
+                  <col width="10%" />
+                  <col width="10%" />
+                  <col width="10%" />
+                  <col width="10%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>작성일</th>
+                    <th>신청자수</th>
+                    <th>진행상태</th>
+                  </tr>
+                </thead>
+                <tbody id="postList">
+                  <!-- js로 출력 -->
+                  <tr>
+                    <td>1</td>
+                    <td>뜨개질 클래스 같이 하실 분~~</td>
+                    <td>타로롱</td>
+                    <td>2023.09.04</td>
+                    <td>2명</td>
+                    <td>진행 중</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="paging">
+            <a href="javascript:void(0);">
+              <i class="fa-solid fa-angles-left"></i>
+            </a>
+            <a href="javascript:void(0);" onclick="before()">
+              <i class="fa-solid fa-angle-left"></i>
+            </a>
+            <a href="javascript:void(0);" class="paging-num active">1</a>
+            <!-- <div class="paging-num"></div> -->
+            <a href="javascript:void(0);" onclick="next()">
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+            <a href="javascript:void(0);">
+              <i class="fa-solid fa-angles-right"></i>
+            </a>
+          </div>
+          <div class="board-btn">
+            <a href="group_insert.html">모집하기</a>
           </div>
         </div>
       </section>
