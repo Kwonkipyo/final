@@ -262,7 +262,7 @@
   font-size: 15px;
   position: relative;
 }
-.me-registration {
+.me-buy {
   width: 280px;
   border: 0;
   cursor: pointer;
@@ -273,10 +273,10 @@
   color: #000;
   font-family: "NanumSquare" !important;
 }
-.me-registration:hover {
+.me-buy:hover {
   background-color: #b87d00;
 }
-.me-registration > h2 {
+.me-buy > h2 {
   line-height: 30px;
   font-size: 20px;
   font-weight: 900;
@@ -286,7 +286,7 @@
   display: flex;
   flex-direction: column-reverse;
 }
-.we-registration {
+.we-buy {
   width: 280px;
   border: 0;
   cursor: pointer;
@@ -297,10 +297,10 @@
   color: #000000;
   font-family: "NanumSquare" !important;
 }
-.we-registration:hover {
+.we-buy:hover {
   background-color: #0062be;
 }
-.we-registration > h2 {
+.we-buy > h2 {
   line-height: 30px;
   font-size: 20px;
   font-weight: 900;
@@ -335,7 +335,7 @@
 }
 
 /* 버튼 호버 시 밑줄이 나타나도록 변경 */
-.we-registration:hover + .linked-text::after {
+.we-buy:hover + .linked-text::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -345,15 +345,101 @@ body {
   font-family: "NanumSquare" !important;
 }
 
+/* new-fix-menu */
+.new-fix-menu{
+  max-width: 967px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  z-index: 999990;
+  opacity: 0;
+  padding: 0 20px;
+}
+.fix-left-button{
+  cursor: pointer;
+  width: 48%;
+  background-color: #ccc;
+  border-radius: 5px;
+
+}
+.fix-left-button button{
+  cursor: pointer;
+  padding: 12px 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: 0;
+  background-color: #f7a800;
+  color: #000;
+  font-family: "NanumSquare" !important;
+  font-size: 22px;
+  font-weight: 900;
+}
+.fix-left-button button:hover{
+  background-color: #b97f00;
+}
+.fix-right-button{
+  cursor: pointer;
+  width: 48%;
+  background-color: #ccc;
+  border-radius: 5px;
+}
+.fix-right-button button{
+  cursor: pointer;
+  padding: 12px 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: 0;
+  background-color: #178fff;
+  color: #000000;
+  font-family: "NanumSquare" !important;
+  font-size: 22px;
+  font-weight: 900;
+}
+.fix-right-button button:hover{
+  background-color: #0067c7;
+}
 /* 반응형 */
 @media all and (max-width: 1024px) {
   .fix-menu {
     display: none;
   }
+  .new-fix-menu{
+    opacity: 1;
+  }
 }
 
 @media all and (max-width: 768px) {
+  .fix-left-button button{
+    font-size: 20px;
+  }
+  .fix-right-button button{
+    font-size: 20px;
+  }
 }
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 480px) {
+  .fix-left-button button{
+    font-size: 15px;
+    padding: 10px 8px;
+  }
+  .fix-right-button button{
+    padding: 10px 8px;
+    font-size: 15px;
+  }
+}
+@media all and (max-width: 370px) {
+  .fix-left-button button{
+    font-size: 13px;
+    padding: 8px 6px;
+  }
+  .fix-right-button button{
+    padding: 8px 5px;
+    font-size: 13px;
+  }
 }

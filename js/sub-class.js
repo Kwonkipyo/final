@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // 각 섹션의 위치값(세로스크롤 위치)
-  const sectionYpos = [1082, 5800, 6700, 8900];
+  const sectionYpos = [1080, 5800, 6720, 8900];
 
   // 클래스 title-menu 의 li 를 찾아라
   // 저장한다. 재활용하기 위해서
