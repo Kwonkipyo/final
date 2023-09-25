@@ -22,7 +22,8 @@
     flex-direction: column;
 }
 .tip-cate a{
-    background-color: #e8eddf;
+    background-color: #d3d8cb;
+    color: #d3d8cb;
     height: 330px;
     border-radius: 30px; 
     transition: all 0.3s;
@@ -44,7 +45,7 @@
     z-index: 1;
 }
 .tip-cate a:hover{
-    background-color: #7d817d;
+    background-color: #4f524f;
 }
 .tip-cate span{
     font-size: 23px;
