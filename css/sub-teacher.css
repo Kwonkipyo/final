@@ -1,0 +1,58 @@
+/*------------------- 강사 소개 -------------------*/
+.teacher-info {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-top: 200px;
+}
+.teacher-name {
+  font-size: 22px;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 70px;
+}
+.teacher-name::before {
+  content: "";
+  width: 200px;
+  height: 1px;
+  border-left: solid 1px #ccc;
+  padding-left: 40px;
+}
+.teacher-name::after {
+  content: "";
+  border-right: solid 1px #ccc;
+  width: 200px;
+  height: 1px;
+  padding-left: 40px;
+}
+.teacher-text {
+  margin-top: 10px;
+}
+.teacher-text p {
+  margin-top: 40px;
+  line-height: 1.9;
+  color: #ccc;
+}
+.teacher-info img {
+  border-radius: 5px;
+}
+
+/* 반응형 */
+@media all and (max-width: 1024px) {
+  .teacher-info {
+    max-width: 1024px;
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .teacher-name{
+    font-size: 18px;
+  }
+  .teacher-text{
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 320px) {
+}

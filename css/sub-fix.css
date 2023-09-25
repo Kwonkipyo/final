@@ -1,0 +1,359 @@
+/*---------- fix-menu -----------*/
+.fix-menu {
+  position: sticky;
+  top: 13.5%;
+  left: 20%;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  max-height: 750px;
+  max-width: 340px;
+}
+.fix-menu-box {
+  width: 100%;
+  height: auto;
+  padding: 30px 25px;
+  background-color: #222;
+  border: solid 1px #000;
+  border-radius: 10px;
+}
+
+/* fix title menu */
+.fix-title-menu {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+  width: 270px;
+  font-size: 15px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.fix-title-menu > span {
+  border-right: 1px solid #ccc;
+  height: 45px;
+  margin-top: 5px;
+}
+.fix-title > h2 {
+  padding-bottom: 10px;
+  font-weight: 900;
+  font-size: 16px;
+}
+.fix-title > p {
+  color: #ccc;
+  font-size: 14px;
+}
+
+/* 트리플 패스 */
+.we-class {
+  background-color: #3e3e3e;
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 13px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+}
+.we-class:hover {
+  background-color: #2e2e2e;
+}
+.focused {
+  outline: 2px solid #fff;
+}
+.we-class > h3 {
+  font-size: 17px;
+  font-weight: 600;
+  padding-bottom: 4px;
+  padding-top: 5px;
+}
+.we-class > p {
+  font-size: 15px;
+}
+.we-class > p > span {
+  font-size: 12px;
+  color: red;
+  padding-right: 10px;
+}
+.we-class i {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 16px;
+}
+.we-class-info-text {
+  display: none;
+  background-color: transparent;
+  position: absolute;
+  text-align: center;
+  width: 220px;
+  height: 40px;
+  line-height: 40px;
+  bottom: 42px;
+  right: -270px;
+  font-size: 14px;
+  border: solid 1px #ccc;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+/* 개별 클래스 */
+.me-class {
+  background-color: #3e3e3e;
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 13px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+}
+.me-class:hover {
+  background-color: #2e2e2e;
+}
+.me-class > h3 {
+  font-size: 17px;
+  font-weight: 600;
+  padding-bottom: 4px;
+  padding-top: 5px;
+}
+.me-class > p {
+  font-size: 15px;
+}
+.me-class > p > span {
+  font-size: 12px;
+  color: red;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+/* 준비물 */
+.custom-selector {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 0px;
+  font-size: 14px;
+}
+.custom-selector option {
+  background-color: #e8eddf;
+  color: #000;
+  border-radius: 20px;
+  font-size: 14px;
+}
+.custom-all {
+  display: flex;
+  flex-direction: column;
+}
+#preparation {
+  width: 280px;
+  padding: 5px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: transparent;
+  text-overflow: ellipsis;
+  color: #e8eddf;
+  font-family: "NanumSquare" !important;
+}
+#result {
+  margin-top: 20px;
+  display: none; /* 초기에는 결과 숨김 */
+}
+#customDiv {
+  display: none; /* 초기에는 숨김 */
+  margin-bottom: 20px;
+}
+
+/* 준비물 박스 */
+.custom-box {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-top: solid 1px #ccc;
+  border-bottom: solid 1px #ccc;
+  padding: 10px;
+  margin-bottom: 5px;
+  font-family: "NanumSquare" !important;
+}
+.custom-image {
+  display: flex;
+}
+.custom-image > p {
+  font-size: 14px;
+  margin-left: 10px;
+}
+.custom-bottom {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.custom-span {
+  font-size: 13px;
+  cursor: pointer;
+  margin-left: 145px;
+}
+
+/* 숫자증가 박스 */
+.number-box {
+  color: #fff;
+  display: flex;
+  border: solid 1px #ccc;
+  font-family: "NanumSquare" !important;
+}
+#increaseButton {
+  padding: 0 8px;
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  border: 0;
+  cursor: pointer;
+  transition: 0.1s;
+}
+#increaseButton:hover {
+  background-color: #aaa;
+}
+#quantity {
+  font-size: 14px;
+  padding-top: 5px;
+}
+#decreaseButton {
+  padding: 0 8px;
+  margin-right: 10px;
+  font-size: 22px;
+  font-weight: 500;
+  border: 0;
+  cursor: pointer;
+}
+#decreaseButton:hover {
+  background-color: #aaa;
+}
+
+/* 가격 박스 */
+.price-box {
+  display: flex;
+  font-size: 15px;
+  color: #fff;
+  justify-content: center;
+  align-items: end;
+}
+.price-box p {
+  height: 18px;
+}
+/* x-박스 */
+.x-box {
+  font-size: 12px;
+  border: solid 1px #ccc;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: 0.1s;
+  padding: 0 3px;
+  padding-top: 1px;
+}
+.x-box:hover {
+  background-color: #aaa;
+}
+
+/* 클래스 신청 버튼 */
+.button-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+  position: relative;
+}
+.me-registration {
+  width: 280px;
+  border: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 13px 0;
+  background-color: #f7a800;
+  color: #000;
+  font-family: "NanumSquare" !important;
+}
+.me-registration:hover {
+  background-color: #b87d00;
+}
+.me-registration > h2 {
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: 900;
+  /* color: #ffffff; */
+}
+.button-box-we {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.we-registration {
+  width: 280px;
+  border: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 13px 0;
+  background-color: #178fff;
+  color: #000000;
+  font-family: "NanumSquare" !important;
+}
+.we-registration:hover {
+  background-color: #0062be;
+}
+.we-registration > h2 {
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: 900;
+  /* color: #ffffff; */
+}
+.button-box h2 i {
+  font-size: 17px;
+  font-weight: 900;
+  transition: 0.3s;
+}
+.button-box h2:hover i {
+  transform: translateX(3px);
+}
+
+/* 기본 스타일 */
+.linked-text {
+  position: relative;
+  width: 191px;
+}
+
+.linked-text::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+/* 버튼 호버 시 밑줄이 나타나도록 변경 */
+.we-registration:hover + .linked-text::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* 폰트 스타일 한번 더 저장 */
+body {
+  font-family: "NanumSquare" !important;
+}
+
+/* 반응형 */
+@media all and (max-width: 1024px) {
+  .fix-menu {
+    display: none;
+  }
+}
+
+@media all and (max-width: 768px) {
+}
+
+@media all and (max-width: 320px) {
+}
