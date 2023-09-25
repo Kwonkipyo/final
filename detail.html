@@ -94,11 +94,11 @@
     <script src="js/sub-curri.js"></script>
     <script src="js/sub-review.js"></script>
     <script src="js/sub-fix.js"></script>
+    <script src="js/sub-md-fix.js"></script>
     <script src="js/footer.js"></script>
 
     <!-- script 불러오기 -->
     <script src="js/sub-script.js"></script>
-    <script src="js/script.js"></script>
 
     <!-- fontawesome -->
     <script
@@ -242,7 +242,7 @@
               </div>
               <div class="mb-menu-link">
                 <ul>
-                  <li><a href="#">공동구매</a></li>
+                  <li><a href="group.html">공동구매</a></li>
                   <li><a href="#">중고거래</a></li>
                   <li><a href="#">게시판</a></li>
                   <li><a href="#">고객센터</a></li>
@@ -841,11 +841,134 @@
           </div>
           <!-- new-fix-menu -->
           <div class="new-fix-menu">
-            <div class="fix-left-button">
-              <button>클래스 신청하기</button>
+            <div class="new-fix-menu-box">
+              <div class="fix-left-button">
+                <button onclick="openModal()">클래스 신청하기</button>
+              </div>
+              <div class="fix-right-button">
+                <button><a href="group.html">클래스 공동구매 찾기</a></button>
+              </div>
             </div>
-            <div class="fix-right-button">
-              <button>클래스 공동구매 찾기</button>
+          </div>
+          <!-- new-fix-menu-modal -->
+          <div id="myModal" class="fix-modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal()">&times;</span>
+              <div class="md-fix-menu-box">
+                <!-- 타이틀 메뉴 -->
+                <div class="md-fix-title-menu">
+                  <div class="md-fix-title">
+                    <h2>수강 시작</h2>
+                    <p>즉시 가능</p>
+                  </div>
+                  <span></span>
+                  <div class="md-fix-title">
+                    <h2>수강 기간</h2>
+                    <p>6개월</p>
+                  </div>
+                  <span></span>
+                  <div class="md-fix-title">
+                    <h2>수강 자료</h2>
+                    <p>별도 구매</p>
+                  </div>
+                </div>
+                <!-- 트리플 패스 -->
+                <div class="md-we-class" id="md-item">
+                  <h3>트리플 패스 수강권</h3>
+                  <p><span>50%</span>월 15,000원</p>
+                  <div class="md-we-class-info">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <div class="md-we-class-info-text">
+                      <p>다른 클래스 3개를 함께 담아요</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- 개별 클래스 -->
+                <div class="md-me-class" id="md-item">
+                  <h3>개별 클래스 수강권</h3>
+                  <p><span>30%</span>월 23,000원</p>
+                </div>
+                <!-- 준비물 -->
+                <div class="md-custom-selector" id="md-item">
+                  <select
+                    id="md-preparation"
+                    onchange="showPreparationAnother()"
+                  >
+                    <option class="md-custom-option" value="md-option">
+                      준비물을 선택하세요
+                    </option>
+                    <option class="md-custom-option1" value="md-option1">
+                      클래스를 도와줄 당신을 위한 뜨개질 키트
+                    </option>
+                  </select>
+                  <div id="md-customDiv">
+                    <!-- 준비물박스 -->
+                    <div class="md-custom-box">
+                      <!-- 이미지 -->
+                      <div class="md-custom-image">
+                        <img
+                          src="images/custom-image.jpg"
+                          alt="준비물"
+                          width="78px"
+                          height="auto"
+                        />
+                        <p>클래스를 도와줄당신을 위한 뜨개질 키트</p>
+                      </div>
+                      <div class="md-custom-bottom">
+                        <!-- 숫자 증가 박스 -->
+                        <div class="md-number-box">
+                          <button id="md-decreaseButton">-</button>
+                          <span id="md-quantity">1</span>
+                          <button id="md-increaseButton">+</button>
+                        </div>
+                        <!-- 가격 박스 -->
+                        <div class="md-price-box">
+                          <p>가격 : <span id="md-price">25,500원</span></p>
+                          <button
+                            class="md-x-box"
+                            onclick="hidePreparationAnother()"
+                          >
+                            X
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="md-custom-span"
+                      >이 용품 중고거래 찾기&nbsp;<i
+                        class="fa-solid fa-arrow-right"
+                      ></i
+                    ></span>
+                  </div>
+                </div>
+                <!-- 클래스 신청 버튼 -->
+                <div class="md-button-box">
+                  <button
+                    disabled
+                    class="md-me-buy"
+                    id="md-applyButton"
+                    onclick="showAlert(event)"
+                  >
+                    <h2>
+                      클래스 신청하기&nbsp;
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </h2>
+                  </button>
+                  <div class="md-button-box-we">
+                    <button
+                      disabled
+                      class="md-we-buy"
+                      onclick="showAlert(event)"
+                    >
+                      <h2>
+                        클래스 공동구매 찾기&nbsp;<i
+                          class="fa-solid fa-chevron-right"
+                        ></i>
+                      </h2>
+                    </button>
+                    <p class="md-linked-text">더 저렴히 시작하고 싶으신가요?</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

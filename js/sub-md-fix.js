@@ -1,9 +1,9 @@
 $(document).ready(function () {
   // HTML 요소를 JavaScript 변수에 할당합니다.
-  const quantityElement = document.getElementById("quantity");
-  const priceElement = document.getElementById("price");
-  const increaseButton = document.getElementById("increaseButton");
-  const decreaseButton = document.getElementById("decreaseButton");
+  const quantityElement = document.getElementById("md-quantity");
+  const priceElement = document.getElementById("md-price");
+  const increaseButton = document.getElementById("md-increaseButton");
+  const decreaseButton = document.getElementById("md-decreaseButton");
 
   // 초기 수량과 단가를 설정합니다.
   let quantity = 1;
@@ -43,14 +43,14 @@ $(document).ready(function () {
   // -----------------------------------------------------------
 
   // 아이콘에 호버했을 때 이벤트 리스너 추가
-  $(".we-class-info").hover(
+  $(".md-we-class-info").hover(
     function () {
       // 호버 시에 보이도록 설정
-      $(this).find(".we-class-info-text").css("display", "block");
+      $(this).find(".md-we-class-info-text").css("display", "block");
     },
     function () {
       // 호버를 벗어났을 때 숨김
-      $(this).find(".we-class-info-text").css("display", "none");
+      $(this).find(".md-we-class-info-text").css("display", "none");
     }
   );
 
@@ -58,28 +58,28 @@ $(document).ready(function () {
 
   // 클래스를 클릭했을때 포커스효과
   // 특별 클래스 div 요소에 클릭 이벤트 핸들러를 추가하여 포커스를 설정합니다.
-  const specialClass = document.querySelector(".we-class");
+  const specialClass = document.querySelector(".md-we-class");
   specialClass.addEventListener("click", () => {
     specialClass.classList.add("focused");
     // 개별 클래스 div에서 포커스 스타일을 제거합니다.
-    const individualClass = document.querySelector(".me-class");
+    const individualClass = document.querySelector(".md-me-class");
     individualClass.classList.remove("focused");
   });
 
   // 개별 클래스 div 요소에 클릭 이벤트 핸들러를 추가하여 포커스를 설정합니다.
-  const individualClass = document.querySelector(".me-class");
+  const individualClass = document.querySelector(".md-me-class");
   individualClass.addEventListener("click", () => {
     individualClass.classList.add("focused");
     // 특별 클래스 div에서 포커스 스타일을 제거합니다.
-    const specialClass = document.querySelector(".we-class");
+    const specialClass = document.querySelector(".md-we-class");
     specialClass.classList.remove("focused");
   });
 
   // ----------------------------------------------------------
 
   // 신청하기 버튼넘어가는 과정
-  var applyButton = document.getElementById("applyButton");
-  var items = document.querySelectorAll("#item");
+  var applyButton = document.getElementById("md-applyButton");
+  var items = document.querySelectorAll("#md-item");
 
   // 항목 클릭 시 상태 변경 및 버튼 활성화 여부 검사하는 함수
   function checkSelection() {
@@ -112,36 +112,53 @@ $(document).ready(function () {
   applyButton.addEventListener("click", function () {
     window.location.href = "payment.html";
   });
+
+  // 푸터의 위치를 확인하고 "fix-menu"를 숨기도록 JavaScript를 작성합니다.
+  window.addEventListener("scroll", function () {
+    var newFixMenu = document.querySelector(".new-fix-menu");
+
+    if (newFixMenu) {
+      var scrollY = window.scrollY || window.pageYOffset;
+      var scrollThreshold = 10000; // 숨기기 위한 스크롤 임계값
+
+      if (scrollY >= scrollThreshold) {
+        // 스크롤 값이 임계값 이상이면 newFixMenu를 숨깁니다.
+        newFixMenu.style.display = "none";
+      } else {
+        // 스크롤 값이 임계값 미만이면 newFixMenu를 보여줍니다.
+        newFixMenu.style.display = "flex";
+      }
+    }
+  });
 });
 
 // ------------------------------------------------
 
 //  준비물 selector
-function showPreparation() {
-  const preparationSelect = document.getElementById("preparation");
-  const customDiv = document.getElementById("customDiv");
+function showPreparationAnother() {
+  const preparationSelect = document.getElementById("md-preparation");
+  const customDiv = document.getElementById("md-customDiv");
 
-  if (preparationSelect.value === "option") {
+  if (preparationSelect.value === "md-option") {
     customDiv.style.display = "none"; // 숨김
   } else {
     customDiv.style.display = "block"; // 표시
   }
 }
 
-// ----------------------------------------------
-
 // X버튼클릭시 준비물 숨기기
-function hidePreparation() {
+function hidePreparationAnother() {
   // X 버튼을 클릭하면 준비물 항목을 숨깁니다.
-  const customDiv = document.getElementById("customDiv");
+  const customDiv = document.getElementById("md-customDiv");
   customDiv.style.display = "none"; // 숨김
 
   // 선택한 옵션 초기화
-  const preparationSelect = document.getElementById("preparation");
+  const preparationSelect = document.getElementById("md-preparation");
   preparationSelect.selectedIndex = 0; // "준비물을 선택하세요"로 초기화
 }
 
 // -----------------------------------------------
+
 // 화면 크기 변경 이벤트에 대한 이벤트 리스너 추가
 window.addEventListener("resize", function () {
   var modal = document.getElementById("myModal");

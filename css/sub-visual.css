@@ -83,7 +83,7 @@
 }
 .hashtag {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .hashtag ul {
   width: 100%;
@@ -93,7 +93,7 @@
 .hashtag ul li {
   width: 100%;
   margin-right: 13px;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
   font-size: 15px;
   padding: 0px 18px;
   border: solid 1px #5b5b5b;

@@ -72,3 +72,19 @@
       scale: 1.2;
     }
   }
+  @media all and (max-width: 480px) {
+    .top-button{
+      right: 20px;
+      bottom: 20px;
+    }
+    .top-btn{
+      width: 30px;
+      line-height: 30px;
+    }
+    .top-chat-button{
+      width: 50px;
+    }
+    .top-chat-button:hover{
+      scale: 1.2;
+    }
+  }
