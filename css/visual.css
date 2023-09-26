@@ -7,6 +7,7 @@
   display: inline;
   height: 100vh;
   width: 100vw;
+  max-width: 1903px;
   max-height: 963px;
   object-fit: fill;
 }
