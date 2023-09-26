@@ -128,7 +128,7 @@
         flex-wrap: wrap;
     }
     .tip-logo{
-        width: 50%;
+        width: 55%;
         height: auto;
     }
     .tip-inner{
@@ -139,7 +139,7 @@
     .tip-cate{
         width: 85%;
         height: 300px;
-        margin-bottom: 70px;
+        margin-bottom: 85px;
     }
     .tip-cate a{
         height: 280px;
