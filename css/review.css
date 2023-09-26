@@ -56,7 +56,7 @@
 }
 .review-right .review-txt {
     width: 100%;
-    height: 360px;
+    height: auto;
     padding: 20px;
     margin-bottom: 20px;
     background-color: rgba(43, 43, 43, 1);
