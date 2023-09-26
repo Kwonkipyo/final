@@ -1,10 +1,10 @@
-.board-header h2{
+.main-board .board-header h2{
   font-size: 35px;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
-.board-wrap{
+.main-board .board-wrap{
   margin-top: 50px;
   width: 100%;
   height: auto;
@@ -14,29 +14,29 @@
   gap: 10%;
 }
 
-.board-sub-title{
+.main-board .board-sub-title{
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: 20px;
 }
 
-.board-sub-title span{
+.main-board .board-sub-title span{
   font-size: 20px;
   color: #f5cb5c;
   font-weight: 700;
 }
 
 /* 인기 중고 검색어 */
-.best-search{
+.main-board .best-search{
   width: 35%;
 }
 
-.best-search-wrap{
+.main-board .best-search-wrap{
   gap: 30px;
 }
 
-.best-search-wrap .search-item-box{
+.main-board .best-search-wrap .search-item-box{
   display: flex;
   gap: 20px;
   flex-flow: column wrap;
@@ -44,7 +44,7 @@
   height: 310px;
 }
 
-.best-search-wrap .search-item{
+.main-board .best-search-wrap .search-item{
   background-color: #333533;
   display: flex;
   align-items: center;
@@ -56,12 +56,12 @@
   transition: 0.5s;
 }
 
-.best-search-wrap .search-item span{
+.main-board .best-search-wrap .search-item span{
   font-weight: 900;
   font-size: 25px;
 }
 
-.best-search-wrap .search-item.first{
+.main-board .best-search-wrap .search-item.first{
   background-color: #111;
   border: 2px solid #e8eddf;
   box-shadow: 0 14px 28px rgba(0,0,0,0.7), 0 10px 10px rgba(0,0,0,0.67);
@@ -69,20 +69,20 @@
 
 
 /* 신규 게시글 */
-.new-board{
+.main-board .new-board{
   width: 55%;
 }
 
-.new-board .plus{
+.main-board .new-board .plus{
   padding-right: 10px;
 }
 
-.new-board-wrap .new-board-item-box{
+.main-board .new-board-wrap .new-board-item-box{
   display: flex;
   flex-direction: column;
 }
 
-.new-board-item{
+.main-board .new-board-item{
   display: flex;
   gap: 20px;
   align-items: center;
@@ -91,11 +91,11 @@
   transition: 0.3s;
 }
 
-.new-board-item:first-child{
+.main-board .new-board-item:first-child{
   border-top: 1px solid #e8eddf;
 }
 
-.new-board-item .board-tag{
+.main-board .new-board-item .board-tag{
   border-radius: 50px;
   font-size: 12px;
   font-weight: 900;
@@ -103,18 +103,18 @@
   height: 20px;
 }
 
-.new-board-item .sale{
+.main-board .new-board-item .sale{
   background: red;
   margin-right: 10px;
   color: #e8eddf;
 }
 
-.new-board-item .done{
+.main-board .new-board-item .done{
   background-color: green;
   color: #e8eddf;
 }
 
-.new-board-item .img{
+.main-board .new-board-item .img{
   width: 100px;
   height: 100px;
   background-size: cover;
@@ -123,27 +123,27 @@
   display: none;
 }
 
-.new-board-item .board-info-txt{
+.main-board .new-board-item .board-info-txt{
   width: 70%;
   flex: 1;
   width: calc(100% - 200px);
 }
 
-.new-board-item .board-info-top{
+.main-board .new-board-item .board-info-top{
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
 }
 
-.new-board-item .board-date{
+.main-board .new-board-item .board-date{
   font-size: 14px;
   width: 50px;
   text-align: right;
   margin-left: 10px;
 }
 
-.new-board-item .board-name{
+.main-board .new-board-item .board-name{
   font-size: 18px;
   font-weight: 700;
   text-overflow: ellipsis;
@@ -152,11 +152,11 @@
   width: calc(100% - 70px);
 }
 
-.new-board-item .price{
+.main-board .new-board-item .price{
   display: none;
 }
 
-.new-board-item .board-info-bottom{
+.main-board .new-board-item .board-info-bottom{
   display: flex;
   justify-content: space-between;
   bottom: 0;
@@ -166,13 +166,13 @@
   display: none;
 }
 
-.new-board-item .badge-area{
+.main-board .new-board-item .badge-area{
   display: flex;
   gap: 10px;
 }
 
-.new-board-item .badge,
-.new-board-item .badge2{
+.main-board .new-board-item .badge,
+.main-board .new-board-item .badge2{
   border: 1px solid;
   border-radius: 5px;
   font-size: 12px;
@@ -181,166 +181,166 @@
   line-height: 20px;
 }
 
-.new-board-item .go-btn{
+.main-board .new-board-item .go-btn{
   float: right;
 }
 
 /* hover */
-.new-board-item:hover{
+.main-board .new-board-item:hover{
   background: #ffbb00;
   border-radius: 10px;
   padding: 10px 20px;
   color: #242423;
 }
 
-.new-board-item:hover .img{
+.main-board .new-board-item:hover .img{
   display: block;
 }
 
-.new-board-item:hover .price{
+.main-board .new-board-item:hover .price{
   display: block;
 }
 
-.new-board-item:hover .board-info-bottom{
+.main-board .new-board-item:hover .board-info-bottom{
   display: flex;
 }
 
 /* 반응형 */
 @media all and (max-width: 1024px) {
-  .board-wrap{
+  .main-board .board-wrap{
     gap: 15px;
   }
-  .board-header h2{
+  .main-board .board-header h2{
     font-size: 30px;
   }
-  .board-header span{
+  .main-board .board-header span{
     font-size: 14px;
   }
-  .best-search-wrap .search-item{
+  .main-board .best-search-wrap .search-item{
     padding: 3px 15px;
     flex: 1;
   }
-  .best-search-wrap .search-item span{
+  .main-board .best-search-wrap .search-item span{
     font-size: 20px;
   }
-  .best-search-wrap .search-item p{
+  .main-board .best-search-wrap .search-item p{
     font-size: 16px;
   }
-  .new-board-item{
+  .main-board .new-board-item{
     gap: 15px;
   }
-  .new-board-item .board-name{
+  .main-board .new-board-item .board-name{
     font-size: 16px;
   }
-  .new-board-item .board-date{
+  .main-board .new-board-item .board-date{
     font-size: 12px;
   }
-  .new-board-item .img{
+  .main-board .new-board-item .img{
     width: 90px;
     height: 90px;
   }
-  .new-board-item .board-info-bottom {
+  .main-board .new-board-item .board-info-bottom {
     margin-top: 22px;
   }
 }
 /* mobile */
 @media all and (max-width: 768px) {
-  .board-header h2{
+  .main-board .board-header h2{
     font-size: 30px;
   }
-  .board-header span{
+  .main-board .board-header span{
     font-size: 13px;
   }
-  .board-sub-title{
+  .main-board .board-sub-title{
     font-size: 20px;
     margin-bottom: 15px;
   }
-  .board-box{
+  .main-board .board-box{
     width: 100%;
     margin-bottom: 70px;
   }
-  .board-wrap{
+  .main-board .board-wrap{
     flex-direction: column;
   }
-  .best-search{
+  .main-board .best-search{
     margin-bottom: 40px;
   }
-  .best-search-wrap{
+  .main-board .best-search-wrap{
     width: 100%;
     flex-direction: column;
   }
-  .best-search-wrap .search-wrap{
+  .main-board .best-search-wrap .search-wrap{
     width: 100%;
     padding: 0;
   }
-  .best-search-wrap .search-item-box{
+  .main-board .best-search-wrap .search-item-box{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     height: auto;
     gap: 10px;
   }
-  .new-board-wrap{
+  .main-board .new-board-wrap{
     padding: 0;
   }
-  .new-board{
+  .main-board .new-board{
     margin-bottom: 0;
   }
-  .new-board-item:hover{
+  .main-board .new-board-item:hover{
     padding: 10px 15px;
   }
 }
 @media all and (max-width: 635px) {
-  .best-search-wrap .search-item span{
+  .main-board .best-search-wrap .search-item span{
     font-size: 17px;
   }
-  .best-search-wrap .search-item p{
+  .main-board .best-search-wrap .search-item p{
     font-size: 13px;
   }
 }
 @media all and (max-width: 480px){
-  .board-header h2{
+  .main-board .board-header h2{
     font-size: 25px;
     margin: 2px;
   }
-  .board-sub-title{
+  .main-board .board-sub-title{
     font-size: 18px;
     margin-bottom: 15px;
   }
-  .new-board-item{
+  .main-board .new-board-item{
     padding: 15px 10px;
     gap: 10px;
   }
-  .new-board-item .img{
+  .main-board .new-board-item .img{
     width: 70px;
     height: 70px;
   }
-  .new-board-item .board-name {
+  .main-board .new-board-item .board-name {
     font-size: 14px;
   }
-  .new-board-item .board-date{
+  .main-board .new-board-item .board-date{
     font-size: 12px;
     margin: 0;
     width: auto;
   }
-  .new-board-item .board-tag{
+  .main-board .new-board-item .board-tag{
     font-size: 10px;
     padding: 0.5px 3px;
     height: 15px;
   }
-  .new-board-item .price{
+  .main-board .new-board-item .price{
     font-size: 13px;
   }
-  .new-board-item .board-info-bottom {
+  .main-board .new-board-item .board-info-bottom {
     margin-top: 13px;
 }
-  .new-board-item .badge,
-  .new-board-item .badge2{
+  .main-board .new-board-item .badge,
+  .main-board .new-board-item .badge2{
     font-size: 10px;
     padding: 0px 2px;
     line-height: 15px;
   }
-  .new-board-item:hover {
+  .main-board .new-board-item:hover {
     padding: 10px 10px;
 }
 };

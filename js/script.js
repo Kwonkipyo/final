@@ -89,7 +89,11 @@ window.addEventListener("load", function () {
     } else {
       topBtnImg.style.transform = "rotate(180deg)";
     }
-    if (window.scrollY >= 4800) {
+    
+    let footer = document.querySelector(".footer");
+    let footerTop = footer.getBoundingClientRect().top;
+    
+    if (window.innerHeight >= footerTop) {
       topBtnBox.style.bottom = "180px";
     } else {
       topBtnBox.style.bottom = "30px";
