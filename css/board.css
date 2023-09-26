@@ -203,9 +203,15 @@
 }
 
 /* 반응형 */
-@media all and (max-width: 1080px) {
+@media all and (max-width: 1024px) {
   .best-search-wrap{
     gap: 15px;
+  }
+  .board-header h2{
+    font-size: 30px;
+  }
+  .board-header span{
+    font-size: 14px;
   }
   .best-search-wrap .search-item span{
     font-size: 20px;
@@ -261,6 +267,12 @@
   .new-board-wrap{
     padding: 0;
   }
+  .new-board{
+    margin-bottom: 0;
+  }
+  .new-board-item:hover{
+    padding: 10px 15px;
+  }
 }
 @media all and (max-width: 635px) {
   .best-search-wrap .search-item span{
@@ -282,6 +294,10 @@
   .new-board-item{
     padding: 15px 10px;
     gap: 10px;
+  }
+  .new-board-item .img{
+    width: 80px;
+    height: 80px;
   }
   .new-board-item .board-name {
     font-size: 14px;

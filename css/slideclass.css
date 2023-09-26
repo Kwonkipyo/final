@@ -171,6 +171,16 @@
         height: 200px;
         width: 250px;
     }
+    .bestclass-title p,
+    .aiclass-title p,
+    .newclass-title p{
+        font-size: 30px;
+    }
+    .bestclass-title span,
+    .aiclass-title span,
+    .newclass-title span{
+        font-size: 18px;
+    }
     .class-box .class-txt{
         height: 80px;
         padding: 10px 15px 5px;
