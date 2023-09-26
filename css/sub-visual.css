@@ -213,10 +213,10 @@
 }
 @media all and (max-width: 480px){
   .visual-image{
-    height: 220px;
+    height: auto;
   }
   .visual-image img {
-    height: 220px;
+    height: auto;
   }
   .tx-1{
     gap: 18px;

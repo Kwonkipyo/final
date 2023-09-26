@@ -1,4 +1,4 @@
-$(document).ready(function () {
+window.addEventListener("load", function(){
   // HTML 요소를 JavaScript 변수에 할당합니다.
   const quantityElement = document.getElementById("quantity");
   const priceElement = document.getElementById("price");

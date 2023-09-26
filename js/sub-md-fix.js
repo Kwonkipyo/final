@@ -1,4 +1,4 @@
-$(document).ready(function () {
+window.addEventListener("load", function () {
   // HTML 요소를 JavaScript 변수에 할당합니다.
   const quantityElement = document.getElementById("md-quantity");
   const priceElement = document.getElementById("md-price");
@@ -138,6 +138,7 @@ window.addEventListener("load", function () {
     fixModal.style.display = "none";
   }
 });
+
 // 모달 열기
 function fixopenModal() {
   var fixModal = document.getElementById("fix-modal");
@@ -156,3 +157,4 @@ window.onclick = function (event) {
     fixModal.style.display = "none";
   }
 };
+// -------------------------------------------------

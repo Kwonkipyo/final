@@ -1,4 +1,4 @@
-$(document).ready(function () {
+window.addEventListener("load", function(){
   // 클래스 title-menu 의 li 를 찾아라
   const navLis = $(".title-menu ul li");
 
