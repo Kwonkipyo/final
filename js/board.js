@@ -47,7 +47,7 @@ window.addEventListener("load", function () {
     `;
     SEARCH.forEach(function (item) {
       let tag = `
-      <a href="#" class="search-item ${item.first ? `${item.first}` : ''}">
+      <a href="#" class="search-item ${item.first ? `${item.first}` : ""}">
         <span>${item.ranking}</span>
         <p>${item.name}</p>
       </a>
@@ -67,9 +67,11 @@ window.addEventListener("load", function () {
       `;
     NEW_BOARD.forEach(function (item) {
       let tag = `
-            <a href="#" class="new-board-item">
+            <a href="javascript:;" class="new-board-item">
             <div class="board-tag ${item.tagClass}">${item.tag}</div>
-              <div class="img" style="background-image: url('../images/${item.pic}');"></div>
+              <div class="img" style="background-image: url('../images/${
+                item.pic
+              }');"></div>
               <div class="board-info-txt">
               <div class="board-info-top">
                 <div class="board-name">${item.name}</div>
@@ -79,7 +81,11 @@ window.addEventListener("load", function () {
                 <div class="board-info-bottom">
                   <div class="badge-area">
                     <div class="badge">${item.badge}</div>
-                    ${item.badge2 ? `<div class="badge2">${item.badge2}</div>` : ''}
+                    ${
+                      item.badge2
+                        ? `<div class="badge2">${item.badge2}</div>`
+                        : ""
+                    }
                   </div>
                   <div class="go-btn"><i class="fa-solid fa-right-long"></i></div>
                 </div>
