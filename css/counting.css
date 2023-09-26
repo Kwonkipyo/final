@@ -38,7 +38,7 @@
 @media all and (max-width:1919px){
     .counting{
         position: relative;
-        top: -6.93px;
+        top:-6.93px;
     }
 }
 @media all and (max-width:1024px){
@@ -50,9 +50,17 @@
         height: 150px;
     }
 }
+@media all and (max-width:768px){
+    .counting-info span:last-child{
+        font-size: 23px;
+    }
+}
 @media all and (max-width:480px){
     .counting{
         height: 250px;
+    }
+    .counting .inner{
+        padding: 0;
     }
     .counting-container{
         height: 250px;
@@ -61,19 +69,18 @@
     }
     .counting-info{
         flex: 1 1 40%;
-        margin-top: 10px;
-    }
-    .counting-info:nth-child(odd){
-        border-right: 1px solid rgba(0,0,0,0.3);
-    }
-    .counting-info:nth-child(even){
         border: 0;
+        width: 100%;
+        padding: 28px;
+    }
+    .counting-info:nth-child(2),.counting-info:nth-child(3){
+        background-color: #ffc524;
     }
     .counting-info span{
-        font-size: 18px;
+        font-size: 14px;
     }
     .counting-info span:last-child{
-        font-size: 26px;
+        font-size: 20px;
     }
 }
 @media all and (max-width:320px){
