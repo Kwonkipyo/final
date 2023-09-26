@@ -3,7 +3,8 @@
   display: inline-block;
   position: relative;
   width: 100%;
-  margin-top: 200px;
+  padding-top: 150px;
+  margin-bottom: 60px;
 }
 .teacher-name {
   font-size: 22px;

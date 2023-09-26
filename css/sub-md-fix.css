@@ -423,7 +423,7 @@ body {
   z-index: 9999999;
 }
 
-.modal-content {
+.fix-modal-content {
   position: relative;
   display: block;
   background-color: #222;
@@ -434,14 +434,67 @@ body {
   border-radius: 10px;
 }
 
-.close {
+.fix-close {
   position: fixed;
   top: 0;
   right: 3%;
   cursor: pointer;
   font-size: 40px;
-  z-index: 999999999999999;
+  z-index: 9999999999;
 }
+
+/* ------------------------------------------------------------------- */
+
+/* image modal */
+.img-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999999;
+}
+
+.img-modal-content {
+  position: absolute;
+  width: 700px;
+  min-width: 700px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 999999;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: solid 10px #fff;
+  border-top: solid 40px #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%,-50%);
+}
+.img-close {
+  display: flex;
+  position: absolute;
+  align-items: center;  
+  justify-content: space-between;
+  width: 670px;
+  top: 26%;
+  left: 50%;
+  cursor: pointer;
+  font-size: 40px;
+  z-index: 9999999999;
+  color: #000;
+  margin: 0 auto;
+  transform: translateX(-50%);
+}
+.img-close p{
+  font-size: 15px;
+  font-weight: 900;
+}
+
+
+
+
+
 
 /* 반응형 */
 @media all and (min-width: 1024px) {
@@ -455,9 +508,6 @@ body {
 @media all and (max-width: 1024px) {
   .fix-menu {
     display: none;
-  }
-  .new-fix-menu{
-    width: 100%;
   }
   .new-fix-menu{
     display: block;

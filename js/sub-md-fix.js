@@ -77,56 +77,20 @@ $(document).ready(function () {
 
   // ----------------------------------------------------------
 
-  // 신청하기 버튼넘어가는 과정
-  var applyButton = document.getElementById("md-applyButton");
-  var items = document.querySelectorAll("#md-item");
-
-  // 항목 클릭 시 상태 변경 및 버튼 활성화 여부 검사하는 함수
-  function checkSelection() {
-    var selectedCount = 0;
-
-    items.forEach(function (item) {
-      if (item.classList.contains("selected")) {
-        selectedCount++;
-      }
-    });
-
-    if (selectedCount === 2) {
-      // 그 외의 경우 버튼 비활성화
-      applyButton.disabled = false;
-    } else {
-      // 두개의 항목 선택했을 경우 활성화
-      applyButton.disabled = true;
-    }
-  }
-
-  // 각 항목(div) 클릭 시 상태를 변경하고 검사 함수 호출
-  items.forEach(function (item) {
-    item.addEventListener("click", function () {
-      item.classList.toggle("selected");
-      checkSelection();
-    });
-  });
-
-  // 버튼을 클릭했을 때 신청 페이지로 이동
-  applyButton.addEventListener("click", function () {
-    window.location.href = "payment.html";
-  });
-
   // 푸터의 위치를 확인하고 "fix-menu"를 숨기도록 JavaScript를 작성합니다.
   window.addEventListener("scroll", function () {
-    var newFixMenu = document.querySelector(".new-fix-menu");
+    var newFixMenu = document.querySelector(".new-fix-menu-box");
+    var footer = document.querySelector(".footer");
 
-    if (newFixMenu) {
-      var scrollY = window.scrollY || window.pageYOffset;
-      var scrollThreshold = 10000; // 숨기기 위한 스크롤 임계값
+    if (newFixMenu && footer) {
+      var footerTop = footer.getBoundingClientRect().top;
 
-      if (scrollY >= scrollThreshold) {
-        // 스크롤 값이 임계값 이상이면 newFixMenu를 숨깁니다.
-        newFixMenu.style.display = "none";
-      } else {
-        // 스크롤 값이 임계값 미만이면 newFixMenu를 보여줍니다.
+      if (footerTop > window.innerHeight - 100) {
+        // 푸터를 만나기 300px 전까지는 newFixMenu를 보여줍니다.
         newFixMenu.style.display = "flex";
+      } else {
+        // 푸터를 만나기 300px 이전에는 newFixMenu를 숨깁니다.
+        newFixMenu.style.display = "none";
       }
     }
   });
@@ -161,34 +125,34 @@ function hidePreparationAnother() {
 
 // 화면 크기 변경 이벤트에 대한 이벤트 리스너 추가
 window.addEventListener("resize", function () {
-  var modal = document.getElementById("myModal");
-  if (window.innerWidth >= 1024) {
-    modal.style.display = "none";
+  var fixModal = document.getElementById("fix-modal");
+  if (window.innerWidth > 1024) {
+    fixModal.style.display = "none";
   }
 });
 
 // 초기 페이지 로드 시 모달 처리
 window.addEventListener("load", function () {
-  var modal = document.getElementById("myModal");
-  if (window.innerWidth >= 1024) {
-    modal.style.display = "none";
+  var fixModal = document.getElementById("fix-modal");
+  if (window.innerWidth > 1024) {
+    fixModal.style.display = "none";
   }
 });
 // 모달 열기
-function openModal() {
-  var modal = document.getElementById("myModal");
-  modal.style.display = "block";
+function fixopenModal() {
+  var fixModal = document.getElementById("fix-modal");
+  fixModal.style.display = "block";
 }
 // 모달 닫기
-function closeModal() {
-  var modal = document.getElementById("myModal");
-  modal.style.display = "none";
+function fixcloseModal() {
+  var fixModal = document.getElementById("fix-modal");
+  fixModal.style.display = "none";
 }
 
 // 모달 외부를 클릭했을 때 모달 닫기
 window.onclick = function (event) {
-  var modal = document.getElementById("myModal");
-  if (event.target == modal) {
-    modal.style.display = "none";
+  var fixModal = document.getElementById("fix-modal");
+  if (event.target == fixModal) {
+    fixModal.style.display = "none";
   }
 };

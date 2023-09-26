@@ -35,7 +35,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- title -->
-    <title>서브페이지</title>
+    <title>Class&</title>
 
     <!-- SEO -->
     <meta name="author" content="지확행" />
@@ -47,6 +47,80 @@
     />
 
     <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="images/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="images/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="images/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="images/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="images/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="images/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="images/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="images/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="images/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="images/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#FFFFFF" />
 
     <!-- Open Graph -->
     <meta property="title" content="" />
@@ -373,14 +447,14 @@
               <!-- 타이틀메뉴 -->
               <div class="title-menu">
                 <ul>
-                  <li><a href="#">클래스 소개</a></li>
-                  <li><a href="#">강사 소개</a></li>
-                  <li><a href="#">커리큘럼</a></li>
-                  <li><a href="#">강의 후기</a></li>
+                  <li><a href="#section1">클래스 소개</a></li>
+                  <li><a href="#section2">강사 소개</a></li>
+                  <li><a href="#section3">커리큘럼</a></li>
+                  <li><a href="#section4">강의 후기</a></li>
                 </ul>
               </div>
               <!-- 클래스정보 -->
-              <div class="class-info">
+              <div class="class-info" id="section1">
                 <div class="class-text">
                   <h2 class="class-text-title">클래스 소개</h2>
                   <p class="class-text-sub">주요 내용</p>
@@ -494,7 +568,7 @@
                 </div>
               </div>
               <!-- 강사정보 -->
-              <div class="teacher-info">
+              <div class="teacher-info" id="section2">
                 <h2 class="teacher-name">강사 소개</h2>
                 <div class="teacher-text">
                   <img src="images/teacher-info-1.jpg" alt="강사소개" />
@@ -511,7 +585,7 @@
                 </div>
               </div>
               <!-- 커리큘럼 -->
-              <div class="curriculum">
+              <div class="curriculum" id="section3">
                 <h2 class="curri-title">커리큘럼</h2>
                 <div class="curri-box1">
                   <div class="curri-video-box">
@@ -649,7 +723,7 @@
                 </div>
               </div>
               <!-- 강의후기 -->
-              <div class="review">
+              <div class="review" id="section4">
                 <h2 class="review-title">강의 후기</h2>
                 <div class="review-score">
                   <h2 class="review-title-score">
@@ -783,12 +857,20 @@
                     <!-- 이미지 -->
                     <div class="custom-image">
                       <img
+                        onclick="imgOpenModal(this)"
                         src="images/custom-image.jpg"
                         alt="준비물"
                         width="78px"
                         height="auto"
                       />
-                      <p>클래스를 도와줄당신을 위한 뜨개질 키트</p>
+                      <p>클래스를 도와줄 당신을 위한 뜨개질 키트</p>
+                    </div>
+                    <div id="imageModal" class="img-modal">
+                      <span class="img-close" onclick="imgCloseModal()"
+                        ><p>이미지 확대</p>
+                        &times;</span
+                      >
+                      <img class="img-modal-content" id="modalImage" />
                     </div>
                     <div class="custom-bottom">
                       <!-- 숫자 증가 박스 -->
@@ -843,7 +925,7 @@
           <div class="new-fix-menu">
             <div class="new-fix-menu-box">
               <div class="fix-left-button">
-                <button onclick="openModal()">클래스 신청하기</button>
+                <button onclick="fixopenModal()">클래스 신청하기</button>
               </div>
               <div class="fix-right-button">
                 <button><a href="group.html">클래스 공동구매 찾기</a></button>
@@ -851,9 +933,9 @@
             </div>
           </div>
           <!-- new-fix-menu-modal -->
-          <div id="myModal" class="fix-modal">
-            <div class="modal-content">
-              <span class="close" onclick="closeModal()">&times;</span>
+          <div id="fix-modal" class="fix-modal">
+            <div class="fix-modal-content">
+              <span class="fix-close" onclick="fixcloseModal()">&times;</span>
               <div class="md-fix-menu-box">
                 <!-- 타이틀 메뉴 -->
                 <div class="md-fix-title-menu">
