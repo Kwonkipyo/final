@@ -42,8 +42,8 @@
   background-color: red;
 }
 .top-chat-button:hover {
-  scale: 1.5;
-  transform: translate(-10px, -20px);
+  scale: 1.2;
+  transform: translate(-10px, -15px);
 }
 .top-chat-button:hover p {
   opacity: 1;
@@ -54,4 +54,37 @@
   font-weight: 700;
   transition: 0.3s;
   opacity: 0;
+}
+
+/* 반응형 */
+@media all and (max-width: 1024px) {
+}
+
+/* mobile */
+@media all and (max-width: 768px) {
+  .top-button {
+    right: 20px;
+    bottom: 20px;
+  }
+  .top-btn {
+    width: 40px;
+    line-height: 40px;
+  }
+  .top-chat-button {
+    width: 60px;
+  }
+  .top-chat-button::after {
+    top: 15px;
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .top-chat-button:hover {
+    transform: translate(-7px, -10px);
+  }
+}
+@media all and (max-width: 600px) {
+}
+@media all and (max-width: 480px){
 }

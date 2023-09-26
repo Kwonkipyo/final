@@ -139,13 +139,15 @@
     .specialclass .specialclass-item{
         flex-direction: row;
         width: 100%;
+        gap: 50px;
     }
     .specialclass .specialclass-item span{
     }
     .specialclass .specialclass-item img{
+        width: 45%;
     }
     .specialclass .specialclass-info span{
-        font-size: 26px;
+        font-size: 25px;
     }
 }
 
