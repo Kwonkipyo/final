@@ -43,6 +43,8 @@
 }
 .tip-cate a img{
     z-index: 1;
+    width: auto;
+    height: auto;
 }
 .tip-cate a:hover{
     background-color: #4f524f;
@@ -103,7 +105,7 @@
         height: 210px;
     }
     .tip-cate a span{
-        font-size: 25px;
+        font-size: 20px;
     }
     .tip-cate a img{
         top: -10px;
@@ -141,15 +143,15 @@
     }
     .tip-cate a{
         height: 280px;
-        padding: 0 50px;
+        padding: 15%;
     }
     .tip-cate a span{
         font-size: 35px;
     }
     .tip-cate a img{
         top: -10px;
-        width: 90%;
-        height: 80%;
+        width: auto;
+        height: auto;
     }
     .tip-cate span{
         font-size: 19px;
