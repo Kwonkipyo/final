@@ -2,12 +2,6 @@
 section {
   margin-bottom: 0;
 }
-.wrap {
-  width: 100%;
-  height: 100vh;
-  background: url("/images/sign-bg.jpg") no-repeat;
-  background-size: cover;
-}
 /* 모달창 */
 #signup-modal-wrap {
   display: none;
@@ -24,8 +18,6 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* width: 450px; */
-  /* height: 300px; */
   padding: 40px;
   border-radius: 20px;
   background-color: #fff;
@@ -50,6 +42,7 @@ section {
 .modal-content h2 {
   font-size: 22px;
   font-weight: bold;
+  white-space: nowrap;
 }
 .modal-content p {
   font-size: 18px;
@@ -65,69 +58,57 @@ section {
 }
 /* sign-header 부분 */
 .sign-header {
-  position: relative;
+  position: absolute;
   display: block;
   width: 100%;
   max-width: 1920px;
-  /* height: 110px; */
   height: 60px;
   font-family: "NanumSquare";
-  /* position: fixed; */
   z-index: 99999;
-  background-color: transparent;
+  overflow: hidden;
+  background: transparent;
   color: #e8eddf;
 }
-.sign-header .inner {
-  width: 100%;
-}
 .sign-header-top {
+  display: block;
   height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.sign-header .logo {
-  width: 120px;
-  height: auto;
-  margin-left: 30px;
+.sign-header-top .logo {
+  display: block;
+  width: 10%;
   margin-top: 15px;
+}
+.sign-header .logo img {
+  width: 100%;
 }
 /* 회원가입 */
 .signup-wrap {
   position: relative;
   width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: url("/images/sign-bg.jpg") no-repeat center center;
+  background-size: cover;
 }
 .signup-bg {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* opacity: 0.2; */
   /* background: black; */
-  /* background: url("images/signup-bg.jpg") no-repeat; */
-  /* background: url("/images/sign-bg.jpg") no-repeat;
-  background-size: cover; */
 }
-/* .signup-bg .signup-line {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 50px;
-}
-.signup-bg .signup-line div {
-  width: 146px;
-  height: 146px;
-  border-radius: 25%;
-  background-color: #d9d9d9;
-} */
 .signup-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: block;
   width: 450px;
-  /* width: 35.5%; */
+  /* height: calc(100vh - 180px); */
   padding: 40px 60px;
   background-color: #000;
 }
@@ -221,7 +202,7 @@ section {
   background-color: #f5cb5c;
   border: none;
   padding: 10px 15px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-size: 16px;
   font-weight: bold;
   color: #000;
@@ -242,6 +223,11 @@ section {
 }
 
 @media all and (max-width: 1024px) {
+  .signup-wrap {
+    height: auto;
+    background: #000;
+    padding: 125px 0;
+  }
   .signup-box {
     width: 100%;
     height: 100%;
@@ -255,6 +241,9 @@ section {
   }
 }
 @media all and (max-width: 768px) {
+  .signup-wrap {
+    padding: 140px 0;
+  }
   #signup-form h2 {
     font-size: 22px;
   }
@@ -294,8 +283,18 @@ section {
   .modal-content > .close-btn {
     font-size: 12px;
   }
+  .nicknameModal {
+    padding: 30px 50px;
+  }
+  .nicknameModal > .close {
+    top: 6%;
+    right: 6%;
+  }
 }
 @media all and (max-width: 480px) {
+  .signup-wrap {
+    padding: 65px 0;
+  }
   .sign-header .logo {
     margin-top: 15px;
     margin-left: 15px;
@@ -316,6 +315,10 @@ section {
   }
   .modal-content > .close-btn {
     font-size: 11px;
+  }
+  .nicknameModal > .close {
+    top: 8%;
+    right: 8%;
   }
 }
 @media all and (max-width: 320px) {
