@@ -167,4 +167,34 @@ window.addEventListener("load", function () {
       modal.style.display = "none";
     }
   };
+
+  // ====================
+  const signWrap = document.querySelector(".signup-wrap");
+  const signBox = document.querySelector(".signup-box");
+  const signInput = document.querySelectorAll("#signup-form input");
+
+  document.addEventListener("click", function (event) {
+    for (i = 0; i < signInput.length; i++) {
+      if (event.target === signInput[i]) {
+        console.log(signInput[i]);
+        signWrap.style.background =
+          "url('/images/sign-bg-click.gif') no-repeat center center";
+        signWrap.style.backgroundSize = "cover";
+      } else {
+        signWrap.style.background =
+          "url('/images/sign-bg.jpg') no-repeat center center";
+        signWrap.style.backgroundSize = "cover";
+      }
+    }
+
+    if (event.target == signBox) {
+      signWrap.style.background =
+        "url('/images/sign-bg-click.gif') no-repeat center center";
+      signWrap.style.backgroundSize = "cover";
+    } else {
+      signWrap.style.background =
+        "url('/images/sign-bg.jpg') no-repeat center center";
+      signWrap.style.backgroundSize = "cover";
+    }
+  });
 });
