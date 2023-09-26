@@ -175,7 +175,6 @@
 	border-radius: 50px;
 	animation: ani-mouse 1.5s linear infinite;
 }
-
 @media all and (max-width:1024px){
   .visual .swiper-slide{
     height: 99%;
@@ -272,7 +271,7 @@
   .visual-button{
     width: calc(90% / 2); 
     height: 80px;
-    top: -250px;
+    top: -200px;
     margin-bottom: 10px;
     text-align: center;
   }
