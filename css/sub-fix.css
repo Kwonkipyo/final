@@ -14,7 +14,7 @@
   height: auto;
   padding: 30px 25px;
   background-color: #222;
-  border: solid 1px #000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
   border-radius: 10px;
 }
 
@@ -90,7 +90,7 @@
   height: 40px;
   line-height: 40px;
   bottom: 42px;
-  right: -270px;
+  right: -250px;
   font-size: 14px;
   border: solid 1px #ccc;
   border-radius: 2px;
@@ -346,7 +346,6 @@ body {
   font-family: "NanumSquare" !important;
 }
 
-
 /* image modal */
 .img-modal {
   display: none;
@@ -367,16 +366,16 @@ body {
   z-index: 999999;
   margin: 0 auto;
   border-radius: 5px;
-  border: solid 10px #fff;
-  border-top: solid 40px #fff;
+  border: solid 10px #eeeeee;
+  border-top: solid 40px #eeeeee;
   top: 50%;
   left: 50%;
-  transform: translate( -50%,-50%);
+  transform: translate(-50%, -50%);
 }
 .img-close {
   display: flex;
   position: absolute;
-  align-items: center;  
+  align-items: center;
   justify-content: space-between;
   width: 670px;
   top: 26%;
@@ -388,7 +387,19 @@ body {
   margin: 0 auto;
   transform: translateX(-50%);
 }
-.img-close p{
+.img-close p {
   font-size: 15px;
   font-weight: 900;
+}
+
+/* 반응형 */
+@media all and (max-width: 1669px) {
+  .we-class-info-text {
+    width: 100%;
+    line-height: 20px;
+    height: 20px;
+    bottom: -20px;
+    right: 0px;
+    font-size: 13px;
+  }
 }

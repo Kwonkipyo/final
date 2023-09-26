@@ -1,4 +1,4 @@
-$(document).ready(function () {
+window.addEventListener("load", function(){
   // jQuery 코드
   $(".fa-heart").click(function () {
     // 현재 하트 아이콘의 색상 가져오기

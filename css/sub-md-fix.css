@@ -1,20 +1,22 @@
 /*---------- md-fix-menu -----------*/
 .md-fix-menu {
   position: fixed;
-  top: 13.5%;
-  left: 20%;
   display: inline-block;
   width: 100%;
   height: auto;
   max-height: 750px;
   max-width: 340px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
 }
 .md-fix-menu-box {
   width: 100%;
   height: auto;
   padding: 30px 25px;
   background-color: #222;
-  border: solid 1px #000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
   border-radius: 10px;
   min-width: 345px !important;
   max-width: 380px !important;
@@ -49,7 +51,7 @@
 /* 트리플 패스 */
 .md-we-class {
   background-color: #3e3e3e;
-  width: 280px;
+  width: 90%;
   margin: 0 auto;
   margin-bottom: 20px;
   padding: 13px 20px;
@@ -88,11 +90,11 @@
   background-color: transparent;
   position: absolute;
   text-align: center;
-  width: 220px;
+  width: 80%;
   height: 40px;
   line-height: 40px;
   bottom: 42px;
-  right: -270px;
+  right: -250px;
   font-size: 14px;
   border: solid 1px #ccc;
   border-radius: 2px;
@@ -102,7 +104,7 @@
 /* 개별 클래스 */
 .md-me-class {
   background-color: #3e3e3e;
-  width: 280px;
+  width: 90%;
   margin: 0 auto;
   margin-bottom: 20px;
   padding: 13px 20px;
@@ -131,7 +133,7 @@
 
 /* 준비물 */
 .md-custom-selector {
-  width: 280px;
+  width: 90%;
   margin: 0 auto;
   margin-bottom: 0px;
   font-size: 14px;
@@ -147,7 +149,7 @@
   flex-direction: column;
 }
 #md-preparation {
-  width: 280px;
+  width: 100%;
   padding: 5px;
   margin-bottom: 20px;
   border-radius: 5px;
@@ -171,6 +173,7 @@
   color: #fff;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   border-top: solid 1px #ccc;
   border-bottom: solid 1px #ccc;
   padding: 10px;
@@ -179,10 +182,12 @@
 }
 .md-custom-image {
   display: flex;
+  width: 100%;
 }
 .md-custom-image > p {
   font-size: 14px;
-  margin-left: 10px;
+  text-align: right;
+  width: 65%;
 }
 .md-custom-bottom {
   margin-top: 20px;
@@ -190,9 +195,11 @@
   justify-content: space-between;
 }
 .md-custom-span {
+  display: flex;
+  justify-content: end;
+  align-items: baseline;
   font-size: 13px;
   cursor: pointer;
-  margin-left: 145px;
 }
 
 /* 숫자증가 박스 */
@@ -257,15 +264,22 @@
 
 /* 클래스 신청 버튼 */
 .md-button-box {
+  width: 90%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   font-size: 15px;
   position: relative;
+  margin: 0 auto;
+}
+.md-button-box h2 {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
 }
 .md-me-buy {
-  width: 280px;
+  width: 100%;
   border: 0;
   cursor: pointer;
   border-radius: 5px;
@@ -284,12 +298,21 @@
   font-weight: 900;
   /* color: #ffffff; */
 }
+
+/* spna이랑 합친 we박스 */
 .md-button-box-we {
   display: flex;
   flex-direction: column-reverse;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  position: relative;
+  margin: 0 auto;
 }
 .md-we-buy {
-  width: 280px;
+  width: 100%;
   border: 0;
   cursor: pointer;
   border-radius: 5px;
@@ -347,7 +370,6 @@ body {
   font-family: "NanumSquare" !important;
 }
 
-
 /* new-fix-menu */
 .new-fix-menu {
   width: 100%;
@@ -373,6 +395,7 @@ body {
   width: 48%;
   background-color: #ccc;
   border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
 }
 .fix-left-button button {
   cursor: pointer;
@@ -394,6 +417,7 @@ body {
   width: 48%;
   background-color: #ccc;
   border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
 }
 .fix-right-button button {
   cursor: pointer;
@@ -424,22 +448,25 @@ body {
 }
 
 .fix-modal-content {
-  position: relative;
+  position: absolute;
   display: block;
   background-color: #222;
-  margin: 0 auto; 
-  margin-top: 10%;
-  width: 37.8%;
+  width: 360px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .fix-close {
-  position: fixed;
-  top: 0;
-  right: 3%;
+  position: absolute;
+  margin: 0 auto;
+  top: 0%;
+  right: 1%;
+  transform: translateX(-50%);
   cursor: pointer;
-  font-size: 40px;
+  font-size: 30px;
   z-index: 9999999999;
 }
 
@@ -469,12 +496,13 @@ body {
   border-top: solid 40px #fff;
   top: 50%;
   left: 50%;
-  transform: translate( -50%,-50%);
+  transform: translate(-50%, -50%);
 }
+
 .img-close {
   display: flex;
   position: absolute;
-  align-items: center;  
+  align-items: center;
   justify-content: space-between;
   width: 670px;
   top: 26%;
@@ -486,15 +514,10 @@ body {
   margin: 0 auto;
   transform: translateX(-50%);
 }
-.img-close p{
+.img-close p {
   font-size: 15px;
   font-weight: 900;
 }
-
-
-
-
-
 
 /* 반응형 */
 @media all and (min-width: 1024px) {
@@ -509,9 +532,17 @@ body {
   .fix-menu {
     display: none;
   }
-  .new-fix-menu{
+  .new-fix-menu {
     display: block;
   }
+}
+.md-we-class-info-text {
+  width: 100%;
+  line-height: 20px;
+  height: 20px;
+  bottom: -20px;
+  right: 0px;
+  font-size: 13px;
 }
 /* 반응형 */
 
@@ -522,9 +553,42 @@ body {
   .fix-right-button button {
     font-size: 20px;
   }
+  .md-we-class-info-text {
+    width: 100%;
+    line-height: 20px;
+    height: 20px;
+    bottom: -20px;
+    right: 0px;
+    font-size: 13px;
+  }
 }
 
 @media all and (max-width: 480px) {
+  .fix-modal-content {
+    width: 320px;
+    min-width: 320px;
+    padding: 0px;
+  }
+  .md-fix-menu-box {
+    width: 320px;
+    min-width: 320px !important;
+    padding: 40px 0;
+  }
+  .md-fix-title-menu {
+    width: 85%;
+  }
+  .md-we-class {
+    width: 85%;
+  }
+  .md-me-class {
+    width: 85%;
+  }
+  .md-custom-selector {
+    width: 85%;
+  }
+  .md-button-box {
+    width: 85%;
+  }
   .fix-left-button button {
     font-size: 15px;
     padding: 10px 8px;
@@ -533,8 +597,24 @@ body {
     padding: 10px 8px;
     font-size: 15px;
   }
+  .fix-close {
+    font-size: 25px;
+  }
 }
-@media all and (max-width: 370px) {
+@media all and (max-width: 380px) {
+  .fix-modal-content {
+    width: 280px;
+    min-width: 280px;
+    padding: 0px;
+  }
+  .md-fix-menu-box {
+    width: 280px;
+    min-width: 280px !important;
+    padding: 30px 0;
+  }
+  .md-custom-selector option {
+    font-size: 13px;
+  }
   .fix-left-button button {
     font-size: 13px;
     padding: 8px 6px;
