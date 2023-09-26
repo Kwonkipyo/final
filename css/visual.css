@@ -225,8 +225,8 @@
     align-items: center;
 }
   .visual-button{
-    width: 45%; 
-    height: 80px;
+    width: 48%; 
+    height: 60px;
     top: -250px;
     text-align: center;
 }
@@ -240,14 +240,22 @@
     font-size: 12px;
     padding-left:0px;
 }
+  .visual .visual-menu{
+  }
   .visual .visual-button span:first-child{
-    font-size: 17px;
+    font-size: 15px;
+}
+.visual .visual-button span:last-child{
+  font-size: 10px;
 }
   .visual .visual-button i{
     font-size: 0;
 }
   .visual .swiper-wrapper p{
     font-size: 50px;
+}
+.scroll-btn{
+  display: none;
 }
 }
 @media all and (max-width:320px){

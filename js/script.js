@@ -66,12 +66,13 @@ window.addEventListener("load", function () {
   const topBtnBox = document.getElementById("top-button");
   const topBtn = document.getElementById("top-btn");
   const topBtnImg = document.getElementById("top-btn-img");
+  let countingTop = document.querySelector(".counting").getBoundingClientRect().top;
 
   topBtn.addEventListener("click", function (event) {
     event.preventDefault();
     if (window.scrollY === 0) {
       window.scrollTo({
-        top: 99999,
+        top: countingTop - 50,
         behavior: "smooth",
       });
     } else {
@@ -95,27 +96,29 @@ window.addEventListener("load", function () {
     }
   });
 
+  
+  
   // ============보수중============건들지마시옹==========
   // .counting 요소의 top 위치를 저장할 변수
-  let countingTop = document
-    .querySelector(".counting")
-    .getBoundingClientRect().top;
+  // let countingTop = document
+  //   .querySelector(".counting")
+  //   .getBoundingClientRect().top;
 
-  // 스크롤 이벤트 리스너 추가
-  window.addEventListener("scroll", function () {
-    if (window.scrollY == 1) {
-      window.scrollTo({
-        top: countingTop - 50,
-        behavior: "smooth",
-      });
-      window.removeEventListener("scroll", arguments.callee);
-    }
-    if (window.scrollY <= countingTop) {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-      window.removeEventListener("scroll", arguments.callee);
-    }
-  });
+  // // 스크롤 이벤트 리스너 추가
+  // window.addEventListener("scroll", function () {
+  //   if (window.scrollY == 1) {
+  //     window.scrollTo({
+  //       top: countingTop - 50,
+  //       behavior: "smooth",
+  //     });
+  //     window.removeEventListener("scroll", arguments.callee);
+  //   }
+  //   if (window.scrollY <= countingTop) {
+  //     window.scrollTo({
+  //       top: 0,
+  //       behavior: "smooth",
+  //     });
+  //     window.removeEventListener("scroll", arguments.callee);
+  //   }
+  // });
 });

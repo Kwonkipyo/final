@@ -15,9 +15,16 @@
 }
 
 .board-sub-title{
-  font-size: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+
+.board-sub-title span{
+  font-size: 20px;
   color: #f5cb5c;
-  margin-bottom: 30px;
+  font-weight: 700;
 }
 
 /* 인기 중고 검색어 */
@@ -27,10 +34,6 @@
 
 .best-search-wrap{
   gap: 30px;
-}
-
-.best-search-wrap .search-wrap{
-  padding: 0 0 0 10px;
 }
 
 .best-search-wrap .search-item-box{
@@ -70,8 +73,8 @@
   width: 55%;
 }
 
-.new-board-wrap{
-  padding: 0 10px;
+.new-board .plus{
+  padding-right: 10px;
 }
 
 .new-board-wrap .new-board-item-box{
@@ -174,7 +177,7 @@
   border-radius: 5px;
   font-size: 12px;
   padding: 0px 3px;
-  font-size: 500;
+  font-weight: 500;
   line-height: 20px;
 }
 
@@ -204,7 +207,7 @@
 
 /* 반응형 */
 @media all and (max-width: 1024px) {
-  .best-search-wrap{
+  .board-wrap{
     gap: 15px;
   }
   .board-header h2{
@@ -213,18 +216,31 @@
   .board-header span{
     font-size: 14px;
   }
+  .best-search-wrap .search-item{
+    padding: 3px 15px;
+    flex: 1;
+  }
   .best-search-wrap .search-item span{
     font-size: 20px;
   }
   .best-search-wrap .search-item p{
     font-size: 16px;
   }
+  .new-board-item{
+    gap: 15px;
+  }
   .new-board-item .board-name{
     font-size: 16px;
   }
-  .best-search-wrap .search-item{
-    padding: 3px 15px;
-    flex: 1;
+  .new-board-item .board-date{
+    font-size: 12px;
+  }
+  .new-board-item .img{
+    width: 90px;
+    height: 90px;
+  }
+  .new-board-item .board-info-bottom {
+    margin-top: 22px;
   }
 }
 /* mobile */
@@ -284,7 +300,7 @@
 }
 @media all and (max-width: 480px){
   .board-header h2{
-    font-size: 26px;
+    font-size: 25px;
     margin: 2px;
   }
   .board-sub-title{
@@ -296,8 +312,8 @@
     gap: 10px;
   }
   .new-board-item .img{
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
   }
   .new-board-item .board-name {
     font-size: 14px;
@@ -312,4 +328,19 @@
     padding: 0.5px 3px;
     height: 15px;
   }
+  .new-board-item .price{
+    font-size: 13px;
+  }
+  .new-board-item .board-info-bottom {
+    margin-top: 13px;
 }
+  .new-board-item .badge,
+  .new-board-item .badge2{
+    font-size: 10px;
+    padding: 0px 2px;
+    line-height: 15px;
+  }
+  .new-board-item:hover {
+    padding: 10px 10px;
+}
+};
