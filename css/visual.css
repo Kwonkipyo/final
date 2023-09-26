@@ -9,7 +9,7 @@
   width: 100vw;
   max-width: 1903px;
   max-height: 963px;
-  object-fit: fill;
+  object-fit: cover;
 }
 .visual .visual-menu{
   display: flex;
@@ -225,10 +225,13 @@
     flex-wrap: wrap;
     align-items: center;
 }
+.visual video{
+  height: 670px;
+}
   .visual-button{
     width: 48%; 
     height: 60px;
-    top: -250px;
+    top: -200px;
     text-align: center;
 }
   .visual-button:first-child{
@@ -241,8 +244,6 @@
     font-size: 12px;
     padding-left:0px;
 }
-  .visual .visual-menu{
-  }
   .visual .visual-button span:first-child{
     font-size: 15px;
 }
@@ -253,7 +254,7 @@
     font-size: 0;
 }
   .visual .swiper-wrapper p{
-    font-size: 50px;
+    font-size: 39px;
 }
 .scroll-btn{
   display: none;
@@ -286,6 +287,6 @@
     font-size: 0;
   }
   .visual .swiper-wrapper p{
-    font-size: 38px;
+    font-size: 35px;
   }
   }
