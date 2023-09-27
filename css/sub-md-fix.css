@@ -31,7 +31,7 @@
   width: 270px;
   font-size: 15px;
   text-align: center;
-  padding-bottom: 20px;
+  margin-bottom: 25px;
 }
 .md-fix-title-menu > span {
   border-right: 1px solid #ccc;
@@ -53,7 +53,7 @@
   background-color: #3e3e3e;
   width: 90%;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   padding: 13px 20px;
   cursor: pointer;
   border-radius: 5px;
@@ -106,7 +106,7 @@
   background-color: #3e3e3e;
   width: 90%;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   padding: 13px 20px;
   cursor: pointer;
   border-radius: 5px;
@@ -151,7 +151,7 @@
 #md-preparation {
   width: 100%;
   padding: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   border-radius: 5px;
   font-size: 14px;
   background-color: transparent;
@@ -159,13 +159,9 @@
   color: #e8eddf;
   font-family: "NanumSquare" !important;
 }
-#result {
-  margin-top: 20px;
-  display: none; /* 초기에는 결과 숨김 */
-}
 #md-customDiv {
   display: none; /* 초기에는 숨김 */
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 /* 준비물 박스 */
@@ -183,6 +179,9 @@
 .md-custom-image {
   display: flex;
   width: 100%;
+}
+.md-custom-image{
+  cursor: pointer;
 }
 .md-custom-image > p {
   font-size: 14px;
@@ -283,7 +282,7 @@
   border: 0;
   cursor: pointer;
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   padding: 13px 0;
   background-color: #f7a800;
   color: #000;
@@ -299,7 +298,7 @@
   /* color: #ffffff; */
 }
 
-/* spna이랑 합친 we박스 */
+/* span이랑 합친 we박스 */
 .md-button-box-we {
   display: flex;
   flex-direction: column-reverse;
@@ -344,6 +343,7 @@
 .md-linked-text {
   position: relative;
   width: 191px;
+  margin-right: auto;
 }
 
 .md-linked-text::after {
@@ -370,6 +370,7 @@ body {
   font-family: "NanumSquare" !important;
 }
 
+/* -------------------------------------------------------------------- */
 /* new-fix-menu */
 .new-fix-menu {
   width: 100%;
@@ -470,54 +471,53 @@ body {
   z-index: 9999999999;
 }
 
-/* ------------------------------------------------------------------- */
-
-/* image modal */
-.img-modal {
+/* 이미지 모달에 대한 CSS */
+.image-modal {
   display: none;
   position: fixed;
+  z-index: 99999999999;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 9999999;
 }
-
-.img-modal-content {
+.image-modal p{
+  font-size: 14px;
   position: absolute;
-  width: 700px;
-  min-width: 700px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  z-index: 999999;
+  top: 196px;
+  color: #000;
+  right: 378px;
+  font-weight: 900;
+  z-index: 9999999999999999;
+}
+.enlarged-image {
+  display: block;
   margin: 0 auto;
-  border-radius: 5px;
-  border: solid 10px #fff;
-  border-top: solid 40px #fff;
+  max-width: 150%;
+  max-height: 150%;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border: 10px solid #ccc;
+  border-top: 25px solid #ccc;
+  border-radius: 5px;
 }
 
-.img-close {
-  display: flex;
+.image-close{
   position: absolute;
-  align-items: center;
-  justify-content: space-between;
-  width: 670px;
-  top: 26%;
-  left: 50%;
+  top: 187px;
+  right: -80px;
   cursor: pointer;
-  font-size: 40px;
-  z-index: 9999999999;
-  color: #000;
-  margin: 0 auto;
-  transform: translateX(-50%);
-}
-.img-close p {
-  font-size: 15px;
+  font-size: 25px;
   font-weight: 900;
+  color: #000;
+  z-index: 9999999999999999;
 }
+
+
+/* ------------------------------------------------------------------- */
 
 /* 반응형 */
 @media all and (min-width: 1024px) {
@@ -540,7 +540,7 @@ body {
   width: 100%;
   line-height: 20px;
   height: 20px;
-  bottom: -20px;
+  bottom: -22.5px;
   right: 0px;
   font-size: 13px;
 }
@@ -552,14 +552,6 @@ body {
   }
   .fix-right-button button {
     font-size: 20px;
-  }
-  .md-we-class-info-text {
-    width: 100%;
-    line-height: 20px;
-    height: 20px;
-    bottom: -20px;
-    right: 0px;
-    font-size: 13px;
   }
 }
 

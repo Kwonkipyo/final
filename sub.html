@@ -47,24 +47,80 @@
     />
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="images/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="images/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="images/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="images/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="images/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="images/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="images/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="images/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="images/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="images/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
 
     <!-- Open Graph -->
     <meta property="title" content="" />
@@ -184,9 +240,11 @@
                 <i class="fa-solid fa-angle-down"></i>
                 <div id="dropdown-menu">
                   <!-- 드롭다운 메뉴 아이템들 -->
+                  <a href="#">마이페이지</a>
                   <a href="#">쿠폰</a>
-                  <a href="#">거래내역</a>
+                  <a href="#">내 강의실</a>
                   <a href="#">회원정보수정</a>
+                  <a href="#">클래스 개설하기</a>
                   <a href="#" id="logout-button">로그아웃</a>
                 </div>
               </div>
@@ -211,14 +269,15 @@
             </div>
             <div class="header-mb-cate" id="mobile-menu">
               <div class="mb-menu-cate">
-                <span class="mb-cate-click"><a href="#">카테고리</a></span>
-                <a href="#"
-                  ><i
-                    class="fa-solid fa-xmark"
-                    id="close-menu"
-                    style="color: #ffffff"
-                  ></i
-                ></a>
+                <span class="mb-cate-click"
+                  ><a href="#">카테고리</a>
+                  <i class="fa-solid fa-chevron-down" style="color: #ffffff"></i
+                ></span>
+                <i
+                  class="fa-solid fa-xmark"
+                  id="close-menu"
+                  style="color: #ffffff"
+                ></i>
                 <div class="mb-cate-depth">
                   <ul class="mb-depth">
                     <li><a href="#">디지털 드로잉</a></li>
@@ -776,7 +835,7 @@
                 <div class="we-class-info">
                   <i class="fa-solid fa-circle-info"></i>
                   <div class="we-class-info-text">
-                    <p>다른 클래스 3개를 함께 담아요</p>
+                    <p>다른 클래스 3개를 함께 담아보세요!</p>
                   </div>
                 </div>
               </div>
@@ -840,9 +899,9 @@
                 </div>
               </div>
               <!-- 클래스 신청 버튼 -->
+              <!-- button 넘어가는 거 막는 코드는 disabled -->
               <div class="button-box">
                 <button
-                  disabled
                   class="me-buy"
                   id="applyButton"
                   onclick="showAlert(event)"
@@ -853,12 +912,13 @@
                   </h2>
                 </button>
                 <div class="button-box-we">
-                  <button disabled class="we-buy" onclick="showAlert(event)">
-                    <h2>
-                      클래스 공동구매 찾기&nbsp;<i
-                        class="fa-solid fa-chevron-right"
-                      ></i>
-                    </h2>
+                  <button class="we-buy">
+                    <a href="group.html">
+                      <h2>
+                        클래스 공동구매 찾기&nbsp;<i
+                          class="fa-solid fa-chevron-right"
+                        ></i></h2
+                    ></a>
                   </button>
                   <p class="linked-text">더 저렴히 시작하고 싶으신가요?</p>
                 </div>
@@ -905,7 +965,7 @@
                   <div class="md-we-class-info">
                     <i class="fa-solid fa-circle-info"></i>
                     <div class="md-we-class-info-text">
-                      <p>다른 클래스 3개를 함께 담아요</p>
+                      <p>다른 클래스 3개를 함께 담아보세요!</p>
                     </div>
                   </div>
                 </div>
@@ -937,8 +997,22 @@
                           alt="준비물"
                           width="78px"
                           height="auto"
+                          data-src="images/custom-image.jpg"
+                          onclick="openImageModal(this)"
                         />
                         <p>클래스를 도와줄 당신을 위한 뜨개질 키트</p>
+                      </div>
+                      <div id="image-modal" class="image-modal">
+                        <p>이미지확대</p>
+                        <span class="image-close" onclick="closeImageModal()"
+                          >&times;</span
+                        >
+                        <img
+                          id="enlarged-image"
+                          class="enlarged-image"
+                          src="images/custom-image.jpg"
+                          alt="확대 이미지"
+                        />
                       </div>
                       <div class="md-custom-bottom">
                         <!-- 숫자 증가 박스 -->
@@ -969,7 +1043,6 @@
                 <!-- 클래스 신청 버튼 -->
                 <div class="md-button-box">
                   <button
-                    disabled
                     class="md-me-buy"
                     id="md-applyButton"
                     onclick="showAlert(event)"
@@ -980,15 +1053,13 @@
                     </h2>
                   </button>
                   <div class="md-button-box-we">
-                    <button
-                      disabled
-                      class="md-we-buy"
-                      onclick="showAlert(event)"
-                    >
+                    <button class="md-we-buy">
                       <h2>
-                        클래스 공동구매 찾기&nbsp;<i
-                          class="fa-solid fa-chevron-right"
-                        ></i>
+                        <a href="group.html">
+                          클래스 공동구매 찾기&nbsp;<i
+                            class="fa-solid fa-chevron-right"
+                          ></i
+                        ></a>
                       </h2>
                     </button>
                     <p class="md-linked-text">더 저렴히 시작하고 싶으신가요?</p>
@@ -1003,7 +1074,9 @@
       <footer class="footer">
         <div class="inner">
           <div class="footer-left">
-            <img src="images/Class&.png" alt="푸터로고" class="footer-logo" />
+            <a href="index.html">
+              <img src="images/Class&.png" alt="푸터로고" class="footer-logo" />
+            </a>
             <br />
             <span>더 쉽게 더 가볍게 Class&</span>
             <div class="footer-selector">

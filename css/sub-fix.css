@@ -27,7 +27,7 @@
   width: 270px;
   font-size: 15px;
   text-align: center;
-  padding-bottom: 20px;
+  margin-bottom: 25px;
 }
 .fix-title-menu > span {
   border-right: 1px solid #ccc;
@@ -49,7 +49,7 @@
   background-color: #3e3e3e;
   width: 280px;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   padding: 13px 20px;
   cursor: pointer;
   border-radius: 5px;
@@ -102,7 +102,7 @@
   background-color: #3e3e3e;
   width: 280px;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   padding: 13px 20px;
   cursor: pointer;
   border-radius: 5px;
@@ -147,7 +147,7 @@
 #preparation {
   width: 280px;
   padding: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   border-radius: 5px;
   font-size: 14px;
   background-color: transparent;
@@ -155,13 +155,9 @@
   color: #e8eddf;
   font-family: "NanumSquare" !important;
 }
-#result {
-  margin-top: 20px;
-  display: none; /* 초기에는 결과 숨김 */
-}
 #customDiv {
   display: none; /* 초기에는 숨김 */
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 /* 준비물 박스 */
@@ -268,7 +264,7 @@
   border: 0;
   cursor: pointer;
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   padding: 13px 0;
   background-color: #f7a800;
   color: #000;
@@ -301,7 +297,7 @@
 .we-buy:hover {
   background-color: #0062be;
 }
-.we-buy > h2 {
+.we-buy h2 {
   line-height: 30px;
   font-size: 20px;
   font-weight: 900;
@@ -367,7 +363,7 @@ body {
   margin: 0 auto;
   border-radius: 5px;
   border: solid 10px #eeeeee;
-  border-top: solid 40px #eeeeee;
+  border-top: solid 30px #eeeeee;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -377,18 +373,19 @@ body {
   position: absolute;
   align-items: center;
   justify-content: space-between;
-  width: 670px;
-  top: 26%;
-  left: 50%;
+  width: 677px;
+  top: 28%;
+  left: 50.1%;
   cursor: pointer;
-  font-size: 40px;
+  font-size: 28px;
   z-index: 9999999999;
+  line-height: 50%;
   color: #000;
   margin: 0 auto;
   transform: translateX(-50%);
 }
 .img-close p {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 900;
 }
 
@@ -398,7 +395,7 @@ body {
     width: 100%;
     line-height: 20px;
     height: 20px;
-    bottom: -20px;
+    bottom: -22.5px;
     right: 0px;
     font-size: 13px;
   }
