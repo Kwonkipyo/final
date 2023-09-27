@@ -49,6 +49,45 @@
   opacity: 1 !important;
 }
 
+/*----------------- 배너 박스------------------- */
+.class-info-banner-box{
+  position: relative;
+  border-radius: 10px;
+  margin-top: 100px;
+  width: 100%;
+}
+.class-info-banner{
+  border-radius: 10px;
+}
+.class-info-banner-bt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 25%;
+  max-width: 25%;
+  bottom: 10%;
+  left: 49%;
+  transform: translateX(-50%);
+  background-color: #ffc116;
+  color: #111;
+  font-weight: 900;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: solid 1px #eee;
+  font-size: 20px;
+  font-weight: 900;
+}
+.class-info-banner-bt:hover{
+  background-color: #e0b12d;
+}
+.class-info-banner-bt i{
+  font-size: 25px;
+  padding-left: 10px;
+}
+
 /*----------------- 클래스소개 -------------------*/
 .class-info {
   display: inline-block;
