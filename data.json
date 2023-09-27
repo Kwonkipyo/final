@@ -7,7 +7,7 @@
         "pic": "dlclass-baking.jpg", 
         "id": "0", 
         "class": "baking",
-        "link":"#"
+        "link":"sub.html"
         },
         {
         "name" : "기초부터 배우는 무궁무진한 레터링 케이크의 비법", 
@@ -16,7 +16,7 @@
         "pic": "dlclass-cake.jpg", 
         "id": "1", 
         "class": "baking",
-        "link":"#"
+        "link":"sub.html"
         },
         {
         "name" : "나의 마음을 힐링하는 수채화 드로잉", 
@@ -25,7 +25,7 @@
         "pic": "dlclass-drawing.jpg", 
         "id": "2", 
         "class": "drawing",
-        "link":"#"
+        "link":"sub.html"
         },
         {
         "name" : "함께 만드는 귀여운 코바늘 인형", 
@@ -34,7 +34,7 @@
         "pic": "dlclass-doll.jpg", 
         "id": "3", 
         "class": "craft",
-        "link":"#"
+        "link":"sub.html"
         },
         {
         "name" : "캘리그라피 전문가와 찾아가는 나만의 손글씨",
@@ -43,7 +43,7 @@
         "pic": "dlclass-calli.jpg", 
         "id": "4", 
         "class": "lifestyle",
-        "link":"#"
+        "link":"sub.html"
         },
         {
         "name" : "근력 강화, 체지방을 감소시키는 나만의 시간, 다이어트 요가 클래스",
@@ -52,7 +52,7 @@
         "pic": "dlclass-yoga.jpg", 
         "id": "5", 
         "class": "sport",
-        "link":"#"
+        "link":"sub.html"
         },
         {
         "name" : "조향사에게 배우는 조향 기초, 나만의 향기를 만들어요.", 
@@ -61,7 +61,7 @@
         "pic": "dlclass-perfume.jpg", 
         "id": "6", 
         "class": "craft",
-        "link":"#"
+        "link":"sub.html"
         },
         {
         "name" : "치명적인 매력을 가진 단 하나뿐인 나만의 작품 레진공예",
@@ -70,7 +70,7 @@
         "pic": "dlclass-resin.jpg", 
         "id": "7", 
         "class": "craft",
-        "link":"#"
+        "link":"sub.html"
         },
         {
         "name" : "초보자도 누구나 집에서 쉽게 귀여운 머랭쿠키 만들기",
@@ -79,7 +79,7 @@
         "pic": "dlclass-baking2.jpg", 
         "id": "8", 
         "class": "baking",
-        "link":"#"
+        "link":"sub.html"
         },
         {
         "name" : "연필 하나로 담아내는 섬세함, 인물화 드로잉",
@@ -88,7 +88,7 @@
         "pic": "dlclass-drawing2.jpg", 
         "id": "9", 
         "class": "drawing",
-        "link":"#"
+        "link":"sub.html"
         }
     ],
     "newclass":[
@@ -99,7 +99,7 @@
         "pic": "newclass-tarot.jpg", 
         "id": "0", 
         "class": "lifestyle",
-        "link":"#"
+        "link":"sub.html"
         },
         {
         "name" : "전통의 현대적 재해석, 비밀장신구와 함께 엮는 전통 매듭 액세서리", 
@@ -108,7 +108,7 @@
         "pic": "newclass-acc.jpg", 
         "id": "1", 
         "class": "craft",
-        "link":"#"
+        "link":"sub.html"
         },
         {
         "name" : "나의 리틀 포레스트, 가드너에게 배우는 셀프 홈가드닝",
@@ -117,7 +117,7 @@
         "pic": "newclass-plant.jpg", 
         "id": "2", 
         "class": "lifestyle",
-        "link":"#"
+        "link":"sub.html"
         },
         {
         "name" : "퇴근 후 만나는 나의 가죽 공방, 가죽공예 기초부터 완성까지", 
@@ -126,7 +126,7 @@
         "pic": "newclass-leather.jpg", 
         "id": "3", 
         "class": "craft",
-        "link":"#"
+        "link":"sub.html"
         },
         {
         "name" : "비보이 & 비걸을 위한 브레이킹 입문 클래스",
@@ -135,7 +135,7 @@
         "pic": "newclass-dance.jpg", 
         "id": "4", 
         "class": "sport",
-        "link":"#"
+        "link":"sub.html"
         },
         {
         "name" : "특별한 도안으로 나만의 꽃밭을 만드는 페이퍼 아트",
@@ -144,7 +144,7 @@
         "pic": "newclass-paper.jpg", 
         "id": "5", 
         "class": "craft",
-        "link":"#"
+        "link":"sub.html"
         },
         {
         "name" : "누워만 있어도 피로가 풀리는 홈필라테스 배우기", 
@@ -153,7 +153,7 @@
         "pic": "newclass-ex.jpg", 
         "id": "6", 
         "class": "sport",
-        "link":"#"
+        "link":"sub.html"
         },
         {
         "name" : "기초부터 응용까지, 취미는 기타",
@@ -162,7 +162,7 @@
         "pic": "newclass-guitar.jpg", 
         "id": "7", 
         "class": "music",
-        "link":"#"
+        "link":"sub.html"
         },
         {
         "name" : "아기자기한 캐릭터푸드 만들기",
@@ -171,7 +171,7 @@
         "pic": "newclass-cook.jpg", 
         "id": "8", 
         "class": "cook",
-        "link":"#"
+        "link":"sub.html"
         },
         {
         "name" : "초보용 반주법과 기본 피아노 코드 배우기",
@@ -180,7 +180,7 @@
         "pic": "newclass-piano.jpg", 
         "id": "9", 
         "class": "music",
-        "link":"#"
+        "link":"sub.html"
         }
     ],
     "search":[
@@ -236,7 +236,7 @@
         "pic": "board-img1.jpg", 
         "badge": "미개봉", 
         "badge2": "배송비포함", 
-        "link":"#"
+        "link":"sub.html"
         },
         {
         "name" : "비즈, 키링 부자재 세트 팝니다", 
@@ -246,7 +246,7 @@
         "date": "7분 전", 
         "pic": "board-img2.jpg", 
         "badge": "미개봉", 
-        "link":"#"
+        "link":"sub.html"
         },
         {
         "name" : "[무료나눔] 네온사인 만들기 DIY 세트 킷", 
@@ -257,7 +257,7 @@
         "pic": "board-img3.jpg", 
         "badge": "미개봉", 
         "badge2": "무료나눔", 
-        "link":"#"
+        "link":"sub.html"
         },
         {
         "name" : "파버카스텔 피트 연필 파스텔 24색 미개봉 새상품", 
@@ -268,7 +268,7 @@
         "pic": "board-img4.jpg", 
         "badge": "미개봉", 
         "badge2": "배송비포함", 
-        "link":"#"
+        "link":"sub.html"
         },
         {
         "name" : "(가격내림)마베프 테이블이젤 M17", 
@@ -278,7 +278,7 @@
         "date": "1시간 전", 
         "pic": "board-img5.jpg", 
         "badge": "배송비포함", 
-        "link":"#"
+        "link":"sub.html"
         },
         {
         "name" : "(거의 새제품) 아반티 우쿨렐레 콘서트 AU-103 판매", 
@@ -288,7 +288,7 @@
         "date": "1시간 전", 
         "pic": "board-img6.jpg",
         "badge": "배송비포함", 
-        "link":"#"
+        "link":"sub.html"
         }
     ]
 }
