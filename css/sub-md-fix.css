@@ -315,7 +315,7 @@
   border: 0;
   cursor: pointer;
   border-radius: 5px;
-  margin-top: 5px;
+  margin-top: 8px;
   padding: 13px 0;
   background-color: #178fff;
   color: #000000;
@@ -501,8 +501,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 10px solid #ccc;
-  border-top: 25px solid #ccc;
+  border: 10px solid #eee;
+  border-top: 25px solid #eee;
   border-radius: 5px;
 }
 
@@ -535,14 +535,24 @@ body {
   .new-fix-menu {
     display: block;
   }
-}
-.md-we-class-info-text {
-  width: 100%;
-  line-height: 20px;
-  height: 20px;
-  bottom: -22.5px;
-  right: 0px;
-  font-size: 13px;
+  .md-we-class-info-text {
+    width: 100%;
+    line-height: 20px;
+    height: 20px;
+    bottom: -22.5px;
+    right: 0px;
+    font-size: 13px;
+  }
+  .image-modal p {
+    font-size: 13px;
+    top: 200px;
+    right: 383px;
+  }
+  .image-close {
+    top: 194px;
+    right: -78px;
+    font-size: 22px;
+  }
 }
 /* 반응형 */
 
@@ -558,12 +568,12 @@ body {
     max-height: 120%;
   }
   .image-modal p {
-    top: 229px;
-    right: 325px;
+    top: 231px;
+    right: 330px;
   }
   .image-close {
-    top: 220px;
-    right: -25px;
+    top: 226px;
+    right: -23px;
   }
 }
 
@@ -609,17 +619,18 @@ body {
     max-height: 100%;
   }
   .image-modal p {
-    top: 271px;
+    top: 274px;
     right: 253px;
-    font-size: 13px;
   }
   .image-close {
-    top: 266px;
+    top: 268px;
     right: 10px;
-    font-size: 22px;
   }
 }
 @media all and (max-width: 380px) {
+  .md-fix-title-menu{
+    width: 235px;
+  }
   .fix-modal-content {
     width: 280px;
     min-width: 280px;
@@ -642,13 +653,13 @@ body {
     font-size: 13px;
   }
   .image-modal p {
-    top: 273px;
-    right: 213px;
-    font-size: 13px;
+    top: 277px;
+    right: 217px;
+    font-size: 12px;
   }
   .image-close {
-    top: 268px;
-    right: 10px;
-    font-size: 22px;
+    top: 270px;
+    right: 11px;
+    font-size: 20px;
   }
 }
