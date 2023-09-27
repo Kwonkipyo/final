@@ -2,43 +2,60 @@ window.addEventListener("load", function () {
   // 저장된 게시글 배열
   let posts = [];
 
-  // 로컬 스토리지에 저장된 게시글 불러오기
+  // 로컬 스토리지에서 게시글 불러오기 또는 초기화
   if (localStorage.getItem("posts")) {
     posts = JSON.parse(localStorage.getItem("posts"));
-    // posts 배열의 각 요소를 순환하면서 반복문 내부에서 post 변수를 통해 현재 요소에
-    // 접근할 수 있게 함. 반복문을 사용하면 posts 배열의 모든 요소를 차례대로 처리 가능
+  }
+
+  // 페이지 로드 시 게시글을 화면에 표시
+  function displayPosts() {
+    const postList = document.getElementById("postList");
+
+    // 기존 게시글을 제거
+    const existingPosts = postList.getElementsByClassName("post");
+    while (existingPosts.length > 0) {
+      postList.removeChild(existingPosts[0]);
+    }
+
+    // 모든 게시글을 화면에 추가
     for (const post of posts) {
       addPostToDOM(post);
     }
   }
 
-  addPostToDOM();
-
   // 게시글 추가 함수
-  function addPostToDOM() {
-    // localStorage에서 사용자 이름 가져오기
-    var count = localStorage.getItem("count");
-    var title = localStorage.getItem("title");
-    var writer = localStorage.getItem("writer");
-    var date = localStorage.getItem("date");
-    var userNum = localStorage.getItem("userNum");
-
+  function addPostToDOM(post) {
     const postList = document.getElementById("postList");
-
     const postElement = document.createElement("tr");
     postElement.classList.add("post");
     postElement.innerHTML = `
-      <td>${count}</td>
-      <td>${title}</td>
-      <td>${writer}</td>
-      <td>${date}</td>
-      <td>${userNum}명</td>
-      <td>진행 중</td>
-    `;
+    <td>${post.count}</td>
+    <td>${post.title}</td>
+    <td>${post.writer}</td>
+    <td>${post.date}</td>
+    <td>${post.userNum}명</td>
+    <td><div class="group-tag">진행 중</div></td>
+  `;
 
-    // 새 게시글을 화면에 추가하는 역할
+    // 새 게시글을 화면에 추가
     postList.prepend(postElement);
   }
+
+  // 게시글 추가 함수
+  function addPost(count, title, writer, date, userNum) {
+    // 새 게시글을 생성하고 배열에 추가
+    const newPost = { count, title, writer, date, userNum };
+    posts.push(newPost);
+
+    // 배열을 localStorage에 저장
+    localStorage.setItem("posts", JSON.stringify(posts));
+
+    // 게시글을 화면에 추가
+    addPostToDOM(newPost);
+  }
+
+  // 초기 게시글 표시
+  displayPosts();
 
   // ====================
   /*

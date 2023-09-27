@@ -21,6 +21,13 @@ section {
   color: #000;
   font-size: 18px;
   font-weight: 400;
+  line-height: 32px;
+}
+.group-banner span {
+  font-family: "SBAggroB";
+  font-size: 24px;
+  font-weight: 900;
+  color: #f5cb5c;
 }
 /* 게시글 작성 */
 .board_insert {

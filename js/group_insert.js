@@ -1,14 +1,14 @@
 window.addEventListener("load", function () {
-  // 작성자 이름 불러오기
+  // 작성자 닉네임 불러오기
   showInitialDashboard();
 
   // 대시보드 화면 표시
   function showInitialDashboard() {
     // localStorage에서 사용자 이름 가져오기
-    var username = localStorage.getItem("username");
+    var usernick = localStorage.getItem("usernick");
 
-    if (username) {
-      document.getElementById("boardWriter").textContent = `${username}`;
+    if (usernick) {
+      document.getElementById("boardWriter").textContent = `${usernick}`;
     } else {
     }
   }
@@ -55,7 +55,6 @@ window.addEventListener("load", function () {
     const date = today;
 
     var count = posts.length + 4;
-    console.log(count);
 
     if (title && hobbyClass && userNum && content) {
       const reader = new FileReader();
