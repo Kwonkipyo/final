@@ -485,10 +485,10 @@ body {
 .image-modal p{
   font-size: 14px;
   position: absolute;
-  top: 196.5px;
-  right: 378px;
+  top: 196px;
   color: #000;
-  font-weight: 700;
+  right: 378px;
+  font-weight: 900;
   z-index: 9999999999999999;
 }
 .enlarged-image {
@@ -507,11 +507,11 @@ body {
 
 .image-close{
   position: absolute;
-  top: 188px;
+  top: 187px;
   right: -80px;
   cursor: pointer;
   font-size: 25px;
-  font-weight: 700;
+  font-weight: 900;
   color: #000;
   z-index: 9999999999999999;
 }
@@ -553,18 +553,6 @@ body {
   .fix-right-button button {
     font-size: 20px;
   }
-  .enlarged-image{
-    max-width: 120%;
-    max-height: 120%;
-  }
-  .image-modal p{
-    top: 229px;
-    right: 325px;
-  }
-  .image-close{
-    top: 220px;
-    right: -25px;
-  }
 }
 
 @media all and (max-width: 480px) {
@@ -604,20 +592,6 @@ body {
   .fix-close {
     font-size: 25px;
   }
-  .enlarged-image{
-    max-width: 100%;
-    max-height: 100%;
-  }
-  .image-modal p{
-    top: 271px;
-    right: 253px;
-    font-size: 13px;
-  }
-  .image-close{
-    top: 266px;
-    right: 10px;
-    font-size: 22px;
-  }
 }
 @media all and (max-width: 380px) {
   .fix-modal-content {
@@ -640,15 +614,5 @@ body {
   .fix-right-button button {
     padding: 8px 5px;
     font-size: 13px;
-  }
-  .image-modal p{
-    top: 273px;
-    right: 213px;
-    font-size: 13px;
-  }
-  .image-close{
-    top: 268px;
-    right: 10px;
-    font-size: 22px;
   }
 }
