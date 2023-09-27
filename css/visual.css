@@ -35,7 +35,7 @@
   position: relative;
   top: -180px;
   z-index: 999;
-  width: calc(70% / 4);
+  width: calc(85% / 4);
   height: 90px;
   border-radius: 10px;
   background-color: #242423;
