@@ -94,6 +94,16 @@ window.addEventListener("load", function () {
       }
     }
   });
+  // --------신청버튼넘어가기 (미완성)----------------
+
+  // 버튼 요소 가져오기
+  var button = document.getElementById("md-applyButton");
+
+  // 버튼 클릭 시 페이지 이동
+  button.addEventListener("click", function () {
+    // "payment.html"로 이동
+    window.location.href = "payment.html";
+  });
 });
 
 // ------------------------------------------------
@@ -119,6 +129,23 @@ function hidePreparationAnother() {
   // 선택한 옵션 초기화
   const preparationSelect = document.getElementById("md-preparation");
   preparationSelect.selectedIndex = 0; // "준비물을 선택하세요"로 초기화
+}
+
+// 준비물 확대 모달
+// 이미지 모달을 열기 위한 JavaScript 함수
+function openImageModal(clickedImg) {
+  const enlargedImage = document.getElementById("enlarged-image");
+  const imageModal = document.getElementById("image-modal");
+
+  // 이미지 모달의 이미지 소스를 클릭된 이미지의 data-src로 설정
+  enlargedImage.src = clickedImg.getAttribute("data-src");
+  imageModal.style.display = "block"; // 모달을 보이도록 설정
+}
+
+// 이미지 모달을 닫기 위한 JavaScript 함수
+function closeImageModal() {
+  const imageModal = document.getElementById("image-modal");
+  imageModal.style.display = "none"; // 모달을 숨기도록 설정
 }
 
 // -----------------------------------------------

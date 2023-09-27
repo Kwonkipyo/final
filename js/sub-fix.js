@@ -1,4 +1,4 @@
-window.addEventListener("load", function(){
+window.addEventListener("load", function () {
   // HTML 요소를 JavaScript 변수에 할당합니다.
   const quantityElement = document.getElementById("quantity");
   const priceElement = document.getElementById("price");
@@ -83,6 +83,16 @@ window.addEventListener("load", function(){
     if (event.target == modal) {
       modal.style.display = "none";
     }
+  });
+  // --------신청버튼넘어가기 (미완성)----------------
+
+  // 버튼 요소 가져오기
+  var button = document.getElementById("applyButton");
+
+  // 버튼 클릭 시 페이지 이동
+  button.addEventListener("click", function () {
+    // "payment.html"로 이동
+    window.location.href = "payment.html";
   });
 });
 

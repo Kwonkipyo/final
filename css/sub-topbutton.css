@@ -59,6 +59,9 @@
     .top-button{
       margin-bottom: 60px;
     }
+    .top-chat-button{
+      width: 50px;
+    }
   }
   @media all and (max-width: 768px) {
     .top-btn{
@@ -66,7 +69,7 @@
       line-height: 30px;
     }
     .top-chat-button{
-      width: 50px;
+      width: 40px;
     }
     .top-chat-button:hover{
       scale: 1.2;
@@ -82,7 +85,13 @@
       line-height: 30px;
     }
     .top-chat-button{
-      width: 50px;
+      width: 30px;
+    }
+    .top-chat-button::after{
+      width: 15px;
+      height: 15px;
+      line-height: 15px;
+      font-size: 10px;
     }
     .top-chat-button:hover{
       scale: 1.2;
