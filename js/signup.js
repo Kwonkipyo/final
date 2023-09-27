@@ -27,7 +27,7 @@ window.addEventListener("load", function () {
 
     const newUser = {
       username: username,
-      usernickname: usernick,
+      usernick: usernick,
       useremail: useremail,
       userpassword: userpw,
       userpasswordcheck: userpwck,
@@ -38,14 +38,16 @@ window.addEventListener("load", function () {
     localStorage.setItem("users", JSON.stringify(users));
     // 사용자 이름을 localStorage에 저장
     localStorage.setItem("username", username);
-    localStorage.setItem("users", JSON.stringify(users));
     localStorage.setItem("useremail", useremail);
+    localStorage.setItem("usernick", usernick);
     alert("가입이 완료 되었습니다. 로그인 페이지로 이동합니다.");
     window.location.href =
       "login.html?username=" +
       encodeURIComponent(username) +
       "?useremail=" +
-      encodeURIComponent(useremail);
+      encodeURIComponent(useremail) +
+      "?usernick=" +
+      encodeURIComponent(usernick);
   });
 
   const checkAllCheckbox = document.getElementById("check_all");
@@ -170,31 +172,19 @@ window.addEventListener("load", function () {
 
   // ====================
   const signWrap = document.querySelector(".signup-wrap");
-  const signBox = document.querySelector(".signup-box");
   const signInput = document.querySelectorAll("#signup-form input");
 
-  document.addEventListener("click", function (event) {
-    for (i = 0; i < signInput.length; i++) {
-      if (event.target === signInput[i]) {
-        console.log(signInput[i]);
-        signWrap.style.background =
-          "url('/images/sign-bg-click.gif') no-repeat center center";
-        signWrap.style.backgroundSize = "cover";
-      } else {
-        signWrap.style.background =
-          "url('/images/sign-bg.jpg') no-repeat center center";
-        signWrap.style.backgroundSize = "cover";
-      }
-    }
+  for (let i = 0; i < signInput.length; i++) {
+    signInput[i].addEventListener("focus", function () {
+      signWrap.style.background =
+        "radial-gradient(circle, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url('/images/sign-bg-click.gif') no-repeat center center";
+      signWrap.style.backgroundSize = "cover";
+    });
 
-    if (event.target == signBox) {
+    signInput[i].addEventListener("blur", function () {
       signWrap.style.background =
-        "url('/images/sign-bg-click.gif') no-repeat center center";
+        "radial-gradient(circle, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url('/images/sign-bg.jpg') no-repeat center center";
       signWrap.style.backgroundSize = "cover";
-    } else {
-      signWrap.style.background =
-        "url('/images/sign-bg.jpg') no-repeat center center";
-      signWrap.style.backgroundSize = "cover";
-    }
-  });
+    });
+  }
 });

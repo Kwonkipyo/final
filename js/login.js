@@ -26,4 +26,22 @@ window.addEventListener("load", function () {
       loginForm.reset();
     }
   });
+
+  // ====================
+  const signWrap = document.querySelector(".login-wrap");
+  const signInput = document.querySelectorAll("#login-form input");
+
+  for (let i = 0; i < signInput.length; i++) {
+    signInput[i].addEventListener("focus", function () {
+      signWrap.style.background =
+        "radial-gradient(circle, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url('/images/sign-bg-click.gif') no-repeat center center";
+      signWrap.style.backgroundSize = "cover";
+    });
+
+    signInput[i].addEventListener("blur", function () {
+      signWrap.style.background =
+        "radial-gradient(circle, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url('/images/sign-bg.jpg') no-repeat center center";
+      signWrap.style.backgroundSize = "cover";
+    });
+  }
 });

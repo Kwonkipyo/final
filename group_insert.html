@@ -47,24 +47,80 @@
     />
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="images/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="images/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="images/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="images/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="images/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="images/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="images/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="images/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="images/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="images/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
 
     <!-- Open Graph -->
     <meta property="title" content="" />
@@ -330,11 +386,14 @@
         <div class="sub-inner">
           <h2>클래스 공동구매 제안하기</h2>
           <div class="group-banner">
-            <p>설명 주구장창~~~~~</p>
-            <!-- <div class="group-banner-left">
-              <p>클래스 같이 해요!</p>
-              <p>클래스원이 같이 모여 저렴하게 취미생활을 시작해보세요.</p>
-            </div> -->
+            <span>How?</span>
+            <p>1. 제목을 입력합니다.</p>
+            <p>2. 신청할 클래스를 선택합니다.</p>
+            <p>3. 클래스에 따라 정해진 인원수를 정합니다.</p>
+            <p>4. 함께 클래스를 들을 팀원들을 위해 자세한 내용을 작성합니다.</p>
+            <p>
+              5. 신청할 클래스와 연관된 사진을 포함하여 신청하면 더욱 좋습니다.
+            </p>
           </div>
         </div>
       </section>
@@ -394,7 +453,14 @@
               <textarea
                 name="boardContent"
                 id="boardContent"
-                placeholder="내용을 입력해주세요."
+                placeholder="공동구매 방식에 대해 자세히 작성해주세요.
+클래스 신청과 취미에 대해 자유롭게 정보 공유할 사람들을 모집해보세요.
+* 취미와 관련 없는 글은 관리자에 의해 게시물 삭제 및 이용제재 처리될 수 있어요.
+
+- 최소 인원 도달 시 바로 수강 or 최소 인원 도달 후 추가 신청 기간
+- &톡을 통한 모임 생성 유무
+
+안전하고 건전한 거래환경을 위해 과학기술정보통신부, 한국인터넷진흥원, Class&이 함께 합니다."
                 required
               ></textarea>
             </fieldset>
@@ -404,7 +470,8 @@
               <input type="file" id="boardImage" accept="image/*" />
             </fieldset>
             <div class="add-post">
-              <a href="group.html" id="addPostBtn">제안하기</a>
+              <!-- <a href="group.html" id="addPostBtn">제안하기</a> -->
+              <button type="submit" id="addPostBtn">제안하기</button>
             </div>
           </form>
         </div>
