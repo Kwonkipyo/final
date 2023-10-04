@@ -69,7 +69,7 @@
   height: 10%;
   max-width: 25%;
   bottom: 10%;
-  left: 49%;
+  left: 50%;
   transform: translateX(-50%);
   background-color: #ffc116;
   border: 0;
@@ -213,6 +213,10 @@
   font-size: 14px;
   text-align: center;
   color: #ccc;
+}
+.content-3 > h2 > span{
+  letter-spacing: 0;
+  font-weight: 900;
 }
 
 /*------------------- 타겟 ------------------*/
@@ -444,10 +448,9 @@
     font-size: 13px;
   }
   .title-menu ul{
-    gap: 0px;
+    justify-content: space-between;
   }
   .title-menu ul li {
-    justify-content: space-between;
     font-size: 15px;
     padding: 5px 4%;
   }
@@ -469,9 +472,6 @@
   }
 }
 @media all and (max-width: 380px) {
-  .title-menu ul{
-    justify-content: space-between;
-  }
   .title-menu ul li {
     font-size: 14px;
     padding: 5px 3px;
@@ -485,9 +485,6 @@
   .class-info-banner-bt i{
     padding-top: 1px;
     font-size: 11px;
-  }
-  .title-menu ul{
-    justify-content: space-between;
   }
   .title-menu ul li {
     font-size: 14px;

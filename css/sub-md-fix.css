@@ -365,6 +365,25 @@
   transform-origin: bottom left;
 }
 
+.md-fix-class-count{
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  color: #acdbc4;
+  font-weight: 700;
+  font-size: 16px;
+}
+.md-fix-class-count i{
+  transform: rotate(-15deg);
+  margin-right: 8px;
+  font-weight: 900;
+}
+.md-fix-class-count span{
+  font-size: 25px;
+  font-weight: 900;
+  color: #5de29f;
+}
+
 /* 폰트 스타일 한번 더 저장 */
 body {
   font-family: "NanumSquare" !important;
