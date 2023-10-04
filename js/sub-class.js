@@ -1,6 +1,5 @@
 window.addEventListener("load", function(){
   const navLis = $(".title-menu ul li");
-
   const navLisA = $(".title-menu ul li a");
 
   navLisA.click(function (event) {

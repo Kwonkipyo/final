@@ -12,7 +12,6 @@ window.addEventListener("load", function () {
 
   increaseButton.addEventListener("click", function () {
     quantity++;
-
     quantityElement.textContent = quantity;
     priceElement.textContent = formatPrice(quantity * unitPrice); 
   });
@@ -21,7 +20,6 @@ window.addEventListener("load", function () {
   decreaseButton.addEventListener("click", function () {
     if (quantity > 1) {
       quantity--;
-
       quantityElement.textContent = quantity;
       priceElement.textContent = formatPrice(quantity * unitPrice); 
     }
@@ -66,10 +64,10 @@ window.addEventListener("load", function () {
       modal.style.display = "none";
     }
   });
-  // --------------신청버튼넘어가기 (미완성)----------------------
+
+  // ------------------------------------------------------------
 
   var button = document.getElementById("applyButton");
-
   button.addEventListener("click", function () {
     window.location.href = "payment.html";
   });

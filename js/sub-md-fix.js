@@ -12,7 +12,6 @@ window.addEventListener("load", function () {
 
   increaseButton.addEventListener("click", function () {
     quantity++;
-
     quantityElement.textContent = quantity;
     priceElement.textContent = formatPrice(quantity * unitPrice);
   });
@@ -20,7 +19,6 @@ window.addEventListener("load", function () {
   decreaseButton.addEventListener("click", function () {
     if (quantity > 1) {
       quantity--;
-
       quantityElement.textContent = quantity;
       priceElement.textContent = formatPrice(quantity * unitPrice);
     }
@@ -73,7 +71,8 @@ window.addEventListener("load", function () {
       }
     }
   });
-  // --------신청버튼넘어가기 (미완성)----------------
+
+  // ----------------------------------------------------------
 
   var button = document.getElementById("md-applyButton");
 
@@ -82,7 +81,7 @@ window.addEventListener("load", function () {
   });
 });
 
-// ------------------------------------------------
+// ------------------------제이쿼리----------------------------
 
 function showPreparationAnother() {
   const preparationSelect = document.getElementById("md-preparation");
@@ -147,4 +146,3 @@ window.onclick = function (event) {
     fixModal.style.display = "none";
   }
 };
-// -------------------------------------------------

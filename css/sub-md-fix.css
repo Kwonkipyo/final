@@ -160,7 +160,7 @@
   font-family: "NanumSquare" !important;
 }
 #md-customDiv {
-  display: none; /* 초기에는 숨김 */
+  display: none;
   margin-bottom: 25px;
 }
 
@@ -295,7 +295,6 @@
   line-height: 30px;
   font-size: 20px;
   font-weight: 900;
-  /* color: #ffffff; */
 }
 
 /* span이랑 합친 we박스 */
@@ -328,7 +327,6 @@
   line-height: 30px;
   font-size: 20px;
   font-weight: 900;
-  /* color: #ffffff; */
 }
 .md-button-box h2 i {
   font-size: 17px;
@@ -359,7 +357,6 @@
   transition: transform 0.3s ease;
 }
 
-/* 버튼 호버 시 밑줄이 나타나도록 변경 */
 .md-we-buy:hover + .md-linked-text::after {
   transform: scaleX(1);
   transform-origin: bottom left;
@@ -373,15 +370,32 @@
   font-weight: 700;
   font-size: 16px;
 }
-.md-fix-class-count i{
-  transform: rotate(-15deg);
-  margin-right: 8px;
-  font-weight: 900;
-}
 .md-fix-class-count span{
   font-size: 25px;
   font-weight: 900;
   color: #5de29f;
+}
+.md-fix-class-count i{
+  margin-right: 15px;
+  font-weight: 900;
+  font-size: 17px;
+}
+
+
+@keyframes rotate {
+  0% {
+      transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(-25deg);
+  }
+  100% {
+      transform: rotate(0deg);
+  }
+}
+
+.fa-bullhorn {
+  animation: rotate 1s linear infinite;
 }
 
 /* 폰트 스타일 한번 더 저장 */
@@ -390,6 +404,7 @@ body {
 }
 
 /* -------------------------------------------------------------------- */
+
 /* new-fix-menu */
 .new-fix-menu {
   width: 100%;
@@ -445,14 +460,14 @@ body {
   width: 100%;
   border-radius: 5px;
   border: 0;
-  background-color: #178fff;
+  background-color: #17b6ff;
   color: #000000;
   font-family: "NanumSquare" !important;
   font-size: 22px;
   font-weight: 900;
 }
 .fix-right-button button:hover {
-  background-color: #0067c7;
+  background-color: #1290ca;
 }
 
 /* new-fix-menu-modal */
@@ -573,7 +588,6 @@ body {
     font-size: 22px;
   }
 }
-/* 반응형 */
 
 @media all and (max-width: 768px) {
   .fix-left-button button {
@@ -646,6 +660,7 @@ body {
     right: 10px;
   }
 }
+
 @media all and (max-width: 380px) {
   .md-fix-title-menu{
     width: 235px;

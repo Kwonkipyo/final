@@ -41,7 +41,6 @@
 .title-menu ul li:hover a {
   color: #ffffff;
 }
-/* 포커스된 메뉴 아이템 스타일 */
 .title-menu ul li.focus-active {
   color: #fff !important;
 }
@@ -472,6 +471,9 @@
   }
 }
 @media all and (max-width: 380px) {
+  .class-info-banner-bt{
+    bottom: 9%;
+  }
   .title-menu ul li {
     font-size: 14px;
     padding: 5px 3px;

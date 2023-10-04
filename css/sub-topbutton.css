@@ -55,6 +55,8 @@
     transition: 0.3s;
     opacity: 0;
   }
+
+  /* 반응형 */
   @media all and (max-width: 1024px) {
     .top-button{
       margin-bottom: 60px;
@@ -63,6 +65,7 @@
       width: 50px;
     }
   }
+
   @media all and (max-width: 768px) {
     .top-btn{
       width: 30px;
@@ -75,6 +78,7 @@
       scale: 1.2;
     }
   }
+
   @media all and (max-width: 480px) {
     .top-button{
       right: 20px;
