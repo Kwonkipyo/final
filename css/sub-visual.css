@@ -127,7 +127,7 @@
   text-align: center;
   margin-right: 15px;
   border-radius: 5px;
-  transition: 0.3s;
+  transition: outline 0.3s ease-in-out;
 }
 .icon-text-type:hover,
 .icon-text-type:hover,

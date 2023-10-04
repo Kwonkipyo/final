@@ -57,6 +57,7 @@
   width: 100%;
 }
 .class-info-banner{
+  width: 100%;
   border-radius: 10px;
 }
 .class-info-banner-bt{
@@ -65,27 +66,30 @@
   align-items: center;
   position: absolute;
   width: 25%;
+  height: 10%;
   max-width: 25%;
   bottom: 10%;
   left: 49%;
   transform: translateX(-50%);
   background-color: #ffc116;
-  color: #111;
-  font-weight: 900;
   border: 0;
   border-radius: 10px;
   padding: 10px 20px;
   cursor: pointer;
   border: solid 1px #eee;
+}
+.class-info-banner-bt p{
+  color: #111;
   font-size: 20px;
   font-weight: 900;
+  font-family: 'NanumSquare';
 }
 .class-info-banner-bt:hover{
   background-color: #e0b12d;
 }
 .class-info-banner-bt i{
   font-size: 25px;
-  padding-left: 10px;
+  padding-left: 5%;
 }
 
 /*----------------- 클래스소개 -------------------*/
@@ -227,7 +231,7 @@
 }
 .class-target ul li {
   display: flex;
-  background-color: #ccc;
+  background-color: #eee;
   width: 100%;
   padding: 15px 20px;
   padding-top: 17px;
@@ -325,6 +329,12 @@
 }
 
 @media all and (max-width: 768px) {
+  .class-info-banner-bt p{
+    font-size: 16px;
+  }
+  .class-info-banner-bt i{
+    font-size: 20px;
+  }
   .title-menu ul{
     display: flex;
     gap: 2px;
@@ -377,6 +387,12 @@
 }
 
 @media all and (max-width: 600px) {
+  .class-info-banner-bt p{
+    font-size: 14px;
+  }
+  .class-info-banner-bt i{
+    font-size: 17px;
+  }
   .content-1 {
     width: 100%;
     height: 240px;
@@ -415,6 +431,18 @@
   }
 }
 @media all and (max-width: 480px) {
+  .class-info-banner-bt{
+    max-width: 30%;
+    width: 30%;
+  }
+  .class-info-banner-bt p{
+    padding-top: 2.3px;
+    font-size: 11px;
+  }
+  .class-info-banner-bt i{
+    padding-top: 2.3px;
+    font-size: 13px;
+  }
   .title-menu ul li {
     padding: 0px 1%;
     font-size: 15px;
@@ -437,10 +465,17 @@
   }
 }
 @media all and (max-width: 320px) {
+  .class-info-banner-bt p{
+    padding-top: 1px;
+    font-size: 10px;
+  }
+  .class-info-banner-bt i{
+    padding-top: 1px;
+    font-size: 11px;
+  }
   .title-menu ul{
     justify-content: space-between;
   }
-
   .title-menu ul li {
     font-size: 14px;
   }
