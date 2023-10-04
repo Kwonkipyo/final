@@ -18,10 +18,10 @@
 }
 .title-menu ul li {
   position: relative;
-  padding: 0px 25px;
-  line-height: 40px;
+  padding: 10px 25px;
   text-align: center;
   font-size: 16px;
+  white-space : nowrap;
 }
 .title-menu ul li::after {
   content: "";
@@ -340,7 +340,7 @@
     gap: 2px;
   }
   .title-menu ul li {
-    padding: 0 5.57%;
+    padding: 10px 5.57%;
     font-size: 15px;
   }
   /* 클래스 소개 */
@@ -443,9 +443,13 @@
     padding-top: 2.3px;
     font-size: 13px;
   }
+  .title-menu ul{
+    gap: 0px;
+  }
   .title-menu ul li {
-    padding: 0px 1%;
+    justify-content: space-between;
     font-size: 15px;
+    padding: 5px 4%;
   }
   .content-1{
     height: 170px;
@@ -464,6 +468,15 @@
     top: 85%;
   }
 }
+@media all and (max-width: 380px) {
+  .title-menu ul{
+    justify-content: space-between;
+  }
+  .title-menu ul li {
+    font-size: 14px;
+    padding: 5px 3px;
+  }
+}
 @media all and (max-width: 320px) {
   .class-info-banner-bt p{
     padding-top: 1px;
@@ -478,6 +491,7 @@
   }
   .title-menu ul li {
     font-size: 14px;
+    padding: 5px 3px;
   }
   .content-1{
     height: 170px;
