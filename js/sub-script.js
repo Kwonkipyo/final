@@ -72,37 +72,41 @@ window.addEventListener("load", function () {
       }
     }
   
-    // top 버튼 스크롤 기능
-    const topBtnBox = document.getElementById("top-button");
-    const topBtn = document.getElementById("top-btn");
-    const topBtnImg = document.getElementById("top-btn-img");
-  
-    topBtn.addEventListener("click", function (event) {
-      event.preventDefault();
-      if (window.scrollY === 0) {
-        window.scrollTo({
-          top: 99999,
-          behavior: "smooth",
-        });
-      } else {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      }
-    });
-    // top 버튼 이미지 회전, 스크롤 효과
-    window.addEventListener("scroll", function () {
-      if (window.scrollY === 0) {
-        topBtnImg.style.transform = "rotate(0deg)";
-      } else {
-        topBtnImg.style.transform = "rotate(180deg)";
-      }
-      if (window.scrollY >= 9500) {
-        topBtnBox.style.bottom = "180px";
-      } else {
-        topBtnBox.style.bottom = "30px";
-      }
-    });
+  // top 버튼 스크롤 기능
+  const topBtnBox = document.getElementById("top-button");
+  const topBtn = document.getElementById("top-btn");
+  const topBtnImg = document.getElementById("top-btn-img");
+  let bannerBoxTop = document.querySelector(".class-info-banner-box").getBoundingClientRect().top;
+
+  topBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    if (window.scrollY === 0) {
+      window.scrollTo({
+        top: bannerBoxTop - 100,
+        behavior: "smooth",
+      });
+    } else {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
   });
-  
+  // top 버튼 이미지 회전, 스크롤 효과
+  window.addEventListener("scroll", function () {
+    if (window.scrollY === 0) {
+      topBtnImg.style.transform = "rotate(0deg)";
+    } else {
+      topBtnImg.style.transform = "rotate(180deg)";
+    }
+    
+    let footer = document.querySelector(".footer");
+    let footerTop = footer.getBoundingClientRect().top;
+    
+    if (window.innerHeight >= footerTop) {
+      topBtnBox.style.bottom = "180px";
+    } else {
+      topBtnBox.style.bottom = "30px";
+    }
+  });
+})
