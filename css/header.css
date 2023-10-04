@@ -28,6 +28,8 @@
 .cntr {
   display: table;
   height: 100%;
+  position: relative;
+  right: 15px;
 }
 .cntr .cntr-innr {
   display: table-cell;
@@ -62,7 +64,7 @@
 .search.active,
 .search:hover {
   width: 150px;
-  height: 20px;
+  height: 25px;
   margin-right: 0px;
 }
 .search.active:after,
@@ -88,12 +90,12 @@
   align-items: center;
   font-size: 15px;
   flex-wrap: wrap;
-  gap: 0 20px;
+  gap: 0 10px;
 }
 .mb-menu{
   display: flex;
   flex-wrap: wrap;
-  gap: 0 20px;
+  gap: 0 10px;
 }
 .sign-menu i{
   cursor: pointer;
@@ -218,7 +220,7 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 10px 25px;
+  /* padding: 0px 25px; */
   display: none;
 }
 #username-display {
@@ -364,6 +366,11 @@
   }
   .header-bottom{
     display: none;
+  }
+  #dashboard-section{
+    position: absolute;
+    right: 0;
+    top: 13px;
   }
 }
 @media all and (max-width:320px){
