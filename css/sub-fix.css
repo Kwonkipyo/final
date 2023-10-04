@@ -156,7 +156,7 @@
   font-family: "NanumSquare" !important;
 }
 #customDiv {
-  display: none; /* 초기에는 숨김 */
+  display: none;
   margin-bottom: 25px;
 }
 
@@ -277,7 +277,6 @@
   line-height: 30px;
   font-size: 20px;
   font-weight: 900;
-  /* color: #ffffff; */
 }
 .button-box-we {
   display: flex;
@@ -301,7 +300,6 @@
   line-height: 30px;
   font-size: 20px;
   font-weight: 900;
-  /* color: #ffffff; */
 }
 .button-box h2 i {
   font-size: 17px;
@@ -331,7 +329,6 @@
   transition: transform 0.3s ease;
 }
 
-/* 버튼 호버 시 밑줄이 나타나도록 변경 */
 .we-buy:hover + .linked-text::after {
   transform: scaleX(1);
   transform-origin: bottom left;
@@ -346,8 +343,7 @@
   font-size: 16px;
 }
 .fix-class-count i{
-  /* transform: rotate(-15deg); */
-  margin-right: 8px;
+  margin-right: 15px;
   font-weight: 900;
   font-size: 17px;
 }
