@@ -10,8 +10,8 @@ section {
 }
 .group-header .bg-title {
   position: absolute;
-  top: -25px;
-  right: 0;
+  top: -10%;
+  right: 2%;
   font-size: 100px;
   font-weight: 900;
   z-index: -1;
@@ -25,7 +25,7 @@ section {
 .group-banner {
   width: 100%;
   margin-top: 33px;
-  padding: 40px 35px;
+  padding: 30px 35px;
   border-radius: 25px;
   background: url("../images/group-banner.jpg") no-repeat center center;
   background-size: cover;
@@ -69,6 +69,7 @@ section {
 }
 .board-tap .taps ul {
   display: flex;
+  flex-flow: row wrap;
   justify-content: flex-end;
 }
 .board-tap .taps ul li {
@@ -78,20 +79,16 @@ section {
 .board-tap .taps ul li:nth-child(3) {
   padding-right: 30px;
 }
-.board-tap .taps ul li:last-child {
-  padding: 0;
-}
 .board-tap .taps a.active {
   font-weight: bold;
   color: #f5cb5c;
 }
 .searchbox {
-  width: 100%;
-  height: 100%;
   padding: 10px 25px;
   border-radius: 30px;
   background-color: #fff;
   border: 1px solid #242423;
+  white-space: nowrap;
 }
 .searchbox input {
   font-size: 15px;
@@ -126,6 +123,22 @@ section {
   width: 100%;
   margin-top: 30px;
 }
+.board-list-title tr th:nth-child(1),
+.board-list-title tr td:nth-child(1),
+.board-list-title tr th:nth-child(3),
+.board-list-title tr td:nth-child(3),
+.board-list-title tr th:nth-child(4),
+.board-list-title tr td:nth-child(4),
+.board-list-title tr th:nth-child(5),
+.board-list-title tr td:nth-child(5),
+.board-list-title tr th:nth-child(6),
+.board-list-title tr td:nth-child(6) {
+  width: 10%;
+}
+.board-list-title tr th:nth-child(2),
+.board-list-title tr td:nth-child(2) {
+  width: 40%;
+}
 .board-list-title th {
   font-size: 16px;
   font-weight: bold;
@@ -135,7 +148,7 @@ section {
 }
 .board-list-title tr td,
 .board-list-title tr th {
-  padding: 20px 10px;
+  padding: 20px 0px;
   cursor: pointer;
   white-space: nowrap;
   overflow: hidden;
@@ -205,9 +218,6 @@ section {
 .board-btn:hover a {
   background-color: #f8c740;
 }
-.footer {
-  margin-top: 0;
-}
 /* 필독 */
 .board-list-title .notice {
   background-color: #ffdf87;
@@ -223,13 +233,19 @@ section {
   margin-right: 3px;
   font-size: 14px;
 }
+.footer {
+  margin-top: 0;
+}
 
 @media all and (max-width: 1024px) {
+  .group-header .bg-title {
+    font-size: 95px;
+  }
   .group-header h2 {
     font-size: 28px;
   }
   .group-banner-left p {
-    font-size: 21px;
+    font-size: 19px;
   }
   .group-banner-right button a {
     font-size: 14px;
@@ -241,13 +257,13 @@ section {
     font-size: 14px;
   }
   .board-list {
-    font-size: 14px;
+    font-size: 13px;
   }
   .board-list h2 {
     font-size: 24px;
   }
   .board-list-title th {
-    font-size: 15px;
+    font-size: 14px;
   }
   .paging {
     font-size: 13px;
@@ -260,8 +276,13 @@ section {
   }
 }
 @media all and (max-width: 768px) {
+  .group-header .bg-title {
+    top: -7%;
+    right: 3%;
+    font-size: 90px;
+  }
   .group-banner {
-    padding: 60px 35px;
+    padding: 40px 35px;
     background: url("../images/group-banner2.jpg") no-repeat center center;
     display: flex;
   }
@@ -274,18 +295,24 @@ section {
   .board-list-title tr th:nth-child(1),
   .board-list-title tr td:nth-child(1),
   .board-list-title tr th:nth-child(4),
-  .board-list-title tr td:nth-child(4),
-  .board-list-title colgroup col:nth-child(1),
-  .board-list-title colgroup col:nth-child(4) {
+  .board-list-title tr td:nth-child(4) {
     display: none;
   }
-  /* .board-list-title colgroup col:nth-child(3),
-  .board-list-title colgroup col:nth-child(n + 5) {
-    width: 20%;
-  } */
+  .board-list-title tr th:nth-child(3),
+  .board-list-title tr td:nth-child(3),
+  .board-list-title tr th:nth-child(5),
+  .board-list-title tr td:nth-child(5),
+  .board-list-title tr th:nth-child(6),
+  .board-list-title tr td:nth-child(6) {
+    width: 10%;
+  }
+  .board-list-title tr th:nth-child(2),
+  .board-list-title tr td:nth-child(2) {
+    width: 15%;
+  }
   .board-list-title tr td,
   .board-list-title tr th {
-    padding: 10px 5px;
+    padding: 10px 0px;
   }
   .group-header h2 {
     font-size: 26px;
@@ -303,13 +330,13 @@ section {
     font-size: 13px;
   }
   .board-list {
-    font-size: 13px;
+    font-size: 12px;
   }
   .board-list h2 {
     font-size: 22px;
   }
   .board-list-title th {
-    font-size: 14px;
+    font-size: 13px;
   }
   .paging {
     font-size: 12px;
@@ -320,84 +347,87 @@ section {
   .board-list-title tbody tr td:nth-child(2) {
     padding: 20px;
   }
+  .board-list-title .group-tag {
+    font-size: 11px;
+  }
 }
 @media all and (max-width: 480px) {
-  .group-banner-left p {
-    font-size: 16px;
+  .group-header {
+    padding-top: 90px;
   }
-}
-@media all and (max-width: 320px) {
-}
-
-/* @media all and (max-width: 1024px) {
   .group-header h2 {
-    font-size: 28px;
-  }
-  .group-banner-left p {
-    font-size: 21px;
-  }
-  .group-banner-right button a {
-    font-size: 14px;
-  }
-  .board-tap .taps ul li {
-    font-size: 14px;
-  }
-  .searchbox input {
-    font-size: 14px;
-  }
-  .board-list {
-    font-size: 14px;
-  }
-  .board-list h2 {
     font-size: 24px;
   }
-  .board-list-title th {
-    font-size: 15px;
+  .group-header .bg-title {
+    top: -4%;
+    right: 4%;
+    font-size: 75px;
   }
-  .paging {
-    font-size: 13px;
-  }
-  .board-btn {
-    font-size: 16px;
-  }
-}
-@media all and (max-width: 768px) {
-  .group-header h2 {
-    font-size: 26px;
+  .group-banner {
+    padding: 30px 25px;
+    margin-top: 28px;
+    display: flex;
+    justify-content: space-between;
   }
   .group-banner-left p {
-    font-size: 18px;
+    font-size: 13px;
+  }
+  .group-banner-right {
+    margin-left: 10px;
   }
   .group-banner-right button a {
-    font-size: 13px;
-  }
-  .board-tap .taps ul li {
-    font-size: 13px;
-  }
-  .searchbox input {
-    font-size: 13px;
-  }
-  .board-list {
-    font-size: 13px;
-  }
-  .board-list h2 {
-    font-size: 22px;
-  }
-  .board-list-title th {
-    font-size: 14px;
-  }
-  .paging {
     font-size: 12px;
   }
-  .board-btn {
-    font-size: 14px;
+  .board-list-title tr th:nth-child(3),
+  .board-list-title tr td:nth-child(3),
+  .board-list-title tr th:nth-child(5),
+  .board-list-title tr td:nth-child(5),
+  .board-list-title tr th:nth-child(6),
+  .board-list-title tr td:nth-child(6) {
+    width: 15%;
+  }
+  .board-list-title tr th:nth-child(2),
+  .board-list-title tr td:nth-child(2) {
+    width: 10%;
   }
   .board-list-title tbody tr td:nth-child(2) {
-    padding: 20px;
+    padding: 15px 5px;
   }
-  
-}
-@media all and (max-width: 480px) {
+  .board-list-title th {
+    font-size: 11px;
+  }
+  .board-list {
+    font-size: 10px;
+  }
+  .board-list h2 {
+    font-size: 20px;
+  }
+  .board-list-title .group-tag {
+    font-size: 10px;
+  }
+  .board-tap .taps ul {
+    display: flex;
+    justify-content: center;
+  }
+  .searchbox {
+    margin-top: 10px;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .searchbox input {
+    width: 100%;
+  }
+  .searchbox i {
+    margin-left: 5px;
+  }
+  .paging {
+    font-size: 11px;
+  }
+  .board-btn {
+    font-size: 13px;
+  }
 }
 @media all and (max-width: 320px) {
-} */
+}

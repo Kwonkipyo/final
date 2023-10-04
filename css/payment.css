@@ -64,15 +64,15 @@ section {
   justify-content: space-between;
   width: 100%;
   margin-bottom: 20px;
-  /* height: 80px; */
+  font-size: 16px;
 }
 .payment-box .text-wrap h3 {
-  font-size: 16px;
   font-weight: 900;
 }
 .payment-box .text-wrap p {
   color: #a0a0a0;
   font-weight: bold;
+  margin-left: 10px;
 }
 .payment-box .class-wrap {
   display: flex;
@@ -82,6 +82,8 @@ section {
   border-radius: 15px;
   background-color: #f4f4f4;
   color: #6c6c6c;
+  font-size: 16px;
+  line-height: 1.7;
 }
 .payment-box .class-wrap .images {
   width: 65px;
@@ -103,54 +105,69 @@ section {
 }
 
 /*  */
+.payment-box .dropdown {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+}
 .payment-box .dropdown-selected {
-  background-color: #3498db;
-  color: white;
-  padding: 10px;
+  background-color: transparent;
+  color: #000;
+  padding: 15px;
   border: none;
   cursor: pointer;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.payment-box .dropdown-selected p {
-  margin: 0;
+  font-size: 16px;
 }
 .payment-box .dropdown-selected i {
-  font-size: 16px;
+  transition: all ease-in 0.2s;
+}
+.payment-box .dropdown-selected i.active {
+  transform: rotate(180deg);
+}
+.payment-box .dropdown-selected span {
+  font-weight: bold;
+  color: rgb(255, 102, 85);
 }
 .payment-box .dropdown-list {
   display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 100%;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  /* position: absolute; */
+  width: 100%;
+  border-top: 1px solid #e0e0e0;
   z-index: 1;
 }
-.payment-box .dropdown-list-item {
-  padding: 10px;
+.payment-box .dropdown-list-item,
+.payment-box .coupon-dropdown-list-item {
+  padding: 15px;
 }
-.payment-box .coupon-dropdown-label {
-  display: flex;
-  flex-direction: column;
+.payment-box .coupon-dropdown-list-item:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
-.payment-box .coupon-dropdown-title {
-  font-weight: bold;
+.payment-box .dropdown-list-item:hover,
+.payment-box .coupon-dropdown-list-item:hover {
+  background-color: #ddd;
 }
-.payment-box .coupon-dropdown-desc small {
-  color: #666;
+.payment-box .dropdown-list-item input,
+.payment-box .coupon-dropdown-list-item input {
+  display: none;
 }
-/* 드롭다운 메뉴 열린 상태 스타일 */
-.show {
+.payment-box .coupon-dropdown-label span {
   display: block;
+}
+.payment-box .coupon-dropdown-label span:last-child {
+  font-size: 14px;
+  color: #a0a0a0;
 }
 /*  */
 
 .payment-box .radio_box {
   width: 100%;
-  border-radius: 15px;
+  border-radius: 10px;
   border: 1px solid #e0e0e0;
+  font-size: 16px;
 }
 .payment-box .radio_box fieldset {
   padding: 15px;
@@ -163,6 +180,11 @@ section {
 .payment-box.check-box {
   display: flex;
   justify-content: space-between;
+  font-size: 16px;
+}
+.payment-box.check-box strong {
+  text-decoration: underline;
+  cursor: pointer;
 }
 .payment-wrap .pay {
   width: 100%;
@@ -177,6 +199,39 @@ section {
 }
 
 @media all and (max-width: 1024px) {
+  .group-header h2 {
+    font-size: 28px;
+  }
+  .payment-box h2 {
+    font-size: 16px;
+  }
+  .payment-box .student-wrap label {
+    font-size: 14px;
+  }
+  .payment-box .student-wrap input {
+    font-size: 14px;
+  }
+  .payment-box .dropdown-selected {
+    font-size: 14px;
+  }
+  .payment-box .text-wrap {
+    font-size: 14px;
+  }
+  .payment-box .class-wrap {
+    font-size: 14px;
+  }
+  .payment-box .class-wrap p:first-child {
+    font-size: 15px;
+  }
+  .payment-box > p {
+    font-size: 13px;
+  }
+  .payment-box .radio_box {
+    font-size: 14px;
+  }
+  .payment-box.check-box {
+    font-size: 14px;
+  }
   .payment-wrap .pay {
     position: fixed;
     display: block;
@@ -190,8 +245,27 @@ section {
   }
 }
 @media all and (max-width: 768px) {
+  .group-header h2 {
+    font-size: 26px;
+  }
+  .payment-box h2 {
+    font-size: 14px;
+  }
+  .payment-wrap .pay {
+    font-size: 17px;
+  }
 }
 @media all and (max-width: 480px) {
+  .group-header {
+    padding-top: 90px;
+  }
+  .group-header h2 {
+    font-size: 24px;
+  }
+  .payment-box .student-wrap input {
+    width: 100%;
+    min-width: auto;
+  }
 }
 @media all and (max-width: 320px) {
 }

@@ -6,7 +6,7 @@ window.addEventListener("load", function () {
     // localStorage에서 사용자 이름 가져오기
     var username = localStorage.getItem("username");
     var useremail = localStorage.getItem("useremail");
-    
+
     if (username && useremail) {
       document.getElementById("username").value = `${username}`;
       document.getElementById("useremail").value = `${useremail}`;
@@ -15,41 +15,50 @@ window.addEventListener("load", function () {
   }
 
   // ====================
-  // JavaScript로 드롭다운 메뉴 열기/닫기 및 선택 항목 변경 및 표시 기능 추가
-  // var dropdown = document.querySelector(".dropdown");
-  // var dropdownContent = dropdown.querySelector(".dropdown-list");
-  // var dropbtn = dropdown.querySelector(".dropdown-selected p");
-  // var selectedItem = document.getElementById("selectedItem");
+  // #searchButton 버튼을 클릭했을 때의 이벤트 리스너 추가
+  document
+    .querySelector(".dropdown-selected")
+    .addEventListener("click", function () {
+      const dropdownList = document.querySelector(".dropdown-list");
+      const dropdownSelectedI = document.querySelector(".dropdown-selected i");
 
-  // // 기본 선택 항목 설정
-  // var defaultOption = dropdownContent.querySelector("input:checked").value;
-  // dropbtn.textContent = defaultOption;
-  // selectedItem.textContent = "선택한 항목: " + defaultOption;
+      dropdownList.style.display = "block";
+      dropdownSelectedI.classList.add("active");
 
-  // dropdown.addEventListener("click", function () {
-  //   dropdownContent.classList.toggle("show");
-  // });
+      document.addEventListener("click", function (event) {
+        const dropdownList = document.querySelector(".dropdown-list");
+        const dropdownSelected = document.querySelector(".dropdown-selected");
 
-  // dropdownContent.addEventListener("click", function (e) {
-  //   if (e.target.tagName === "INPUT") {
-  //     var selectedOption = e.target.value;
-  //     dropbtn.textContent = selectedOption;
-  //     selectedItem.textContent = "선택한 항목: " + selectedOption;
-  //     dropdownContent.classList.remove("show");
-  //   }
-  // });
+        if (event.target !== dropdownSelected) {
+          dropdownList.style.display = "none";
+          dropdownSelectedI.classList.remove("active");
+        }
+      });
+    });
 
-  // window.onclick = function (event) {
-  //   if (!event.target.matches(".dropdown-selected p")) {
-  //     var dropdowns = document.getElementsByClassName("dropdown-list");
-  //     for (var i = 0; i < dropdowns.length; i++) {
-  //       var openDropdown = dropdowns[i];
-  //       if (openDropdown.classList.contains("show")) {
-  //         openDropdown.classList.remove("show");
-  //       }
-  //     }
-  //   }
-  // };
+  // .coupon-dropdown-list-item를 클릭했을 때 이벤트 핸들러 추가
+  const couponListItems = document.querySelectorAll(
+    ".coupon-dropdown-list-item"
+  );
+
+  couponListItems.forEach(function (item) {
+    item.addEventListener("click", function () {
+      // 선택한 아이템의 값을 가져와서 dropdown-selected p에 적용
+      const selectedTitle = item.querySelector(
+        ".coupon-dropdown-title"
+      ).textContent;
+      document.querySelector(".dropdown-selected p").textContent =
+        selectedTitle;
+    });
+  });
+
+  const dropdownListItem = document.querySelector(".dropdown-list-item");
+  dropdownListItem.addEventListener("click", function () {
+    document.querySelector(".dropdown-selected p").textContent = "사용가능 쿠폰 ";
+    let addSpan = document.createElement("span");
+    addSpan.innerHTML = "3장";
+    document.querySelector(".dropdown-selected p").appendChild(addSpan);
+  });
 
   // ====================
   const paymentWrap = document.querySelector(".payment-wrap");
