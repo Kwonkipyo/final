@@ -386,13 +386,17 @@
         <div class="sub-inner">
           <h2>클래스 공동구매 모집하기</h2>
           <div class="group-banner">
-            <span>How?</span>
+            <span class="group-banner-header">How?</span>
             <p>1. 제목을 입력합니다.</p>
             <p>2. 신청할 클래스를 선택합니다.</p>
             <p>3. 클래스에 따라 정해진 인원수를 정합니다.</p>
-            <p>4. 함께 클래스를 들을 팀원들을 위해 자세한 내용을 작성합니다.</p>
             <p>
-              5. 신청할 클래스와 연관된 사진을 포함하여 신청하면 더욱 좋습니다.
+              4. 함께 클래스를 들을 팀원들을 위해
+              <span>자세한 내용을 작성합니다.</span>
+            </p>
+            <p>
+              5. 신청할 클래스와 연관된 사진을
+              <span>포함하여 신청하면 더욱 좋습니다.</span>
             </p>
           </div>
         </div>
@@ -411,7 +415,6 @@
               <label for="boardWriter" class="notAfter">작성자</label>
               <p id="boardWriter"></p>
             </fieldset>
-
             <!-- 클래스 -->
             <fieldset class="search-fieldset">
               <label for="searchClass" class="must">클래스</label>
@@ -431,9 +434,8 @@
                 <ul id="searchResults"></ul>
               </div>
             </fieldset>
-
             <!-- 신청자수 -->
-            <fieldset>
+            <fieldset class="applicant">
               <label for="boardNum" class="must">신청자수</label>
               <div class="boardNum-wrap">
                 <button type="button" class="boardNum-btn down">-</button>
@@ -470,70 +472,9 @@
               <input type="file" id="boardImage" accept="image/*" />
             </fieldset>
             <div class="add-post">
-              <!-- <a href="group.html" id="addPostBtn">제안하기</a> -->
               <button type="submit" id="addPostBtn">제안하기</button>
             </div>
           </form>
-        </div>
-      </section>
-      <!-- 글 출력 -->
-      <section class="board" style="display: none">
-        <div class="sub-inner">
-          <div class="board-wrap">
-            <div class="board-list">
-              <h2>공동구매 게시판</h2>
-              <table class="board-list-title">
-                <colgroup>
-                  <col width="10%" />
-                  <col width="40%" />
-                  <col width="10%" />
-                  <col width="10%" />
-                  <col width="10%" />
-                  <col width="10%" />
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th>번호</th>
-                    <th>제목</th>
-                    <th>작성자</th>
-                    <th>작성일</th>
-                    <th>신청자수</th>
-                    <th>진행상태</th>
-                  </tr>
-                </thead>
-                <tbody id="postList">
-                  <!-- js로 출력 -->
-                  <tr>
-                    <td>1</td>
-                    <td>뜨개질 클래스 같이 하실 분~~</td>
-                    <td>타로롱</td>
-                    <td>2023.09.04</td>
-                    <td>2명</td>
-                    <td>진행 중</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="paging">
-            <a href="javascript:void(0);">
-              <i class="fa-solid fa-angles-left"></i>
-            </a>
-            <a href="javascript:void(0);" onclick="before()">
-              <i class="fa-solid fa-angle-left"></i>
-            </a>
-            <a href="javascript:void(0);" class="paging-num active">1</a>
-            <!-- <div class="paging-num"></div> -->
-            <a href="javascript:void(0);" onclick="next()">
-              <i class="fa-solid fa-angle-right"></i>
-            </a>
-            <a href="javascript:void(0);">
-              <i class="fa-solid fa-angles-right"></i>
-            </a>
-          </div>
-          <div class="board-btn">
-            <a href="group_insert.html">모집하기</a>
-          </div>
         </div>
       </section>
       <!-- 푸터 -->

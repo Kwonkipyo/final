@@ -23,11 +23,13 @@ section {
   font-weight: 400;
   line-height: 32px;
 }
-.group-banner span {
+.group-banner span.group-banner-header {
   font-family: "SBAggroB";
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 900;
   color: #f5cb5c;
+  display: block;
+  margin-bottom: 12px;
 }
 /* 게시글 작성 */
 .board_insert {
@@ -66,6 +68,7 @@ section {
 .board_insert input[type="text"],
 .board_insert textarea,
 .board_insert select {
+  display: block;
   font-size: 16px;
   padding: 7px;
   margin-bottom: 10px;
@@ -75,7 +78,6 @@ section {
 .board_insert input {
   width: 45%;
 }
-
 .search-box {
   position: relative;
   width: 45%;
@@ -106,7 +108,6 @@ section {
   position: absolute;
   display: none;
   width: 100%;
-  min-height: 250px;
   overflow-y: hidden;
   border: 0.8px solid #e0e0e0;
   border-radius: 3px;
@@ -118,10 +119,13 @@ section {
   padding: 10px;
   border-bottom: 1px solid #e0e0e0;
 }
-
+#board_form .applicant {
+  display: none;
+}
 #board_form .boardNum-wrap {
   position: relative;
   width: 10%;
+  min-width: 120px;
   padding: 0 30px;
   display: flex;
   align-items: center;
@@ -148,6 +152,7 @@ section {
 }
 #board_form .boardNum-wrap input {
   width: 100%;
+  min-width: 60px;
   height: 30px;
   text-align: center;
 }
@@ -157,7 +162,7 @@ section {
   padding: 0 30px 0 10px;
 }
 #board_form #boardContent {
-  width: 85%;
+  width: 80%;
   height: 200px;
   resize: none;
 }
@@ -170,6 +175,7 @@ section {
 .board_insert .add-post {
   display: flex;
   justify-content: flex-end;
+  padding-top: 15px;
 }
 .add-post #addPostBtn {
   display: flex;
@@ -187,84 +193,95 @@ section {
 .footer {
   margin-top: 0;
 }
-/*  */
-/*  */
-.board {
-  background-color: #fff;
-  padding-bottom: 100px;
-}
-.board-wrap {
-  /* min-height: 845px; */
-}
-.board-list {
-  /* min-height: 720px; */
-  padding-top: 34px;
-  font-size: 15px;
-  color: #000;
-  text-align: center;
-}
-.board-list h2 {
-  font-size: 26px;
-  font-weight: bold;
-  margin: 30px 0;
-}
-.board-list-title {
-  width: 100%;
-}
-.board-list-title th {
-  font-size: 16px;
-  font-weight: bold;
-}
-.board-list-title thead {
-  border-bottom: 3px solid #616161;
-}
-.board-list-title tr * {
-  padding: 20px 10px;
-  cursor: pointer;
-}
-.board-list-title tbody tr {
-  border-bottom: 1px solid #000;
-}
-.paging {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  margin-top: 20px;
-  padding-bottom: 50px;
-  font-size: 14px;
-  color: #666;
-}
-.paging a {
-  margin: 0 10px;
-  cursor: pointer;
-}
-.paging-num {
-  border-bottom: 1px solid #666;
-}
-.paging-num.active {
-  font-weight: bold;
-  color: #f5cb5c;
-}
-.board-btn {
-  display: flex;
-  justify-content: center;
-  font-size: 17px;
-  color: #000;
-}
-.board-btn a {
-  display: inline-block;
-  background-color: #f5cb5c;
-  padding: 15px 50px;
-}
-.board-btn:hover a {
-  background-color: #f8c740;
-}
 
 @media all and (max-width: 1024px) {
+  .group-header h2 {
+    font-size: 28px;
+  }
+  .group-banner {
+    font-size: 16px;
+  }
+  .group-banner span.group-banner-header {
+    font-size: 28px;
+  }
+  #board_form label {
+    font-size: 16px;
+  }
+  .board_insert input[type="text"],
+  .board_insert textarea,
+  .board_insert select {
+    font-size: 14px;
+  }
+  #board_form #boardWriter {
+    font-size: 14px;
+  }
+  #board_form #boardImage {
+    font-size: 13px;
+  }
+  .add-post #addPostBtn {
+    font-size: 14px;
+  }
 }
 @media all and (max-width: 768px) {
+  .group-header h2 {
+    font-size: 26px;
+  }
+  .group-banner {
+    font-size: 14px;
+  }
+  .group-banner span.group-banner-header {
+    font-size: 26px;
+  }
+  #board_form label {
+    width: 130px;
+    font-size: 14px;
+  }
+  .board_insert input[type="text"],
+  .board_insert textarea,
+  .board_insert select {
+    font-size: 12px;
+  }
+  #board_form #boardWriter {
+    font-size: 12px;
+  }
+  #board_form #boardImage {
+    font-size: 11px;
+  }
+  .board_insert #boardTitle,
+  .board_insert #boardImage {
+    width: 80%;
+  }
+  #board_form #boardWriter {
+    width: 80%;
+  }
+  .search-box {
+    width: 80%;
+  }
+  .add-post #addPostBtn {
+    font-size: 13px;
+  }
 }
 @media all and (max-width: 480px) {
+  .group-header {
+    padding-top: 90px;
+  }
+  .group-header h2 {
+    font-size: 24px;
+  }
+  .group-banner {
+    padding: 30px 25px;
+    font-size: 13px;
+    text-align: center;
+  }
+  .group-banner span.group-banner-header {
+    font-size: 24px;
+  }
+  .group-banner span {
+    display: block;
+  }
+  #board_form label {
+    font-size: 13px;
+  }
 }
 @media all and (max-width: 320px) {
 }
