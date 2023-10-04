@@ -10,6 +10,8 @@ window.addEventListener("load", function () {
     if (usernick) {
       document.getElementById("boardWriter").textContent = `${usernick}`;
     } else {
+      alert("로그인 후 작성 가능합니다.");
+      window.location.href = "login.html";
     }
   }
 
@@ -26,8 +28,6 @@ window.addEventListener("load", function () {
     tDate.getFullYear() + "." + (tDate.getMonth() + 1) + "." + tDate.getDate();
 
   const boardForm = document.getElementById("board_form");
-  const addPostBtn = document.getElementById("addPostBtn"); // 제안하기 버튼
-  const postList = document.getElementById("postList"); // 리스트 출력 부분
 
   // 저장된 게시글 배열
   let posts = [];
@@ -37,9 +37,6 @@ window.addEventListener("load", function () {
     posts = JSON.parse(localStorage.getItem("posts"));
     // posts 배열의 각 요소를 순환하면서 반복문 내부에서 post 변수를 통해 현재 요소에
     // 접근할 수 있게 함. 반복문을 사용하면 posts 배열의 모든 요소를 차례대로 처리 가능
-    for (const post of posts) {
-      addPostToDOM(post);
-    }
   }
 
   // 게시글 작성 버튼 클릭 이벤트 처리
@@ -54,7 +51,7 @@ window.addEventListener("load", function () {
     const imageFile = postImageInput.files[0];
     const date = today;
 
-    var count = posts.length + 4;
+    var count = posts.length + 12632;
 
     if (title && hobbyClass && userNum && content) {
       const reader = new FileReader();
@@ -80,8 +77,7 @@ window.addEventListener("load", function () {
         localStorage.setItem("writer", writer);
         localStorage.setItem("date", date);
         localStorage.setItem("userNum", userNum);
-        // 화면에 게시글 추가
-        addPostToDOM(newPost);
+
         // 입력 필드 초기화
         postTitleInput.value = "";
         postWriterInput.value = "";
@@ -112,23 +108,6 @@ window.addEventListener("load", function () {
       }
     }
   });
-
-  // 게시글 추가 함수
-  function addPostToDOM(post) {
-    const postElement = document.createElement("tr");
-    postElement.classList.add("post");
-    postElement.innerHTML = `
-      <td>${post.count}</td>
-      <td>${post.title}</td>
-      <td>${post.writer}</td>
-      <td>${post.date}</td>
-      <td>${post.userNum}명</td>
-      <td>진행 중</td>
-    `;
-
-    // 새 게시글을 화면에 추가하는 역할
-    postList.prepend(postElement);
-  }
 
   // ====================
   // 최소값과 최대값 설정
@@ -195,7 +174,6 @@ window.addEventListener("load", function () {
       }
 
       document.addEventListener("click", function (event) {
-        // console.log(event.target);
         const searchClass = document.getElementById("searchClass");
         const searchBtn = document.getElementById("searchButton");
         const searchBtni = document.querySelector("#searchButton i");
@@ -241,6 +219,7 @@ window.addEventListener("load", function () {
 
         listItem.addEventListener("click", function () {
           document.getElementById("searchClass").value = classObj.name;
+          document.querySelector(".applicant").style.display = "flex";
         });
       }
     }
