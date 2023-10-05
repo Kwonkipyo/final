@@ -1,34 +1,36 @@
-window.addEventListener("load", function(){
+window.addEventListener("load", function () {
+  let isLiked = false;
+
   $(".fa-heart").click(function () {
     const currentColor = $(this).css("color");
     if (currentColor === "rgb(255, 0, 0)") {
       $(this).css("color", "");
-      let currentCount = parseInt($(".heart-count").text());
-      $({ count: currentCount }).animate(
-        { count: currentCount - 1 },
-        {
-          duration: 1000, 
-          step: function () {
-            $(".heart-count").text(Math.ceil(this.count));
-          },
-        }
-      );
+      isLiked = false; 
     } else {
       $(this).css("color", "red");
-      let currentCount = parseInt($(".heart-count").text());
-      $({ count: currentCount }).animate(
-        { count: currentCount + 1 },
-        {
-          duration: 1000, 
-          step: function () {
-            $(".heart-count").text(Math.ceil(this.count));
-          },
-        }
-      );
+      isLiked = true; 
     }
+    let currentCount = parseInt($(".heart-count").text());
+
+    if (isLiked) {
+      currentCount++;
+    } else {
+      currentCount--;
+    }
+
+    $({ count: currentCount }).animate(
+      { count: currentCount },
+      {
+        duration: 100,
+        step: function () {
+          $(".heart-count").text(Math.ceil(this.count));
+        },
+      }
+    );
     $(this).addClass("heart-pulse");
+
     setTimeout(() => {
       $(this).removeClass("heart-pulse");
-    }, 1000);
+    }, 2000);
   });
 });
