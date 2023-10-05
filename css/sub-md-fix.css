@@ -186,7 +186,6 @@
 .md-custom-image > p {
   font-size: 14px;
   text-align: right;
-  width: 65%;
 }
 .md-custom-bottom {
   margin-top: 20px;
@@ -695,5 +694,8 @@ body {
     top: 270px;
     right: 11px;
     font-size: 20px;
+  }
+  .md-fix-class-count{
+    font-size: 14px
   }
 }
