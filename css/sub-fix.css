@@ -2,11 +2,10 @@
 .fix-menu {
   position: sticky;
   top: 13.5%;
-  left: 20%;
   display: inline-block;
   width: 100%;
   height: auto;
-  max-height: 750px;
+  max-height: 808px;
   max-width: 340px;
 }
 .fix-menu-box {
@@ -177,7 +176,7 @@
 }
 .custom-image > p {
   font-size: 14px;
-  margin-left: 10px;
+  text-align: right;
 }
 .custom-bottom {
   margin-top: 20px;

@@ -245,15 +245,18 @@
 }
 
 @media all and (max-width: 410px) {
-  .review-love-2{
+  .review-love{
     margin-bottom: 90px;
+  }
+  .review-love-2{
+    margin-bottom: 110px;
+  }
+  .review-sad-2{
+    margin-bottom: 60px;
   }
 }
 @media all and (max-width: 320px) {
   .review-love-2{
     margin-bottom: 120px;
-  }
-  .review-sad-2{
-    margin-bottom: 40px;
-  }
+  } 
 }
