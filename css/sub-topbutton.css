@@ -71,37 +71,7 @@
   }
 
   @media all and (max-width: 768px) {
-    .top-btn{
-      width: 40px;
-      line-height: 40px;
-    }
-    .top-chat-button{
-      width: 60px;
-    }
-    .top-chat-button:hover{
-      scale: 1.2;
-    }
-  }
-
-  @media all and (max-width: 480px) {
     .top-button{
-      right: 20px;
-      bottom: 20px;
-    }
-    .top-btn{
-      width: 30px;
-      line-height: 30px;
-    }
-    .top-chat-button{
-      width: 30px;
-    }
-    .top-chat-button::after{
-      width: 15px;
-      height: 15px;
-      line-height: 15px;
-      font-size: 10px;
-    }
-    .top-chat-button:hover{
-      scale: 1.2;
+      display: none;
     }
   }
