@@ -74,25 +74,35 @@ window.addEventListener("load", function () {
 
   // ----------------------------------------------------------
 
-  var button = document.getElementById("md-applyButton");
+  function setFocusOnClick() {
+    var div1 = document.getElementById("md-weClass");
+    var div2 = document.getElementById("md-meClass");
 
-  button.addEventListener("click", function () {
-    window.location.href = "payment.html";
-  });
+    div1.addEventListener("click", function () {
+      div1.focus();
+      div1.classList.add("focused");
+      div2.classList.remove("focused");
+    });
 
-  // ------------클래스 신청하기 버튼 클릭 시 효과--------------------
+    div2.addEventListener("click", function () {
+      div2.focus();
+      div2.classList.add("focused");
+      div1.classList.remove("focused");
+    });
+  }
 
-  // 대시보드 버튼 엘리먼트 가져오기
-  var dashboardButton = document.getElementById("md-applyButton");
+  function navigateToPaymentPage() {
+    if (
+      document.getElementById("md-weClass").classList.contains("focused") ||
+      document.getElementById("md-meClass").classList.contains("focused")
+    ) {
+      window.location.href = "payment.html";
+    } else {
+      alert("수강권과 준비물을 선택 주세요.");
+    }
+  }
 
-  // 버튼 클릭 이벤트 리스너 추가
-  dashboardButton.addEventListener("click", function () {
-    showInitialDashboard();
-  });
-
-  // 대시보드 화면 표시
   function showInitialDashboard() {
-    // localStorage에서 사용자 이름 가져오기
     var usernick = localStorage.getItem("usernick");
 
     if (usernick) {
@@ -102,6 +112,14 @@ window.addEventListener("load", function () {
       window.location.href = "login.html";
     }
   }
+
+  setFocusOnClick();
+
+  var applyButton = document.getElementById("md-applyButton");
+  applyButton.addEventListener("click", function () {
+    navigateToPaymentPage();
+    showInitialDashboard();
+  });
 });
 
 // ------------------------제이쿼리----------------------------

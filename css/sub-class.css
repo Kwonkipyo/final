@@ -65,7 +65,6 @@
   align-items: center;
   position: absolute;
   width: 25%;
-  height: 10%;
   max-width: 25%;
   bottom: 10%;
   left: 50%;
@@ -82,12 +81,13 @@
   font-size: 20px;
   font-weight: 900;
   font-family: 'NanumSquare';
+  margin-left: 8%;
 }
 .class-info-banner-bt:hover{
   background-color: #e0b12d;
 }
 .class-info-banner-bt i{
-  font-size: 25px;
+  font-size: 22px;
   padding-left: 5%;
 }
 
@@ -303,6 +303,9 @@
 }
 
 @media all and (max-width: 1024px) {
+  .class-info-banner-bt{
+    padding: 12px 20px;
+  }
   .main-content {
     max-width: 1024px;
     width: 100%;
@@ -332,6 +335,9 @@
 }
 
 @media all and (max-width: 768px) {
+  .class-info-banner-bt{
+    padding: 8px 20px;
+  }
   .class-info-banner-bt p{
     font-size: 16px;
   }
@@ -390,6 +396,9 @@
 }
 
 @media all and (max-width: 600px) {
+  .class-info-banner-bt{
+    padding: 5px 20px;
+  }
   .class-info-banner-bt p{
     font-size: 14px;
   }
@@ -435,6 +444,9 @@
 }
 @media all and (max-width: 480px) {
   .class-info-banner-bt{
+    padding: 3px 20px;
+  }
+  .class-info-banner-bt{
     max-width: 30%;
     width: 30%;
   }
@@ -473,20 +485,7 @@
 @media all and (max-width: 380px) {
   .class-info-banner-bt{
     bottom: 9%;
-  }
-  .title-menu ul li {
-    font-size: 14px;
-    padding: 5px 3px;
-  }
-}
-@media all and (max-width: 320px) {
-  .class-info-banner-bt p{
-    padding-top: 1px;
-    font-size: 10px;
-  }
-  .class-info-banner-bt i{
-    padding-top: 1px;
-    font-size: 11px;
+    padding: 2px 20px;
   }
   .title-menu ul li {
     font-size: 14px;
@@ -510,4 +509,22 @@
     font-size: 12px;
     top: 83%;
 }
+}
+@media all and (max-width: 320px) {
+  .class-info-banner-bt{
+    bottom: 9.5%;
+    padding: 1px 20px;
+  }
+  .class-info-banner-bt p{
+    padding-top: 1px;
+    font-size: 10px;
+  }
+  .class-info-banner-bt i{
+    padding-top: 1px;
+    font-size: 11px;
+  }
+  .title-menu ul li {
+    font-size: 14px;
+    padding: 5px 3px;
+  }
 }

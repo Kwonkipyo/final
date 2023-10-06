@@ -1,15 +1,3 @@
-// ---------------------------------------------------
-
-function showAlert(event) {
-  alert("로그인 후 이용해주세요.");
-
-  event.preventDefault();
-
-  window.location.href = "login.html";
-}
-
-// ----------------------------------------------------
-
 window.addEventListener("load", function () {
   showInitialDashboard();
 
