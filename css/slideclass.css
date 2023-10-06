@@ -1,20 +1,23 @@
-.aiclass{
+.bestclass,
+.newclass{
     margin-bottom: 0;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
 }
 
-.newclass{
+.aiclass{
     text-align: left;
     margin-bottom: 0;
     padding-bottom: 200px;
 }
 
+.sw-bestclass,
 .sw-aiclass,
 .sw-newclass{
     width: 100%;
     overflow: visible;
 }
 
+.bestclass .swiper-wrapper,
 .aiclass .swiper-wrapper,
 .newclass .swiper-wrapper{
     width: 100%;
@@ -24,15 +27,25 @@
 .class-slide{
     height: 250px;
     width: 300px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 25px;
-    overflow: hidden;
+    position: relative;
     transition: 0.3s;
+}
+
+.bestclass .class-ranking{
+    position: absolute;
+    font-weight: 900;
+    font-size: 250px;
+    bottom: -135px;
+    left: -110px;
+    z-index: -1;
+    color: #888;
 }
 
 .class-slide:hover{
     transform: translateY(-10px);
+}
+
+.class-slide:hover .class-box{
     box-shadow: 0 14px 28px rgba(0,0,0,0.7), 0 10px 10px rgba(0,0,0,0.67);
 }
 
@@ -42,14 +55,21 @@
     height: 100%;
     flex-direction: column;
     justify-content: space-between;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    transition: 0.3s;
+    overflow: hidden;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.7), 0 10px 10px rgba(0,0,0,0.67);
 }
 
 .aiclass .class-box{
-    align-items: flex-start;
+    align-items: flex-end;
 }
 
+.bestclass .class-box,
 .newclass .class-box{
-    align-items: flex-end;
+    align-items: flex-start;
 }
 
 .class-box .class-txt{
@@ -63,11 +83,31 @@
     justify-content: space-between;
 }
 
-.class-box .class-txt .class-price{
-    text-align: right;
+.class-box .class-txt-bottom{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.aiclass .class-box .class-txt-bottom{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.aiclass .class-box .class-txt-bottom .class-price{
+    
+}
+
+.class-box .class-txt-bottom .class-teacher{
+    font-size: 13px;
+    opacity: 0.6;
+    font-weight: 700;
 }
 
 .bestclass-title,
+.goodclass-title,
 .aiclass-title,
 .newclass-title{
     font-weight: 700;
@@ -76,6 +116,7 @@
 }
 
 .bestclass-title span,
+.goodclass-title span,
 .aiclass-title > span,
 .newclass-title span{
     font-size: 20px;
@@ -85,12 +126,18 @@
 }
 
 .bestclass-title p,
+.goodclass-title p,
 .aiclass-title p,
 .newclass-title p{
     font-size: 35px;
     display: inline;
 }
 
+.goodclass-title i{
+    font-size: 35px;
+}
+
+.bestclass .plus,
 .aiclass .plus,
 .newclass .plus{
     position: absolute;
@@ -98,19 +145,17 @@
     top: 20px;
 }
 
-.newclass .plus{
+.aiclass .plus{
     display: flex;
     flex-direction: row-reverse;
     align-items: baseline;
 }
 
-.plus i,
 .plus i{
     margin-left: 5px;
     transition: 0.3s;
 }
 
-.plus:hover i,
 .plus:hover i{
     transform: translateX(3px);
 }
@@ -165,6 +210,46 @@
     background-color: rgb(0, 119, 255);
 }
 
+.class-slide .class-txt-top{
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.class-slide .class-txt-top i{
+    transform: rotate(-15deg);
+    margin-right: 3px;
+}
+
+.class-slide .class-txt-top span{
+    font-size: 25px;
+    margin-right: 5px;
+    font-weight: 900;
+}
+
+.class-slide .class-count{
+    color: #acdbc4;
+}
+
+.class-slide .class-count span{
+    color: #5de29f;
+}
+
+.class-slide .class-grade{
+    color: rgb(255, 224, 140);
+}
+
+.class-slide .class-grade span{
+    color: rgb(255, 187, 0);
+}
+
+.class-slide .class-new{
+    color: #c0e6ff;
+}
+
+.class-slide .class-new span{
+    color: #67c2ff;
+}
+
 /* aiclass */
 /* newclass */
 
@@ -192,6 +277,11 @@
     .class-type {
         padding: 2px 8px;
         font-size: 14px;
+    }
+    .bestclass .class-ranking{
+        font-size: 200px;
+        bottom: -115px;
+        left: -90px;
     }
 }
 /* mobile */
@@ -241,6 +331,7 @@
     }
     .class-type {
         padding: 2px 6px;
+        margin-left: 5px;
         font-size: 12px;
     }
     .bestclass-title span,
@@ -257,5 +348,23 @@
     .newclass .plus{
         font-size: 12px;
         top: 40px;
+    }
+    .class-slide .class-txt-top{
+        font-weight: 700;
+        font-size: 14px;
+    }
+    .class-slide .class-txt-top span{
+        font-size: 20px;
+    }
+    .bestclass .class-ranking{
+        font-size: 150px;
+        bottom: -88px;
+        left: -70px;
+    }
+    .class-box{
+        border-radius: 10px;
+    }
+    .class-box .class-txt-bottom .class-teacher {
+        font-size: 10px;
     }
 }
