@@ -1,3 +1,3 @@
 function showAlert() {
-  alert('결제를 진행해주세요.');
+  alert('결제 후 이용 가능합니다.');
 }

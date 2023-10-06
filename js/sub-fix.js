@@ -90,7 +90,7 @@ window.addEventListener("load", function () {
     ) {
       window.location.href = "payment.html";
     } else {
-      alert("수강권과 준비물을 선택 주세요.");
+      alert("수강권과 준비물을 선택해 주세요.");
     }
   }
 
@@ -100,7 +100,7 @@ window.addEventListener("load", function () {
     if (usernick) {
       document.getElementById("boardWriter").textContent = `${usernick}`;
     } else {
-      alert("로그인 후 이용해주세요.");
+      alert("로그인 후 이용해 주세요.");
       window.location.href = "login.html";
     }
   }
