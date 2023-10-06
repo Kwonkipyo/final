@@ -369,8 +369,8 @@
   }
   #dashboard-section{
     position: absolute;
-    right: 0;
-    top: 13px;
+    right: 20px;
+    top: 23px;
   }
 }
 @media all and (max-width:320px){
