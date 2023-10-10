@@ -133,22 +133,13 @@
     display: inline;
 }
 
-.goodclass-title i{
-    font-size: 35px;
-}
-
 .bestclass .plus,
+.goodclass .plus,
 .aiclass .plus,
 .newclass .plus{
     position: absolute;
     right: 20px;
     top: 20px;
-}
-
-.aiclass .plus{
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: baseline;
 }
 
 .plus i{
@@ -260,12 +251,14 @@
         width: 250px;
     }
     .bestclass-title p,
+    .goodclass-title p,
     .aiclass-title p,
     .newclass-title p{
         font-size: 30px;
     }
     .bestclass-title span,
-    .aiclass-title span,
+    .goodclass-title span,
+    .aiclass-title > span,
     .newclass-title span{
         font-size: 18px;
     }
@@ -287,35 +280,36 @@
 /* mobile */
 @media all and (max-width: 768px) {
     .bestclass-title span,
+    .goodclass-title span,
     .aiclass-title > span,
     .newclass-title span{
         font-size: 17px;
         margin-right: 8px;
     }
     .bestclass-title p,
+    .goodclass-title p,
     .aiclass-title p,
     .newclass-title p{
         font-size: 30px;
     }
-    .plus,
     .plus{
         font-size: 14px;
     }
 }
 @media all and (max-width: 600px) {
     .bestclass-title,
+    .goodclass-title,
     .aiclass-title,
     .newclass-title{
         display: flex;
         flex-direction: column;
         margin-bottom: 20px;
     }
-    .newclass-title{
-        align-items: flex-end;
-    }
+    .bestclass .plus,
+    .goodclass .plus,
     .aiclass .plus,
     .newclass .plus{
-        top: 40px;
+        top: 35px;
     }
 }
 @media all and (max-width: 480px){
@@ -335,19 +329,16 @@
         font-size: 12px;
     }
     .bestclass-title span,
+    .goodclass-title span,
     .aiclass-title > span,
     .newclass-title span{
         font-size: 15px;
     }
     .bestclass-title p,
+    .goodclass-title p,
     .aiclass-title p,
     .newclass-title p{
-        font-size: 25px;
-    }
-    .aiclass .plus,
-    .newclass .plus{
-        font-size: 12px;
-        top: 40px;
+        font-size: 22px;
     }
     .class-slide .class-txt-top{
         font-weight: 700;
@@ -365,6 +356,9 @@
         border-radius: 10px;
     }
     .class-box .class-txt-bottom .class-teacher {
+        font-size: 10px;
+    }
+    .plus{
         font-size: 10px;
     }
 }
