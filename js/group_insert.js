@@ -16,10 +16,130 @@ window.addEventListener("load", function () {
   }
 
   // ====================
+  // data.json을 로딩. 연결시켜준다.
+  const xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function (event) {
+    const req = event.target;
+    if (req.readyState === XMLHttpRequest.DONE) {
+      const str = req.response;
+      // 글자로 온 데이터를 객체로 변환
+      // 글자가 json 규칙대로 만들어진 문자열.
+      // 그러므로 json 글자를 객체로 변환해서 활용한다.
+      let obj = JSON.parse(str);
+
+      BEST_CLASS = obj.bestclass;
+      AI_CLASS = obj.aiclass;
+      NEW_CLASS = obj.newclass;
+    }
+  };
+
+  // 자료를 호출한다.
+  xhttp.open("GET", "data.json");
+  // 웹브라우저 기능 실행 할 수 있도록 요청.
+  xhttp.send();
+
+  // #searchButton 버튼을 클릭했을 때의 이벤트 리스너 추가
+  document
+    .getElementById("searchButton")
+    .addEventListener("click", function () {
+      document.querySelector(".applicant").style.display = "none";
+      // #searchClass 입력 필드의 값을 가져옴
+      const searchKeyword = document.getElementById("searchClass").value.trim();
+
+      const searchResultsElement = document.getElementById("searchResults");
+      searchResultsElement.style.display = "block";
+
+      // data.json 파일에서 클래스 검색
+      if (searchKeyword !== "") {
+        const searchResults = searchClasses(searchKeyword);
+        displaySearchResults(searchResults);
+      }
+
+      document.addEventListener("click", function (event) {
+        const searchClass = document.getElementById("searchClass");
+        const searchBtn = document.getElementById("searchButton");
+        const searchBtni = document.querySelector("#searchButton i");
+        const searchList = document.getElementById("searchResults");
+        if (
+          event.target !== searchClass &&
+          event.target !== searchBtn &&
+          event.target !== searchBtni
+        ) {
+          searchList.style.display = "none";
+        }
+      });
+    });
+
+  // data.json에서 클래스 검색 함수
+  function searchClasses(keyword) {
+    const allClasses = BEST_CLASS.concat(AI_CLASS, NEW_CLASS); // AI 클래스와 신규 클래스를 합침
+    const results = [];
+
+    // 모든 클래스를 순회하면서 키워드와 일치하는 것을 찾음
+    for (const classObj of allClasses) {
+      if (classObj.name.toLowerCase().includes(keyword.toLowerCase())) {
+        results.push(classObj);
+      }
+    }
+    return results;
+  }
+
+  // 검색 결과를 화면에 표시하는 함수
+  function displaySearchResults(results) {
+    const searchResultsElement = document.getElementById("searchResults");
+    searchResultsElement.innerHTML = ""; // 기존 결과를 초기화
+
+    if (results.length === 0) {
+      // 검색 결과가 없을 경우 메시지를 출력
+      searchResultsElement.innerHTML = "<li>검색 결과가 없습니다.</li>";
+    } else {
+      // 검색 결과를 리스트로 출력
+      for (const classObj of results) {
+        const listItem = document.createElement("li");
+
+        // 클래스 이미지를 표시
+        const image = document.createElement("img");
+        image.src = "images/" + classObj.pic; // classObj에서 이미지 URL을 가져와서 설정
+        image.alt = classObj.name; // 이미지의 대체 텍스트 설정
+        listItem.appendChild(image); // 이미지를 리스트 아이템에 추가
+
+        const text = document.createElement("p");
+        text.textContent = classObj.name;
+        listItem.appendChild(text);
+
+        searchResultsElement.appendChild(listItem);
+
+        listItem.addEventListener("click", function () {
+          document.getElementById("searchClass").value = classObj.name;
+          document.querySelector(".applicant").style.display = "flex";
+
+          const boardNumWrap = document.querySelector(".boardNum-wrap");
+          const numPeople = document.createElement("p");
+
+          for (const textNum of NEW_CLASS) {
+            if (textNum.name.includes(classObj.name)) {
+              numPeople.textContent = "5명";
+              break;
+            } else {
+              numPeople.textContent = "10명";
+              break;
+            }
+          }
+
+          // 이전에 존재하는 내용을 초기화하고 새로운 내용을 추가합니다.
+          boardNumWrap.innerHTML = "";
+          boardNumWrap.appendChild(numPeople);
+
+          console.log(numPeople.textContent);
+        });
+      }
+    }
+  }
+
+  // ====================
   const postTitleInput = document.getElementById("boardTitle"); // 제목
   const postWriterInput = document.getElementById("boardWriter"); // 작성자
   const postClassInput = document.getElementById("searchClass"); // 클래스
-  const postNumInput = document.getElementById("boardNum"); // 신청자수
   const postContentInput = document.getElementById("boardContent"); // 내용
   const postImageInput = document.getElementById("boardImage"); // 이미지
 
@@ -46,10 +166,12 @@ window.addEventListener("load", function () {
     const title = postTitleInput.value;
     const writer = postWriterInput.innerText;
     const hobbyClass = postClassInput.value;
-    const userNum = postNumInput.value;
     const content = postContentInput.value;
     const imageFile = postImageInput.files[0];
     const date = today;
+
+    // numPeople 값을 가져옵니다.
+    const userNum = document.querySelector(".boardNum-wrap p").textContent;
 
     var count = posts.length + 12632;
 
@@ -82,7 +204,6 @@ window.addEventListener("load", function () {
         postTitleInput.value = "";
         postWriterInput.value = "";
         postClassInput.value = "";
-        postNumInput.value = "";
         postContentInput.value = "";
         postImageInput.value = "";
 
@@ -110,118 +231,13 @@ window.addEventListener("load", function () {
   });
 
   // ====================
-  // 최소값과 최대값 설정
-  var minValue = 5;
-  var maxValue = 10;
+  const appIcon = document.querySelector(".applicant i");
+  const appTextInfo = document.querySelector(".app-textInfo");
 
-  // boardNum 엘리먼트와 버튼 엘리먼트 가져오기
-  var boardNum = document.getElementById("boardNum");
-  var downBtn = document.querySelector(".boardNum-btn.down");
-  var upBtn = document.querySelector(".boardNum-btn.up");
-
-  // Down 버튼 클릭 시
-  downBtn.addEventListener("click", function () {
-    var currentValue = parseInt(boardNum.value);
-    if (currentValue > minValue) {
-      boardNum.value = currentValue - 1;
-    }
+  appIcon.addEventListener("mouseover", function () {
+    appTextInfo.style.display = "block";
   });
-
-  // Up 버튼 클릭 시
-  upBtn.addEventListener("click", function () {
-    var currentValue = parseInt(boardNum.value);
-    if (currentValue < maxValue) {
-      boardNum.value = currentValue + 1;
-    }
+  appIcon.addEventListener("mouseout", function () {
+    appTextInfo.style.display = "none";
   });
-
-  // ====================
-  // data.json을 로딩. 연결시켜준다.
-  const xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function (event) {
-    const req = event.target;
-    if (req.readyState === XMLHttpRequest.DONE) {
-      const str = req.response;
-      // 글자로 온 데이터를 객체로 변환
-      // 글자가 json 규칙대로 만들어진 문자열.
-      // 그러므로 json 글자를 객체로 변환해서 활용한다.
-      let obj = JSON.parse(str);
-
-      AI_CLASS = obj.aiclass;
-      NEW_CLASS = obj.newclass;
-    }
-  };
-
-  // 자료를 호출한다.
-  xhttp.open("GET", "data.json");
-  // 웹브라우저 기능 실행 할 수 있도록 요청.
-  xhttp.send();
-
-  // #searchButton 버튼을 클릭했을 때의 이벤트 리스너 추가
-  document
-    .getElementById("searchButton")
-    .addEventListener("click", function () {
-      // #searchClass 입력 필드의 값을 가져옴
-      const searchKeyword = document.getElementById("searchClass").value.trim();
-
-      const searchResultsElement = document.getElementById("searchResults");
-      searchResultsElement.style.display = "block";
-
-      // data.json 파일에서 클래스 검색
-      if (searchKeyword !== "") {
-        const searchResults = searchClasses(searchKeyword);
-        displaySearchResults(searchResults);
-      }
-
-      document.addEventListener("click", function (event) {
-        const searchClass = document.getElementById("searchClass");
-        const searchBtn = document.getElementById("searchButton");
-        const searchBtni = document.querySelector("#searchButton i");
-        const searchList = document.getElementById("searchResults");
-        if (
-          event.target !== searchClass &&
-          event.target !== searchBtn &&
-          event.target !== searchBtni
-        ) {
-          searchList.style.display = "none";
-        }
-      });
-    });
-
-  // data.json에서 클래스 검색 함수
-  function searchClasses(keyword) {
-    const allClasses = AI_CLASS.concat(NEW_CLASS); // AI 클래스와 신규 클래스를 합침
-    const results = [];
-
-    // 모든 클래스를 순회하면서 키워드와 일치하는 것을 찾음
-    for (const classObj of allClasses) {
-      if (classObj.name.toLowerCase().includes(keyword.toLowerCase())) {
-        results.push(classObj);
-      }
-    }
-    return results;
-  }
-
-  // 검색 결과를 화면에 표시하는 함수
-  function displaySearchResults(results) {
-    const searchResultsElement = document.getElementById("searchResults");
-    searchResultsElement.innerHTML = ""; // 기존 결과를 초기화
-
-    if (results.length === 0) {
-      // 검색 결과가 없을 경우 메시지를 출력
-      searchResultsElement.innerHTML = "<li>검색 결과가 없습니다.</li>";
-    } else {
-      // 검색 결과를 리스트로 출력
-      for (const classObj of results) {
-        const listItem = document.createElement("li");
-        listItem.textContent = classObj.name;
-        searchResultsElement.appendChild(listItem);
-
-        listItem.addEventListener("click", function () {
-          document.getElementById("searchClass").value = classObj.name;
-          document.querySelector(".applicant").style.display = "flex";
-        });
-      }
-    }
-  }
 });

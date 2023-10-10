@@ -40,7 +40,7 @@ window.addEventListener("load", function () {
     localStorage.setItem("username", username);
     localStorage.setItem("useremail", useremail);
     localStorage.setItem("usernick", usernick);
-    alert("가입이 완료 되었습니다. 로그인 페이지로 이동합니다.");
+    alert("Class&의 가족이 되신 것을 환영합니다! 로그인 페이지로 이동합니다.");
     window.location.href =
       "login.html?username=" +
       encodeURIComponent(username) +
@@ -101,7 +101,7 @@ window.addEventListener("load", function () {
 
   function checkPw() {
     if (pw1.value.length < 8) {
-      alert("비밀번호는 8자리 이상 입력하셔야 합니다.");
+      alert("비밀번호는 8자리 이상 입력해야 합니다.");
       pw1.value = ""; // 비밀번호 필드 지움
       pw1.focus(); // 비밀번호를 다시 입력할 수 있게 포커싱
     }
@@ -126,7 +126,7 @@ window.addEventListener("load", function () {
       const signnick = document.getElementById("signup-nickname");
 
       if (signnick.value === "") {
-        alert("닉네임을 작성해주세요");
+        alert("닉네임을 작성해주세요.");
       } else {
         var modal = document.getElementById("signup-modal-wrap");
         modal.style.display = "block";
@@ -144,11 +144,11 @@ window.addEventListener("load", function () {
     if (authenticatedUser) {
       nickStatus.style.color = "red";
       nickStatus.textContent =
-        signnick.value + "은 사용할 수 없는 닉네임입니다.";
+        signnick.value + " 은(는) 사용할 수 없는 닉네임입니다.";
     } else {
       nickStatus.style.color = "blue";
       nickStatus.textContent =
-        signnick.value + "은 사용할 수 있는 닉네임입니다.";
+        signnick.value + " 은(는) 사용할 수 있는 닉네임입니다.";
     }
   });
 

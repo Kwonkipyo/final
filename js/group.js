@@ -31,9 +31,9 @@ window.addEventListener("load", function () {
     postElement.innerHTML = `
     <td>${post.count}</td>
     <td>${post.title}</td>
-    <td>${post.writer}</td>
+    <td>${post.writer}<img src="images/grade-silver.png" alt="등급-실버"></td>
     <td>${post.date}</td>
-    <td>${post.userNum}명</td>
+    <td>${post.userNum}</td>
     <td><div class="group-tag">진행 중</div></td>
   `;
 

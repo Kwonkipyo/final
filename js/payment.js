@@ -54,7 +54,8 @@ window.addEventListener("load", function () {
 
   const dropdownListItem = document.querySelector(".dropdown-list-item");
   dropdownListItem.addEventListener("click", function () {
-    document.querySelector(".dropdown-selected p").textContent = "사용가능 쿠폰 ";
+    document.querySelector(".dropdown-selected p").textContent =
+      "사용가능 쿠폰 ";
     let addSpan = document.createElement("span");
     addSpan.innerHTML = "3장";
     document.querySelector(".dropdown-selected p").appendChild(addSpan);
@@ -72,7 +73,8 @@ window.addEventListener("load", function () {
       return;
     }
 
-    alert("결제가 완료되었습니다. 당신의 취미 생활을 응원합니다.");
+    alert("결제가 완료되었습니다. 즐거운 취미 생활 되세요!");
     window.location.href = "index.html";
   });
+
 });

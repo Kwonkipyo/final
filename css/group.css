@@ -22,6 +22,9 @@ section {
   font-weight: bold;
   color: #e8eddf;
 }
+.group-header .sub-inner {
+  margin-top: 50px;
+}
 .group-banner {
   width: 100%;
   margin-top: 33px;
@@ -49,23 +52,28 @@ section {
 .group-banner-right button {
   background-color: transparent;
   border: none;
+  font-family: "NanumSquare";
+}
+.group-banner-right button a:hover {
+  background-color: #c29b31;
 }
 .group-banner-right button a {
   display: block;
   font-size: 15px;
-  font-weight: bold;
+  font-weight: 900;
   text-align: center;
   padding: 10px 25px;
   border-radius: 30px;
   background-color: #f5cb5c;
   color: #000;
   border: none;
+  transition: 0.3s;
 }
 /* 게시판 탭 */
 .board-tap .taps {
   width: 100%;
-  margin: 34px 0;
-  color: #242423;
+  margin-top: 30px;
+  color: #e8eddf;
 }
 .board-tap .taps ul {
   display: flex;
@@ -83,12 +91,18 @@ section {
   font-weight: bold;
   color: #f5cb5c;
 }
+.board-tap .taps a:hover {
+  color: #f7db8f;
+}
 .searchbox {
-  padding: 10px 25px;
+  padding: 0 25px;
   border-radius: 30px;
   background-color: #fff;
   border: 1px solid #242423;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  height: 40px;
 }
 .searchbox input {
   font-size: 15px;
@@ -96,21 +110,21 @@ section {
 }
 .searchbox i {
   color: #9d9d9d;
+  cursor: pointer;
 }
 /* 게시판 */
 .board {
-  background-color: #fff;
   padding-bottom: 100px;
-  margin-top: 40px;
 }
 .board-wrap {
   /* min-height: 845px; */
 }
 .board-list {
   /* min-height: 720px; */
-  padding-top: 34px;
+  padding-top: 70px;
   font-size: 16px;
-  color: #000;
+  color: #fff;
+  color: #e8eddf;
   text-align: center;
 }
 .board-list h2 {
@@ -121,7 +135,8 @@ section {
 }
 .board-list-title {
   width: 100%;
-  margin-top: 30px;
+  border-top: 1px solid;
+  margin-top: 15px;
 }
 .board-list-title tr th:nth-child(1),
 .board-list-title tr td:nth-child(1),
@@ -175,6 +190,10 @@ section {
 .board-list-title tbody tr td:last-child {
   color: blue;
 }
+.board-list-title tbody tr td img {
+  width: 15%;
+  margin-left: 5px;
+}
 .board-list-title .group-tag {
   display: inline-block;
   border-radius: 50px;
@@ -184,39 +203,54 @@ section {
   background-color: royalblue;
   color: #e8eddf;
 }
+#postList > tr:hover {
+  background-color: #242423;
+}
+#post-notice > .notice:hover {
+  background-color: #e2c77b;
+}
 .paging {
   display: flex;
   justify-content: center;
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 40px;
+  margin-bottom: 30px;
   padding-bottom: 50px;
   font-size: 14px;
   color: #666;
+}
+.paging i:hover {
+  color: #f5cb5c;
 }
 .paging a {
   margin: 0 10px;
   cursor: pointer;
 }
-.paging-num {
-  border-bottom: 1px solid #666;
-}
 .paging-num.active {
   font-weight: bold;
   color: #f5cb5c;
+  border-bottom: 1px solid #666;
+}
+.paging-num:hover {
+  color: #f5cb5c;
+  border-bottom: 1px solid #666;
 }
 .board-btn {
   display: flex;
   justify-content: center;
   font-size: 17px;
   color: #000;
+  font-family: "NanumSquare";
+  font-weight: 700;
 }
 .board-btn a {
   display: inline-block;
   background-color: #f5cb5c;
   padding: 15px 50px;
+  transition: 0.3s;
 }
-.board-btn:hover a {
-  background-color: #f8c740;
+.board-btn a:hover {
+  background-color: #c29b31;
 }
 /* 필독 */
 .board-list-title .notice {

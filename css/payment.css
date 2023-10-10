@@ -73,6 +73,7 @@ section {
   color: #a0a0a0;
   font-weight: bold;
   margin-left: 10px;
+  text-align: right;
 }
 .payment-box .class-wrap {
   display: flex;
@@ -90,7 +91,7 @@ section {
   height: 65px;
   border-radius: 10px;
   margin-right: 10px;
-  background: url("/images/sub-visual.jpg") no-repeat center;
+  background: url("/images/sub-visual.jpg") no-repeat center center;
   background-size: cover;
 }
 .payment-box .class-wrap p:first-child {
@@ -103,8 +104,7 @@ section {
   font-size: 14px;
   font-weight: bold;
 }
-
-/*  */
+/* 쿠폰 */
 .payment-box .dropdown {
   border: 1px solid #e0e0e0;
   border-radius: 10px;
@@ -133,7 +133,6 @@ section {
 }
 .payment-box .dropdown-list {
   display: none;
-  /* position: absolute; */
   width: 100%;
   border-top: 1px solid #e0e0e0;
   z-index: 1;
@@ -156,13 +155,13 @@ section {
 }
 .payment-box .coupon-dropdown-label span {
   display: block;
+  font-size: 16px;
 }
 .payment-box .coupon-dropdown-label span:last-child {
   font-size: 14px;
   color: #a0a0a0;
 }
 /*  */
-
 .payment-box .radio_box {
   width: 100%;
   border-radius: 10px;
@@ -172,6 +171,9 @@ section {
 .payment-box .radio_box fieldset {
   padding: 15px;
   border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+}
+.payment-box .radio_box fieldset * {
   cursor: pointer;
 }
 .payment-box .radio_box fieldset:last-child {
@@ -214,6 +216,15 @@ section {
   .payment-box .dropdown-selected {
     font-size: 14px;
   }
+  .payment-box .dropdown-list-item:first-child label {
+    font-size: 14px;
+  }
+  .payment-box .coupon-dropdown-label span {
+    font-size: 14px;
+  }
+  .payment-box .coupon-dropdown-label span:last-child {
+    font-size: 12px;
+  }
   .payment-box .text-wrap {
     font-size: 14px;
   }
@@ -251,6 +262,42 @@ section {
   .payment-box h2 {
     font-size: 14px;
   }
+  .payment-box .student-wrap label {
+    font-size: 13px;
+  }
+  .payment-box .student-wrap input {
+    font-size: 13px;
+  }
+  .payment-box .dropdown-selected {
+    font-size: 13px;
+  }
+  .payment-box .dropdown-list-item:first-child label {
+    font-size: 13px;
+  }
+  .payment-box .coupon-dropdown-label span {
+    font-size: 13px;
+  }
+  .payment-box .coupon-dropdown-label span:last-child {
+    font-size: 11px;
+  }
+  .payment-box .text-wrap {
+    font-size: 13px;
+  }
+  .payment-box .class-wrap {
+    font-size: 13px;
+  }
+  .payment-box .class-wrap p:first-child {
+    font-size: 14px;
+  }
+  .payment-box > p {
+    font-size: 12px;
+  }
+  .payment-box .radio_box {
+    font-size: 13px;
+  }
+  .payment-box.check-box {
+    font-size: 13px;
+  }
   .payment-wrap .pay {
     font-size: 17px;
   }
@@ -265,6 +312,16 @@ section {
   .payment-box .student-wrap input {
     width: 100%;
     min-width: auto;
+  }
+  .payment-box .text-wrap h3 span {
+    display: block;
+  }
+  .payment-box .text-wrap p span {
+    display: block;
+    white-space: nowrap;
+  }
+  .payment-box .class-wrap div:last-child {
+    max-width: 180px;
   }
 }
 @media all and (max-width: 320px) {
