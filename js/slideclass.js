@@ -74,7 +74,7 @@ window.addEventListener("load", function(){
         bestClassTag.innerHTML = html;
         var swiper = new Swiper(".sw-bestclass", {
             slidesPerView: 'auto',
-            speed: 7000,
+            speed: 10000,
             spaceBetween: 130,
             freeMode: true,
             autoplay: {     //자동슬라이드 (false-비활성화)
@@ -138,7 +138,7 @@ window.addEventListener("load", function(){
         aiClassTag.innerHTML = html;
         var swiper = new Swiper(".sw-aiclass", {
             slidesPerView: 'auto',
-            speed: 7000,
+            speed: 10000,
             spaceBetween: 50,
             freeMode: true,
             autoplay: {     //자동슬라이드 (false-비활성화)
@@ -202,7 +202,7 @@ window.addEventListener("load", function(){
         newClassTag.innerHTML = html;
         var swiper = new Swiper(".sw-newclass", {
             slidesPerView: 'auto',
-            speed: 7000,
+            speed: 10000,
             spaceBetween: 50,
             freeMode: true,
             autoplay: {     //자동슬라이드 (false-비활성화)

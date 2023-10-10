@@ -30,13 +30,15 @@
 .banner .banner1 img:first-child{
     position: absolute;
     left: 0;
-    width: 500px;
+    bottom: 0;
+    width: 370px;
 }
 
 .banner .banner1 img:last-child{
     position: absolute;
     right: 0;
-    width: 400px;
+    bottom: 0;
+    width: 270px;
 }
 
 .banner .banner1 .banner-txt{
