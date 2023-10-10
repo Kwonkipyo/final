@@ -43,7 +43,7 @@ window.addEventListener("load", function () {
         document.getElementById(
           "username-display2"
         ).textContent = `${username}`;
-        document.getElementById("bestclass-title").style.display = "none";
+        document.getElementById("goodclass-title").style.display = "none";
         document.getElementById("aiclass-title").style.display = "flex";
       } else if (page === "login.html" || page === "signup.html") {
       } else {
@@ -57,7 +57,7 @@ window.addEventListener("load", function () {
       document.getElementById("signup-section").style.display = "block";
       document.getElementById("dashboard-section").style.display = "none";
 
-      document.getElementById("bestclass-title").style.display = "flex";
+      document.getElementById("goodclass-title").style.display = "flex";
       document.getElementById("aiclass-title").style.display = "none";
     }
   }
