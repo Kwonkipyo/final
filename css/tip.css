@@ -60,7 +60,8 @@
 }
 .tip-sub-title > span:last-child{
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
+    opacity: 0.7;
 }
 .tip-sub-title{
     margin-bottom: 10px;
@@ -126,7 +127,7 @@
         flex-wrap: wrap;
     }
     .tip-logo{
-        width: 50%;
+        width: 40%;
         height: auto;
     }
     .tip-title span{
