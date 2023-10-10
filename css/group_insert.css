@@ -70,7 +70,7 @@ section {
 .board_insert select {
   display: block;
   font-size: 16px;
-  padding: 7px;
+  padding: 7px 11px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -118,43 +118,44 @@ section {
   font-size: 14px;
   padding: 10px;
   border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#searchResults li img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  object-fit: cover;
 }
 #board_form .applicant {
   display: none;
 }
-#board_form .boardNum-wrap {
+#board_form .applicant i {
   position: relative;
-  width: 10%;
-  min-width: 120px;
-  padding: 0 30px;
-  display: flex;
-  align-items: center;
-}
-#board_form .boardNum-wrap .boardNum-btn {
-  width: 30px;
-  height: 30px;
   font-size: 16px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
-#board_form .boardNum-wrap .boardNum-btn.down {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-#board_form .boardNum-wrap .boardNum-btn.up {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-#board_form .boardNum-wrap input {
-  width: 100%;
-  min-width: 60px;
-  height: 30px;
   text-align: center;
+  margin-left: 5px;
+  color: #333;
+}
+#board_form .applicant .app-textInfo {
+  position: absolute;
+  display: none;
+  top: 36%;
+  left: 1.5%;
+  width: 122px;
+  padding: 8px 9px;
+  background-color: #000;
+  opacity: 0.5;
+  border-radius: 4px;
+}
+#board_form .applicant .app-textInfo p {
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+}
+#board_form .boardNum-wrap {
+  width: 80%;
 }
 #board_form #boardClass {
   width: 45%;
@@ -165,6 +166,7 @@ section {
   width: 80%;
   height: 200px;
   resize: none;
+  padding: 10px;
 }
 #board_form #boardImage {
   font-size: 15px;
@@ -215,6 +217,15 @@ section {
   #board_form #boardWriter {
     font-size: 14px;
   }
+  #board_form .applicant i {
+    font-size: 14px;
+  }
+  #board_form .applicant .app-textInfo p {
+    font-size: 12px;
+  }
+  #board_form .boardNum-wrap p {
+    font-size: 14px;
+  }
   #board_form #boardImage {
     font-size: 13px;
   }
@@ -242,6 +253,15 @@ section {
     font-size: 12px;
   }
   #board_form #boardWriter {
+    font-size: 12px;
+  }
+  #board_form .applicant i {
+    font-size: 12px;
+  }
+  #board_form .applicant .app-textInfo p {
+    font-size: 10px;
+  }
+  #board_form .boardNum-wrap p {
     font-size: 12px;
   }
   #board_form #boardImage {

@@ -52,9 +52,15 @@ section {
 .modal-content > .close-btn {
   font-size: 14px;
   padding: 5px 20px;
-  background-color: #232324;
-  color: #e8eddf;
+  background-color: #f5cb5c;
   cursor: pointer;
+  border: none;
+  font-family: "NanumSquare";
+  font-weight: 700;
+  transition: 0.1s;
+}
+.modal-content > .close-btn:hover {
+  background-color: #d1ae4c;
 }
 /* sign-header 부분 */
 .sign-header {
@@ -107,7 +113,6 @@ section {
 .signup-box {
   display: block;
   width: 450px;
-  /* height: calc(100vh - 180px); */
   padding: 40px 60px;
   background-color: #000;
 }
@@ -122,14 +127,14 @@ section {
 #signup-form > input {
   width: 100%;
   padding: 10px 15px;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
   font-size: 14px;
   font-weight: bold;
 }
 #signup-form .like-input {
   width: 100%;
   padding: 7px 15px;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
   border-radius: 2px;
   background-color: #fff;
   display: flex;
@@ -144,7 +149,18 @@ section {
 }
 #check-nickname-button {
   font-size: 12px;
-  padding: 3px 5px;
+  padding: 4px 8px;
+  font-family: "NanumSquare";
+  background-color: #f5cb5c;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.1s;
+}
+#check-nickname-button:hover {
+  background-color: #d1ae4c;
 }
 #nickname-status {
   margin-top: 5px;
@@ -167,6 +183,9 @@ section {
   display: flex;
   justify-content: space-between;
   margin-bottom: 3px;
+}
+.checkbox_group li strong {
+  cursor: pointer;
 }
 .checkbox_group li:first-child {
   margin-bottom: 8px;
@@ -199,16 +218,19 @@ section {
 #signup-form button[type="submit"] {
   width: 100%;
   background-color: #f5cb5c;
+  color: #000;
   border: none;
   padding: 10px 15px;
   margin-bottom: 30px;
   font-size: 16px;
   font-weight: bold;
-  color: #000;
   cursor: pointer;
+  transition: 0.1s;
+  font-family: "NanumSquare";
+  font-weight: 900;
 }
 #signup-form button[type="submit"]:hover {
-  background-color: #ebbc3d;
+  background-color: #d1ae4c;
 }
 #signup-form p:last-child {
   text-align: center;
@@ -225,12 +247,11 @@ section {
   .signup-wrap {
     height: auto;
     background: #000;
-    padding: 125px 0;
   }
   .signup-box {
     width: 100%;
     height: 100%;
-    padding: 10px 30px;
+    padding: 90px 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -240,9 +261,6 @@ section {
   }
 }
 @media all and (max-width: 768px) {
-  .signup-wrap {
-    padding: 140px 0;
-  }
   #signup-form h2 {
     font-size: 22px;
   }
@@ -291,9 +309,6 @@ section {
   }
 }
 @media all and (max-width: 480px) {
-  .signup-wrap {
-    padding: 65px 0;
-  }
   .sign-header .logo {
     margin-top: 15px;
     margin-left: 15px;

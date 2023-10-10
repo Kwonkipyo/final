@@ -351,6 +351,7 @@
                     id="searchClass"
                     name="searchClass"
                     placeholder="클래스를 검색하세요"
+                    required
                   />
                   <button type="button" id="searchButton">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -362,18 +363,14 @@
             </fieldset>
             <!-- 신청자수 -->
             <fieldset class="applicant">
-              <label for="boardNum" class="must">신청자수</label>
-              <div class="boardNum-wrap">
-                <button type="button" class="boardNum-btn down">-</button>
-                <input
-                  type="text"
-                  id="boardNum"
-                  name="boardNum"
-                  value="5"
-                  required
-                />
-                <button type="button" class="boardNum-btn up">+</button>
-              </div>
+              <label for="boardNum" class="must">
+                신청자수
+                <i class="fa-solid fa-circle-info"></i>
+                <div class="app-textInfo">
+                  <p>이 클래스의 최소 <br />공동구매 인원 수입니다.</p>
+                </div>
+              </label>
+              <div class="boardNum-wrap"></div>
             </fieldset>
             <!-- 내용 -->
             <fieldset>
