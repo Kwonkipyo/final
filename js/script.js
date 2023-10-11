@@ -58,7 +58,7 @@ window.addEventListener("load", function () {
       document.getElementById("signup-section").style.display = "block";
       document.getElementById("dashboard-section").style.display = "none";
 
-      document.getElementById("bestclass-title").style.display = "flex";
+      document.getElementById("goodclass-title").style.display = "flex";
       document.getElementById("aiclass-title").style.display = "none";
     }
   }

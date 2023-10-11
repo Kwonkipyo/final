@@ -88,11 +88,9 @@ window.addEventListener("load", function () {
       topBtnImg.style.transform = "rotate(180deg)";
     }
 
-    let footer = document.querySelector(".footer");
-    let footerTop = footer.getBoundingClientRect().top;
-
-    if (window.innerHeight >= footerTop) {
-      topBtnBox.style.bottom = "160px";
+    // 미디어 쿼리를 사용하여 화면 너비가 1024px 이하일 때만 bottom 값을 80px로 설정
+    if (window.innerWidth <= 1024) {
+      topBtnBox.style.bottom = "80px";
     } else {
       topBtnBox.style.bottom = "30px";
     }
