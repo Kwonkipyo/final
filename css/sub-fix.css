@@ -82,7 +82,7 @@
 }
 .we-class-info-text {
   display: none;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
   text-align: center;
   width: 220px;
@@ -153,6 +153,7 @@
   text-overflow: ellipsis;
   color: #e8eddf;
   font-family: "NanumSquare" !important;
+  cursor: pointer;
 }
 #customDiv {
   display: none;
@@ -305,7 +306,8 @@
   font-weight: 900;
   transition: 0.3s;
 }
-.button-box h2:hover i {
+.button-box .me-buy:hover i,
+.button-box .we-buy:hover i {
   transform: translateX(3px);
 }
 
