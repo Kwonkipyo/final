@@ -18,6 +18,7 @@ window.addEventListener("load", function () {
     if (authenticatedUser) {
       // 사용자 이름을 localStorage에 저장
       localStorage.setItem("username", authenticatedUser.username);
+      localStorage.setItem("usernick", authenticatedUser.usernick);
       alert(`반갑습니다, ${authenticatedUser.username}님!\n오늘도 즐거운 취미 생활을 Class&가 함께하겠습니다.`);
       // localStorage.setItem("useremail", authenticatedUser.useremail);
       window.location.href = "index.html";

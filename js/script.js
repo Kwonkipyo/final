@@ -17,12 +17,12 @@ window.addEventListener("load", function () {
   }
 
   function clearUserData() {
-    localStorage.removeItem("username");
+    localStorage.removeItem("usernick");
   }
 
   function clearUsernameParam() {
     var url = new URL(window.location.href);
-    url.searchParams.delete("username");
+    url.searchParams.delete("usernick");
     window.history.replaceState({}, "", url.toString());
   }
 
