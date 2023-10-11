@@ -580,11 +580,11 @@ body {
   }
   .image-modal p {
     font-size: 13px;
-    top: 200px;
+    top: 225px;
     right: 383px;
   }
   .image-close {
-    top: 194px;
+    top: 220px;
     right: -78px;
     font-size: 22px;
   }
@@ -602,11 +602,11 @@ body {
     max-height: 120%;
   }
   .image-modal p {
-    top: 231px;
+    top: 257px;
     right: 330px;
   }
   .image-close {
-    top: 226px;
+    top: 252px;
     right: -23px;
   }
 }
@@ -653,11 +653,11 @@ body {
     max-height: 100%;
   }
   .image-modal p {
-    top: 274px;
+    top: 300px;
     right: 253px;
   }
   .image-close {
-    top: 268px;
+    top: 295px;
     right: 10px;
   }
 }
@@ -688,12 +688,12 @@ body {
     font-size: 13px;
   }
   .image-modal p {
-    top: 277px;
+    top: 305px;
     right: 217px;
     font-size: 12px;
   }
   .image-close {
-    top: 270px;
+    top: 297px;
     right: 11px;
     font-size: 20px;
   }
