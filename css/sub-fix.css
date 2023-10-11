@@ -82,14 +82,14 @@
 }
 .we-class-info-text {
   display: none;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   text-align: center;
   width: 220px;
   height: 40px;
   line-height: 40px;
-  bottom: 42px;
-  right: -250px;
+  bottom: 40px;
+  right: -220px;
   font-size: 14px;
   border: solid 1px #ccc;
   border-radius: 2px;
@@ -424,9 +424,9 @@ body {
 @media all and (max-width: 1669px) {
   .we-class-info-text {
     width: 100%;
-    line-height: 20px;
-    height: 20px;
-    bottom: -22.5px;
+    line-height: 21px;
+    height: 21px;
+    bottom: -23px;
     right: 0px;
     font-size: 13px;
   }
