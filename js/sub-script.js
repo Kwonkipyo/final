@@ -29,9 +29,10 @@ window.addEventListener("load", function () {
   // 대시보드 화면 표시
   function showInitialDashboard() {
     // localStorage에서 사용자 이름 가져오기
-    var username = localStorage.getItem("username");
+    // var username = localStorage.getItem("username");
+    var usernick = localStorage.getItem("usernick");
 
-    if (username) {
+    if (usernick) {
       var path = window.location.pathname;
       var page = path.split("/").pop();
 
@@ -39,16 +40,16 @@ window.addEventListener("load", function () {
         document.getElementById("login-section").style.display = "none";
         document.getElementById("signup-section").style.display = "none";
         document.getElementById("dashboard-section").style.display = "flex";
-        document.getElementById("username-display").textContent = `${username}`;
+        document.getElementById("username-display").textContent = `${usernick}`;
         document.getElementById(
           "username-display2"
-        ).textContent = `${username}`;
+        ).textContent = `${usernick}`;
       } else if (page === "login.html" || page === "signup.html") {
       } else {
         document.getElementById("login-section").style.display = "none";
         document.getElementById("signup-section").style.display = "none";
         document.getElementById("dashboard-section").style.display = "flex";
-        document.getElementById("username-display").textContent = `${username}`;
+        document.getElementById("username-display").textContent = `${usernick}`;
       }
     } else {
       document.getElementById("login-section").style.display = "block";
