@@ -44,7 +44,7 @@ window.addEventListener("load", function () {
         document.getElementById(
           "username-display2"
         ).textContent = `${usernick}`;
-        document.getElementById("bestclass-title").style.display = "none";
+        document.getElementById("goodclass-title").style.display = "none";
         document.getElementById("aiclass-title").style.display = "flex";
       } else if (page === "login.html" || page === "signup.html") {
       } else {
