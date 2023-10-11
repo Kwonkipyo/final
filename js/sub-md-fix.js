@@ -56,21 +56,22 @@ window.addEventListener("load", function () {
   });
 
   // ----------------------------------------------------------
+  
+  // 하단 픽스메뉴 footer에 도착하면 사라지는 코드
+  // window.addEventListener("scroll", function () {
+  //   var newFixMenu = document.querySelector(".new-fix-menu-box");
+  //   var footer = document.querySelector(".footer");
 
-  window.addEventListener("scroll", function () {
-    var newFixMenu = document.querySelector(".new-fix-menu-box");
-    var footer = document.querySelector(".footer");
+  //   if (newFixMenu && footer) {
+  //     var footerTop = footer.getBoundingClientRect().top;
 
-    if (newFixMenu && footer) {
-      var footerTop = footer.getBoundingClientRect().top;
-
-      if (footerTop > window.innerHeight - 100) {
-        newFixMenu.style.display = "flex";
-      } else {
-        newFixMenu.style.display = "none";
-      }
-    }
-  });
+  //     if (footerTop > window.innerHeight - 100) {
+  //       newFixMenu.style.display = "flex";
+  //     } else {
+  //       newFixMenu.style.display = "none";
+  //     }
+  //   }
+  // });
 
   // ----------------------------------------------------------
 
