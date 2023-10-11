@@ -87,14 +87,14 @@
 }
 .md-we-class-info-text {
   display: none;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
   text-align: center;
-  width: 80%;
+  width: 220px;
   height: 40px;
   line-height: 40px;
-  bottom: 42px;
-  right: -250px;
+  bottom: 40px;
+  right: -220px;
   font-size: 14px;
   border: solid 1px #ccc;
   border-radius: 2px;
@@ -158,6 +158,7 @@
   text-overflow: ellipsis;
   color: #e8eddf;
   font-family: "NanumSquare" !important;
+  cursor: pointer;
 }
 #md-customDiv {
   display: none;
@@ -332,7 +333,8 @@
   font-weight: 900;
   transition: 0.3s;
 }
-.md-button-box h2:hover i {
+.md-button-box .md-me-buy:hover i,
+.md-button-box .md-we-buy:hover i {
   transform: translateX(3px);
 }
 
