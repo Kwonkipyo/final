@@ -84,6 +84,8 @@
     transform: translate(-7px, -10px);
   }
 }
+@media all and (max-width: 600px) {
+}
 @media all and (max-width: 480px){
   .top-button {
     right: 0;
@@ -105,5 +107,8 @@
   }
   .top-btn img{
     display: none;
+  }
+  .top-chat-button {
+    right: 8px;
   }
 }
