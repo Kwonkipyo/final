@@ -376,6 +376,10 @@
     right: 20px;
     top: 23px;
   }
+  #dropdown-menu{
+    left: -38px;
+    top: 150%;
+  }
 }
 @media all and (max-width:320px){
   .header{
